@@ -1,0 +1,7 @@
+<?php
+	echo $this->thingsForm;
+?>
+<form enctype="multipart/form-data" action="/things/upload" method="POST">
+    	<input dojoType="dojox.form.Uploader" multiple="true" uploadOnSelect="true" baseClass="tradesFileUploader" name="uploadedfile" id="uploadedfile" type="file" />
+         <div id="files" dojoType="dojox.form.uploader.FileList" uploaderId="uploadedfile"></div>
+</form>

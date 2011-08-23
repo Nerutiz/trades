@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+
+td{
+	padding: 5px;
+}
+
+form td:first-child{
+	text-align: right;
+	vertical-align:top;
+}
+
+form td:last-child{
+	text-align: right;
+}
+
+form label{
+	top:5px;
+	position:relative;
+}
+
+ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+li{
+	padding: 3px;
+}
+
+.errors{
+	list-style: none;
+	font-size: 11px;
+	color:red;
+}
+
+table .dijitTextBox {
+	border: 1px solid #BDC7D8;
+}
+
+form .dijitTextBoxFocused {
+	outline: 0px;
+}
+
+form .dijitPlaceHolder{
+	color: #777;
+	font-size: 12px;
+	font-style: normal;
+	top:2px;
+	
+}
+
+table td, table th{
+	padding: 5px;
+	text-align:left;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+.mythingsTable tr{
+	cursor:pointer;
+}
+
+.mythingsTable tr:hover{
+	background: #bfbfbf;
+}
+
+.tradesFileUploader{
+	width:auto !important;
+	display: inline-block;
+	cursor:pointer;
+}
+
+.tradesFileUploader input{
+	cursor:pointer !important;
+}
+
+.tradesFileUploader:hover .dijitButtonText{
+	text-decoration: underline;
+}
+
+.tradesFileUploader span{
+	border: 0px !important;
+	font-size:12px;
+	padding: 0px !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow:none !important;
+	color: #3E5787;
+	cursor:pointer;
+}
+

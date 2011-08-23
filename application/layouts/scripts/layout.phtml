@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Zend Framework Quickstart Application</title>
+  	
+    <?php //echo $this->headLink()->appendStylesheet('/css/global.css') ?>
+    
+	<?php echo $this->headTitle() ?>
+    
+	<?php echo $this->headMeta() ?>
+    
+	<?php echo $this->headLink() ?>
+    
+	<?php echo $this->headStyle() ?>
+	<?php
+   		$this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOption('isDebug', true);
+     ?>
+    
+	<?php if ($this->dojo()->isEnabled())
+			{
+				$this->dojo()->setLocalPath('/js/dojo/dojo.js')
+                 ->addStyleSheetModule('dijit.themes.claro');
+    			echo $this->dojo();
+			}
+?>
+    <?php echo $this->headScript(); ?>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/js/dojox/widget/Dialog/Dialog.css" />
+    <script type="text/javascript" src="/js/trades/trades.js"></script>
+</head>
+<body class="claro">
+<div id="header" style="">
+<a href="/account/logout" style="float:right;"><?php echo 'Logout'; ?></a>
+</div>
+<?php echo $this->layout()->content ?>
+</body>
+</html>
