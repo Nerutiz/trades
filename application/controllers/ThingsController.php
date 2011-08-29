@@ -64,28 +64,22 @@ class ThingsController extends Zend_Controller_Action
    
     public function uploadAction()
     {
-    	$upload = new Zend_File_Transfer_Adapter_Http();
-		$files = $upload->getFileInfo();
-		//$upload->setDestination("uploads/files");
-		$i=0;
-		foreach ($files as $file)
-		{
-			$exts = split("[/\\.]", $file['name']) ; 
- 			$n = count($exts)-1; 
- 			$exts = $exts[$n]; 
-			$files['uploadedfiles_' . $i . '_']['savedName'] = uniqid();
-			
-			move_uploaded_file($files['uploadedfiles_' . $i . '_']['savedName'], "uploads/files" . $files['uploadedfiles_' . $i . '_']['savedName']);
-			//print_r($files['uploadedfiles_' . $i . '_']['savedName'] = uniqid() . '.' . $exts);
-			$upload->addFilter(new Zend_Filter_File_Rename(array('target' => 'uploads/files/' . $files['uploadedfiles_' . $i . '_']['savedName'] . '.' . 'jpg')));
-			$i++;
-			$upload->receive($file);
-		} 	
-			 
-	 	if (!$upload->receive())
-	 	{
-			$messages = $upload->getMessages();
-			echo implode("\n", $messages);
+
+	    if($this->getRequest()->isPost())
+	    {
+		
+			$upload = new Zend_File_Transfer_Adapter_Http();
+			$upload->addValidator('Size', false, 20000, 'file2');
+			$upload->setDestination('uploads/' . uniqid());
+			$files = $upload->getFileInfo();
+			foreach ($files as $file => $info)
+			{
+				if($upload->isValid($file))
+				{
+					$upload->receive($file);
+				}
+			}
 		}
+
     }
 }
