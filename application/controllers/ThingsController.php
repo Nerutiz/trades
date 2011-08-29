@@ -64,21 +64,38 @@ class ThingsController extends Zend_Controller_Action
    
     public function uploadAction()
     {
-
+		 $this->_helper->layout->disableLayout();
 	    if($this->getRequest()->isPost())
 	    {
-		
+			$cnt = 0;
 			$upload = new Zend_File_Transfer_Adapter_Http();
 			$upload->addValidator('Size', false, 20000, 'file2');
-			$upload->setDestination('uploads/' . uniqid());
+			$upload->setDestination('uploads/');
 			$files = $upload->getFileInfo();
 			foreach ($files as $file => $info)
 			{
+				
+				//$ext = $this->findexts($info['name']);
+				//print_r($info);
+				
+				$upload->addFilter('Rename', array('target' => 'uploads/' . uniqid() . '.' . end(explode(".", $info['name'])) ,'overwrite' => true));
 				if($upload->isValid($file))
 				{
 					$upload->receive($file);
 				}
+				$name = $info['name'];
+				$type = $info['type'];
+				$size = $info['size'];
+				$file = 'uploads/' . $name;
+				$_post['file'] = $file;
+				$_post['name'] = $name;
+				$_post['type'] = $type;
+				$_post['size'] = $size;
+				$htmldata[$cnt] = $_post;
+				$cnt++;
 			}
+			$data = json_encode($htmldata);
+			return $data;	
 		}
 
     }
