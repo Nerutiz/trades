@@ -2,7 +2,6 @@
 class Application_Model_UploadMapper
 {
 	protected $_dbTable;
-
 	public function setDbTable($dbTable)
     {
         if (is_string($dbTable)) {
@@ -18,23 +17,35 @@ class Application_Model_UploadMapper
     public function getDbTable()
     {
         if (null === $this->_dbTable) {
-            $this->setDbTable('Application_Model_DbTable_Things');
+            $this->setDbTable('Application_Model_DbTable_Upload');
         }
         return $this->_dbTable;
     }
     
- 	public function saveall(Application_Model_Upload $upload)
+ 	public function saveall($image)
     {
+    	//print_r($this->getDbTable());
+    	
     	$data = array(
-    		'uuid'			=>	$upload->getUuid(),
-    		'type'			=>	$upload->getTitle(),
-    		'name'			=>	$upload->getName(),
-    		'size'			=>	$upload->getSize(),
-    		'things_id'		=>	$upload->getThingid(),
+    		'uuid'			=>	$image['uuid'],
+    		'type'			=>	$image['type'],
+    		'name'			=>	$image['name'],
+    		'size'			=>	$image['size'],
+    		'ext'			=>	$image['ext'],
+    		'width'			=>	$image['width'],
+    		'height'		=>	$image['height'],
+    	
+    		//'things_id'		=>	$upload->getThingid(),
     	);
       $this->getDbTable()->insert($data);
     }
-
+	
+    public function deletefile($uuid)
+    {
+    	$where = Zend_Db_Table::getDefaultAdapter()->quoteInto('uuid=?',$uuid);
+    	$this->getDbTable()->delete($where);
+    }
+    
 	public function find($id, Application_Model_Things $thing)
     {
         $result = $this->getDbTable()->find($id);
@@ -65,6 +76,4 @@ class Application_Model_UploadMapper
         }
         return $entries;
     }
-    
-	
 }

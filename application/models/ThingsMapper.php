@@ -23,6 +23,14 @@ class Application_Model_ThingsMapper
         return $this->_dbTable;
     }
     
+ 	public function getImageDbTable()
+    {
+        if (null === $this->_dbTable) {
+            $this->setDbTable('Application_Model_DbTable_Upload');
+        }
+        return $this->_dbTable;
+    }
+    
  	public function saveall(Application_Model_Things $thing, $userid)
     {
     	$data = array(
@@ -32,7 +40,15 @@ class Application_Model_ThingsMapper
     		'keywords'		=>	$thing->getKeywords(),
     		'users_id'		=>	$userid,
     	);
-      $this->getDbTable()->insert($data);
+		$this->getDbTable()->insert($data);
+		$lastId = $this->getDbTable()->getAdapter()->lastInsertId();
+		$imageArray = explode("-", $thing->getImages());
+		foreach ($imageArray as $image)
+		{
+			$dbAdapter = Zend_Db_Table::getDefaultAdapter(); 
+			if ($image != '')
+    	 	$dbAdapter->query('UPDATE upload SET things_id="' . $lastId . '" WHERE uuid="' . $image . '"');
+		}
     }
     
     public function save($dbField, $value, $userid, Application_Model_Things $thing)
@@ -72,6 +88,17 @@ class Application_Model_ThingsMapper
                   ->setWishes($row->wishes)
                   ->setKeywords($row->keywords);
         return $row->toArray();
+    }
+    
+	public function findimage($id)
+    {
+    	//$this->setDbTable('upload');
+    	 $imageDbTable = $this->setDbTable('Application_Model_DbTable_Upload');
+        //$dbAdapter = Zend_Db_Table::getDefaultAdapter(); 
+        $result = $this->getImageDbTable()->fetchAll($this->getImageDbTable()->select()->where('things_id=?', $id));
+//        $select = $dbAdapter->query('SELECT * FROM upload WHERE things_id=' . $id . '');
+//        $result = $select->fetchAll();
+     	return $result;
     }
     
 	public function fetchAll($userId)

@@ -40,12 +40,11 @@ class ThingsController extends Zend_Controller_Action
 		$mapper = new Application_Model_ThingsMapper();
 		if($this->_getParam('id'))
 		{
-//			echo $this->_getParam('id');
-//			return;
 			$this->view->form = $form;
 			$mapper = new Application_Model_ThingsMapper();
-			$result = $mapper->find($this->_getParam('id'), $thing);
+			$result = $mapper->find($this->_getParam('id'), $thing);	
 			$form->populate($result);
+			$this->view->images = $mapper->findimage($this->_getParam('id'));
 		}
 		else 
 			$this->view->form = $form;
@@ -64,25 +63,25 @@ class ThingsController extends Zend_Controller_Action
    
     public function uploadAction()
     {
-		 $this->_helper->layout->disableLayout();
+		$this->_helper->layout->disableLayout();
 	    if($this->getRequest()->isPost())
 	    {
 			$cnt = 0;
+			$mapper = new Application_Model_UploadMapper();
 			$upload = new Zend_File_Transfer_Adapter_Http();
 			$upload->addValidator('Size', false, 20000, 'file2');
 			$upload->setDestination('uploads/');
 			$files = $upload->getFileInfo();
 			foreach ($files as $file => $info)
 			{
-				
-				//$ext = $this->findexts($info['name']);
-				//print_r($info);
-				
-				$upload->addFilter('Rename', array('target' => 'uploads/' . uniqid() . '.' . end(explode(".", $info['name'])) ,'overwrite' => true));
+				$ext = end(explode(".", $info['name']));
+				$uuid = uniqid();
+				$upload->addFilter('Rename', array('target' => 'uploads/' . $uuid . '.' . $ext ,'overwrite' => true));
 				if($upload->isValid($file))
 				{
 					$upload->receive($file);
 				}
+				$imageSize = getimagesize('uploads/' . $uuid . '.' . $ext);
 				$name = $info['name'];
 				$type = $info['type'];
 				$size = $info['size'];
@@ -91,12 +90,32 @@ class ThingsController extends Zend_Controller_Action
 				$_post['name'] = $name;
 				$_post['type'] = $type;
 				$_post['size'] = $size;
+				$_post['uuid'] = $uuid;
+				$_post['width'] = $imageSize[0];
+				$_post['height'] = $imageSize[1];
+				$_post['ext'] = $ext;
 				$htmldata[$cnt] = $_post;
+				$mapper->saveall($htmldata[$cnt]);
 				$cnt++;
 			}
 			$data = json_encode($htmldata);
-			return $data;	
+			echo $data;	
 		}
 
+    }
+    
+    public function deletefileAction()
+    {
+    	$this->_helper->layout->disableLayout();
+    	$mapper = new Application_Model_UploadMapper();
+    	$file = $this->_getParam('file');
+    	if($file)
+    	{
+    		if ($_SERVER['DOCUMENT_ROOT'].file_exists($file))
+    		{
+    			unlink($_SERVER['DOCUMENT_ROOT'].$file);
+    			$mapper->deletefile($this->_getParam('uuid'));
+    		}
+    	}
     }
 }

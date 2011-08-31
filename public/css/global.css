@@ -27,6 +27,9 @@ li{
 	padding: 3px;
 }
 
+.imagesBlock img{
+	margin: 5px 10px;
+}
 .errors{
 	list-style: none;
 	font-size: 11px;
@@ -92,3 +95,53 @@ table{
 	cursor:pointer;
 }
 
+.imageContainer{
+	position: relative;
+	display: inline-block;
+}
+
+.deleteImage{
+	background: url("../images/deleteX.png");
+	display: inline-block;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	top:0px;
+	right: 0px;
+	display: none;
+}
+
+.imageContainer:hover .deleteImage{
+	display: inline-block;
+}
+
+.menu{
+	margin-left: 160px;
+}
+
+.menu a{
+	 display: inline-block;
+	 padding: 5px;
+}
+
+.logo{
+	background: url("../images/logo.png");
+	width: 154px;
+	height: 97px;
+	position: absolute;
+	top: -12px;
+}
+
+.header{
+	margin-top: 15px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+	padding: 5px;
+	min-height: 60px;
+	vertical-align: bottom;
+	position: relative;
+}

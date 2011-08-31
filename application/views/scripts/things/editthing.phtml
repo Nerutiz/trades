@@ -1,1 +1,10 @@
 <?php echo $this->form;?>
+
+<div id="imagesBlock" class="imagesBlock">
+<?php foreach ($this->images as $image):?>
+	<span class="imageContainer">
+		<img src="/uploads/<?php echo $image->uuid . '.' . $image->ext;?>" width="100" height="<?php echo $image->height / ($image->width / 100);?>">
+		<span class="deleteImage" onclick="deleteImage(dojo.query('img', this.parentNode)[0], '<?php echo $image->uuid; ?>', '<?php echo $image->id;?>')"></span>
+	</span>
+<?php endforeach;?>
+</div>

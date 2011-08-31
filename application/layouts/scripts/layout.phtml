@@ -30,9 +30,18 @@
     <script type="text/javascript" src="/js/trades/trades.js"></script>
 </head>
 <body class="claro">
-<div id="header" style="">
-<a href="/account/logout" style="float:right;"><?php echo 'Logout'; ?></a>
+<div id="header" class="header">
+	<a href="/account/logout" style="float:right;"><?php echo 'Logout'; ?></a>
+	<div class="logo"></div>
+	<div class="menu">
+		<a href="/things/mythings">
+			Mano daiktai
+		</a>
+	</div>
 </div>
 <?php echo $this->layout()->content ?>
+<div class="footer">
+	Footer'is
+</div>
 </body>
 </html>

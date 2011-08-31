@@ -8,6 +8,7 @@ class Application_Model_Things
 	protected $_wishes;
 	protected $_keywords;
 	protected $_userID;
+	protected $_images;
 	
  	public function __construct(array $options = null)
     {
@@ -44,6 +45,17 @@ class Application_Model_Things
             }
         }
         return $this;
+    }
+    
+	public function setImages($images)
+    {
+    	$this->_images = (string) $images;
+    	return $this;
+    }
+    
+ 	public function getImages()
+    {
+    	return $this->_images;
     }
     
     public function setId($id)

@@ -25,29 +25,30 @@ class Application_Form_ThingsForm extends Zend_Dojo_Form
 		 $this->addElement(new Zend_Dojo_Form_Element_TextBox('title', array(
             'decorators'	=>	$this->elementDecorators,
 		 //	'label'			=>	'Email',
-            'placeHolder'	=>	'Type your thing name',
+            'label'	=>	'Type your thing name',
 			'required'		=>	false,
 		 )));
 		 
 		  $this->addElement('Textarea', 'description', array(
             'decorators'	=>	$this->elementDecorators,
-		  //	'placeholder'	=>	'Type your thing description',
+		  	'label'			=>	'Type your thing description',
 			'required'		=>	false,
 		 ));
 		 
 		  $this->addElement('Textarea', 'wishes', array(
             'decorators'	=>	$this->elementDecorators,
 		 	//'label'			=>	'Full name',
-		 // 	'placeholder'	=>	'Type your Wishes',
+		 	'label'			=>	'Type your Wishes',
 		  	'required'		=>	false,
 		 ));
 		 
 		  $this->addElement('Textarea', 'keywords', array(
             'decorators'	=>	$this->elementDecorators,
-		 //	'label'			=>	'Address',
-		 // 	'placeholder'	=>	'Type Keywords',
+		 	'label'	=>	'Type Keywords',
 		  	'required'		=>	false,
 		 ));
+		 
+		 $this->addElement(new Zend_Form_Element_Hidden('images'));
 		 
 		 $this->addElement(new Zend_Dojo_Form_Element_SubmitButton('save', array(
          'value'		=>	'Save',

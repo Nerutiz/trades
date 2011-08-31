@@ -70,3 +70,12 @@ function editTaskDialog(taskId)
 	 secondDlg.show();
 	 
 }
+
+function deleteImage(element, uuid, id)
+{	
+	dojo.xhrPost({
+		url:'/things/deletefile',
+		content:{file:dojo.attr(element, 'src'), uuid:uuid, id:id}
+	});
+	dojo.destroy(element.parentNode);
+}
