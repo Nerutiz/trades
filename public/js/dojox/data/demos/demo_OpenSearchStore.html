@@ -6,18 +6,21 @@
 -->
 <html>
 <head>
-	<title>Demo of OpenSearchStore</title>
-	<style type="text/css">
+<title>Demo of OpenSearchStore</title>
+<style type="text/css">
+@import "../../../dijit/themes/tundra/tundra.css";
 
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-		@import "./openSearchDemo.css";
-	</style>
+@import "../../../dojo/resources/dojo.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	
-	<script type="text/javascript">
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "./openSearchDemo.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+
+<script type="text/javascript">
 		dojo.require("dojo.parser");
 		dojo.require("dijit.form.TextBox");
 		dojo.require("dijit.form.Button");
@@ -166,50 +169,48 @@
 </head>
 
 <body class="tundra">
-	<h1>DEMO:  OpenSearchStore Search</h1>
-	<hr />
-	<h3>Description:</h3>
-	<p>
-		This simple demo shows how services, such as an OpenSearch compliant search service, can be wrapped by the datastore API.  In this demo, you can search public search engines through a simple OpenSearchStore by specifying a series of search terms (separated by spaces) to search on.  The results will be displayed below the search box.
-	</p>
-    <p>
-        <b>NOTE:  This demo makes use of a simple PHP based proxy script.  The proxy script requires cURL support in PHP.  Without cURL support, the demo will throw errors.</b>
-    </p>
-	<label for="urlSelector">URL of OpenSearchDocument:</label>
-	<select dojoType="dijit.form.FilteringSelect"
-			id="urlSelector"
-			name="urlSelector"
-			autoComplete="true">
-		<option value="{url: 'http://intertwingly.net/search/'}">http://intertwingly.net/search/</option>
-		<option value="{url: 'http://www.shutterpoint.com/opensearch.xml'}">http://www.shutterpoint.com/opensearch.xml</option>
-		<option value="{url: 'http://technorati.com/osd.xml', itemPath: '.hentry'}">http://technorati.com/osd.xml</option>
-	</select>
-	<label for="transformItem">Apply transform function?</label>
-	<input dojoType="dijit.form.CheckBox"
-		   type="checkbox"
-		   id="transformItem"
-		   name="transformItem">
-	</input>
-	<hr />
-	<label for="status">Status:</label>
-	<div dojoType="dijit.form.TextBox" maxLength="50" id="status" name="status" jsId="statusWidget" disabled="true"></div>
-	<label for="searchTerms">Search For:</label>
-	<div dojoType="dijit.form.TextBox" maxLength="50" id="searchTerms" name="searchTerms" jsId="searchTermsWidget" value="javascript"></div>
-	<label for="count">Number of Results:</label>
-	<div id="count"
-		 name="count"
-		 jsId="countWidget"
-		 dojoType="dijit.form.NumberSpinner"
-		 value="20"
-		 constraints="{min:1,max:20}">
-	</div>
-	<div dojoType="dijit.form.Button" label="Search" id="searchButton" jsId="searchButtonWidget"></div>
-	<hr/>
-	<div dojoType="dojox.data.OpenSearchStore"
-		 url="openSearchProxy.php?osd=true&url=http://intertwingly.net/search/"
-		 jsId="openSearchStore">
-	</div>
-	<ul id="searchResults"></ul>
+<h1>DEMO: OpenSearchStore Search</h1>
+<hr />
+<h3>Description:</h3>
+<p>This simple demo shows how services, such as an OpenSearch
+compliant search service, can be wrapped by the datastore API. In this
+demo, you can search public search engines through a simple
+OpenSearchStore by specifying a series of search terms (separated by
+spaces) to search on. The results will be displayed below the search
+box.</p>
+<p><b>NOTE: This demo makes use of a simple PHP based proxy
+script. The proxy script requires cURL support in PHP. Without cURL
+support, the demo will throw errors.</b></p>
+<label for="urlSelector">URL of OpenSearchDocument:</label>
+<select dojoType="dijit.form.FilteringSelect" id="urlSelector"
+	name="urlSelector" autoComplete="true">
+	<option value="{url: 'http://intertwingly.net/search/'}">http://intertwingly.net/search/</option>
+	<option value="{url: 'http://www.shutterpoint.com/opensearch.xml'}">http://www.shutterpoint.com/opensearch.xml</option>
+	<option
+		value="{url: 'http://technorati.com/osd.xml', itemPath: '.hentry'}">http://technorati.com/osd.xml</option>
+</select>
+<label for="transformItem">Apply transform function?</label>
+<input dojoType="dijit.form.CheckBox" type="checkbox" id="transformItem"
+	name="transformItem">
+</input>
+<hr />
+<label for="status">Status:</label>
+<div dojoType="dijit.form.TextBox" maxLength="50" id="status"
+	name="status" jsId="statusWidget" disabled="true"></div>
+<label for="searchTerms">Search For:</label>
+<div dojoType="dijit.form.TextBox" maxLength="50" id="searchTerms"
+	name="searchTerms" jsId="searchTermsWidget" value="javascript"></div>
+<label for="count">Number of Results:</label>
+<div id="count" name="count" jsId="countWidget"
+	dojoType="dijit.form.NumberSpinner" value="20"
+	constraints="{min:1,max:20}"></div>
+<div dojoType="dijit.form.Button" label="Search" id="searchButton"
+	jsId="searchButtonWidget"></div>
+<hr />
+<div dojoType="dojox.data.OpenSearchStore"
+	url="openSearchProxy.php?osd=true&url=http://intertwingly.net/search/"
+	jsId="openSearchStore"></div>
+<ul id="searchResults"></ul>
 
 </body>
 </html>

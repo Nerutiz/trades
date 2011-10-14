@@ -2,46 +2,54 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/tundra/tundra_rtl.css";
-		
-		#output {
-			width: 400px;
-			position: absolute;
-			top: 50px;
-		}
-		#entryContent {
-			margin-left: 450px;
-			position: absolute;
-			top: 50px;
-			background-color: #eee;
-			height: 800px;
-			padding: 2px;
-		}		
-		.search-result {
-			width: 100%;
-			border: 2px dashed;
-			padding: 4px;
-		}
-		#entryContent h2 {
-			text-decoration: underline;
-		}
-		.summary {
-			font-weight: bolder;
-		}
-		.tags {
-			background-color: lightGrey;
-		}
-	</style>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<title>Google Feed Store</title>
+@import "../../../dijit/themes/tundra/tundra.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../GoogleSearchStore.js"></script>
-	<script type="text/javascript" src="../GoogleFeedStore.js"></script>
-	<script type="text/javascript">
+@import "../../../dijit/themes/tundra/tundra_rtl.css";
+
+#output {
+	width: 400px;
+	position: absolute;
+	top: 50px;
+}
+
+#entryContent {
+	margin-left: 450px;
+	position: absolute;
+	top: 50px;
+	background-color: #eee;
+	height: 800px;
+	padding: 2px;
+}
+
+.search-result {
+	width: 100%;
+	border: 2px dashed;
+	padding: 4px;
+}
+
+#entryContent h2 {
+	text-decoration: underline;
+}
+
+.summary {
+	font-weight: bolder;
+}
+
+.tags {
+	background-color: lightGrey;
+}
+</style>
+
+<title>Google Feed Store</title>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../GoogleSearchStore.js"></script>
+<script type="text/javascript" src="../GoogleFeedStore.js"></script>
+<script type="text/javascript">
 		dojo.require("dijit.form.ComboBox");
 		dojo.require("dijit.form.FilteringSelect");
 		dojo.require("dojox.dtl");
@@ -92,22 +100,18 @@
 		}
 	</script>
 </head>
-<body class="tundra" style="margin:20px;">
-	<form>
-		Text: <select id="searchText" >
-				<option value="http://shaneosullivan.wordpress.com/feed/">http://shaneosullivan.wordpress.com/feed/</option>
-				<option value="http://dojocampus.org/content/category/dojo-cookies/feed/">http://dojocampus.org/content/category/dojo-cookies/feed/</option>
-				<option value="http://www.dojotoolkit.org/aggregator/rss">http://www.dojotoolkit.org/aggregator/rss</option>
-			</select>
-		Count: <input id="count" type="text" value="10" width=20/>
-		<input id="searchButton" type="button" value="store.fetch()" onclick="doSearch()" />
-		
-		<div id="output">
-			
-		</div>
-		<div id="entryContent">
-			
-		</div>
-	</form>
+<body class="tundra" style="margin: 20px;">
+<form>Text: <select id="searchText">
+	<option value="http://shaneosullivan.wordpress.com/feed/">http://shaneosullivan.wordpress.com/feed/</option>
+	<option
+		value="http://dojocampus.org/content/category/dojo-cookies/feed/">http://dojocampus.org/content/category/dojo-cookies/feed/</option>
+	<option value="http://www.dojotoolkit.org/aggregator/rss">http://www.dojotoolkit.org/aggregator/rss</option>
+</select> Count: <input id="count" type="text" value="10" width=20 /> <input
+	id="searchButton" type="button" value="store.fetch()"
+	onclick="doSearch()" />
+
+<div id="output"></div>
+<div id="entryContent"></div>
+</form>
 </body>
 </html>

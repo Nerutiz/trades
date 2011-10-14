@@ -3,33 +3,31 @@
  It's here because certain details may change over time.  The classes
  remain the same so applying the original will be easy in case of change.
 */
-
-.dojoxEntityPalette {
-	/* outer node of the dropdown */
+.dojoxEntityPalette { /* outer node of the dropdown */
 	border: 1px solid #999;
 	background: #fff;
 	-moz-border-radius: 3pt;
 }
 
-.dojoxEntityPaletteCell {
-	/* individual cell of the drop down */
+.dojoxEntityPaletteCell { /* individual cell of the drop down */
 	border: 1px dotted gray;
-	width: 20px;	/* todo: don't hardcode width/height; it's neither nececessary nor a11y safe */
+	width: 20px;
+	/* todo: don't hardcode width/height; it's neither nececessary nor a11y safe */
 	line-height: 18px;
 	overflow: hidden;
 	z-index: 10;
 	text-align: center;
 }
 
-.dojoxEntityPaletteCellHover, .dojoxEntityPaletteCellActive, .dojoxEntityPaletteCellFocused {
+.dojoxEntityPaletteCellHover,.dojoxEntityPaletteCellActive,.dojoxEntityPaletteCellFocused
+	{
 	width: 18px;
-        line-height: 16px;
+	line-height: 16px;
 	overflow: hidden;
 	cursor: default;
-	border:1px dashed #000;
-	outline:1px dashed #dedede;
+	border: 1px dashed #000;
+	outline: 1px dashed #dedede;
 }
-
 
 .dojoxEntityPalettePreviewTable {
 	table-layout: auto;
@@ -53,5 +51,5 @@
 }
 
 .dijit_a11y .dojoxEntityPaletteCell {
-	background-color:transparent !important;
+	background-color: transparent !important;
 }

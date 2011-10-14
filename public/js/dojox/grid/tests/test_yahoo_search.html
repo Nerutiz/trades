@@ -2,25 +2,27 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>dojox.grid.Grid - Yahoo Search Test</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style>
-		@import "../resources/Grid.css";
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}
-		.grid {
-			height: 30em;
-		}
-		
-		#info {
-			width: 700px;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: true"></script>
-	<script type="text/javascript">
+<title>dojox.grid.Grid - Yahoo Search Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style>
+@import "../resources/Grid.css";
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.grid {
+	height: 30em;
+}
+
+#info {
+	width: 700px;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojo.io.script");
@@ -28,8 +30,8 @@
 		dojo.require("dojox.data.ServiceStore");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript" src="yahooSearch.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="yahooSearch.js"></script>
+<script type="text/javascript">
 		var service = new dojox.rpc.Service(dojo.moduleUrl("dojox.rpc.SMDLibrary", "yahoo.smd"));
 		var store = new YahooStore({ service: service.webSearch });
 
@@ -105,27 +107,26 @@
 	</script>
 </head>
 <body>
-	<div style="font-weight: bold; padding-bottom: 0.25em;">dojox.grid.Grid - Yahoo Search Test</div>
-	<div style="padding-bottom: 3px;">
-		<label><input id="webRb" type="radio" name="searchType" checked>Web</label>&nbsp;&nbsp;
-		<label><input id="imageRb" type="radio" name="searchType">Images</label>
-	</div>	
-	<input id="searchInput" type="text" value="apple">&nbsp;&nbsp;
-	<button onclick="doSearch()">Search</button><br><br>
-	<div dojoType="dojox.grid.DataGrid" 
-		jsId="grid" class="grid" id="grid"
-		autoWidth="true" structure="webLayout" 
-		store="store" elasticView="1" 
-		query="{ query: 'apple' }" 
-		rowSelector="20px">
-	</div>
-	<br>
-	<div id="info">
-		<div id="rowCount" style="float: left"></div>
-		<div style="float: right">
-			<div id="sendInfo" style="text-align: right"></div>
-			<div id="receiveInfo" style="text-align: right"></div>
-		</div>
-	</div>
+<div style="font-weight: bold; padding-bottom: 0.25em;">dojox.grid.Grid
+- Yahoo Search Test</div>
+<div style="padding-bottom: 3px;"><label><input id="webRb"
+	type="radio" name="searchType" checked>Web</label>&nbsp;&nbsp; <label><input
+	id="imageRb" type="radio" name="searchType">Images</label></div>
+<input id="searchInput" type="text" value="apple">
+&nbsp;&nbsp;
+<button onclick="doSearch()">Search</button>
+<br>
+<br>
+<div dojoType="dojox.grid.DataGrid" jsId="grid" class="grid" id="grid"
+	autoWidth="true" structure="webLayout" store="store" elasticView="1"
+	query="{ query: 'apple' }" rowSelector="20px"></div>
+<br>
+<div id="info">
+<div id="rowCount" style="float: left"></div>
+<div style="float: right">
+<div id="sendInfo" style="text-align: right"></div>
+<div id="receiveInfo" style="text-align: right"></div>
+</div>
+</div>
 </body>
 </html>

@@ -1,20 +1,23 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>dojox.grid.TreeGrid Tests</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		.grid {
-			width: 70em;
-			height: 15em;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: false"></script>
-	<script type="text/javascript">
+<title>dojox.grid.TreeGrid Tests</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+.grid {
+	width: 70em;
+	height: 15em;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: false"></script>
+<script type="text/javascript">
 		dojo.require("dojox.grid.TreeGrid");
 		dojo.require("dojox.data.JsonRestStore");
 		dojo.require("dojo.parser");
@@ -113,39 +116,43 @@
 	</script>
 </head>
 <body class="tundra">
-	<h1 class="testTitle">Test: dojox.tests.grid.TreeGrid</h1>
-	<h4 class="testSubtitle">dojox.grid.TreeGrid Large 4-Level - calculated totals and openAtLevels</h4>
-	<table dojoType="dojox.grid.TreeGrid" class="grid" style="height: 45em;width: 100%;"
-		store="store" rowsPerPage="20" jsId="grid" rowSelector="true" openAtLevels="false,true,3">
-			<thead>
-				<tr>
-					<th field="label" relWidth="2" formatter="seasonSummary">Players</th>
-					<th field="games" itemAggregates="numGames">
+<h1 class="testTitle">Test: dojox.tests.grid.TreeGrid</h1>
+<h4 class="testSubtitle">dojox.grid.TreeGrid Large 4-Level -
+calculated totals and openAtLevels</h4>
+<table dojoType="dojox.grid.TreeGrid" class="grid"
+	style="height: 45em; width: 100%;" store="store" rowsPerPage="20"
+	jsId="grid" rowSelector="true" openAtLevels="false,true,3">
+	<thead>
+		<tr>
+			<th field="label" relWidth="2" formatter="seasonSummary">Players</th>
+			<th field="games" itemAggregates="numGames">
+			<table>
+				<thead>
+					<tr>
+						<th field="label" relWidth="2" formatter="gameSummary">Game</th>
+						<th field="qtrs"
+							itemAggregates="numQtrs,totPts,totReb,totAst,totTP">
 						<table>
 							<thead>
 								<tr>
-									<th field="label" relWidth="2" formatter="gameSummary">Game</th>
-									<th field="qtrs" itemAggregates="numQtrs,totPts,totReb,totAst,totTP">
-										<table>
-											<thead>
-												<tr>
-													<th field="label" relWidth="2" formatter="quarterSummary">Quarter</th>
-													<th field="pts" relWidth="1">Points</th>
-													<th field="reb" relWidth="1">Rebounds</th>
-													<th field="ast" relWidth="1">Assists</th>
-													<th field="tp" relWidth="1" formatter="formatTime">Time Played</th>
-												</tr>
-											</thead>
-										</table>
-									</th>
+									<th field="label" relWidth="2" formatter="quarterSummary">Quarter</th>
+									<th field="pts" relWidth="1">Points</th>
+									<th field="reb" relWidth="1">Rebounds</th>
+									<th field="ast" relWidth="1">Assists</th>
+									<th field="tp" relWidth="1" formatter="formatTime">Time
+									Played</th>
 								</tr>
 							</thead>
 						</table>
-					</th>
-				</tr>
-			</thead>
-	</table>
-	Text After
+						</th>
+					</tr>
+				</thead>
+			</table>
+			</th>
+		</tr>
+	</thead>
+</table>
+Text After
 </body>
 </html>
 

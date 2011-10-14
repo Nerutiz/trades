@@ -1,15 +1,16 @@
 <html>
-	<head>
-		<title>GFX on SVGWeb sample</title>
+<head>
+<title>GFX on SVGWeb sample</title>
 
-		<!-- tell svgweb to use flash rather than native svg -->
-		<meta name="svg.render.forceflash" content="true"/>
-		<!-- include svgweb, must before dojo, notice the extra 'data-path' attribute -->
-		<script src="svgweb/src/svg.js" data-path="svgweb/src"></script>
-		<!-- include dojo, notice the config: forceGfxRenderer:'svg' -->
-		<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true, forceGfxRenderer: 'svg'"></script>
+<!-- tell svgweb to use flash rather than native svg -->
+<meta name="svg.render.forceflash" content="true" />
+<!-- include svgweb, must before dojo, notice the extra 'data-path' attribute -->
+<script src="svgweb/src/svg.js" data-path="svgweb/src"></script>
+<!-- include dojo, notice the config: forceGfxRenderer:'svg' -->
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true, forceGfxRenderer: 'svg'"></script>
 
-		<script type="text/javascript">
+<script type="text/javascript">
 			dojo.require("dojox.gfx");
 			dojo.require("dojox.gfx.move");
 
@@ -162,10 +163,10 @@
 
 			}
 		</script>
-	</head>
+</head>
 
-	<body>
-		<div id="surface" style="width:600;height:550;border:solid 1px">
-		</div>
-	</body>
+<body>
+<div id="surface" style="width: 600; height: 550; border: solid 1px">
+</div>
+</body>
 </html>

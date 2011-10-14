@@ -5,17 +5,20 @@
 -->
 <html>
 <head>
-	<title>Demo of PicasaStore</title>
-	<style type="text/css">
+<title>Demo of PicasaStore</title>
+<style type="text/css">
+@import "../../../dijit/themes/tundra/tundra.css";
 
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-		@import "./picasaDemo.css";
-	</style>
+@import "../../../dojo/resources/dojo.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript">
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "./picasaDemo.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dojo.parser");
 		dojo.require("dijit.form.TextBox");
 		dojo.require("dijit.form.Button");
@@ -106,85 +109,67 @@
 </head>
 
 <body class="tundra">
-	<h1>
-		DEMO:  PicasaStore Search
-	</h1>
-	<hr>
-	<h3>
-		Description:
-	</h3>
-	<p>
-		This simple demo shows how services, such as Picasa, can be wrapped by the datastore API.  In this demo, you can search public Picasa images through a simple PicasaStore by specifying a series of tags (separated by spaces) to search on.  The results will be displayed below the search box.
-	</p>
-	<p>
-		For fun, search on the 3dny tag!
-	</p>
+<h1>DEMO: PicasaStore Search</h1>
+<hr>
+<h3>Description:</h3>
+<p>This simple demo shows how services, such as Picasa, can be
+wrapped by the datastore API. In this demo, you can search public Picasa
+images through a simple PicasaStore by specifying a series of tags
+(separated by spaces) to search on. The results will be displayed below
+the search box.</p>
+<p>For fun, search on the 3dny tag!</p>
 
-	<blockquote>
-
-	<!--
+<blockquote><!--
 		The store instance used by this demo.
 	-->
-	<table>
-		<tbody>
-			<tr>
-				<td>
-					<b>Status:</b>
-				</td>
-				<td>
-					<div dojoType="dijit.form.TextBox" size="50" id="status" jsId="statusWidget" disabled="true"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<b>ID:</b>
-				</td>
-				<td>
-					<div dojoType="dijit.form.TextBox" size="50" id="userid" jsId="idWidget"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<b>Query:</b>
-				</td>
-				<td>
-					<div dojoType="dijit.form.TextBox" size="50" id="tags" jsId="tagsWidget" value="flower"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<b>Number of Pictures:</b>
-				</td>
-				<td>
-					<div   
-						id="start"
-						jsId="startWidget"
-						dojoType="dijit.form.NumberSpinner"
-						value="1"
-						constraints="{min:1,places:0}" 
-					></div>
-					<div   
-						id="count"
-						jsId="countWidget"
-						dojoType="dijit.form.NumberSpinner"
-						value="20"
-						constraints="{min:1,max:100,places:0}" 
-					></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
-				<td>
-					<div dojoType="dijit.form.Button" label="Search" id="searchButton" jsId="searchButtonWidget"></div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<hr/>
-	</blockquote>
-	<div dojoType="dojox.data.PicasaStore" jsId="picasaStore" label="title"></div>
-	<div dojoType="dojox.data.demos.widgets.PicasaViewList" id="picasaViews" jsId="picasaViewsWidget"></div>
+<table>
+	<tbody>
+		<tr>
+			<td><b>Status:</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="status"
+				jsId="statusWidget" disabled="true"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><b>ID:</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="userid"
+				jsId="idWidget"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><b>Query:</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="tags"
+				jsId="tagsWidget" value="flower"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><b>Number of Pictures:</b></td>
+			<td>
+			<div id="start" jsId="startWidget"
+				dojoType="dijit.form.NumberSpinner" value="1"
+				constraints="{min:1,places:0}"></div>
+			<div id="count" jsId="countWidget"
+				dojoType="dijit.form.NumberSpinner" value="20"
+				constraints="{min:1,max:100,places:0}"></div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div dojoType="dijit.form.Button" label="Search" id="searchButton"
+				jsId="searchButtonWidget"></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+</blockquote>
+<div dojoType="dojox.data.PicasaStore" jsId="picasaStore" label="title"></div>
+<div dojoType="dojox.data.demos.widgets.PicasaViewList" id="picasaViews"
+	jsId="picasaViewsWidget"></div>
 
 </body>
 </html>

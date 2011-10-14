@@ -2,36 +2,37 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dijit.place unit test</title>
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../css/dijitTests.css";
+<title>Dijit.place unit test</title>
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-		body {
-			height: 100%;
-			padding: 0px;
-			margin: 0px;
-		}
+@import "../css/dijitTests.css";
 
-		.aroundNode {
-			position: absolute;
-			width: 20px;
-			height: 20px;
-			background: yellow;
-		}
+body {
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
 
-		#popup {
-			position: absolute;
-			width: 75px;
-			background: blue;
-			color: white;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="isDebug: true, parseOnLoad: false"></script>
-	<script type="text/javascript" src="../_testCommon.js"></script>
+.aroundNode {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: yellow;
+}
 
-	<script type="text/javascript">
+#popup {
+	position: absolute;
+	width: 75px;
+	background: blue;
+	color: white;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: false"></script>
+<script type="text/javascript" src="../_testCommon.js"></script>
+
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dojo.window");
 		dojo.require("dijit.dijit");
@@ -128,14 +129,14 @@
 	</script>
 </head>
 <body>
-	<h1>Dijit Place Unit Test</h1>
-	<div id="aroundTop" class="aroundNode" style="top: 0px; left: 50%;">T</div>
-	<div id="aroundLeft" class="aroundNode" style="top: 200px; left: 0;">L</div>
-	<div id="aroundRight" class="aroundNode" style="top: 200px; right: 1px;">R</div>
-	<div id="aroundBottom" class="aroundNode" style="bottom: 5px; left: 50%;">B</div>
+<h1>Dijit Place Unit Test</h1>
+<div id="aroundTop" class="aroundNode" style="top: 0px; left: 50%;">T</div>
+<div id="aroundLeft" class="aroundNode" style="top: 200px; left: 0;">L</div>
+<div id="aroundRight" class="aroundNode" style="top: 200px; right: 1px;">R</div>
+<div id="aroundBottom" class="aroundNode"
+	style="bottom: 5px; left: 50%;">B</div>
 
-	<div id="popup">
-		I'm a drop down, wider and taller than the around nodes I'm placed next to.
-	</div>
+<div id="popup">I'm a drop down, wider and taller than the around
+nodes I'm placed next to.</div>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Test Transfer</title>
-<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 dojo.provide("dojox.wire.ml.tests.markup.Transfer");
 
@@ -70,88 +71,63 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body>
-<div dojoType="dojox.wire.ml.Action"
-	triggerTopic="transferData">
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Transfer.source.a"
-		target="dojox.wire.ml.tests.markup.Transfer.item"
-		targetStore="dojox.wire.ml.tests.markup.Transfer.store"
-		targetAttribute="y"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Transfer.item"
-		sourceStore="dojox.wire.ml.tests.markup.Transfer.store"
-		sourceAttribute="y"
-		target="dojox.wire.ml.tests.markup.Transfer.target.a"></div>
-</div>
-<div dojoType="dojox.wire.ml.Action"
-	triggerTopic="transferXml">
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Transfer.source.a"
-		target="dojox.wire.ml.tests.markup.Transfer.element"
-		targetPath="y/text()"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Transfer.element"
-		sourcePath="y/text()"
-		target="dojox.wire.ml.tests.markup.Transfer.target.a"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Transfer.source.b"
-		target="dojox.wire.ml.tests.markup.Transfer.element"
-		targetPath="y/@z"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Transfer.element"
-		sourcePath="y/@z"
-		target="dojox.wire.ml.tests.markup.Transfer.target.b"></div>
-</div>
+<div dojoType="dojox.wire.ml.Action" triggerTopic="transferData">
 <div dojoType="dojox.wire.ml.Transfer"
-	triggerTopic="transferComposite"
+	source="dojox.wire.ml.tests.markup.Transfer.source.a"
+	target="dojox.wire.ml.tests.markup.Transfer.item"
+	targetStore="dojox.wire.ml.tests.markup.Transfer.store"
+	targetAttribute="y"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Transfer.item"
+	sourceStore="dojox.wire.ml.tests.markup.Transfer.store"
+	sourceAttribute="y"
+	target="dojox.wire.ml.tests.markup.Transfer.target.a"></div>
+</div>
+<div dojoType="dojox.wire.ml.Action" triggerTopic="transferXml">
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Transfer.source.a"
+	target="dojox.wire.ml.tests.markup.Transfer.element"
+	targetPath="y/text()"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Transfer.element"
+	sourcePath="y/text()"
+	target="dojox.wire.ml.tests.markup.Transfer.target.a"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Transfer.source.b"
+	target="dojox.wire.ml.tests.markup.Transfer.element" targetPath="y/@z"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Transfer.element" sourcePath="y/@z"
+	target="dojox.wire.ml.tests.markup.Transfer.target.b"></div>
+</div>
+<div dojoType="dojox.wire.ml.Transfer" triggerTopic="transferComposite"
 	source="dojox.wire.ml.tests.markup.Transfer.source"
 	target="dojox.wire.ml.tests.markup.Transfer.target">
-	<div dojoType="dojox.wire.ml.ChildWire"
-		name="x"
-		property="a"></div>
-	<div dojoType="dojox.wire.ml.ChildWire"
-		which="source"
-		name="y"
-		property="b"></div>
-	<div dojoType="dojox.wire.ml.ChildWire"
-		which="target"
-		name="x"
-		property="c"></div>
-	<div dojoType="dojox.wire.ml.ChildWire"
-		which="target"
-		name="y"
-		property="d"></div>
+<div dojoType="dojox.wire.ml.ChildWire" name="x" property="a"></div>
+<div dojoType="dojox.wire.ml.ChildWire" which="source" name="y"
+	property="b"></div>
+<div dojoType="dojox.wire.ml.ChildWire" which="target" name="x"
+	property="c"></div>
+<div dojoType="dojox.wire.ml.ChildWire" which="target" name="y"
+	property="d"></div>
 </div>
-<div dojoType="dojox.wire.ml.Transfer"
-	triggerTopic="transferTable"
+<div dojoType="dojox.wire.ml.Transfer" triggerTopic="transferTable"
 	source="dojox.wire.ml.tests.markup.Transfer.source.c"
 	target="dojox.wire.ml.tests.markup.Transfer.target.a">
-	<div dojoType="dojox.wire.ml.ColumnWire"
-		column="b"
-		property="d"></div>
-	<div dojoType="dojox.wire.ml.ColumnWire"
-		column="c"
-		property="e"></div>
+<div dojoType="dojox.wire.ml.ColumnWire" column="b" property="d"></div>
+<div dojoType="dojox.wire.ml.ColumnWire" column="c" property="e"></div>
 </div>
-<div dojoType="dojox.wire.ml.Transfer"
-	triggerTopic="transferTree"
+<div dojoType="dojox.wire.ml.Transfer" triggerTopic="transferTree"
 	source="dojox.wire.ml.tests.markup.Transfer.source.c"
 	target="dojox.wire.ml.tests.markup.Transfer.target.a">
-	<div dojoType="dojox.wire.ml.NodeWire"
-		titleProperty="d">
-		<div dojoType="dojox.wire.ml.NodeWire"
-			titleProperty="e"></div>
-	</div>
+<div dojoType="dojox.wire.ml.NodeWire" titleProperty="d">
+<div dojoType="dojox.wire.ml.NodeWire" titleProperty="e"></div>
 </div>
-<div dojoType="dojox.wire.ml.Transfer"
-	triggerTopic="transferText"
-	source="dojox.wire.ml.tests.markup.Transfer.source"
-	delimiter="/"
+</div>
+<div dojoType="dojox.wire.ml.Transfer" triggerTopic="transferText"
+	source="dojox.wire.ml.tests.markup.Transfer.source" delimiter="/"
 	target="dojox.wire.ml.tests.markup.Transfer.target.c">
-	<div dojoType="dojox.wire.ml.SegmentWire"
-		property="a"></div>
-	<div dojoType="dojox.wire.ml.SegmentWire"
-		property="b"></div>
+<div dojoType="dojox.wire.ml.SegmentWire" property="a"></div>
+<div dojoType="dojox.wire.ml.SegmentWire" property="b"></div>
 </div>
 </body>
 </html>

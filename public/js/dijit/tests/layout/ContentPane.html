@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>ContentPane DOH test</title>
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../../themes/claro/claro.css";
-		@import "../css/dijitTests.css";
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>ContentPane DOH test</title>
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-		.box {
-			border: 1px solid black;
-			padding: 8px;
-		}
+@import "../../themes/claro/claro.css";
 
-		.dijitTestWidget {
-			border: 1px dashed red;
-			background-color: #C0E209 ;
-		}
-	</style>
+@import "../css/dijitTests.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		data-dojo-config="isDebug: true"></script>
-	<script type="text/javascript">
+.box {
+	border: 1px solid black;
+	padding: 8px;
+}
+
+.dijitTestWidget {
+	border: 1px dashed red;
+	background-color: #C0E209;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	data-dojo-config="isDebug: true"></script>
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dijit.layout.ContentPane");
 		dojo.require("dojo.data.ItemFileReadStore");
@@ -472,50 +474,55 @@
 	</script>
 </head>
 <body class="claro">
-	<h2>dijit.layout.ContentPane DOH test</h2>
-	<h3>Test designed to run on localhost (minimize impact from network latency)</h3>
+<h2>dijit.layout.ContentPane DOH test</h2>
+<h3>Test designed to run on localhost (minimize impact from network
+latency)</h3>
 
-	<h4>This should NOT be parsed automatically</h4>
-	<div id="pane1" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='"class":"box"'>
-		<div data-dojo-type='dijit.TestWidget'>If this has a different background and a red border, the page parsed when it shouldn't</div>
-	</div>
-	<br/><h3>Testing ContentPane</h3>
-	<div id='pane2' class='box'>
-		Even though the entire page isn't scanned for widgets,
-		any sub widgets of a ContentPane will be created when a ContentPane is created<br/>
-		<span id="2_zero" data-dojo-type='dijit.TestWidget'>This should have a backgroundcolor and a border</span>
-		<div id="2_one" data-dojo-type="dijit._Widget"></div>
-		<div id="2_two" data-dojo-type="dijit._Widget"></div>
-		<div id="2_three" data-dojo-type="dijit._Widget"></div>
-	</div>
-	<br/><br/>
-	<div id="pane5"></div>
+<h4>This should NOT be parsed automatically</h4>
+<div id="pane1" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='"class":"box"'>
+<div data-dojo-type='dijit.TestWidget'>If this has a different
+background and a red border, the page parsed when it shouldn't</div>
+</div>
+<br />
+<h3>Testing ContentPane</h3>
+<div id='pane2' class='box'>Even though the entire page isn't
+scanned for widgets, any sub widgets of a ContentPane will be created
+when a ContentPane is created<br />
+<span id="2_zero" data-dojo-type='dijit.TestWidget'>This should
+have a backgroundcolor and a border</span>
+<div id="2_one" data-dojo-type="dijit._Widget"></div>
+<div id="2_two" data-dojo-type="dijit._Widget"></div>
+<div id="2_three" data-dojo-type="dijit._Widget"></div>
+</div>
+<br />
+<br />
+<div id="pane5"></div>
 
-	<!-- for container tests -->
-	<div id="container" data-dojo-type="dijit.layout.ContentPane">
-		<div id="zero" data-dojo-type="dijit.TestContained"></div>
-		<div id="one" data-dojo-type="dijit.TestContained"></div>
-		<div id="two" data-dojo-type="dijit.TestContained"></div>
-		<div id="three" data-dojo-type="dijit._Widget"></div>
-	</div>
-	<div id="outside" data-dojo-type="dijit._Widget"></div>
-	<div id="outsideCont" data-dojo-type="dijit.TestContained"></div>
+<!-- for container tests -->
+<div id="container" data-dojo-type="dijit.layout.ContentPane">
+<div id="zero" data-dojo-type="dijit.TestContained"></div>
+<div id="one" data-dojo-type="dijit.TestContained"></div>
+<div id="two" data-dojo-type="dijit.TestContained"></div>
+<div id="three" data-dojo-type="dijit._Widget"></div>
+</div>
+<div id="outside" data-dojo-type="dijit._Widget"></div>
+<div id="outsideCont" data-dojo-type="dijit.TestContained"></div>
 
-	<!-- for testing popup widgets inside of a content pane -->
-	<div id="popupTest">
-		<div id="popupPane" data-dojo-type="dijit.layout.ContentPane">
-			<div id="dialog" data-dojo-type="dijit.Dialog">
-				hello world
-			</div>
-		</div>
-	</div>
+<!-- for testing popup widgets inside of a content pane -->
+<div id="popupTest">
+<div id="popupPane" data-dojo-type="dijit.layout.ContentPane">
+<div id="dialog" data-dojo-type="dijit.Dialog">hello world</div>
+</div>
+</div>
 
-	<!-- for testing non-widgets inside of a content pane -->
-	<div id="nonWidgetTest">
-		<div id="nonWidgetPane" data-dojo-type="dijit.layout.ContentPane" data-dojo-id="nwp">
-			<div data-dojo-type="NonWidget" data-dojo-id="nw1"></div>
-		</div>
-	</div>
+<!-- for testing non-widgets inside of a content pane -->
+<div id="nonWidgetTest">
+<div id="nonWidgetPane" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-id="nwp">
+<div data-dojo-type="NonWidget" data-dojo-id="nw1"></div>
+</div>
+</div>
 
 </body>
 </html>

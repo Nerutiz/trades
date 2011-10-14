@@ -7,63 +7,85 @@
 <title>DataSeries Test</title>
 
 <style>
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	@import "../../../dijit/themes/dijit.css";
-    @import "../../../dijit/themes/tundra/tundra.css";
-	
-	#spinners{
-		clear:both;
-	}
-	#spinners label{
-		width:60px;
-		line-height:30px;
-		margin-top:10px;
-	}
-	.tundra #spinners .dijitSpinner	{
-		width:70px !important;
-		margin:5px !important;
-	}
-	.tundra #spinners .dijitSpinner{
-		width:80px !important;
-	}
-	.dijitSpinner{
-		padding:0px !important;
-	}
-	#spinners .dijitSpinnerButtonContainer{
-		line-height:23px;
-	}
-	.dj_ie #spinners .dijitSpinnerButtonContainer{
-		height:25px;
-	}
-	.dijitInputLayoutContainer .dijitInputField input{
-		padding:5px 0px 0px 5px;
-	}
-	.dj_webkit .dijitInputLayoutContainer .dijitInputField input{
-		padding:10px 0px 0px 5px;
-	}
+@import "../../../dojo/resources/dojo.css";
 
-    .dojoxLegendNode {border: 1px solid #ccc; margin: 5px 10px 5px 10px; padding: 3px;}
-    .dojoxLegendText {vertical-align: text-top; padding-right: 10px}
-    
-	#charts {
-		clear: both;
-		margin-bottom: 50px;
-	}
-	.chart-area {
-		float: left;
-		border: 1px solid #ccc;
-		width:  450px;
-        height: 350px;
-		margin: 3px;
-	}
-	.chart {
-		width:  450px;
-		height: 300px;
-	}
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/dijit.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+#spinners {
+	clear: both;
+}
+
+#spinners label {
+	width: 60px;
+	line-height: 30px;
+	margin-top: 10px;
+}
+
+.tundra #spinners .dijitSpinner {
+	width: 70px !important;
+	margin: 5px !important;
+}
+
+.tundra #spinners .dijitSpinner {
+	width: 80px !important;
+}
+
+.dijitSpinner {
+	padding: 0px !important;
+}
+
+#spinners .dijitSpinnerButtonContainer {
+	line-height: 23px;
+}
+
+.dj_ie #spinners .dijitSpinnerButtonContainer {
+	height: 25px;
+}
+
+.dijitInputLayoutContainer .dijitInputField input {
+	padding: 5px 0px 0px 5px;
+}
+
+.dj_webkit .dijitInputLayoutContainer .dijitInputField input {
+	padding: 10px 0px 0px 5px;
+}
+
+.dojoxLegendNode {
+	border: 1px solid #ccc;
+	margin: 5px 10px 5px 10px;
+	padding: 3px;
+}
+
+.dojoxLegendText {
+	vertical-align: text-top;
+	padding-right: 10px
+}
+
+#charts {
+	clear: both;
+	margin-bottom: 50px;
+}
+
+.chart-area {
+	float: left;
+	border: 1px solid #ccc;
+	width: 450px;
+	height: 350px;
+	margin: 3px;
+}
+
+.chart {
+	width: 450px;
+	height: 300px;
+}
 </style>
 
-<script src="../../../dojo/dojo.js" djConfig="isDebug: false, parseOnLoad: true"></script>
+<script src="../../../dojo/dojo.js"
+	djConfig="isDebug: false, parseOnLoad: true"></script>
 
 <script>
     
@@ -195,24 +217,23 @@
 </head>
 
 <body class="tundra">
-	<h1>DataSeries Test</h1>
-	<p>
-		Use the spinner fields at the bottom to change the data. The charts listen to store changes an update automatically.
-	</p>
-	<div id="charts">
-		<div class="chart-area">
-            <div id="lines_legend"></div>
-			<div id="lines" class="chart"></div>
-		</div>
-		<div class="chart-area">
-            <div id="cols_legend"></div>
-			<div id="cols" class="chart"></div>
-		</div>	
-		<div class="chart-area">
-            <div id="pie_legend"></div>
-			<div id="pie" class="chart"></div>
-		</div>
-	</div>
-	<div id="spinners"></div>
+<h1>DataSeries Test</h1>
+<p>Use the spinner fields at the bottom to change the data. The
+charts listen to store changes an update automatically.</p>
+<div id="charts">
+<div class="chart-area">
+<div id="lines_legend"></div>
+<div id="lines" class="chart"></div>
+</div>
+<div class="chart-area">
+<div id="cols_legend"></div>
+<div id="cols" class="chart"></div>
+</div>
+<div class="chart-area">
+<div id="pie_legend"></div>
+<div id="pie" class="chart"></div>
+</div>
+</div>
+<div id="spinners"></div>
 </body>
 </html>

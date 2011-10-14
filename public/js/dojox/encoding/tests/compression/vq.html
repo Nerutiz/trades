@@ -1,15 +1,19 @@
 ﻿<html>
-	<head>
-		<title>Compress colors using VQ</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<style type="text/css">
-			@import "../../../../dojo/resources/dojo.css";
-			@import "../../../../dijit/tests/css/dijitTests.css";
-			
-			.pane { margin-top: 2em; }
-		</style>
-		<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true"></script>
-		<script type="text/javascript">
+<head>
+<title>Compress colors using VQ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
+
+.pane {
+	margin-top: 2em;
+}
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
+<script type="text/javascript">
 			dojo.require("dojox.encoding.tests.compression.colors");
 			dojo.require("dojox.encoding.compression.splay");
 			dojo.require("dojox.encoding.bits");
@@ -167,19 +171,21 @@
 				dojo.connect(dojo.byId("run"), "onclick", run);
 			});
 		</script>
-	</head>
-	<body>
-		<h1>Compress colors using VQ</h1>
-		<p>Select desirable number of clusters:&nbsp;<select id="ncluster">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="4">4</option>
-			<option value="8">8</option>
-			<option value="16">16</option>
-			<option value="32">32</option>
-			<option value="64">64</option>
-		</select>&nbsp;<button id="run">Run</button></p>
-		<div id="status" class="pane"><em>No status yet.</em></div>
-		<div id="report" class="pane"><em>No results yet.</em></div>
-	</body>
+</head>
+<body>
+<h1>Compress colors using VQ</h1>
+<p>Select desirable number of clusters:&nbsp;<select id="ncluster">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="4">4</option>
+	<option value="8">8</option>
+	<option value="16">16</option>
+	<option value="32">32</option>
+	<option value="64">64</option>
+</select>&nbsp;
+<button id="run">Run</button>
+</p>
+<div id="status" class="pane"><em>No status yet.</em></div>
+<div id="report" class="pane"><em>No results yet.</em></div>
+</body>
 </html>

@@ -1,4 +1,3 @@
-
 /*
  *  CheckBox and Radio Widgets,
  *	and the CSS to embed a checkbox or radio icon inside a ToggleButton.
@@ -18,15 +17,15 @@
  *					hover 	 - checked
  *							 - unchecked
 */
-
-.nihilo .dijitToggleButton .dijitCheckBox,
-.nihilo .dijitToggleButton .dijitCheckBoxIcon {
+.nihilo .dijitToggleButton .dijitCheckBox,.nihilo .dijitToggleButton .dijitCheckBoxIcon
+	{
 	background-image: url('../images/spriteCheckbox.gif');
 }
 
-.nihilo .dijitCheckBox,
-.nihilo .dijitCheckBoxIcon {		/* inside a toggle button */
-	background-image: url('../images/spriteCheckbox.gif'); /* checkbox sprite image */
+.nihilo .dijitCheckBox,.nihilo .dijitCheckBoxIcon {
+	/* inside a toggle button */
+	background-image: url('../images/spriteCheckbox.gif');
+	/* checkbox sprite image */
 	background-repeat: no-repeat;
 	width: 16px;
 	height: 16px;
@@ -34,25 +33,21 @@
 	padding: 0;
 }
 
-.nihilo .dijitCheckBox,
-.nihilo .dijitToggleButton .dijitCheckBoxIcon {
+.nihilo .dijitCheckBox,.nihilo .dijitToggleButton .dijitCheckBoxIcon {
 	/* unchecked */
 	background-position: -16px;
 }
 
-.nihilo .dijitCheckBoxChecked,
-.nihilo .dijitToggleButtonChecked .dijitCheckBoxIcon {
-	/* checked */
+.nihilo .dijitCheckBoxChecked,.nihilo .dijitToggleButtonChecked .dijitCheckBoxIcon
+	{ /* checked */
 	background-position: 0;
 }
 
-.nihilo .dijitCheckBoxDisabled {
-	/* disabled */
+.nihilo .dijitCheckBoxDisabled { /* disabled */
 	background-position: -48px;
 }
 
-.nihilo .dijitCheckBoxCheckedDisabled {
-	/* disabled but checked */
+.nihilo .dijitCheckBoxCheckedDisabled { /* disabled but checked */
 	background-position: -32px;
 }
 

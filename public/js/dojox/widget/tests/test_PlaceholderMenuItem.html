@@ -3,32 +3,34 @@
 <html>
 <head>
 
-	<title>PlaceholderMenuItem Test</title>
+<title>PlaceholderMenuItem Test</title>
 
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<!-- required: a default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/tundra/tundra.css">
-	
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="parseOnLoad: true, isDebug: true"></script>
-	
-	<!-- not needed, for testing alternate themes -->
-	<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
 
-	<script language="JavaScript" type="text/javascript">
+<!-- required: a default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/tundra/tundra.css">
+
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="parseOnLoad: true, isDebug: true"></script>
+
+<!-- not needed, for testing alternate themes -->
+<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+
+<script language="JavaScript" type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dojox.widget.PlaceholderMenuItem");
 		dojo.require("dijit.ColorPalette");
 		dojo.require("dijit.Calendar");
 		dojo.require("dojo.parser");	// scan page for widgets and instantiate them
 	</script>
-    
-    <script language="Javascript" type="text/javascript">
+
+<script language="Javascript" type="text/javascript">
 		dojo.addOnLoad(function(){
 			doh.register("tests",
 				[
@@ -105,11 +107,12 @@
 </head>
 <body class="tundra">
 
-	<div dojoType="dijit.Menu" id="submenu1" contextMenuForWindow="true" style="display: none;">
-		<div dojoType="dijit.MenuItem">First Item</div>
-		<div dojoType="dijit.MenuItem" disabled="true">Disabled Item</div>
-		<div dojoType="dijit.MenuSeparator"></div>
-		<div dojoType="dojox.widget.PlaceholderMenuItem">PHCopyPaste</div>
+<div dojoType="dijit.Menu" id="submenu1" contextMenuForWindow="true"
+	style="display: none;">
+<div dojoType="dijit.MenuItem">First Item</div>
+<div dojoType="dijit.MenuItem" disabled="true">Disabled Item</div>
+<div dojoType="dijit.MenuSeparator"></div>
+<div dojoType="dojox.widget.PlaceholderMenuItem">PHCopyPaste</div>
 <!--
 		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconCut"
 			onClick="alert('not actually cutting anything, just a test!')">Cut</div>
@@ -118,30 +121,27 @@
 		<div dojoType="dijit.MenuItem" iconClass="dijitEditorIcon dijitEditorIconPaste"
 			onClick="alert('not actually pasting anything, just a test!')">Paste</div>
 -->
-		<div dojoType="dijit.MenuSeparator"></div>
-		<div dojoType="dijit.PopupMenuItem">
-			<span>Enabled Submenu</span>
-			<div dojoType="dijit.Menu" id="submenu2">
-				<div dojoType="dijit.MenuItem" onClick="alert('Submenu 1!')">Submenu Item One</div>
-				<div dojoType="dojox.widget.PlaceholderMenuItem">PH2</div>
+<div dojoType="dijit.MenuSeparator"></div>
+<div dojoType="dijit.PopupMenuItem"><span>Enabled Submenu</span>
+<div dojoType="dijit.Menu" id="submenu2">
+<div dojoType="dijit.MenuItem" onClick="alert('Submenu 1!')">Submenu
+Item One</div>
+<div dojoType="dojox.widget.PlaceholderMenuItem">PH2</div>
 <!--
 				<div dojoType="dijit.MenuItem" onClick="alert('Submenu 2!')">Submenu Item Two</div>
 -->
-				<div dojoType="dijit.PopupMenuItem">
-					<span>Deeper Submenu</span>
-					<div dojoType="dijit.Menu" id="submenu3"">
-						<div dojoType="dojox.widget.PlaceholderMenuItem">PHCopyPaste</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div dojoType="dijit.PopupMenuItem"><span>Deeper Submenu</span>
+<div dojoType="dijit.Menu" id="submenu3"">
+<div dojoType="dojox.widget.PlaceholderMenuItem">PHCopyPaste</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-	<div style="padding: 1em">
-		
-		<h1 class="testTitle">PlaceholderMenuItem Test</h1>
-		left click to open the menu
-		
-	</div>
+<div style="padding: 1em">
+
+<h1 class="testTitle">PlaceholderMenuItem Test</h1>
+left click to open the menu</div>
 </body>
 </html>

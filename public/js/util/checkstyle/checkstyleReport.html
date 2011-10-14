@@ -1,42 +1,47 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<style type="text/css">
-		@import "../../dojo/resources/dojo.css";
-		@import "../../dojox/grid/resources/Grid.css";
-		@import "../../dojox/grid/resources/soriaGrid.css";
+<style type="text/css">
+@import "../../dojo/resources/dojo.css";
 
-		html, body, #main{	
-			width: 100%;	/* make the body expand to fill the visible window */
-			height: 100%;
-			overflow: hidden;	/* erase window level scrollbars */
-			padding: 0 0 0 0;
-			margin: 0 0 0 0;
-			font: 10pt Arial,Myriad,Tahoma,Verdana,sans-serif;
-		}
-		
-		#checks label {
-			padding: 4px;
-			float: left;
-		}
-		#checks input {
-			float: right;
-		}
-		#checks div {
-			height: 15px;
-			padding: 4px;
-			margin-top: 5px;
-		}
-	</style>
+@import "../../dojox/grid/resources/Grid.css";
 
-	<!-- required: the default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../dijit/themes/soria/soria.css">
+@import "../../dojox/grid/resources/soriaGrid.css";
 
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../dojo/dojo.js"
-		djConfig="isDebug: true, parseOnLoad: true"></script>
+html,body,#main {
+	width: 100%; /* make the body expand to fill the visible window */
+	height: 100%;
+	overflow: hidden; /* erase window level scrollbars */
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	font: 10pt Arial, Myriad, Tahoma, Verdana, sans-serif;
+}
 
-	<script type="text/javascript">
+#checks label {
+	padding: 4px;
+	float: left;
+}
+
+#checks input {
+	float: right;
+}
+
+#checks div {
+	height: 15px;
+	padding: 4px;
+	margin-top: 5px;
+}
+</style>
+
+<!-- required: the default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../dijit/themes/soria/soria.css">
+
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+
+<script type="text/javascript">
 		dojo.require("dijit.dijit"); // optimize: load dijit layer
 		dojo.require("dijit.layout.BorderContainer");
 		dojo.require("dijit.form.FilteringSelect");
@@ -49,9 +54,9 @@
 		dojo.require("dijit.Dialog");
 	</script>
 
-	
-	<script type="text/javascript" src="checkstyleUtil.js"></script>
-	<script type="text/javascript">
+
+<script type="text/javascript" src="checkstyleUtil.js"></script>
+<script type="text/javascript">
 		var singleFileStore;
 		var errorQuery;
 		var saveErrorMsg = "You may need to rename the checkstyle.php.rename.html file to checkstyle.php."
@@ -424,95 +429,81 @@
 	</script>
 </head>
 <body class="soria">
-	
-	<div dojoType="dijit.layout.BorderContainer" design="sidebar" id="main">
-		<div id="folders" dojoType="dijit.layout.ContentPane" region="leading" 
-			style="width: 200px;padding: 0;" splitter="true">
-			<table dojoType="dojox.grid.DataGrid"id="folderGrid"
-				store="checkstyleStore" style="height: 100%; width: 100%;"
-				query="{ folder: 1 }" rowsPerPage="20" rowSelector="20px"
-				onCellClick="onFolderClick(arguments[0])"
-				>
-				<thead>
-					<tr>
-						<th field="file" width="auto">Folders</th>
-					</tr>
-				</thead>
-			</table>
-		</div>
-		<div id="header" dojoType="dijit.layout.ContentPane" region="top" style="height: 50px;">
-			<h1>Checkstyle results from <span id="reportDate"></span>
-				Total errors:<span id="totalErrors"></span>
-			</h1>
-		</div>
-		<div id="mainTab" dojoType="dijit.layout.TabContainer" region="center" style="padding: 0;">
-			<div id="errorsTab" dojoType="dijit.layout.BorderContainer" title="Error List" style="height:100%;width:100%;">
-				<table dojoType="dojox.grid.DataGrid" id="messagesGrid"
-					class="checkstyleGrid" store="checkstyleStore" 
-					query="{ folder: 0 }" rowsPerPage="50" rowSelector="20px"
-					region="top"
-					style="height:50%;"
-					>
-					<script type="dojo/connect" event="_onFetchBegin" args="size, req">
+
+<div dojoType="dijit.layout.BorderContainer" design="sidebar" id="main">
+<div id="folders" dojoType="dijit.layout.ContentPane" region="leading"
+	style="width: 200px; padding: 0;" splitter="true">
+<table dojoType="dojox.grid.DataGrid" id="folderGrid"
+	store="checkstyleStore" style="height: 100%; width: 100%;"
+	query="{ folder: 1 }" rowsPerPage="20" rowSelector="20px"
+	onCellClick="onFolderClick(arguments[0])">
+	<thead>
+		<tr>
+			<th field="file" width="auto">Folders</th>
+		</tr>
+	</thead>
+</table>
+</div>
+<div id="header" dojoType="dijit.layout.ContentPane" region="top"
+	style="height: 50px;">
+<h1>Checkstyle results from <span id="reportDate"></span> Total
+errors:<span id="totalErrors"></span></h1>
+</div>
+<div id="mainTab" dojoType="dijit.layout.TabContainer" region="center"
+	style="padding: 0;">
+<div id="errorsTab" dojoType="dijit.layout.BorderContainer"
+	title="Error List" style="height: 100%; width: 100%;">
+<table dojoType="dojox.grid.DataGrid" id="messagesGrid"
+	class="checkstyleGrid" store="checkstyleStore" query="{ folder: 0 }"
+	rowsPerPage="50" rowSelector="20px" region="top" style="height: 50%;">
+	<script type="dojo/connect" event="_onFetchBegin" args="size, req">
 						dojo.byId("totalErrors").innerHTML = size;
 					</script>
-					<thead>
-						<tr>
-							<th field="file" width="300px">File</th>
-							<th field="line" width="40px">Line</th>
-							<th field="msg" width="auto" formatter="formatMessage">Message</th>
-						</tr>
-					</thead>
-				</table>
-				<div dojoType="dijit.layout.ContentPane" region="bottom" splitter="true" style="height:45%;">
-					<div>
-						<div dojoType="dijit.form.ToggleButton" 
-							 id="showFileErrorsBtn"
-							 label="Show File Errors" 
-							 iconClass="dijitRadioIcon"
-							 onclick="showCurrentErrors()"
-							 disabled="true"
-							 ></div>
-						<div dojoType="dijit.form.ToggleButton" 
-							 id="showAllErrorsBtn"
-							 label="Show All Errors" 
-							 iconClass="dijitRadioIcon"
-							 checked="true"
-							 onclick="showAllErrors()"></div>
-						<div dojoType="dijit.form.Button" 
-							 id="makeFixesBtn"
-							 label="Make Fixes" 
-							 onclick="makeSimpleFixes()"></div>
-						<div dojoType="dijit.form.Button" 
-							 id="saveFileBtn"
-							 label="Save" 
-							 onclick="saveFile()"></div>
-						<div dojoType="dijit.form.Button" 
-							 id="saveAllFileBtn"
-							 label="Save All" 
-							 onclick="showSaveDialog()"></div>
-					</div>
-					<div>
-						<textarea id="editInput" rows="7" cols="100"></textarea>
-					</div>
-				</div>
-			</div>
-			<div id="chartTab" dojoType="dijit.layout.BorderContainer" style="width:100%;height:100%;" title="Worst Modules">
-				<div dojoType="dijit.layout.ContentPane" region="top">
-					This chart displays the folders of depth 2 in descending order of checkstyle violations.
-				</div>
-				<div dojoType="dijit.layout.ContentPane" region="center">
-					<div id="chart" style="height:400px; width: 1000px;"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div dojoType="dijit.Dialog" id="changedFilesDlg" title="Save Changed Files">
-		<div id="checks">
-			
-		</div>
-		<div dojoType="dijit.form.Button" label="Save" onclick="saveAllChangedFiles()"></div>
-		<div dojoType="dijit.form.Button" label="Cancel" onclick="dijit.byId('changedFilesDlg').hide();"></div>
-	</div>
+	<thead>
+		<tr>
+			<th field="file" width="300px">File</th>
+			<th field="line" width="40px">Line</th>
+			<th field="msg" width="auto" formatter="formatMessage">Message</th>
+		</tr>
+	</thead>
+</table>
+<div dojoType="dijit.layout.ContentPane" region="bottom" splitter="true"
+	style="height: 45%;">
+<div>
+<div dojoType="dijit.form.ToggleButton" id="showFileErrorsBtn"
+	label="Show File Errors" iconClass="dijitRadioIcon"
+	onclick="showCurrentErrors()" disabled="true"></div>
+<div dojoType="dijit.form.ToggleButton" id="showAllErrorsBtn"
+	label="Show All Errors" iconClass="dijitRadioIcon" checked="true"
+	onclick="showAllErrors()"></div>
+<div dojoType="dijit.form.Button" id="makeFixesBtn" label="Make Fixes"
+	onclick="makeSimpleFixes()"></div>
+<div dojoType="dijit.form.Button" id="saveFileBtn" label="Save"
+	onclick="saveFile()"></div>
+<div dojoType="dijit.form.Button" id="saveAllFileBtn" label="Save All"
+	onclick="showSaveDialog()"></div>
+</div>
+<div><textarea id="editInput" rows="7" cols="100"></textarea></div>
+</div>
+</div>
+<div id="chartTab" dojoType="dijit.layout.BorderContainer"
+	style="width: 100%; height: 100%;" title="Worst Modules">
+<div dojoType="dijit.layout.ContentPane" region="top">This chart
+displays the folders of depth 2 in descending order of checkstyle
+violations.</div>
+<div dojoType="dijit.layout.ContentPane" region="center">
+<div id="chart" style="height: 400px; width: 1000px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div dojoType="dijit.Dialog" id="changedFilesDlg"
+	title="Save Changed Files">
+<div id="checks"></div>
+<div dojoType="dijit.form.Button" label="Save"
+	onclick="saveAllChangedFiles()"></div>
+<div dojoType="dijit.form.Button" label="Cancel"
+	onclick="dijit.byId('changedFilesDlg').hide();"></div>
+</div>
 </body>
 </html>

@@ -1,20 +1,30 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
-    <title>Tension test.</title>
-    <style>
-        @import "../../../dojo/resources/dojo.css";
-        @import "../../../dijit/themes/tundra/tundra.css";
-        @import "../../../dijit/tests/css/dijitTests.css";
-    </style>
-    <style>
-        .dojoxLegendNode {border: 1px solid #ccc; margin: 5px 10px 5px 10px; padding: 3px}
-        .dojoxLegendText {vertical-align: text-top; padding-right: 10px}
-    </style>
-    <script src="../../../dojo/dojo.js" djConfig="isDebug: true"></script>
-    <script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>Tension test.</title>
+<style>
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+<style>
+.dojoxLegendNode {
+	border: 1px solid #ccc;
+	margin: 5px 10px 5px 10px;
+	padding: 3px
+}
+
+.dojoxLegendText {
+	vertical-align: text-top;
+	padding-right: 10px
+}
+</style>
+<script src="../../../dojo/dojo.js" djConfig="isDebug: true"></script>
+<script>
         dojo.require("dojox.charting.Chart");
         dojo.require("dojox.charting.axis2d.Default");
         dojo.require("dojox.charting.plot2d.Default");
@@ -48,10 +58,10 @@
     </script>
 </head>
 <body class="tundra">
-    <h1>Tension test.</h1>
-    <!--<p><button onclick="makeObjects();">Go</button></p>-->
-    <div id="test_chart" style="width: 400px; height: 400px;"></div>
-    <div id="test_legend"></div>
-    <p>That's all Folks!</p>
+<h1>Tension test.</h1>
+<!--<p><button onclick="makeObjects();">Go</button></p>-->
+<div id="test_chart" style="width: 400px; height: 400px;"></div>
+<div id="test_legend"></div>
+<p>That's all Folks!</p>
 </body>
 </html>

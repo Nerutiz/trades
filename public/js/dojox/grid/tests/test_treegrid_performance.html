@@ -1,20 +1,23 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>dojox.grid.TreeGrid Performance Tests</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		.grid {
-			width: 70em;
-			height: 15em;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: false"></script>
-	<script type="text/javascript">
+<title>dojox.grid.TreeGrid Performance Tests</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+.grid {
+	width: 70em;
+	height: 15em;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: false"></script>
+<script type="text/javascript">
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.grid.TreeGrid");
 		dojo.require("dojo.data.ItemFileWriteStore");
@@ -136,70 +139,72 @@
 	</script>
 </head>
 <body class="tundra">
-	<h1 class="testTitle">
-		Test: dojox.tests.grid.TreeGrid Performance
-		<span dojoType="dojo.data.ItemFileWriteStore" 
-			jsId="jsonStore" url="support/gamedata.json">
-		</span>
-	</h1>
+<h1 class="testTitle">Test: dojox.tests.grid.TreeGrid Performance <span
+	dojoType="dojo.data.ItemFileWriteStore" jsId="jsonStore"
+	url="support/gamedata.json"> </span></h1>
 
-	<h4 class="testSubtitle">dojox.grid.DataGrid (For reference)</h4>
-	<div class="parseContainer">
-		<table dojoType="dojox.grid.DataGrid" class="grid" style="height: 15em;width: 100%;"
-			store="jsonStore" rowsPerPage="50" query="{label:'Quarter *'}" queryOptions="{deep: true}" rowSelector="false">
-			<thead>
-				<tr>
-					<th field="label" relWidth="2" formatter="quarterSummary">Quarter</th>
-					<th field="pts" relWidth="1">Points</th>
-					<th field="reb" relWidth="1">Rebounds</th>
-					<th field="ast" relWidth="1">Assists</th>
-					<th field="tp" relWidth="1" formatter="formatTime">Time Played</th>
-				</tr>
-			</thead>
-		</table>
-	</div>
-	<h4 class="testSubtitle">dojox.grid.TreeGrid Large 4-Level</h4>
-	<div class="parseContainer">
-		<table dojoType="dojox.grid.TreeGrid" class="grid" style="height: 15em;width: 100%;"
-			store="jsonStore" rowsPerPage="20" rowSelector="false">
-			<thead>
-				<tr>
-					<th field="label" relWidth="2">Player</th>
-					<th field="seasns" aggregate="sum" itemAggregates="numSeasons">
+<h4 class="testSubtitle">dojox.grid.DataGrid (For reference)</h4>
+<div class="parseContainer">
+<table dojoType="dojox.grid.DataGrid" class="grid"
+	style="height: 15em; width: 100%;" store="jsonStore" rowsPerPage="50"
+	query="{label:'Quarter *'}" queryOptions="{deep: true}"
+	rowSelector="false">
+	<thead>
+		<tr>
+			<th field="label" relWidth="2" formatter="quarterSummary">Quarter</th>
+			<th field="pts" relWidth="1">Points</th>
+			<th field="reb" relWidth="1">Rebounds</th>
+			<th field="ast" relWidth="1">Assists</th>
+			<th field="tp" relWidth="1" formatter="formatTime">Time Played</th>
+		</tr>
+	</thead>
+</table>
+</div>
+<h4 class="testSubtitle">dojox.grid.TreeGrid Large 4-Level</h4>
+<div class="parseContainer">
+<table dojoType="dojox.grid.TreeGrid" class="grid"
+	style="height: 15em; width: 100%;" store="jsonStore" rowsPerPage="20"
+	rowSelector="false">
+	<thead>
+		<tr>
+			<th field="label" relWidth="2">Player</th>
+			<th field="seasns" aggregate="sum" itemAggregates="numSeasons">
+			<table>
+				<thead>
+					<tr>
+						<th field="label" relWidth="2" formatter="seasonSummary">Season</th>
+						<th field="games" aggregate="sum" itemAggregates="numGames">
 						<table>
 							<thead>
 								<tr>
-									<th field="label" relWidth="2" formatter="seasonSummary">Season</th>
-									<th field="games" aggregate="sum" itemAggregates="numGames">
-										<table>
-											<thead>
-												<tr>
-													<th field="label" relWidth="2" formatter="gameSummary">Game</th>
-													<th field="qtrs" aggregate="sum" itemAggregates="numQtrs,totPts,totReb,totAst,totTP">
-														<table>
-															<thead>
-																<tr>
-																	<th field="label" relWidth="2" formatter="quarterSummary">Quarter</th>
-																	<th field="pts" relWidth="1">Points</th>
-																	<th field="reb" relWidth="1">Rebounds</th>
-																	<th field="ast" relWidth="1">Assists</th>
-																	<th field="tp" relWidth="1" formatter="formatTime">Time Played</th>
-																</tr>
-															</thead>
-														</table>
-													</th>
-												</tr>
-											</thead>
-										</table>
+									<th field="label" relWidth="2" formatter="gameSummary">Game</th>
+									<th field="qtrs" aggregate="sum"
+										itemAggregates="numQtrs,totPts,totReb,totAst,totTP">
+									<table>
+										<thead>
+											<tr>
+												<th field="label" relWidth="2" formatter="quarterSummary">Quarter</th>
+												<th field="pts" relWidth="1">Points</th>
+												<th field="reb" relWidth="1">Rebounds</th>
+												<th field="ast" relWidth="1">Assists</th>
+												<th field="tp" relWidth="1" formatter="formatTime">Time
+												Played</th>
+											</tr>
+										</thead>
+									</table>
 									</th>
 								</tr>
 							</thead>
 						</table>
-					</th>
-				</tr>
-			</thead>
-		</table>
-	</div>
+						</th>
+					</tr>
+				</thead>
+			</table>
+			</th>
+		</tr>
+	</thead>
+</table>
+</div>
 </body>
 </html>
 

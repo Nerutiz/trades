@@ -4,13 +4,12 @@
 	width: 100%;
 	overflow: hidden;
 	/* FIXME: need basline styles for tundra, soria, and nihilo */
-	border:1px solid #ccc;
-	-moz-border-radius:6pt;
-	-webkit-border-radius:7pt;
+	border: 1px solid #ccc;
+	-moz-border-radius: 6pt;
+	-webkit-border-radius: 7pt;
 }
 
 /* Horizontal classes */
-
 .horizontalPagerPager {
 	position: absolute;
 	height: 12px;
@@ -35,11 +34,10 @@
 }
 
 .horizontalPagerIcon {
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 /* Vertical classes */
-
 .verticalPagerPager {
 	position: absolute;
 	width: 12px;
@@ -64,27 +62,25 @@
 }
 
 .verticalPagerIcon {
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 /* Misc. */
-
 .pagerIconContainer {
-	position: absolute;	
+	position: absolute;
 }
 
 .pagerIconContainer img {
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 /* Items */
-
 .pagerItems {
 	list-style: none;
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 }
-	
+
 .pagerItem {
 	overflow: hidden;
 	padding: 0;

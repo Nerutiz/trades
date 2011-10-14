@@ -1,24 +1,28 @@
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Testing the Standby widget</title>
-	<style type="text/css">
-		@import "../../../dijit/themes/soria/soria.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-		@import "../../../dojox/grid/resources/soriaGrid.css";
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Testing the Standby widget</title>
+<style type="text/css">
+@import "../../../dijit/themes/soria/soria.css";
 
-		.curvedClass {
-			background-color: darkblue;
-			width: 250px;
-			height: 250px;
-			-moz-border-radius: 15px 15px 15px 15px; 
-			-webkit-border-radius: 15px;"        
-		}
-	</style>
-	
-	<script type="text/javascript" src="../../../dojo/dojo.js" djconfig="parseOnLoad:true, isDebug: true"></script>
+@import "../../../dijit/tests/css/dijitTests.css";
 
-	<script type="text/javascript">
+@import "../../../dojox/grid/resources/soriaGrid.css";
+
+.curvedClass {
+	background-color: darkblue;
+	width: 250px;
+	height: 250px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px;
+	"
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djconfig="parseOnLoad:true, isDebug: true"></script>
+
+<script type="text/javascript">
 		dojo.require("dojox.widget.Standby");
 		dojo.require("dijit.form.Button");
 		dojo.require("dijit.Tree");
@@ -188,199 +192,298 @@
 		});
 
 	</script>
-	
+
 </head>
 <body class="soria" id="bodyId">
-	
-	<h1 class="testTitle">dojox.widget.Standby</h1>
 
-	<h3>Testing a basic on a div contained in a scrolling div</h3>
-	<button id ="overlay14Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay14Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div style="width: 250px; height: 100px; overflow: auto">
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-	<div id ="overlayTarget14" style="width: 200px; height: 200px; background-color: darkblue;"></div>
-		<div style="width: 400px; height: 5px"></div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-	</div>
-	<div id ="standby14" target="overlayTarget14" dojoType="dojox.widget.Standby"></div>
-	<hr>
+<h1 class="testTitle">dojox.widget.Standby</h1>
 
-	<hr>
-	<h3>Testing a basic overlay</h3>
-	<button id ="overlay1Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay1Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget1" style="width: 200px; height: 100px; background-color: darkblue;"></div>
-	<div id ="standby1" target="overlayTarget1" dojoType="dojox.widget.Standby"></div>
-	<hr>
+<h3>Testing a basic on a div contained in a scrolling div</h3>
+<button id="overlay14Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay14Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div style="width: 250px; height: 100px; overflow: auto"><br>
+<br>
+<br>
+<br>
+<br>
+<div id="overlayTarget14"
+	style="width: 200px; height: 200px; background-color: darkblue;"></div>
+<div style="width: 400px; height: 5px"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<div id="standby14" target="overlayTarget14"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
 
-
-	<h3>Testing a basic overlay on a positioned div</h3>
-	<button id ="overlay2Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay2Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget2" style="position: absolute; width: 200px; height: 100px; background-color: darkblue; top: 500px; left: 500px;"></div>
-	<div id ="standby2" target="overlayTarget2" dojoType="dojox.widget.Standby"></div>
-	<hr>
-
-	<h3>Testing a basic overlay on a dijit</h3>
-	<button id ="overlay3Button1" dojoType="dijit.form.Button">Really long button!!!!!  Click to show the standby overlay on the button.</button>
-	<br>
-	<button id ="overlay3Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="standby3" target="overlay3Button1" dojoType="dojox.widget.Standby"></div>
-	<hr>
-
-	<h3>Testing a basic on a nested div</h3>
-	<button id ="overlay4Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay4Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div><div><div><div id ="overlayTarget4" style="width: 200px; height: 100px; background-color: darkblue;"></div></div></div></div>
-	<div id ="standby4" target="overlayTarget4" dojoType="dojox.widget.Standby"></div>
-	<hr>
-
-	<h3>Testing a different image</h3>
-	<button id ="overlay5Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay5Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget5" style="width: 500px; height: 500px; background-color: darkgray;"></div>
-	<div id ="standby5" target="overlayTarget5" dojoType="dojox.widget.Standby" image="images/busy.gif"></div>
-	<hr>
-
-	<h3>Testing an overlay on a div that has curved borders (CSS styles, Firefox and Webkit (Safari), only)</h3>
-	<button id ="overlay6Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay6Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget6" style="width: 200px; height: 100px; background-color: darkblue; -moz-border-radius: 15px; -webkit-border-radius: 15px;"></div>
-	<div id ="standby6" target="overlayTarget6" dojoType="dojox.widget.Standby"></div>
-	<hr>
-
-	<h3>Testing an overlay on a div that has curved borders (CSS styles, Firefox and Webkit (Safari), only, margined to the center) and a different color for the overlay</h3>
-	<button id ="overlay7Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay7Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget7" style="width: 200px; height: 100px; background-color: darkblue; -moz-border-radius: 15px; -webkit-border-radius: 15px; margin: auto"></div>
-	<div id ="standby7" target="overlayTarget7" dojoType="dojox.widget.Standby" color="lightblue"></div>
-	<hr>
+<hr>
+<h3>Testing a basic overlay</h3>
+<button id="overlay1Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay1Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget1"
+	style="width: 200px; height: 100px; background-color: darkblue;"></div>
+<div id="standby1" target="overlayTarget1"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
 
 
-	<h3>Testing an overlay on a grid</h3>
-	<button id ="overlay8Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay8Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div jsId="ifsStore" dojoType="dojo.data.ItemFileReadStore", url="../../../dijit/tests/_data/countries.json"></div>
-	<table id ="overlayTarget8" dojoType="dojox.grid.DataGrid", style="width: 500px; height: 300px; margin: auto" store="ifsStore", query="{}">
-		<thead>
-			<tr>
-				<th field="name" width="300px">Country/Continent Name</th>
-				<th field="type" width="auto">Type</th>
-			</tr>
-		</thead>
-	</table>
-	<div id ="standby8" target="overlayTarget8" dojoType="dojox.widget.Standby"></div>
-	<hr>
+<h3>Testing a basic overlay on a positioned div</h3>
+<button id="overlay2Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay2Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget2"
+	style="position: absolute; width: 200px; height: 100px; background-color: darkblue; top: 500px; left: 500px;"></div>
+<div id="standby2" target="overlayTarget2"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
+
+<h3>Testing a basic overlay on a dijit</h3>
+<button id="overlay3Button1" dojoType="dijit.form.Button">Really
+long button!!!!! Click to show the standby overlay on the button.</button>
+<br>
+<button id="overlay3Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="standby3" target="overlay3Button1"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
+
+<h3>Testing a basic on a nested div</h3>
+<button id="overlay4Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay4Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div>
+<div>
+<div>
+<div id="overlayTarget4"
+	style="width: 200px; height: 100px; background-color: darkblue;"></div>
+</div>
+</div>
+</div>
+<div id="standby4" target="overlayTarget4"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
+
+<h3>Testing a different image</h3>
+<button id="overlay5Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay5Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget5"
+	style="width: 500px; height: 500px; background-color: darkgray;"></div>
+<div id="standby5" target="overlayTarget5"
+	dojoType="dojox.widget.Standby" image="images/busy.gif"></div>
+<hr>
+
+<h3>Testing an overlay on a div that has curved borders (CSS
+styles, Firefox and Webkit (Safari), only)</h3>
+<button id="overlay6Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay6Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget6"
+	style="width: 200px; height: 100px; background-color: darkblue; -moz-border-radius: 15px; -webkit-border-radius: 15px;"></div>
+<div id="standby6" target="overlayTarget6"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
+
+<h3>Testing an overlay on a div that has curved borders (CSS
+styles, Firefox and Webkit (Safari), only, margined to the center) and a
+different color for the overlay</h3>
+<button id="overlay7Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay7Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget7"
+	style="width: 200px; height: 100px; background-color: darkblue; -moz-border-radius: 15px; -webkit-border-radius: 15px; margin: auto"></div>
+<div id="standby7" target="overlayTarget7"
+	dojoType="dojox.widget.Standby" color="lightblue"></div>
+<hr>
 
 
-	<h3>Testing an overlay on a dijit.Tree</h3>
-	<button id ="overlay9Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay9Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div jsId="ifsStore2" dojoType="dojo.data.ItemFileReadStore", url="../../../dijit/tests/_data/countries.json"></div>
-	<div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel" store="ifsStore2" query="{type:'continent'}" rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
-	<div id ="overlayTarget9" dojoType="dijit.Tree", style="width: 30%" model="continentModel", query="{}"></div>
-	<div id ="standby9" target="overlayTarget9" dojoType="dojox.widget.Standby"></div>
-	<hr>
+<h3>Testing an overlay on a grid</h3>
+<button id="overlay8Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay8Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div jsId="ifsStore" dojoType="dojo.data.ItemFileReadStore"
+	, url="../../../dijit/tests/_data/countries.json"></div>
+<table id="overlayTarget8" dojoType="dojox.grid.DataGrid"
+	, style="width: 500px; height: 300px; margin: auto" store="ifsStore"
+	, query="{}">
+	<thead>
+		<tr>
+			<th field="name" width="300px">Country/Continent Name</th>
+			<th field="type" width="auto">Type</th>
+		</tr>
+	</thead>
+</table>
+<div id="standby8" target="overlayTarget8"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
 
-	<h3>Testing overlay following a div as it moves (And with some whacky margins that need to be accounted for)</h3>
-	<button id ="overlay10Button1" dojoType="dijit.form.Button">Click to show the standby overlay and move the overlayed div.</button>
-	<br>
-	<button id ="overlay10Button2" dojoType="dijit.form.Button">Click to scoot the div back and hide the standby overlay.</button>
-	<div style="width: 100%;"><div id ="overlayTarget10" style="width: 200px; height: 100px; background-color: darkblue; margin-right: 100px; margin-top: 100px; margin-bottom: 100px;"></div></div>
-	<div id ="standby10" target="overlayTarget10" dojoType="dojox.widget.Standby"></div>
-	<hr>
 
-	<h3>Testing an overlay with class set styles for curves (Firefox, safari only).</h3>
-	<button id ="overlay11Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay11Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget11" class="curvedClass"></div>
-	<div id ="standby11" target="overlayTarget11" dojoType="dojox.widget.Standby"></div>
-	<hr>
+<h3>Testing an overlay on a dijit.Tree</h3>
+<button id="overlay9Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay9Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div jsId="ifsStore2" dojoType="dojo.data.ItemFileReadStore"
+	, url="../../../dijit/tests/_data/countries.json"></div>
+<div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel"
+	store="ifsStore2" query="{type:'continent'}" rootId="continentRoot"
+	rootLabel="Continents" childrenAttrs="children"></div>
+<div id="overlayTarget9" dojoType="dijit.Tree" , style="width: 30%"
+	model="continentModel" , query="{}"></div>
+<div id="standby9" target="overlayTarget9"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
 
-	<h3>Testing a basic on a zIndex'ed div</h3>
-	<button id ="overlay13Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay13Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget13" style="width: 200px; height: 100px; background-color: darkblue; z-index: 200"></div>
-	<div id ="standby13" target="overlayTarget13" dojoType="dojox.widget.Standby"></div>
-	<hr>
+<h3>Testing overlay following a div as it moves (And with some
+whacky margins that need to be accounted for)</h3>
+<button id="overlay10Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay and move the overlayed div.</button>
+<br>
+<button id="overlay10Button2" dojoType="dijit.form.Button">Click
+to scoot the div back and hide the standby overlay.</button>
+<div style="width: 100%;">
+<div id="overlayTarget10"
+	style="width: 200px; height: 100px; background-color: darkblue; margin-right: 100px; margin-top: 100px; margin-bottom: 100px;"></div>
+</div>
+<div id="standby10" target="overlayTarget10"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
 
-   	<h3>Testing that this still works in a dialog after zIndex changes</h3>
-	<div dojoType="dijit.Dialog" id="dialog">
-		<button id ="overlay15Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-		<br>
-		<button id ="overlay15Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-		<div id ="overlayTarget15" style="width: 200px; height: 100px; background-color: darkblue;"></div>
-		<div id ="standby15" target="overlayTarget15" dojoType="dojox.widget.Standby" zIndex="1000"></div>
-	</div>
-   	<hr>
+<h3>Testing an overlay with class set styles for curves (Firefox,
+safari only).</h3>
+<button id="overlay11Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay11Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget11" class="curvedClass"></div>
+<div id="standby11" target="overlayTarget11"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
 
-	<h3>Testing a basic on a node, using only centered text.</h3>
-	<button id ="overlay16Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay16Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget16" style="width: 200px; height: 100px; background-color: darkblue;"></div>
-	<div id ="standby16" target="overlayTarget16" dojoType="dojox.widget.Standby" centerIndicator="text"></div>
-	<hr>
+<h3>Testing a basic on a zIndex'ed div</h3>
+<button id="overlay13Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay13Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget13"
+	style="width: 200px; height: 100px; background-color: darkblue; z-index: 200"></div>
+<div id="standby13" target="overlayTarget13"
+	dojoType="dojox.widget.Standby"></div>
+<hr>
 
-	<h3>Testing a basic on a node, using only centered text that was customized.</h3>
-	<button id ="overlay17Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay17Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget17" style="width: 200px; height: 100px; background-color: darkblue;"></div>
-	<div id ="standby17" target="overlayTarget17" dojoType="dojox.widget.Standby" centerIndicator="text" text="&lt;span style='color: red; font-weight: bold; font-style: italic;'>WAIT, FOO!&lt;/span>"></div>
-	<hr>
+<h3>Testing that this still works in a dialog after zIndex changes</h3>
+<div dojoType="dijit.Dialog" id="dialog">
+<button id="overlay15Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay15Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget15"
+	style="width: 200px; height: 100px; background-color: darkblue;"></div>
+<div id="standby15" target="overlayTarget15"
+	dojoType="dojox.widget.Standby" zIndex="1000"></div>
+</div>
+<hr>
 
-	<h3>Testing a basic on a node, using only centered text that is changed with each display.</h3>
-	<button id ="overlay18Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay18Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget18" style="width: 200px; height: 100px; background-color: darkblue;"></div>
-	<div id ="standby18" target="overlayTarget18" dojoType="dojox.widget.Standby" centerIndicator="text" text="&lt;span style='color: red; font-weight: bold; font-style: italic;'>WAIT, FOO!&lt;/span>"></div>
-	<hr>
+<h3>Testing a basic on a node, using only centered text.</h3>
+<button id="overlay16Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay16Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget16"
+	style="width: 200px; height: 100px; background-color: darkblue;"></div>
+<div id="standby16" target="overlayTarget16"
+	dojoType="dojox.widget.Standby" centerIndicator="text"></div>
+<hr>
 
-	<h3>Testing a basic on a node, using only centered text, and with a background color that changes with each show</h3>
-	<button id ="overlay19Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay19Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div id ="overlayTarget19" style="width: 200px; height: 100px; background-color: darkblue;"></div>
-	<div id ="standby19" target="overlayTarget19" dojoType="dojox.widget.Standby" centerIndicator="text" text="&lt;span style='color: red; font-weight: bold; font-style: italic;'&gt;Watch Background&lt;/span&gt;"></div>
-	<hr>
+<h3>Testing a basic on a node, using only centered text that was
+customized.</h3>
+<button id="overlay17Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay17Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget17"
+	style="width: 200px; height: 100px; background-color: darkblue;"></div>
+<div id="standby17" target="overlayTarget17"
+	dojoType="dojox.widget.Standby" centerIndicator="text"
+	text="&lt;span style='color: red; font-weight: bold; font-style: italic;'>WAIT, FOO!&lt;/span>"></div>
+<hr>
 
-	<h3>Testing the widget in a relatively positioned block.  This has caused problems, verifying the fix of reparenting to document.body works.</h3>
-	<button id ="overlay12Button1" dojoType="dijit.form.Button">Click to show the standby overlay</button>
-	<br>
-	<button id ="overlay12Button2" dojoType="dijit.form.Button">Click to hide the standby overlay</button>
-	<div style="position: relative; top: 50px; left: 50px;">
-		<div id ="overlayTarget12" class="curvedClass"></div>
-		<div id ="standby12" target="overlayTarget12" dojoType="dojox.widget.Standby"></div>
-	</div>        
+<h3>Testing a basic on a node, using only centered text that is
+changed with each display.</h3>
+<button id="overlay18Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay18Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget18"
+	style="width: 200px; height: 100px; background-color: darkblue;"></div>
+<div id="standby18" target="overlayTarget18"
+	dojoType="dojox.widget.Standby" centerIndicator="text"
+	text="&lt;span style='color: red; font-weight: bold; font-style: italic;'>WAIT, FOO!&lt;/span>"></div>
+<hr>
 
-	<br>
-	<br>
-	<br> 
-	<h3>Testing an overlay of the entire document body.</h3>
-	<button id ="overlay20Button1" dojoType="dijit.form.Button">Click to show the standby overlay on body for 5 seconds!</button>
-	<div id ="standby20" target="bodyId" dojoType="dojox.widget.Standby"></div>
+<h3>Testing a basic on a node, using only centered text, and with a
+background color that changes with each show</h3>
+<button id="overlay19Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay19Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div id="overlayTarget19"
+	style="width: 200px; height: 100px; background-color: darkblue;"></div>
+<div id="standby19" target="overlayTarget19"
+	dojoType="dojox.widget.Standby" centerIndicator="text"
+	text="&lt;span style='color: red; font-weight: bold; font-style: italic;'&gt;Watch Background&lt;/span&gt;"></div>
+<hr>
+
+<h3>Testing the widget in a relatively positioned block. This has
+caused problems, verifying the fix of reparenting to document.body
+works.</h3>
+<button id="overlay12Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay</button>
+<br>
+<button id="overlay12Button2" dojoType="dijit.form.Button">Click
+to hide the standby overlay</button>
+<div style="position: relative; top: 50px; left: 50px;">
+<div id="overlayTarget12" class="curvedClass"></div>
+<div id="standby12" target="overlayTarget12"
+	dojoType="dojox.widget.Standby"></div>
+</div>
+
+<br>
+<br>
+<br>
+<h3>Testing an overlay of the entire document body.</h3>
+<button id="overlay20Button1" dojoType="dijit.form.Button">Click
+to show the standby overlay on body for 5 seconds!</button>
+<div id="standby20" target="bodyId" dojoType="dojox.widget.Standby"></div>
 
 </body>
 </html>

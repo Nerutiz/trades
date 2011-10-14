@@ -1,31 +1,40 @@
-	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <title>dojox.grid.TreeGrid Lazy-loading for children items test</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-        <style type="text/css">
-            @import "../../../dojo/resources/dojo.css";
-            @import "../../../dijit/themes/claro/claro.css";
-            @import "../../../dojox/grid/resources/Grid.css";
-			@import "../../../dojox/grid/resources/tundraGrid.css";
-            @import "../../../dojox/grid/resources/claroGrid.css";
-            body {
-				font-size: 0.9em;
-				font-family: Geneva, Arial, Helvetica, sans-serif;
-				padding: 0.5em;
-			}
-			.title {
-				text-align:center;
-				margin:1em;
-			}
-			.grid {
-                width: 70em;
-                height: 30em;
-				border: 1px solid #333333;
-            }
-        </style>
-        <script type="text/javascript" src="../../../dojo/dojo.js"  djConfig="isDebug:true, parseOnLoad: true"></script>
-        <script type="text/javascript">
+<head>
+<title>dojox.grid.TreeGrid Lazy-loading for children items test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/claro/claro.css";
+
+@import "../../../dojox/grid/resources/Grid.css";
+
+@import "../../../dojox/grid/resources/tundraGrid.css";
+
+@import "../../../dojox/grid/resources/claroGrid.css";
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	padding: 0.5em;
+}
+
+.title {
+	text-align: center;
+	margin: 1em;
+}
+
+.grid {
+	width: 70em;
+	height: 30em;
+	border: 1px solid #333333;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<script type="text/javascript">
             dojo.require("dojox.grid.LazyTreeGrid");
             dojo.require("dijit.tree.ForestStoreModel");
             dojo.require("dojo.data.ItemFileWriteStore");
@@ -122,33 +131,37 @@
 			}
 
         </script>
-    </head>
-    <body class="claro">
-        <h1 class="title">Test: dojox.grid.TreeGrid - Lazy-loading for children items</h1>
-        <span dojoType="dojo.data.ItemFileWriteStore"
-              jsId="jsonStore" data="dataItems">
-        </span>
+</head>
+<body class="claro">
+<h1 class="title">Test: dojox.grid.TreeGrid - Lazy-loading for
+children items</h1>
+<span dojoType="dojo.data.ItemFileWriteStore" jsId="jsonStore"
+	data="dataItems"> </span>
 
-        <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel"
-        	store="jsonStore" query="{type:'*'}" childrenAttrs="children"></div>
-		<div dojoType="dojox.grid.LazyTreeGridStoreModel" jsId="continentModel"
-        	store="jsonStore" query="{type:'*'}" childrenAttrs="children"></div>
+<div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel"
+	store="jsonStore" query="{type:'*'}" childrenAttrs="children"></div>
+<div dojoType="dojox.grid.LazyTreeGridStoreModel" jsId="continentModel"
+	store="jsonStore" query="{type:'*'}" childrenAttrs="children"></div>
 
-        <table jsid="grid" dojoType="dojox.grid.LazyTreeGrid" class="grid" defaultOpen=true rowsPerPage=5
-			   store="jsonStore" treeModel="continentModel" rowSelector="20px"  columnReordering=true>
-            <thead>
-                <tr>
-                    <th field="name" width="auto">Name</th>
-                    <th field="type" width="auto">Type</th> 
-					<th field="population" width="auto">Population</th>
-					<th field="area" width="auto">Area</th>
-                </tr>
-            </thead>
-        </table>
-    </body>
-	
-	<button dojoType="dijit.form.Button" onClick="addItem()">Add Item</button>
-	<button dojoType="dijit.form.Button" onClick="addChildItem()">Add Child Item</button>
-	<button dojoType="dijit.form.Button" onClick="removeSelected()">Delete Selected</button>
+<table jsid="grid" dojoType="dojox.grid.LazyTreeGrid" class="grid"
+	defaultOpen=true rowsPerPage=5 store="jsonStore"
+	treeModel="continentModel" rowSelector="20px" columnReordering=true>
+	<thead>
+		<tr>
+			<th field="name" width="auto">Name</th>
+			<th field="type" width="auto">Type</th>
+			<th field="population" width="auto">Population</th>
+			<th field="area" width="auto">Area</th>
+		</tr>
+	</thead>
+</table>
+</body>
+
+<button dojoType="dijit.form.Button" onClick="addItem()">Add
+Item</button>
+<button dojoType="dijit.form.Button" onClick="addChildItem()">Add
+Child Item</button>
+<button dojoType="dijit.form.Button" onClick="removeSelected()">Delete
+Selected</button>
 </html>
 

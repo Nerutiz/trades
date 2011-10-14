@@ -1,24 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	
-	<title>Sample Dojo / Dijit Page</title>
-	<style type="text/css">
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../resources/Lightbox.css";
-		#container {
-			position:absolute;
-			left:-9999px;
-			width:9000px;
-			overflow:hidden;
-		}
-		#randomimage {
-			height:100px;
-		}
-	</style>
-	<script>var djConfig = { isDebug:true, parseOnLoad:true }</script>
-	<script src="../../../dojo/dojo.js"></script>
-	<script type="text/javascript">
+
+<title>Sample Dojo / Dijit Page</title>
+<style type="text/css">
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../resources/Lightbox.css";
+
+#container {
+	position: absolute;
+	left: -9999px;
+	width: 9000px;
+	overflow: hidden;
+}
+
+#randomimage {
+	height: 100px;
+}
+</style>
+<script>var djConfig = { isDebug:true, parseOnLoad:true }</script>
+<script src="../../../dojo/dojo.js"></script>
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dojo.parser");
 		dojo.require("dojox.image.Lightbox");
@@ -177,8 +180,10 @@
 
 </head>
 <body class="tundra">
-	<a href="images/square.jpg" id="parsed" title="basic title" dojoType="dojox.image.Lightbox">test</a>
-	<a href="images/square.jpg" id="grouper" group="bar" dojoType="dojox.image.Lightbox">testgroup</a>
-	<a href="images/square.jpg" group="bar" dojoType="dojox.image.Lightbox">testgroup</a>
+<a href="images/square.jpg" id="parsed" title="basic title"
+	dojoType="dojox.image.Lightbox">test</a>
+<a href="images/square.jpg" id="grouper" group="bar"
+	dojoType="dojox.image.Lightbox">testgroup</a>
+<a href="images/square.jpg" group="bar" dojoType="dojox.image.Lightbox">testgroup</a>
 </body>
 </html>

@@ -2,17 +2,21 @@
 <html style="height: 100%;">
 <head>
 
-	<title>DataPresentation widget example</title>
-	
-	<style type="text/css"> 
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dojox/grid/resources/tundraGrid.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
-	
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="parseOnLoad: true"></script>
-	<script type="text/javascript">
+<title>DataPresentation widget example</title>
+
+<style type="text/css">
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dojox/grid/resources/tundraGrid.css";
+
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="parseOnLoad: true"></script>
+<script type="text/javascript">
 
 		dojo.require("dojox.widget.DataPresentation");
 		dojo.require("dojox.charting.themes.Minty");
@@ -117,44 +121,47 @@
 		});
 	</script>
 </head>
-<body style="font-family: arial; font-size: 12px; height: 100%;" class="tundra">
+<body style="font-family: arial; font-size: 12px; height: 100%;"
+	class="tundra">
 
-	<h1>An example of DataPresentation widget</h1>
+<h1>An example of DataPresentation widget</h1>
 
-	<p>This example shows automatic refresh (every 3 seconds), although this is
-		most useful in conjunction with a URL where the data may change each time. 
-		To make something visible, some background code is tweaking the values randomly
-		so that the automatic refresh always pulls changed data.
-	</p>
+<p>This example shows automatic refresh (every 3 seconds), although
+this is most useful in conjunction with a URL where the data may change
+each time. To make something visible, some background code is tweaking
+the values randomly so that the automatic refresh always pulls changed
+data.</p>
 
-	<p>To see how the widget can cope with different data shapes, switch from 
-		jsondata0 to jsondata1 as the input data. jsondata0 is structured as complete
-		'series' of values, gathered into an array with series titles. jsondata1 is
-		structures as 'data points', each containing multiple sales values.
-	</p>
+<p>To see how the widget can cope with different data shapes, switch
+from jsondata0 to jsondata1 as the input data. jsondata0 is structured
+as complete 'series' of values, gathered into an array with series
+titles. jsondata1 is structures as 'data points', each containing
+multiple sales values.</p>
 
-	<p>Note that the widget is driving its own DOM node (the chart, in this case, 
-		although it could be any of the components) and is also driving other nodes
-		containing the grid, legend, etc.
-	</p>
+<p>Note that the widget is driving its own DOM node (the chart, in
+this case, although it could be any of the components) and is also
+driving other nodes containing the grid, legend, etc.</p>
 
-	<div style="width:400px; text-align: center;">
-		<h2 id="title" style="margin-bottom: 0;"></h2>
-		<p id="footer" style="color: gray; font-size: 0.85em; margin-top: 0.2em;"></p>
-	</div>
-	
-	<div style="width: 450px; position: relative;">
-		<div id="chartdiv" style="width: 400px; height: 300px;"></div>
-		<div style="position: absolute; top: 40px; right: 0px; padding: 0.2em 0.5em; border: 1px solid gray; background-color: rgba(255, 255, 221, 0.8);">
-			<div id="legenddiv" style="z-index: 1;"></div>
-		</div>
-	</div>
-	  
-	<p>Now here is the same data displayed in a grid (also driven by the same DataPresentation widget):</p>
-	
-	<div style="width:400px; height:240px;">
-		<div id="griddiv"></div>
-	</div>
-	
+<div style="width: 400px; text-align: center;">
+<h2 id="title" style="margin-bottom: 0;"></h2>
+<p id="footer"
+	style="color: gray; font-size: 0.85em; margin-top: 0.2em;"></p>
+</div>
+
+<div style="width: 450px; position: relative;">
+<div id="chartdiv" style="width: 400px; height: 300px;"></div>
+<div
+	style="position: absolute; top: 40px; right: 0px; padding: 0.2em 0.5em; border: 1px solid gray; background-color: rgba(255, 255, 221, 0.8);">
+<div id="legenddiv" style="z-index: 1;"></div>
+</div>
+</div>
+
+<p>Now here is the same data displayed in a grid (also driven by the
+same DataPresentation widget):</p>
+
+<div style="width: 400px; height: 240px;">
+<div id="griddiv"></div>
+</div>
+
 </body>
 </html>

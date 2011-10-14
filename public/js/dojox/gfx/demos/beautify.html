@@ -1,12 +1,15 @@
-﻿<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+﻿<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <title>Beautify JSON</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
 <script type="text/javascript">
 
 trimPath = function(o){
@@ -36,13 +39,17 @@ beautify = function(){
 </script>
 </head>
 <body>
-	<h1>Beautify JSON</h1>
-	<p>Paste valid JSON in this textarea and receive a pretty-printed version of it. Use Firefox, if you want to be able to read comma-ended sequences (Python style).
-	Additionally it knows how to remove extra spaces from path elements.</p>
-	<p><textarea id="io" cols="80" rows="10" wrap="off"></textarea></p>
-	<p><button onclick="beautify()">Beautify!</button>
-	&nbsp;&nbsp;&nbsp;<input type="checkbox" id="path" checked="checked" />&nbsp;Process "path" elements
-	&nbsp;&nbsp;&nbsp;<input type="checkbox" id="pprint" checked="checked" />&nbsp;Pretty-print JSON</p>
-	<p><em>This program is a companion for inspector.html.</em></p>
+<h1>Beautify JSON</h1>
+<p>Paste valid JSON in this textarea and receive a pretty-printed
+version of it. Use Firefox, if you want to be able to read comma-ended
+sequences (Python style). Additionally it knows how to remove extra
+spaces from path elements.</p>
+<p><textarea id="io" cols="80" rows="10" wrap="off"></textarea></p>
+<p>
+<button onclick="beautify()">Beautify!</button>
+&nbsp;&nbsp;&nbsp;<input type="checkbox" id="path" checked="checked" />&nbsp;Process
+"path" elements &nbsp;&nbsp;&nbsp;<input type="checkbox" id="pprint"
+	checked="checked" />&nbsp;Pretty-print JSON</p>
+<p><em>This program is a companion for inspector.html.</em></p>
 </body>
 </html>

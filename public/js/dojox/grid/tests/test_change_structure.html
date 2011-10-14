@@ -1,36 +1,39 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>dojox.grid._Grid Change Structure Example</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">
-		@import "../resources/Grid.css";
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}
-		.heading {
-			font-weight: bold;
-			padding-bottom: 0.25em;
-		}
-				
-		#grid { 
-			border: 1px solid #333;
-			width: 48em;
-			height: 30em;
-		}
-		
-		#grid .dojoxGridCell {
-			text-align: center;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:false, parseOnLoad: true"></script>
-	<script type="text/javascript">
+<title>dojox.grid._Grid Change Structure Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../resources/Grid.css";
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.heading {
+	font-weight: bold;
+	padding-bottom: 0.25em;
+}
+
+#grid {
+	border: 1px solid #333;
+	width: 48em;
+	height: 30em;
+}
+
+#grid .dojoxGridCell {
+	text-align: center;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojox.grid._Grid");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 
 		// get can return data for a cell of the grid
 		function get(inRowIndex) {
@@ -106,9 +109,11 @@
 <body>
 <div class="heading">dojox.grid._Grid Change Structure Example</div>
 <p>
-	<button onclick="toggleStructure()">Change Structure</button>
-</p>	
-<div id="grid" jsid="grid" dojoType="dojox.grid._Grid" structure="structure" rowSelector="20px" rowCount="100000" elasticView="2"></div>
+<button onclick="toggleStructure()">Change Structure</button>
+</p>
+<div id="grid" jsid="grid" dojoType="dojox.grid._Grid"
+	structure="structure" rowSelector="20px" rowCount="100000"
+	elasticView="2"></div>
 
 </body>
 </html>

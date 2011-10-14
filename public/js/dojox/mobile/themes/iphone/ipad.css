@@ -1,43 +1,54 @@
 /* dojox.mobile.View */
-
 /* dojox.mobile.Heading */
 .mblHeading {
 	background-color: #889BB3;
-	background: -webkit-gradient(linear, left top, left bottom, from(#F3F4F6), to(#A7ABB8));
+	background: -webkit-gradient(linear, left top, left bottom, from(#F3F4F6),
+		to(#A7ABB8) );
 	border-top: 1px solid #FEFEFE;
 	border-bottom: 1px solid #787E8F;
 	color: #70777F;
-	text-shadow: rgba(256,256,256,0.6) 0px 1px 0px;
+	text-shadow: rgba(256, 256, 256, 0.6) 0px 1px 0px;
 }
 
 /* Heading Arrow Button */
 .mblArrowButtonHead {
 	border-color: #4D4E50;
-	background: -webkit-gradient(linear, left top, right bottom, from(#B1B5BB), to(#6A727D));
+	background: -webkit-gradient(linear, left top, right bottom, from(#B1B5BB),
+		to(#6A727D) );
 }
+
 .mblArrowButtonBody {
 	border-color: #C0C0C0;
 	background-color: #5877A2;
-	background: -webkit-gradient(linear, left top, left bottom, from(#B1B5BB), to(#6A727D));
+	background: -webkit-gradient(linear, left top, left bottom, from(#B1B5BB),
+		to(#6A727D) );
 	-webkit-tap-highlight-color: transparent;
-	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 }
+
 .mblArrowButtonNeck {
 	border-color: #C0C0C0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#B1B5BB), to(#6A727D));
+	background: -webkit-gradient(linear, left top, left bottom, from(#B1B5BB),
+		to(#6A727D) );
 }
+
 .mblArrowButtonSelected .mblArrowButtonHead {
-	background: -webkit-gradient(linear, left top, right bottom, from(#9DA0A3), to(#43484F));
+	background: -webkit-gradient(linear, left top, right bottom, from(#9DA0A3),
+		to(#43484F) );
 }
-.mblArrowButtonSelected .mblArrowButtonBody, .mblArrowButtonSelected .mblArrowButtonNeck {
-	background: -webkit-gradient(linear, left top, left bottom, from(#9DA0A3), to(#43484F));
+
+.mblArrowButtonSelected .mblArrowButtonBody,.mblArrowButtonSelected .mblArrowButtonNeck
+	{
+	background: -webkit-gradient(linear, left top, left bottom, from(#9DA0A3),
+		to(#43484F) );
 }
 
 /* dojox.mobile.RoundRect */
 .mblRoundRect {
 	margin: 7px 30px 30px 30px;
 }
-.mblHeading + .mblRoundRect {
+
+.mblHeading+.mblRoundRect {
 	margin-top: 30px;
 }
 
@@ -51,10 +62,10 @@
 .mblRoundRectList {
 	margin: 7px 30px 30px 30px;
 }
-.mblHeading + .mblRoundRectList {
+
+.mblHeading+.mblRoundRectList {
 	margin-top: 30px;
 }
-
 /* dojox.mobile.EdgeToEdgeList */
 /* dojox.mobile.ListItem */
 /* Switch */
@@ -63,4 +74,3 @@
 /* dojox.mobile.Button */
 /* Tab Container */
 /* Progress Indicator */
-

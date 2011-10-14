@@ -1,16 +1,15 @@
 /* Time Picker */
-.tundra .dijitTimePickerTick,
-.tundra .dijitTimePickerMarker {
+.tundra .dijitTimePickerTick,.tundra .dijitTimePickerMarker {
 	border-color: #ccc;
 }
 
 .tundra .dijitTimePickerTick {
-	color:white;
+	color: white;
 }
 
 .tundra .dijitTimePickerMarker {
-	background:#d3d3d3 url("images/titleBar.png") repeat-x top;
-	color:#293a4b;
+	background: #d3d3d3 url("images/titleBar.png") repeat-x top;
+	color: #293a4b;
 	font-weight: bold;
 }
 
@@ -21,32 +20,29 @@
 
 .tundra .dijitTimePickerItemHover {
 	background: #60a1ea none;
-	color:white;
+	color: white;
 }
 
-.tundra .dijitTimePickerItemHover,
-.tundra .dijitTimePickerItemSelected {
+.tundra .dijitTimePickerItemHover,.tundra .dijitTimePickerItemSelected {
 	position: relative;
 	z-index: 10;
 }
 
 .tundra .dijitTimePickerTick .dijitTimePickerItemInner {
-	font-size:0.4em;
+	font-size: 0.4em;
 }
 
-.tundra .dijitTimePickerItemHover .dijitTimePickerItemInner,
-.tundra .dijitTimePickerItemSelected .dijitTimePickerItemInner {
-	font-size:1em;
+.tundra .dijitTimePickerItemHover .dijitTimePickerItemInner,.tundra .dijitTimePickerItemSelected .dijitTimePickerItemInner
+	{
+	font-size: 1em;
 }
 
 .tundra .dijitTimePickerMarkerHover {
 	border-top: 1px solid #ccc;
 }
 
-.tundra .dijitTimePickerTickHover,
-.tundra .dijitTimePickerTickSelected {
-	margin-top:-0.3em;
-	margin-bottom:-0.3em;
+.tundra .dijitTimePickerTickHover,.tundra .dijitTimePickerTickSelected {
+	margin-top: -0.3em;
+	margin-bottom: -0.3em;
 	border-bottom: none;
 }
-

@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<!--
-	Copyright (c) 2004-2011 The Dojo Foundation, Licensed under the Academic
-	Free License version 2.1 or BSD licenses
--->
+<!-- Copyright (c) 2004-2011 The Dojo Foundation, Licensed under the Academic 
+	Free License version 2.1 or BSD licenses -->
 <project name="dojo" default="cldr" basedir=".">
 	<description>Build the Dojo toolkit</description>
 
-	<property name="project" value="dojo"/>
-	<property name="root" location="../../.."/>
-	<property name="dojoLoader" value="default"/>
-	<property name="ldml" location="ldml"/>
-	<property name="logDir" location="."/>
-	<property name="json" location="${root}/dojo/cldr/nls"/>
+	<property name="project" value="dojo" />
+	<property name="root" location="../../.." />
+	<property name="dojoLoader" value="default" />
+	<property name="ldml" location="ldml" />
+	<property name="logDir" location="." />
+	<property name="json" location="${root}/dojo/cldr/nls" />
 
-	<!-- Arbitrary defaults. locales and currencies properties can be altered or eliminated to build the entire set -->
-	<property name="locales" value="ar,ca,cs,da,de-de,el,en-au,en-ca,en-gb,en-us,es-es,fi,fr-ch,fr-fr,he-il,hu,it-it,ja-jp,ko-kr,nb,nl,pl,pt-br,pt-pt,ro,ru,sk,sl,sv,th,tr,zh,zh-cn,zh-hant,zh-hans,zh-hk,zh-tw" />
+	<!-- Arbitrary defaults. locales and currencies properties can be altered 
+		or eliminated to build the entire set -->
+	<property name="locales"
+		value="ar,ca,cs,da,de-de,el,en-au,en-ca,en-gb,en-us,es-es,fi,fr-ch,fr-fr,he-il,hu,it-it,ja-jp,ko-kr,nb,nl,pl,pt-br,pt-pt,ro,ru,sk,sl,sv,th,tr,zh,zh-cn,zh-hant,zh-hans,zh-hk,zh-tw" />
 	<property name="currencies" value="GBP,USD,CAD,AUD,EUR,CHF,HKD,JPY,CNY" />
 
 	<target name="-check-config"
 		description="checks to make sure than we're sane before doing anything else">
 		<available property="bsf_ok" file="${user.home}/.ant/lib/bsf.jar" />
-		<available property="ant_bsf_ok" file="${user.home}/.ant/lib/ant-apache-bsf.jar" />
+		<available property="ant_bsf_ok"
+			file="${user.home}/.ant/lib/ant-apache-bsf.jar" />
 		<available property="js_ok" file="${user.home}/.ant/lib/js.jar" />
 		<available property="saxon9_ok" file="${user.home}/.ant/lib/saxon9.jar" />
 		<available property="resolver_ok" file="${user.home}/.ant/lib/resolver.jar" />
-		<available property="logger_ok" file="${user.home}/.ant/lib/commons-logging-1.1.1.jar" />
-		
+		<available property="logger_ok"
+			file="${user.home}/.ant/lib/commons-logging-1.1.1.jar" />
+
 		<condition property="config_ok">
 			<and>
 				<isset property="bsf_ok" />
@@ -39,28 +41,24 @@
 		</condition>
 	</target>
 
-	<target name="-fix-config"
-		depends="-check-config"
-		unless="config_ok"
+	<target name="-fix-config" depends="-check-config" unless="config_ok"
 		description="fixes our ant classpath (if possible)">
-		<copy todir="${user.home}/.ant/lib"
-			preservelastmodified="true">
+		<copy todir="${user.home}/.ant/lib" preservelastmodified="true">
 			<fileset dir="lib/">
-				<include name="bsf.jar"/>
-				<include name="ant-apache-bsf.jar"/>
-				<include name="saxon9.jar"/>
-				<include name="resolver.jar"/>
-				<include name="commons-logging-1.1.1.jar"/>
+				<include name="bsf.jar" />
+				<include name="ant-apache-bsf.jar" />
+				<include name="saxon9.jar" />
+				<include name="resolver.jar" />
+				<include name="commons-logging-1.1.1.jar" />
 			</fileset>
 		</copy>
-		<copy todir="${user.home}/.ant/lib"
-			preservelastmodified="true">
+		<copy todir="${user.home}/.ant/lib" preservelastmodified="true">
 			<fileset dir="../../shrinksafe">
-				<include name="js.jar"/>
+				<include name="js.jar" />
 			</fileset>
 		</copy>
 
-		<echo message=""/>
+		<echo message="" />
 		<echo message="+--------------------------------------------------------+" />
 		<echo message="| Due to some horrendous design decisions by the authors |" />
 		<echo message="| of Ant, it has been necessary to install some jar     |" />
@@ -72,9 +70,9 @@
 		<echo message="|                                                        |" />
 		<echo message="| The system will now exit.                              |" />
 		<echo message="+--------------------------------------------------------+" />
-		<echo message=""/>
+		<echo message="" />
 
-		<fail message="Sorry, please re-run your build command, it should work now"/>
+		<fail message="Sorry, please re-run your build command, it should work now" />
 	</target>
 
 	<target name="ldml" depends="-ldml-check" unless="ldmlUnpacked"
@@ -96,7 +94,7 @@
 		description="Transforms LDML from the CLDR into JSON">
 
 		<scriptdef name="removeEmptyOutput" language="javascript">
-			<attribute name="dir"/>
+			<attribute name="dir" />
 			<![CDATA[
 		function isEmpty(o){
 			for(x in o){
@@ -151,26 +149,31 @@
 		</scriptdef>
 
 		<macrodef name="processLdml">
-			<attribute name="in"/>
-			<attribute name="basedir"/>
-			<attribute name="destdir"/>
+			<attribute name="in" />
+			<attribute name="basedir" />
+			<attribute name="destdir" />
 
 			<sequential>
-				<mkdir dir="@{destdir}"/>
-				<transform in="@{in}" style="calendar.xsl" basedir="@{basedir}" destdir="@{destdir}"/>
-				<transform in="@{in}" style="number.xsl" basedir="@{basedir}" destdir="@{destdir}"/>
-				<transform in="@{in}" style="currency.xsl" basedir="@{basedir}" destdir="@{destdir}"/>
-				<echo level="info" message="Transformed @{in} to @{destDir}" taskName="cldr"/>
+				<mkdir dir="@{destdir}" />
+				<transform in="@{in}" style="calendar.xsl" basedir="@{basedir}"
+					destdir="@{destdir}" />
+				<transform in="@{in}" style="number.xsl" basedir="@{basedir}"
+					destdir="@{destdir}" />
+				<transform in="@{in}" style="currency.xsl" basedir="@{basedir}"
+					destdir="@{destdir}" />
+				<echo level="info" message="Transformed @{in} to @{destDir}"
+					taskName="cldr" />
 				<removeEmptyOutput dir="@{destdir}" />
 			</sequential>
 		</macrodef>
 		<macrodef name="transform">
-			<attribute name="in"/>
-			<attribute name="style"/>
-			<attribute name="basedir"/>
-			<attribute name="destdir"/>
+			<attribute name="in" />
+			<attribute name="style" />
+			<attribute name="basedir" />
+			<attribute name="destdir" />
 			<sequential>
-				<xslt includes="@{in}" style="@{style}" destdir="@{destdir}" basedir="@{basedir}" extension=".tmp">
+				<xslt includes="@{in}" style="@{style}" destdir="@{destdir}"
+					basedir="@{basedir}" extension=".tmp">
 					<factory name="net.sf.saxon.TransformerFactoryImpl" />
 					<xmlcatalog>
 						<catalogpath path="ldml/catalog" />
@@ -185,8 +188,8 @@
 		</macrodef>
 
 		<scriptdef name="transformCldr" language="javascript">
-			<attribute name="destdir"/>
-			<element name="fileset" type="fileset"/>
+			<attribute name="destdir" />
+			<element name="fileset" type="fileset" />
 			<![CDATA[
 	var fs = elements.get("fileset").get(0);
 	var basedir = fs.getDir(project);
@@ -243,29 +246,33 @@
 		<transformCldr destdir="${json}">
 			<fileset dir="${ldml}/core/common/main" includes="**/*.xml" />
 		</transformCldr>
-		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true" logError="true" >
+		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true"
+			logError="true">
 			<arg value="arrayInherit.js" />
 			<arg value="${json}" />
-			<arg value="${logDir}"/>
+			<arg value="${logDir}" />
 			<sysproperty key="DOJO_LOADER" value="${dojoLoader}" />
 		</java>
-		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true" logError="true" >
+		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true"
+			logError="true">
 			<arg value="specialLocale.js" />
 			<arg value="${json}" />
 			<arg value="${locales}" />
-			<arg value="${logDir}"/>
+			<arg value="${logDir}" />
 			<sysproperty key="DOJO_LOADER" value="${dojoLoader}" />
 		</java>
-		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true" logError="true" >
+		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true"
+			logError="true">
 			<arg value="alias.js" />
 			<arg value="${json}" />
-			<arg value="${logDir}"/>
+			<arg value="${logDir}" />
 			<sysproperty key="DOJO_LOADER" value="${dojoLoader}" />
 		</java>
-		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true" logError="true" >
+		<java jar="../../shrinksafe/js.jar" failonerror="true" fork="true"
+			logError="true">
 			<arg value="wrap.js" />
 			<arg value="${json}" />
-			<arg value="${logDir}"/>
+			<arg value="${logDir}" />
 			<sysproperty key="DOJO_LOADER" value="${dojoLoader}" />
 		</java>
 	</target>

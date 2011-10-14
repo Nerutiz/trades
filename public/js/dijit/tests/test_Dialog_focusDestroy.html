@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>Dialog Widget Dojo Tests</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Dialog Widget Dojo Tests</title>
 
-	<style type="text/css">
-		@import "../themes/claro/document.css";
-		@import "css/dijitTests.css";
+<style type="text/css">
+@import "../themes/claro/document.css";
 
-		body { font-family : sans-serif; }
-		form { margin-bottom : 0; }
-		table { border: none; }
-		#dialog3_underlay { background-color: #027 }
-	</style>
+@import "css/dijitTests.css";
 
-	<!-- required: a default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../dijit/themes/claro/claro.css"/>
+body {
+	font-family: sans-serif;
+}
 
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../dojo/dojo.js"
-		data-dojo-config="parseOnLoad: true, isDebug: true"></script>
+form {
+	margin-bottom: 0;
+}
 
-	<!-- not needed, for testing alternate themes -->
-	<script type="text/javascript" src="_testCommon.js"></script>
+table {
+	border: none;
+}
 
-	<script type="text/javascript">
+#dialog3_underlay {
+	background-color: #027
+}
+</style>
+
+<!-- required: a default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../dijit/themes/claro/claro.css" />
+
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../dojo/dojo.js"
+	data-dojo-config="parseOnLoad: true, isDebug: true"></script>
+
+<!-- not needed, for testing alternate themes -->
+<script type="text/javascript" src="_testCommon.js"></script>
+
+<script type="text/javascript">
 		dojo.require("dijit.dijit"); // optimize: load dijit layer
 		dojo.require("dijit.Dialog");
 		dojo.require("dijit.form.Button");
@@ -59,15 +72,17 @@
 </head>
 <body class="claro">
 
-	<h1 class="testTitle">Dijit layout.Dialog tests</h1>
+<h1 class="testTitle">Dijit layout.Dialog tests</h1>
 
-	<p>If you input this box, you can type. You should be able to type and use backspace/etc
-	when you destroy the visible dialog. refs <a href="http://trac.dojotoolkit.org/ticket/5351">#5351</a>
-	</p>
+<p>If you input this box, you can type. You should be able to type
+and use backspace/etc when you destroy the visible dialog. refs <a
+	href="http://trac.dojotoolkit.org/ticket/5351">#5351</a></p>
 
-	<input id="testInput" name="foo" value="bar" />
+<input id="testInput" name="foo" value="bar" />
 
-	<button id="showDialog" data-dojo-type="dijit.form.Button" data-dojo-props='onClick:function(){ createAndShow() }'>Show Dialog</button>
+<button id="showDialog" data-dojo-type="dijit.form.Button"
+	data-dojo-props='onClick:function(){ createAndShow() }'>Show
+Dialog</button>
 
 </body>
 </html>

@@ -2,26 +2,28 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dojox Analytics Test</title>
+<title>Dojox Analytics Test</title>
 
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
-	
-	<!-- required: a default theme file -->
-	<link rel="stylesheet" id="themeStyles" href="../../../dijit/themes/tundra/tundra.css" />
-	
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="parseOnLoad: true, isDebug: true, usePlainJson: true, sendMethod: 'script', sendInterval: 5000, analyticsUrl: 'http://dojotoolkit.org/~dmachi/dojo-1.0/dojox/analytics/logger/dojoxAnalytics.php'"></script>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<!-- do not use: only for testing alternate themes -->
-	<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
-	<script type="text/javascript" src="../Urchin.js"></script>
-	
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
 
-	<script language="JavaScript" type="text/javascript">
+<!-- required: a default theme file -->
+<link rel="stylesheet" id="themeStyles"
+	href="../../../dijit/themes/tundra/tundra.css" />
+
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="parseOnLoad: true, isDebug: true, usePlainJson: true, sendMethod: 'script', sendInterval: 5000, analyticsUrl: 'http://dojotoolkit.org/~dmachi/dojo-1.0/dojox/analytics/logger/dojoxAnalytics.php'"></script>
+
+<!-- do not use: only for testing alternate themes -->
+<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+<script type="text/javascript" src="../Urchin.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
 		// include the analytics system
 		dojo.require("dojox.analytics.Urchin");
 		var tracker = null; 
@@ -53,11 +55,12 @@
 </head>
 <body class="tundra">
 
-	<h1>Simple Lazy loading of Google Analytics Code</h1>
-	
-	<button id="galoader" onclick="createTracker()">Create Tracker</button>
-	
-	<button id="lazy" onclick="trackRandom()" disabled="disabled">Track something</button>
-	
+<h1>Simple Lazy loading of Google Analytics Code</h1>
+
+<button id="galoader" onclick="createTracker()">Create Tracker</button>
+
+<button id="lazy" onclick="trackRandom()" disabled="disabled">Track
+something</button>
+
 </body>
 </html>

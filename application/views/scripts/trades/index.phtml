@@ -1,0 +1,112 @@
+
+<?php /*?>
+<div class="sidesContainer">
+	<div class="sides">
+		<b>Mano daiktai</b>
+		<table id="myThings">
+			<thead>
+				<tr>
+					<th><?php echo 'Title';?></th>
+					<th><?php echo 'Description';?></th>
+					<th></th>
+					<th><?php echo 'Wishes';?></th>
+					<th><?php echo 'Keywords';?></th>
+				</tr>
+			</thead>
+			<tbody class="mythingsTable">
+			<?php foreach ($this->mythings as $thing): ?>
+				<tr dndtype="myThing" class="dojoDndItem" onclick="window.location.href='/things/editthing?id=<?php echo $thing->getId();?>'">
+					<td><?php echo $thing->getTitle(); ?></td>
+					<td><?php echo $thing->getDescription(); ?></td>
+					<td><?php //echo $thing->getTitle(); ?></td>
+					<td><?php echo $thing->getWishes(); ?></td>
+					<td><?php echo $thing->getKeywords(); ?></td>
+				</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+	<div class="sides">
+		<b>Kitu daiktai</b>
+		<table dojotype="dojo.dnd.Source" copyOnly="true" selfAccept="false" >
+			<thead>
+				<tr>
+					<th><?php echo 'Title';?></th>
+					<th><?php echo 'Description';?></th>
+					<th></th>
+					<th><?php echo 'Wishes';?></th>
+					<th><?php echo 'Keywords';?></th>
+				</tr>
+			</thead>
+			<tbody class="mythingsTable">
+			<?php foreach ($this->othersthings as $othersThing):?>
+				<tr class="dojoDndItem" onclick="window.location.href='/things/editthing?id=<?php echo $thing->getId();?>'">
+					<td><?php echo $othersThing->title; ?></td>
+					<td><?php echo $othersThing->description; ?></td>
+					<td><?php //echo $thing->getTitle(); ?></td>
+					<td><?php echo $othersThing->wishes; ?></td>
+					<td><?php echo $othersThing->keywords; ?></td>
+				</tr>
+			<?php endforeach; ?>	
+			</tbody>
+		</table>
+	</div>
+</div>
+<?php */ ?>
+<?php 
+
+//	$jsonObjectWithExpression = Zend_Json::encode(
+//    $this->mythings,
+//    false);
+
+?>
+<?php $request = Zend_Controller_Front::getInstance()->getRequest();?>
+<form action="/trades/index" id="selectForm" method="POST">
+	<select style="margin-top:25px;" onchange="dojo.byId('selectForm').submit();" name="userid" id="userid ">
+	<?php foreach($this->users as $user):?>
+		<option <?php  if($request->getParam('userid')==$user->id) echo 'selected';?> value="<?php echo $user->id;?>">
+			<?php echo $user->email; ?>
+		</option>
+	<?php endforeach; ?>
+	</select>
+</form>
+<br>
+<div class="sides">
+		<b>Mano daiktai</b>
+	<table id="myThings" accept="tr">
+		<thead>
+			<tr>
+				<th><?php echo 'Title';?></th>
+				<th><?php echo 'Description';?></th>
+				<th><?php echo 'Wishes';?></th>
+			</tr>
+		</thead>
+	</table>
+</div>
+<div class="sides">
+	<b>Kitu daiktai</b>
+	<table id="otherThings">
+		<thead>
+			<tr>
+				<th><?php echo 'Title';?></th>
+				<th><?php echo 'Description';?></th>
+				<th><?php echo 'Wishes';?></th>
+			</tr>
+		</thead>
+	</table>
+</div>
+<div id="dropPane" class="dropPane" style="font-size: 20px;">Drop  here</div>
+<script type="text/javascript">
+	var myThingsCreator = new trades.DragNDrop({
+		id:'myThings', 
+		isDraggable:true,
+		items:<?php echo $this->mydojodata;?>
+		});
+
+	var otherThingsCreator = new trades.DragNDrop({
+		id:'otherThings',
+		isDraggable:true, 
+		items:<?php echo $this->othersthings;?>
+		});
+</script>
+<input type="hidden" id="params">

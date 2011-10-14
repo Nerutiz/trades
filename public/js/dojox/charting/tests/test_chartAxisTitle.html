@@ -5,30 +5,35 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>Chart2D Title</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	@import "../../../dijit/themes/tundra/tundra.css";
-	
-	.axisTitleRotation90 {
-		transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		-webkit-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-	}
-	.axisTitleRotation180 {
-		transform: rotate(180deg);
-		-o-transform: rotate(180deg);
-		-webkit-transform: rotate(180deg);
-		-moz-transform: rotate(180deg);
-	}
-	.axisTitleRotation270 {
-		transform: rotate(-90deg);
-		-o-transform: rotate(-90deg);
-		-webkit-transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-	}
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+.axisTitleRotation90 {
+	transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+}
+
+.axisTitleRotation180 {
+	transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+
+.axisTitleRotation270 {
+	transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+}
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 
 dojo.require("dojox.charting.Chart");
@@ -143,19 +148,17 @@ dojo.addOnLoad(makeObjects);
 <body class="tundra">
 <h1>Chart2D Titles</h1>
 <p>Column chart with axis title</p>
-<p>
-	Axis Title Gap:&nbsp;
-	<input dojoType="dijit.form.NumberSpinner" id="axisTitleGap" value="15" constraints="{min: 0, max: 50, fractional: false}" style="width: 8em;">
-    &nbsp;&nbsp;
-	Axis Rotation
-    <input dojoType="dijit.form.NumberSpinner" id="rotation" value="0" constraints="{min: 0, max: 360, fractional: false}" style="width: 8em;">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<select id="orientation">
-		<option value="axis">axis title facing the axis</option>
-		<option value="away">axis title facing away</option>
-	</select>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button dojoType="dijit.form.Button" onClick="updateAxis()">Apply</button>
+<p>Axis Title Gap:&nbsp; <input dojoType="dijit.form.NumberSpinner"
+	id="axisTitleGap" value="15"
+	constraints="{min: 0, max: 50, fractional: false}" style="width: 8em;">
+&nbsp;&nbsp; Axis Rotation <input dojoType="dijit.form.NumberSpinner"
+	id="rotation" value="0"
+	constraints="{min: 0, max: 360, fractional: false}" style="width: 8em;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <select id="orientation">
+	<option value="axis">axis title facing the axis</option>
+	<option value="away">axis title facing away</option>
+</select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button dojoType="dijit.form.Button" onClick="updateAxis()">Apply</button>
 </p>
 <div id="test1" style="width: 500px; height: 400px;"></div>
 <p>Line chart with customized axis title</p>

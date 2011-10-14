@@ -1,36 +1,43 @@
 <html>
-	<head>
-	<title>Test dojox.grid.DataGrid Basic</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<head>
+<title>Test dojox.grid.DataGrid Basic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 
-    <style type="text/css">
-        @import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-        @import "../../../dijit/tests/css/dijitTests.css";
-		table { border: none; }
-        
-        body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}
-		.heading {
-			font-weight: bold;
-			padding-bottom: 0.25em;
-		}
-				
-		#grid { 
-			border: 1px solid #333;
-			width: 400px;
-			height: 500px;
-		}
-	</style>
-	<script type="text/javascript" 
-		src="../../../dojo/dojo.js"
-		djConfig="isDebug: true, parseOnLoad: true">
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+table {
+	border: none;
+}
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.heading {
+	font-weight: bold;
+	padding-bottom: 0.25em;
+}
+
+#grid {
+	border: 1px solid #333;
+	width: 400px;
+	height: 500px;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true">
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		
 		dojo.require("dojo.data.ItemFileReadStore");
@@ -120,32 +127,35 @@
 			doh.run();
 		});
 	</script>
-	<style>
-		.dijitTextBox {
-			color: gray;
-			width: 90px;
-		}
-	</style>
-	</head>	
-	<body class="tundra">
-		<h1 class="testTitle">Test: dojox.tests.grid.Grid Formatters</h1>
-		<div dojoType="dojo.data.ItemFileReadStore" jsId="readStore" url="support/countryStore.json?"></div>
-		<div dojoType="dojox.grid.formatterScopeObj" store="readStore" jsId="myObject"></div>
-		<table dojoType="dojox.grid.DataGrid" jsId="grid" formatterScope="myObject" 
-				style="width: 65em;height: 25em;" store="readStore" queryOptions="{deep:true}" rowsPerPage="100">
-			<thead>
-				<tr>
-					<th field="name" relWidth="2">Name</th>
-					<th field="type" relWidth="2">Type</th>
-					<th field="type" formatter="fmtABBR" relWidth="1">Abbr</th>
-					<th field="type" formatter="fmtValue" relWidth="2">Value</th>
-					<th field="type" formatter="fmtBool" relWidth="1">IsCountry</th>
-					<th field="type" formatter="fmtInt" relWidth="1">Int</th>
-					<th fields="children" formatter="fmtChildren" relWidth="3">Children</th>
-					<th field="_item" formatter="fmtItem" relWidth="2">Parent</th>
-					<th field="name" formatter="fmtWidget" relWidth="3">Widget</th>
-				</tr>
-			</thead>
-		</table>
-	</body>
+<style>
+.dijitTextBox {
+	color: gray;
+	width: 90px;
+}
+</style>
+</head>
+<body class="tundra">
+<h1 class="testTitle">Test: dojox.tests.grid.Grid Formatters</h1>
+<div dojoType="dojo.data.ItemFileReadStore" jsId="readStore"
+	url="support/countryStore.json?"></div>
+<div dojoType="dojox.grid.formatterScopeObj" store="readStore"
+	jsId="myObject"></div>
+<table dojoType="dojox.grid.DataGrid" jsId="grid"
+	formatterScope="myObject" style="width: 65em; height: 25em;"
+	store="readStore" queryOptions="{deep:true}" rowsPerPage="100">
+	<thead>
+		<tr>
+			<th field="name" relWidth="2">Name</th>
+			<th field="type" relWidth="2">Type</th>
+			<th field="type" formatter="fmtABBR" relWidth="1">Abbr</th>
+			<th field="type" formatter="fmtValue" relWidth="2">Value</th>
+			<th field="type" formatter="fmtBool" relWidth="1">IsCountry</th>
+			<th field="type" formatter="fmtInt" relWidth="1">Int</th>
+			<th fields="children" formatter="fmtChildren" relWidth="3">Children</th>
+			<th field="_item" formatter="fmtItem" relWidth="2">Parent</th>
+			<th field="name" formatter="fmtWidget" relWidth="3">Widget</th>
+		</tr>
+	</thead>
+</table>
+</body>
 </html>

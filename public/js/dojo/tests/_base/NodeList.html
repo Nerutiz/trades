@@ -5,34 +5,34 @@
 	basic tests
 -->
 <html>
-	<head>
-		<style type="text/css">
-			@import "../../resources/dojo.css";
-			html, body {
-				padding: 0px;
-				margin: 0px;
-				border: 0px;
-			}
+<head>
+<style type="text/css">
+@import "../../resources/dojo.css";
 
-			#sq100 {
-				background-color: black;
-				color: white;
-				position: absolute;
-				left: 100px;
-				top: 100px;
-				width: 100px;
-				height: 100px;
-				border: 0px;
-				padding: 0px;
-				margin: 0px;
-				overflow: hidden;
-			}
+html,body {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
 
-		</style>
-		<title>testing dojo.NodeList</title>
-		<script type="text/javascript" src="../../dojo.js"
-			djConfig="isDebug: false"></script>
-		<script type="text/javascript">
+#sq100 {
+	background-color: black;
+	color: white;
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	width: 100px;
+	height: 100px;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+</style>
+<title>testing dojo.NodeList</title>
+<script type="text/javascript" src="../../dojo.js"
+	djConfig="isDebug: false"></script>
+<script type="text/javascript">
 			dojo.require("doh.runner");
 			dojo.require("dojo.string");
 			dojo.require("dojo.parser");
@@ -617,15 +617,11 @@
 				doh.run();
 			});
 		</script>
-	</head>
-	<body>
-		<h1>testing dojo.NodeList</h1>
-		<div id="sq100">
-			100px square, abs
-		</div>
-		<div id="t">
-			<span id="c1">c1</span>
-		</div>
-	</body>
+</head>
+<body>
+<h1>testing dojo.NodeList</h1>
+<div id="sq100">100px square, abs</div>
+<div id="t"><span id="c1">c1</span></div>
+</body>
 </html>
 

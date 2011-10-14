@@ -5,10 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>Pie 2D</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
 <script type="text/javascript">
 
 dojo.require("dojox.charting.Chart");
@@ -134,16 +136,30 @@ dojo.addOnLoad(makeObjects);
 <div id="test1" style="width: 300px; height: 300px;"></div>
 <p>2: Pie with external labels and precision=0.</p>
 <div id="test2" style="width: 300px; height: 300px;"></div>
-<p>3/4: Two pies with internal and external labels with a constant radius.</p>
-<table border="1"><tr>
-	<td><div id="test3" style="width: 300px; height: 300px;"></div></td>
-	<td><div id="test4" style="width: 300px; height: 300px;"></div></td>
-</tr></table>
-<p>5/6: Pie with internal custom labels and custom colors (#6 is rotated).</p>
-<table border="1"><tr>
-	<td><div id="test5" style="width: 300px; height: 300px;"></div></td>
-	<td><div id="test6" style="width: 300px; height: 300px;"></div></td>
-</tr></table>
+<p>3/4: Two pies with internal and external labels with a constant
+radius.</p>
+<table border="1">
+	<tr>
+		<td>
+		<div id="test3" style="width: 300px; height: 300px;"></div>
+		</td>
+		<td>
+		<div id="test4" style="width: 300px; height: 300px;"></div>
+		</td>
+	</tr>
+</table>
+<p>5/6: Pie with internal custom labels and custom colors (#6 is
+rotated).</p>
+<table border="1">
+	<tr>
+		<td>
+		<div id="test5" style="width: 300px; height: 300px;"></div>
+		</td>
+		<td>
+		<div id="test6" style="width: 300px; height: 300px;"></div>
+		</td>
+	</tr>
+</table>
 <p>7: Degenerated pie with 1 element.</p>
 <div id="test7" style="width: 200px; height: 200px;"></div>
 <p>8: Degenerated pie with 1 positive elements (out of 5).</p>

@@ -3,13 +3,15 @@
 <title>Testing text</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-	@import "../../../../dojo/resources/dojo.css";
-	@import "../../../../dijit/tests/css/dijitTests.css";
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
 </style>
 <!-- SVGWEB { -->
-<meta name="svg.render.forceflash" content="true"/>
+<meta name="svg.render.forceflash" content="true" />
 <script src="svgweb/src/svg.js" data-path="svgweb/src"></script>
-<script src="../../../../dojo/dojo.js" djConfig="isDebug:true,forceGfxRenderer:'svg'" type="text/javascript"></script>
+<script src="../../../../dojo/dojo.js"
+	djConfig="isDebug:true,forceGfxRenderer:'svg'" type="text/javascript"></script>
 <!-- } -->
 <script type="text/javascript">
 dojo.require("dojox.gfx");
@@ -71,9 +73,13 @@ dojo.addOnLoad(makeShapes);
 </script>
 </head>
 <body>
-	<h1>dojox.gfx Text test</h1>
+<h1>dojox.gfx Text test</h1>
 <div id="test" style="width: 500px; height: 500px;"></div>
-<div><button onclick="surface.clear();">Clear</button>&nbsp;<button onclick="getSizes();">Get sizes</button></div>
+<div>
+<button onclick="surface.clear();">Clear</button>
+&nbsp;
+<button onclick="getSizes();">Get sizes</button>
+</div>
 <p id="sizes">&nbsp;</p>
 <p>That's all Folks!</p>
 </body>

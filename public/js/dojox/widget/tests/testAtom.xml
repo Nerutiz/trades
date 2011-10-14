@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en" xml:base="http://www.dojocampus.org/explorer">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"
+	xml:base="http://www.dojocampus.org/explorer">
 	<title type="text">DojoCampus Feature Explorer: Latest Demos</title>
 	<subtitle type="text">The latest demos from the Dojo toolkit</subtitle>
 	<generator uri="http://dojocampus.org/" version="MU">DojoCampus</generator>
 	<link rel="alternate" type="text/html" href="http://dojocampus.org/explorer" />
 	<id>http://www.dojocampus.org/explorer/featureexplorer/latestDemos.xml</id>
-	<link rel="self" type="application/atom+xml" href="http://www.dojocampus.org/explorer/featureexplorer/latestDemos.xml" />
+	<link rel="self" type="application/atom+xml"
+		href="http://www.dojocampus.org/explorer/featureexplorer/latestDemos.xml" />
 
 	<updated>2008-06-11T17:33:29+02:00</updated>
 	<entry>
@@ -15,7 +17,8 @@
 		</author>
 		<title type="text">Dojox / Widgets / Iterator / Data Store</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Widgets_Iterator_Data%20Store"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Widgets_Iterator_Data%20Store" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Widgets_Iterator_Data%20Store</id>
 		<updated>2008-06-11T17:33:29+02:00</updated>
 		<published>2008-06-11T17:33:29+02:00</published>
@@ -56,7 +59,8 @@ in the data store.
 		</author>
 		<title type="text">Dojox / Widgets / SortList / From Data Store</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_From%20Data%20Store"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_From%20Data%20Store" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_From%20Data%20Store</id>
 		<updated>2008-06-11T17:33:29+02:00</updated>
 		<published>2008-06-11T17:33:29+02:00</published>
@@ -92,7 +96,8 @@ populate it with data from a data store.
 		</author>
 		<title type="text">Dojox / Widgets / SortList / From Markup</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_From%20Markup"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_From%20Markup" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_From%20Markup</id>
 		<updated>2008-06-11T17:33:29+02:00</updated>
 		<published>2008-06-11T17:33:29+02:00</published>
@@ -138,7 +143,8 @@ sorts the HTML elements already present in the UL list.
 		</author>
 		<title type="text">Dojox / Widgets / SortList / Custom Sort</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_Custom%20Sort"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_Custom%20Sort" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Widgets_SortList_Custom%20Sort</id>
 		<updated>2008-06-11T17:33:29+02:00</updated>
 		<published>2008-06-11T17:33:29+02:00</published>
@@ -203,7 +209,8 @@ numbers based on their numerical value rather than their alphabetical value.
 		</author>
 		<title type="text">Dojox / Layout / Resize Handle / Animated</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Layout_Resize%20Handle_Animated"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Layout_Resize%20Handle_Animated" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Layout_Resize%20Handle_Animated</id>
 		<updated>2008-06-11T17:33:28+02:00</updated>
 		<published>2008-06-11T17:33:28+02:00</published>
@@ -276,7 +283,8 @@ numbers based on their numerical value rather than their alphabetical value.
 		</author>
 		<title type="text">Dojox / Layout / ScrollPane / Programmatic</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Layout_ScrollPane_Programmatic"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Layout_ScrollPane_Programmatic" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Layout_ScrollPane_Programmatic</id>
 		<updated>2008-06-11T17:33:28+02:00</updated>
 		<published>2008-06-11T17:33:28+02:00</published>
@@ -413,7 +421,8 @@ using the style attribute.
 		</author>
 		<title type="text">Dojox / Layout / Resize Handle / X Axis</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Layout_Resize%20Handle_X%20Axis"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Layout_Resize%20Handle_X%20Axis" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Layout_Resize%20Handle_X%20Axis</id>
 		<updated>2008-06-11T17:33:28+02:00</updated>
 		<published>2008-06-11T17:33:28+02:00</published>
@@ -460,7 +469,8 @@ with resizing only on the X Axis.
 		</author>
 		<title type="text">Dojox / Widgets / Color Picker / Basic</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Widgets_Color%20Picker_Basic"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Widgets_Color%20Picker_Basic" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Widgets_Color%20Picker_Basic</id>
 		<updated>2008-06-11T17:33:28+02:00</updated>
 		<published>2008-06-11T17:33:28+02:00</published>
@@ -499,7 +509,8 @@ and how to attach an event to be notified of the selected color.
 		</author>
 		<title type="text">Dojox / Layout / ScrollPane / Vertical</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Layout_ScrollPane_Vertical"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Layout_ScrollPane_Vertical" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Layout_ScrollPane_Vertical</id>
 		<updated>2008-06-11T17:33:28+02:00</updated>
 		<published>2008-06-11T17:33:28+02:00</published>
@@ -620,7 +631,8 @@ using the style attribute.
 		</author>
 		<title type="text">Dojox / Widgets / Color Picker / Customized</title>
 
-		<link rel="alternate" type="text/html" href="http://www.dojocampus.org/explorer#Dojox_Widgets_Color%20Picker_Customized"/>
+		<link rel="alternate" type="text/html"
+			href="http://www.dojocampus.org/explorer#Dojox_Widgets_Color%20Picker_Customized" />
 		<id>http://www.dojocampus.org/explorer#Dojox_Widgets_Color%20Picker_Customized</id>
 		<updated>2008-06-11T17:33:28+02:00</updated>
 		<published>2008-06-11T17:33:28+02:00</published>

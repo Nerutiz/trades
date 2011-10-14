@@ -5,18 +5,37 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>Chart 2D: fireEvent test</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	@import "../../../dijit/themes/tundra/tundra.css";
+@import "../../../dojo/resources/dojo.css";
 
-	.dojoxLegendNode {border: 1px solid #ccc; margin: 5px 10px 5px 10px; padding: 3px}
-	.dojoxLegendText {vertical-align: text-top; padding-right: 10px}
+@import "../../../dijit/tests/css/dijitTests.css";
 
-    .events {font-size: 11pt;}
-    .events th, .events td {padding: 0.25em 1em;}
-    .events th {font-weight: bold;}
+@import "../../../dijit/themes/tundra/tundra.css";
+
+.dojoxLegendNode {
+	border: 1px solid #ccc;
+	margin: 5px 10px 5px 10px;
+	padding: 3px
+}
+
+.dojoxLegendText {
+	vertical-align: text-top;
+	padding-right: 10px
+}
+
+.events {
+	font-size: 11pt;
+}
+
+.events th,.events td {
+	padding: 0.25em 1em;
+}
+
+.events th {
+	font-weight: bold;
+}
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 dojo.require("dijit.form.Button");
 dojo.require("dijit.form.Select");
@@ -158,54 +177,79 @@ fireEvent = function(type){
 
 <h1>Chart 2D: fireEvent test</h1>
 
-<p>
-    <span>Plot:&nbsp;</span>
-    <select dojoType="dijit.form.Select" id="plot" onChange="changePlot()">
-        <option value="Columns">Columns</option>
-        <option value="ClusteredColumns">ClusteredColumns</option>
-        <option value="StackedColumns">StackedColumns</option>
-        <option value="Bars">Bars</option>
-        <option value="ClusteredBars">ClusteredBars</option>
-        <option value="StackedBars">StackedBars</option>
-        <option value="Lines">Lines</option>
-        <option value="StackedAreas">StackedAreas</option>
-        <option value="Pie">Pie</option>
-    </select>
-</p>
+<p><span>Plot:&nbsp;</span> <select dojoType="dijit.form.Select"
+	id="plot" onChange="changePlot()">
+	<option value="Columns">Columns</option>
+	<option value="ClusteredColumns">ClusteredColumns</option>
+	<option value="StackedColumns">StackedColumns</option>
+	<option value="Bars">Bars</option>
+	<option value="ClusteredBars">ClusteredBars</option>
+	<option value="StackedBars">StackedBars</option>
+	<option value="Lines">Lines</option>
+	<option value="StackedAreas">StackedAreas</option>
+	<option value="Pie">Pie</option>
+</select></p>
 
 <table class="events" border="1">
-    <thead>
-        <tr>
-            <th>Plot</th><th>Event</th><th>Event Object</th><th>H. axis</th><th>V. axis</th><th>Series</th><th>Index</th><th>X value</th><th>Y value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr id="def">
-            <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
-        </tr>
-        <tr id="emp">
-            <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>Plot</th>
+			<th>Event</th>
+			<th>Event Object</th>
+			<th>H. axis</th>
+			<th>V. axis</th>
+			<th>Series</th>
+			<th>Index</th>
+			<th>X value</th>
+			<th>Y value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="def">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr id="emp">
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
 </table>
 
-<p>
-    <span>Fire event:&nbsp;</span>
-    <select dojoType="dijit.form.Select" id="series">
-        <option value="Series 1">Series 1</option>
-        <option value="Series 2">Series 2</option>
-        <option value="Series 3">Series 3</option>
-        <option value="Series 4">Series 4</option>
-        <option value="Series 5">Series 5</option>
-    </select>
-    <span>&nbsp;on index:&nbsp;</span>
-	<input dojoType="dijit.form.NumberSpinner" id="index" value="0" constraints="{min: 0, max: 9, fractional: false}" style="width: 5em;">
-    &nbsp;<button dojoType="dijit.form.Button" onClick="fireEvent('onmouseover')">onmouseover</button>
-    &nbsp;<button dojoType="dijit.form.Button" onClick="fireEvent('onmouseout')">onmouseout</button>
-    &nbsp;<button dojoType="dijit.form.Button" onClick="fireEvent('onclick')">onclick</button>
+<p><span>Fire event:&nbsp;</span> <select
+	dojoType="dijit.form.Select" id="series">
+	<option value="Series 1">Series 1</option>
+	<option value="Series 2">Series 2</option>
+	<option value="Series 3">Series 3</option>
+	<option value="Series 4">Series 4</option>
+	<option value="Series 5">Series 5</option>
+</select> <span>&nbsp;on index:&nbsp;</span> <input
+	dojoType="dijit.form.NumberSpinner" id="index" value="0"
+	constraints="{min: 0, max: 9, fractional: false}" style="width: 5em;">
+&nbsp;
+<button dojoType="dijit.form.Button" onClick="fireEvent('onmouseover')">onmouseover</button>
+&nbsp;
+<button dojoType="dijit.form.Button" onClick="fireEvent('onmouseout')">onmouseout</button>
+&nbsp;
+<button dojoType="dijit.form.Button" onClick="fireEvent('onclick')">onclick</button>
 </p>
 
-<p><em>Warning: the pie chart shows only the last series (Series 5).</em></p>
+<p><em>Warning: the pie chart shows only the last series
+(Series 5).</em></p>
 
 <div id="test" style="width: 600px; height: 400px;"></div>
 <div id="legend"></div>

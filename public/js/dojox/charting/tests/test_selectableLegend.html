@@ -1,35 +1,42 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Chart: Selectable Legend test</title>
-        <style type="text/css">
-            @import "../../../dojo/resources/dojo.css";
-            @import "../../../dijit/tests/css/dijitTests.css";
-            @import "../../../dijit/themes/claro/claro.css";
-			@import "../resources/Legend.css";
-        </style>
-        <style>
-			.bars{
-				width:300px;
-				height:200px;
-			}
-			.columns{
-				width:300px;
-				height:250px;
-			}
-			.pie {
-				width:500px;
-				height:300px;
-			}
-			.bubble{
-				width:320px;
-				height:300px;
-			}
-        </style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chart: Selectable Legend test</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-        <script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-        <script type="text/javascript">
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/claro/claro.css";
+
+@import "../resources/Legend.css";
+</style>
+<style>
+.bars {
+	width: 300px;
+	height: 200px;
+}
+
+.columns {
+	width: 300px;
+	height: 250px;
+}
+
+.pie {
+	width: 500px;
+	height: 300px;
+}
+
+.bubble {
+	width: 320px;
+	height: 300px;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
             dojo.require("dijit.dijit");
             dojo.require("dojox.charting.Chart");
             dojo.require("dojox.charting.axis2d.Default");
@@ -177,73 +184,73 @@
 			})
         
         </script>
-    </head>
-    <body class="claro">
-		<h1>Chart: Selectable Legend</h1>
-		<h3>Click the legends</h3>
-		<div style="clear:both;">
-		<div style="float:left;">
-		<h2>1.Bars</h2>
-		<div id="bars" class="bars"></div>
-		<div id="barsLegend"></div>
-		</div>
-		<div style="float:left;">
-		<h2>2.Clustered Bars</h2>
-		<div id="clusteredBars" class="bars"></div>
-		<div id="clusteredBarsLegend"></div>
-		</div>
-		<div style="float:left;">
-		<h2>3.Stacked Bars</h2>
-		<div id="stackedBars" class="bars"></div>
-		<div id="stackedBarsLegend"></div>
-		</div>
-		<div style="float:left;">
-		<h2>4.Stacked Area</h2>
-		<div id="stackedArea" class="bars"></div>
-		<div id="stackedAreaLegend"></div>
-		</div>
-		</div>
-		
-		
-		<div style="clear:both;">
-		<div style="float:left;">
-		<h2>5.Columns</h2>
-		<div id="columns" class="columns"></div>
-		<div id="columnsLegend"></div>
-		</div>
-		<div style="float:left;">
-		<h2>6.Clustered Columns</h2>
-		<div id="clusteredColumns" class="columns"></div>
-		<div id="clusteredColumnsLegend"></div>
-		</div>
-		<div style="float:left;">
-		<h2>7.Stacked Columns</h2>
-		<div id="stackedColumns" class="columns"></div>
-		<div id="stackedColumnsLegend"></div>
-		</div>
-		<div style="float:left;">
-		<h2>8.Lines&Columns</h2>
-		<div id="linesColumns" class="columns"></div>
-		<div id="linesColumnsLegend"></div>
-		</div>
-		</div>
-		
-		<div style="clear:both;">
-		<div style="float:left;">
-		<h2>9.Pie</h2>
-		<div id="pie" class="pie" style="float:left;"></div>
-		<div style="float:left;">
-		<div id="pieLegend"></div>
-		</div>
-		</div>
-		<div style="float:left;margin-left:40px">
-		<h2>10.Bubble</h2>
-		<div id="bubble" class="bubble" style="float:left;"></div>
-		<div style="float:left;">
-		<div id="bubbleLegend"></div>
-		</div>
-		</div>
-		</div>
+</head>
+<body class="claro">
+<h1>Chart: Selectable Legend</h1>
+<h3>Click the legends</h3>
+<div style="clear: both;">
+<div style="float: left;">
+<h2>1.Bars</h2>
+<div id="bars" class="bars"></div>
+<div id="barsLegend"></div>
+</div>
+<div style="float: left;">
+<h2>2.Clustered Bars</h2>
+<div id="clusteredBars" class="bars"></div>
+<div id="clusteredBarsLegend"></div>
+</div>
+<div style="float: left;">
+<h2>3.Stacked Bars</h2>
+<div id="stackedBars" class="bars"></div>
+<div id="stackedBarsLegend"></div>
+</div>
+<div style="float: left;">
+<h2>4.Stacked Area</h2>
+<div id="stackedArea" class="bars"></div>
+<div id="stackedAreaLegend"></div>
+</div>
+</div>
 
-    </body>
+
+<div style="clear: both;">
+<div style="float: left;">
+<h2>5.Columns</h2>
+<div id="columns" class="columns"></div>
+<div id="columnsLegend"></div>
+</div>
+<div style="float: left;">
+<h2>6.Clustered Columns</h2>
+<div id="clusteredColumns" class="columns"></div>
+<div id="clusteredColumnsLegend"></div>
+</div>
+<div style="float: left;">
+<h2>7.Stacked Columns</h2>
+<div id="stackedColumns" class="columns"></div>
+<div id="stackedColumnsLegend"></div>
+</div>
+<div style="float: left;">
+<h2>8.Lines&Columns</h2>
+<div id="linesColumns" class="columns"></div>
+<div id="linesColumnsLegend"></div>
+</div>
+</div>
+
+<div style="clear: both;">
+<div style="float: left;">
+<h2>9.Pie</h2>
+<div id="pie" class="pie" style="float: left;"></div>
+<div style="float: left;">
+<div id="pieLegend"></div>
+</div>
+</div>
+<div style="float: left; margin-left: 40px">
+<h2>10.Bubble</h2>
+<div id="bubble" class="bubble" style="float: left;"></div>
+<div style="float: left;">
+<div id="bubbleLegend"></div>
+</div>
+</div>
+</div>
+
+</body>
 </html>

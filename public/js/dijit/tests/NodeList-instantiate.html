@@ -1,24 +1,29 @@
 <html>
-	<head>
-		<title>dojo.NodeList.instantiate() tests</title>
+<head>
+<title>dojo.NodeList.instantiate() tests</title>
 
-		<style type="text/css">
-			@import "../themes/claro/document.css";
-			@import "css/dijitTests.css";
-			#container { height:200px; }
-		</style>
+<style type="text/css">
+@import "../themes/claro/document.css";
 
-		<!-- required: a default dijit theme: -->
-		<link id="themeStyles" rel="stylesheet" href="../../dijit/themes/claro/claro.css"/>
+@import "css/dijitTests.css";
 
-		<!-- required: dojo.js -->
-		<script type="text/javascript" src="../../dojo/dojo.js"
-			djConfig="isDebug: true"></script>
+#container {
+	height: 200px;
+}
+</style>
 
-		<!-- not needed, for testing alternate themes -->
-		<script type="text/javascript" src="_testCommon.js"></script>
+<!-- required: a default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../dijit/themes/claro/claro.css" />
 
-		<script type="text/javascript">
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
+
+<!-- not needed, for testing alternate themes -->
+<script type="text/javascript" src="_testCommon.js"></script>
+
+<script type="text/javascript">
 			dojo.require("doh.runner");
 			dojo.require("dijit.dijit"); // optimize: load dijit layer
 			dojo.require("dijit._Widget");
@@ -125,33 +130,49 @@
 				doh.run();
 			});
 		</script>
-	</head>
-	<body class="claro">
+</head>
+<body class="claro">
 
-		<h1>dojo.NodeList.instantiate() tests</h1>
+<h1>dojo.NodeList.instantiate() tests</h1>
 
-		<h2>Some simple widgets:</h2>
-		<ul id="list1"
-			><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li
-		></ul>
-		<ul id="list2"
-			><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li><li>inner</li
-		></ul>
+<h2>Some simple widgets:</h2>
+<ul id="list1">
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+</ul>
+<ul id="list2">
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+	<li>inner</li>
+</ul>
 
-		<h2>A TabContainer:</h2>
-		<div id="container"
-			><div>pane1</div
-			><div>pane2</div
-			><div>pane3</div
-		></div>
+<h2>A TabContainer:</h2>
+<div id="container">
+<div>pane1</div>
+<div>pane2</div>
+<div>pane3</div>
+</div>
 
-		<h2>Some Buttons</h2>
-		<div id="buttonTest"
-			><button id="b1">button 1</button
-			><button id="b2">button 2</button
-			><button id="b3">button 3</button
-			><button id="b4">button 4</button
-		></div>
+<h2>Some Buttons</h2>
+<div id="buttonTest">
+<button id="b1">button 1</button>
+<button id="b2">button 2</button>
+<button id="b3">button 3</button>
+<button id="b4">button 4</button>
+</div>
 
-	</body>
+</body>
 </html>

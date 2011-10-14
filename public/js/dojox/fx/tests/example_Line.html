@@ -2,26 +2,29 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>using a dojo._Line and dojo.Animation</title>
-	<style type="text/css">
-	        @import "../../../dojo/resources/dojo.css";
-	        @import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/tests/css/dijitTests.css"; 
-		#node {
-			position:absolute;
-			top:100px; left:100px; 
-			width:400px;
-			height:400px; 
-			padding:12px;
-			-moz-border-radius:5pt;
-			overflow:hidden;
-			border:1px solid #333; 
-		}
-	</style>
-	<script type="text/javascript"
-	        djConfig="parseOnLoad: true, isDebug:false"
-	        src="../../../dojo/dojo.js"></script>
-	<script type="text/javascript">
+<title>using a dojo._Line and dojo.Animation</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+#node {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	width: 400px;
+	height: 400px;
+	padding: 12px;
+	-moz-border-radius: 5pt;
+	overflow: hidden;
+	border: 1px solid #333;
+}
+</style>
+<script type="text/javascript"
+	djConfig="parseOnLoad: true, isDebug:false" src="../../../dojo/dojo.js"></script>
+<script type="text/javascript">
 		dojo.require("dojo.parser");
 		dojo.require("dojo.fx.easing");
 		dojo.require("dojox.gfx");
@@ -72,9 +75,9 @@
 	</script>
 </head>
 <body class="tundra">
-	
-	<h1>an "animateProperty" for dojox.gfx</h1>
-	<div id="node"></div>
+
+<h1>an "animateProperty" for dojox.gfx</h1>
+<div id="node"></div>
 
 </body>
 </html>

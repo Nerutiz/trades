@@ -5,11 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>Chart2D Title</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	@import "../../../dijit/themes/tundra/tundra.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 
 dojo.require("dojox.charting.Chart");
@@ -79,11 +82,11 @@ dojo.addOnLoad(makeObjects);
 <body class="tundra">
 <h1>Chart2D Title</h1>
 <p>Column chart with chart title</p>
-<p>
-    Title Gap:&nbsp;
-    <input dojoType="dijit.form.NumberSpinner" id="titleGap" value="20" constraints="{min: 0, max: 100, fractional: false}" style="width: 8em;">
-    &nbsp;
-    <button dojoType="dijit.form.Button" onClick="updateTitleGap()">Apply</button>
+<p>Title Gap:&nbsp; <input dojoType="dijit.form.NumberSpinner"
+	id="titleGap" value="20"
+	constraints="{min: 0, max: 100, fractional: false}" style="width: 8em;">
+&nbsp;
+<button dojoType="dijit.form.Button" onClick="updateTitleGap()">Apply</button>
 </p>
 <div id="test1" style="width: 400px; height: 300px;"></div>
 <p>Line chart with customized chart title</p>

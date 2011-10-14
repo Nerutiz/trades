@@ -1,5 +1,4 @@
-.tundra .dijitMenu,
-.tundra .dijitMenuBar {
+.tundra .dijitMenu,.tundra .dijitMenuBar {
 	border: 1px solid #7eabcd;
 	margin: 0;
 	padding: 0;
@@ -7,7 +6,7 @@
 }
 
 .tundra .dijitBorderContainer .dijitMenuBar {
-	border:1px solid #ccc;
+	border: 1px solid #ccc;
 }
 
 .tundra .dijitMenuItem {
@@ -19,17 +18,18 @@
 	padding: 4px 5px;
 }
 
-.tundra .dijitMenuPreviousButton, .tundra .dijitMenuNextButton {
+.tundra .dijitMenuPreviousButton,.tundra .dijitMenuNextButton {
 	font-style: italic;
 }
+
 .tundra .dijitMenuItem td {
 	padding: 2px;
 }
 
-.tundra .dijitMenuPassive .dijitMenuItemHover,
-.tundra .dijitMenuItemSelected {
+.tundra .dijitMenuPassive .dijitMenuItemHover,.tundra .dijitMenuItemSelected
+	{
 	background-color: #3559ac;
-	color:#fff;
+	color: #fff;
 }
 
 .tundra .dijitMenuItemIcon {
@@ -44,6 +44,7 @@
 	background-image: url('images/spriteArrows.png');
 	background-position: -14px 0;
 }
+
 .dj_ie6 .tundra .dijitMenuExpand {
 	background-image: url('images/spriteArrows.gif');
 }

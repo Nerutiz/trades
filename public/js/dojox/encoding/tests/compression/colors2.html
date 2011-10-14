@@ -1,15 +1,19 @@
 ﻿<html>
-	<head>
-		<title>Compress colors</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<style type="text/css">
-			@import "../../../../dojo/resources/dojo.css";
-			@import "../../../../dijit/tests/css/dijitTests.css";
-			
-			.pane { margin-top: 2em; }
-		</style>
-		<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true"></script>
-		<script type="text/javascript">
+<head>
+<title>Compress colors</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
+
+.pane {
+	margin-top: 2em;
+}
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
+<script type="text/javascript">
 			dojo.require("dojox.encoding.tests.compression.colors");
 			dojo.require("dojox.encoding.ascii85");
 			dojo.require("dojox.encoding.bits");
@@ -95,10 +99,12 @@
 				dojo.connect(dojo.byId("run"), "onclick", run);
 			});
 		</script>
-	</head>
-	<body>
-		<h1>Compress colors</h1>
-		<p><button id="run">Run</button></p>
-		<div id="status" class="pane"><em>No status yet.</em></div>
-	</body>
+</head>
+<body>
+<h1>Compress colors</h1>
+<p>
+<button id="run">Run</button>
+</p>
+<div id="status" class="pane"><em>No status yet.</em></div>
+</body>
 </html>

@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
 
-		<title>dojox.form.CheckedMultiSelect</title>
+<title>dojox.form.CheckedMultiSelect</title>
 
-		<link rel="stylesheet" id="themeStyles" href="../../../dijit/themes/claro/claro.css">
-		<link rel="stylesheet" href="../resources/CheckedMultiSelect.css">
+<link rel="stylesheet" id="themeStyles"
+	href="../../../dijit/themes/claro/claro.css">
+<link rel="stylesheet" href="../resources/CheckedMultiSelect.css">
 
-		<style>
-			@import url(../../../dojo/resources/dojo.css);
-			@import url(../../../dijit/tests/css/dijitTests.css);
-			.ark { text-decoration: underline; }
-		</style>
+<style>
+@import url(../../../dojo/resources/dojo.css);
 
-	    <script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-		
-		<script src="../../../dijit/tests/_testCommon.js"></script>
+@import url(../../../dijit/tests/css/dijitTests.css);
 
-	    <script type="text/javascript">
+.ark {
+	text-decoration: underline;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+
+<script src="../../../dijit/tests/_testCommon.js"></script>
+
+<script type="text/javascript">
 			dojo.require("doh.runner");
 	        dojo.require("dojo.parser");
 			dojo.require("dojox.form.CheckedMultiSelect");
@@ -226,63 +232,63 @@
 				});
 			});
 		</script>
-	</head>	
-	<body class="claro">
-		<h1 class="testTitle">Test: dojox.form.CheckedMultiSelect</h1>
-		<form dojoType="dijit.form.Form" jsId="form">
-			<h2>Check Boxes</h2>
-			<select jsId="ms1" multiple="true" name="ms1" dojoType="dojox.form.CheckedMultiSelect">
-				<option value="TN">Tennessee</option>
-				<option value="VA" selected="selected">Virginia</option>
-				<option value="WA" selected="selected">Washington</option>
-				<option value="FL">Florida</option>
-				<option value="CA">California</option>
-			</select>
-			<select jsId="ms2" multiple="true" name="ms2" dojoType="dojox.form.CheckedMultiSelect">
-				<option value="UT">Utah</option>
-				<option value="TX" selected="selected">Texas</option>
-				<option value="GA" selected="selected">Georgia</option>
-				<option value="ID">Idaho</option>
-				<option value="WY">Wyoming</option>
-				<option value="OR">Oregon</option>
-				<option value="PA">Pennsylvania</option>
-			</select>
-			<select jsId="ms3" multiple="true" name="ms3" dojoType="dojox.form.CheckedMultiSelect">
-			</select>
-		<hr>
-			<h2>Radio Buttons</h2>
-			<select jsId="ss1" name="ss1" dojoType="dojox.form.CheckedMultiSelect">
-				<option value="TN">Tennessee</option>
-				<option value="VA" selected="selected">Virginia</option>
-				<option value="WA">Washington</option>
-				<option value="FL">Florida</option>
-				<option value="CA">California</option>
-			</select>
-			<select jsId="ss2" name="ss2" value="TX" dojoType="dojox.form.CheckedMultiSelect">
-				<option value="UT">Utah</option>
-				<option value="TX">Texas</option>
-				<option value="GA">Georgia</option>
-				<option value="ID">Idaho</option>
-				<option value="WY">Wyoming</option>
-				<option value="OR">Oregon</option>
-				<option value="PA">Pennsylvania</option>
-			</select>
-			<select jsId="ss3" name="ss3" dojoType="dojox.form.CheckedMultiSelect">
-			</select>
-		<hr>
-			<h4 class="testSubtitle">Store-based</h4>
-			<select jsId="ms4" multiple="true" size="5" name="ms4" store="readStore" dojoType="dojox.form.CheckedMultiSelect">
-			</select>
-			<select jsId="ms5" multiple="true" size="5" name="ms5" store="writeStore" dojoType="dojox.form.CheckedMultiSelect">
-			</select>
-		<hr>
-			<h4 class="testSubtitle">Validation</h4>
-			<select jsId="rq1" multiple="true" required="true" name="rq1" store="readStore" dojoType="dojox.form.CheckedMultiSelect"
-				invalidMessage="You need to select at least one"
-			></select>
-			<button dojoType="dijit.form.Button">
-				Validate
-				<script type='dojo/method' event='onClick'>
+</head>
+<body class="claro">
+<h1 class="testTitle">Test: dojox.form.CheckedMultiSelect</h1>
+<form dojoType="dijit.form.Form" jsId="form">
+<h2>Check Boxes</h2>
+<select jsId="ms1" multiple="true" name="ms1"
+	dojoType="dojox.form.CheckedMultiSelect">
+	<option value="TN">Tennessee</option>
+	<option value="VA" selected="selected">Virginia</option>
+	<option value="WA" selected="selected">Washington</option>
+	<option value="FL">Florida</option>
+	<option value="CA">California</option>
+</select> <select jsId="ms2" multiple="true" name="ms2"
+	dojoType="dojox.form.CheckedMultiSelect">
+	<option value="UT">Utah</option>
+	<option value="TX" selected="selected">Texas</option>
+	<option value="GA" selected="selected">Georgia</option>
+	<option value="ID">Idaho</option>
+	<option value="WY">Wyoming</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+</select> <select jsId="ms3" multiple="true" name="ms3"
+	dojoType="dojox.form.CheckedMultiSelect">
+</select>
+<hr>
+<h2>Radio Buttons</h2>
+<select jsId="ss1" name="ss1" dojoType="dojox.form.CheckedMultiSelect">
+	<option value="TN">Tennessee</option>
+	<option value="VA" selected="selected">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="FL">Florida</option>
+	<option value="CA">California</option>
+</select> <select jsId="ss2" name="ss2" value="TX"
+	dojoType="dojox.form.CheckedMultiSelect">
+	<option value="UT">Utah</option>
+	<option value="TX">Texas</option>
+	<option value="GA">Georgia</option>
+	<option value="ID">Idaho</option>
+	<option value="WY">Wyoming</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+</select> <select jsId="ss3" name="ss3" dojoType="dojox.form.CheckedMultiSelect">
+</select>
+<hr>
+<h4 class="testSubtitle">Store-based</h4>
+<select jsId="ms4" multiple="true" size="5" name="ms4" store="readStore"
+	dojoType="dojox.form.CheckedMultiSelect">
+</select> <select jsId="ms5" multiple="true" size="5" name="ms5"
+	store="writeStore" dojoType="dojox.form.CheckedMultiSelect">
+</select>
+<hr>
+<h4 class="testSubtitle">Validation</h4>
+<select jsId="rq1" multiple="true" required="true" name="rq1"
+	store="readStore" dojoType="dojox.form.CheckedMultiSelect"
+	invalidMessage="You need to select at least one"></select>
+<button dojoType="dijit.form.Button">Validate <script
+	type='dojo/method' event='onClick'>
 					var isvalid = rq1.isValid();
 					console.warn("isvalid?", isvalid, form, form.validate);
 					try{
@@ -292,55 +298,40 @@
 						console.log(e);
 					}
 					console.warn("validated");
-				</script>
-			</button>
-		<hr>
-			<button dojoType="dijit.form.Button">
-				<script type="dojo/method" event="onClick">
+				</script></button>
+<hr>
+<button dojoType="dijit.form.Button"><script type="dojo/method"
+	event="onClick">
 					console.dir(form.get("value"));
-				</script>
-				Get Values
-			</button>
-			<button dojoType="dijit.form.Button">
-				<script type="dojo/method" event="onClick">
+				</script> Get Values</button>
+<button dojoType="dijit.form.Button"><script type="dojo/method"
+	event="onClick">
 					numOptions++;
 					ms3.addOption({value: numOptions + "", label: "Option " + (numOptions)});
-				</script>
-				Add Check Option
-			</button>
-			<button dojoType="dijit.form.Button">
-				<script type="dojo/method" event="onClick">
+				</script> Add Check Option</button>
+<button dojoType="dijit.form.Button"><script type="dojo/method"
+	event="onClick">
 					numOptions++;
 					ss3.addOption({value: numOptions + "", label: "Option " + (numOptions)});
-				</script>
-				Add Radio Option
-			</button>
-			<button dojoType="dijit.form.Button">
-				<script type="dojo/method" event="onClick">
+				</script> Add Radio Option</button>
+<button dojoType="dijit.form.Button"><script type="dojo/method"
+	event="onClick">
 					ms3.set("disabled", !ms3.disabled);
 					ss3.set("disabled", !ss3.disabled);
-				</script>
-				Toggle Disabled
-			</button>
-			<button dojoType="dijit.form.Button">
-				<script type="dojo/method" event="onClick">
+				</script> Toggle Disabled</button>
+<button dojoType="dijit.form.Button"><script type="dojo/method"
+	event="onClick">
 					ms2.set("readOnly", !ms2.readOnly);
 					ss2.set("readOnly", !ss2.readOnly);
-				</script>
-				Toggle Read Only
-			</button>
-			<button dojoType="dijit.form.Button">
-				<script type="dojo/method" event="onClick">
+				</script> Toggle Read Only</button>
+<button dojoType="dijit.form.Button"><script type="dojo/method"
+	event="onClick">
 					ms1.invertSelection(true);
-				</script>
-				Invert Selection
-			</button>
-			<button dojoType="dijit.form.Button">
-				<script type="dojo/method" event="onClick">
+				</script> Invert Selection</button>
+<button dojoType="dijit.form.Button"><script type="dojo/method"
+	event="onClick">
 					console.log(ms1.get("displayedValue"));
-				</script>
-				Get Displayed Value
-			</button>
-		</form>
-	</body>
+				</script> Get Displayed Value</button>
+</form>
+</body>
 </html>

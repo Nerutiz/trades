@@ -12,7 +12,7 @@
 //  /usr/local/php5/bin/php -q makeCix.php > ../resources/dojo.cix
 //
 
-// $Rev: $ 
+// $Rev: $
 $current_version = "1.6.0";
 
 header("Content-type: text/xml");
@@ -54,76 +54,76 @@ $namespace = $f->appendChild($api);
 
 // iterate through our modified array, and make an XML tree of the data:
 foreach ($out as $ns => $data){
-	
-		// each top-level namespace get's it own scope
-		$nsdata = $doc->createElement('scope');
-		$nsdata->setAttribute("ilk","class");
-		$nsdata->setAttribute("name",$ns);
 
-		foreach ($data as $obj => $info){
+	// each top-level namespace get's it own scope
+	$nsdata = $doc->createElement('scope');
+	$nsdata->setAttribute("ilk","class");
+	$nsdata->setAttribute("name",$ns);
+
+	foreach ($data as $obj => $info){
 			
-			$objElm = $doc->createElement('scope');
-			if(!empty($info['type'])){
+		$objElm = $doc->createElement('scope');
+		if(!empty($info['type'])){
 
-				$tt = $info['type'];
-				switch($tt){
-					case "Object" :
-						// inspect this object deeper, but append to namespace:
-						$nsdata->appendChild(dojo_inspect($data[$obj],$obj,$doc, "variable"));
-						break;
-					case "Function" :
-						if($info['classlike']){
-							// inspect deeper, append to namesapce:
-							$nsdata->setAttribute("ilk","class");
-							$nsdata->appendChild(dojo_inspect($data[$obj],$obj,$doc));
-						}else{
-							// functions usually have param data:
-							$objElm->setAttribute("ilk",strtolower($tt));
-							$objElm->setAttribute("name",$obj);
-							if(is_array($info['parameters'])){
-								// generate the signature
-								$sig = $obj."(";
-								foreach($info['parameters'] as $param => $pData){
-									$sig .= $param.",";
-									$paramElm = $doc->createElement('variable');
-									if(!empty($pData['type'])){
-										$paramElm->setAttribute("citdl",$pData['type']);
-									}
-									$paramElm->setAttribute("name",$param);
-									$paramElm->setAttribute("ilk","argument");
-									if($pData['summary']){
-										$paramElm->setAttribute("doc", fix_utf(htmlentities($pData['summary'])));
-									}
-									$objElm -> appendChild($paramElm);
+			$tt = $info['type'];
+			switch($tt){
+				case "Object" :
+					// inspect this object deeper, but append to namespace:
+					$nsdata->appendChild(dojo_inspect($data[$obj],$obj,$doc, "variable"));
+					break;
+				case "Function" :
+					if($info['classlike']){
+						// inspect deeper, append to namesapce:
+						$nsdata->setAttribute("ilk","class");
+						$nsdata->appendChild(dojo_inspect($data[$obj],$obj,$doc));
+					}else{
+						// functions usually have param data:
+						$objElm->setAttribute("ilk",strtolower($tt));
+						$objElm->setAttribute("name",$obj);
+						if(is_array($info['parameters'])){
+							// generate the signature
+							$sig = $obj."(";
+							foreach($info['parameters'] as $param => $pData){
+								$sig .= $param.",";
+								$paramElm = $doc->createElement('variable');
+								if(!empty($pData['type'])){
+									$paramElm->setAttribute("citdl",$pData['type']);
 								}
-								$sig = substr($sig,0,strlen($sig)-1);
-								$sig .= ")";
-								$objElm->setAttribute("signature",$sig);
-								unset($sig);
+								$paramElm->setAttribute("name",$param);
+								$paramElm->setAttribute("ilk","argument");
+								if($pData['summary']){
+									$paramElm->setAttribute("doc", fix_utf(htmlentities($pData['summary'])));
+								}
+								$objElm -> appendChild($paramElm);
 							}
+							$sig = substr($sig,0,strlen($sig)-1);
+							$sig .= ")";
+							$objElm->setAttribute("signature",$sig);
+							unset($sig);
 						}
-						break;
-				}
-				unset($tt);
+					}
+					break;
 			}
-			// pertinent data:
-			if(!empty($info['returns'])){
-				$objElm->setAttribute("returns",htmlentities($info['returns']));
-			}
-			// helpful data:
-			if(!empty($info['summary'])){
-				$objElm->setAttribute("doc", fix_utf(htmlentities($info['summary'])));
-			}
-			
-			// avoid appending this node if we skipped popoulating it (in the case of nsdata->appendCHild())
-			if($objElm->hasAttribute("name")){
-				$nsdata->appendChild($objElm);
-			}
+			unset($tt);
 		}
+		// pertinent data:
+		if(!empty($info['returns'])){
+			$objElm->setAttribute("returns",htmlentities($info['returns']));
+		}
+		// helpful data:
+		if(!empty($info['summary'])){
+			$objElm->setAttribute("doc", fix_utf(htmlentities($info['summary'])));
+		}
+			
+		// avoid appending this node if we skipped popoulating it (in the case of nsdata->appendCHild())
+		if($objElm->hasAttribute("name")){
+			$nsdata->appendChild($objElm);
+		}
+	}
 
-		// and dump all the data to this namesapce
-		$namespace->appendChild($nsdata);	
-	
+	// and dump all the data to this namesapce
+	$namespace->appendChild($nsdata);
+
 }
 
 // append the APi to the document, and print:
@@ -152,12 +152,12 @@ function dojo_inspect($data,$ns,$doc,$t="scope"){
 			case "classlike" :
 			case "examples" :
 			case "private_parent" :
-			case "description" : 
+			case "description" :
 			case "source" :
 			case "style" :
 				break;
 
-			// mmm, duplicated from above:
+				// mmm, duplicated from above:
 			case "parameters" :
 				$sig = $ns."(";
 				foreach($info as $key => $val){
@@ -169,7 +169,7 @@ function dojo_inspect($data,$ns,$doc,$t="scope"){
 				$elm->setAttribute("signature",$sig);
 				break;
 
-			// some pertinant info about this element:
+				// some pertinant info about this element:
 			case "returns" : $elm->setAttribute("returns",htmlentities($info));
 			case "private" : $elm->setAttribute("attributes","private"); break;
 
@@ -181,25 +181,25 @@ function dojo_inspect($data,$ns,$doc,$t="scope"){
 							break;
 						default:
 							if (is_array($info)) {
-							    if ($info["instance"]) {
-								$elm->setAttribute("citdl",$info["instance"]);
-							    }
+								if ($info["instance"]) {
+									$elm->setAttribute("citdl",$info["instance"]);
+								}
 							} else {
-							    $elm->setAttribute("citdl",$info);
+								$elm->setAttribute("citdl",$info);
 							}
 					}
 				}
 				break;
 
-			// ahhh, the blessed summary:
+				// ahhh, the blessed summary:
 			case "summary" : $elm->setAttribute("doc", fix_utf(htmlentities($info)));
-				break;
+			break;
 
 			// just in case we missed something?
 			default :
 				$scope_type = "scope";
 				if (($data[$obj]["instance"] != NULL) ||
-				    ($data[$obj]["type"] == "Object")) {
+				($data[$obj]["type"] == "Object")) {
 					$scope_type = "variable";
 				}
 				$elm->appendChild(dojo_inspect($data[$obj],$obj,$doc,$scope_type));
@@ -219,12 +219,12 @@ function dojo_get_contents_cache($namespace, $file, $forceNew = false){
 	// if the file hasn't been change since the last time, skip parsing it
 	$mtime = dojo_get_file_time($namespace, $file);
 	$cfile = "./cache/".md5($namespace.$file).".".$mtime;
-	
+
 	if(!$forceNew && file_exists($cfile)){
 		// read it from the cache:
 		$cache = file_get_contents($cfile);
 		$data = unserialize($cache);
-		
+
 	}else{
 		// parse the file, and save the cached results:
 		$data = @dojo_get_contents($namespace, $file);
@@ -232,7 +232,7 @@ function dojo_get_contents_cache($namespace, $file, $forceNew = false){
 		$fp = fopen($cfile,"w+");
 		fputs($fp,$cache);
 		fclose($fp);
-		
+
 	}
 	return $data;
 
@@ -259,7 +259,7 @@ function expando_dojo($array){
 						case 8 :
 							fprintf("UNCAUGHT! %s", $item); // way tooooo deep.
 							break;
-						case 7 : 
+						case 7 :
 							$l1 = $list[1];
 							$l2 = $list[2];
 							$l3 = $list[3];
@@ -267,9 +267,9 @@ function expando_dojo($array){
 							$l5 = $list[5];
 							$l6 = $list[6];
 							if ($ret[$namespace][$l1][$l2][$l3][$l4][$l5][$l6] == NULL)
-								$ret[$namespace][$l1][$l2][$l3][$l4][$l5][$l6] = $data;
+							$ret[$namespace][$l1][$l2][$l3][$l4][$l5][$l6] = $data;
 							else
-								$ret[$namespace][$l1][$l2][$l3][$l4][$l5][$l6] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3][$l4][$l5][$l6]);
+							$ret[$namespace][$l1][$l2][$l3][$l4][$l5][$l6] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3][$l4][$l5][$l6]);
 							break;
 						case 6 :
 							$l1 = $list[1];
@@ -278,37 +278,37 @@ function expando_dojo($array){
 							$l4 = $list[4];
 							$l5 = $list[5];
 							if ($ret[$namespace][$l1][$l2][$l3][$l4][$l5] == NULL)
-								$ret[$namespace][$l1][$l2][$l3][$l4][$l5] = $data;
+							$ret[$namespace][$l1][$l2][$l3][$l4][$l5] = $data;
 							else
-								$ret[$namespace][$l1][$l2][$l3][$l4][$l5] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3][$l4][$l5]);
+							$ret[$namespace][$l1][$l2][$l3][$l4][$l5] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3][$l4][$l5]);
 							break;
-						case 5 : 
+						case 5 :
 							$l1 = $list[1];
 							$l2 = $list[2];
 							$l3 = $list[3];
 							$l4 = $list[4];
 							if ($ret[$namespace][$l1][$l2][$l3][$l4] == NULL)
-								$ret[$namespace][$l1][$l2][$l3][$l4] = $data;
+							$ret[$namespace][$l1][$l2][$l3][$l4] = $data;
 							else
-								$ret[$namespace][$l1][$l2][$l3][$l4] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3][$l4]);
+							$ret[$namespace][$l1][$l2][$l3][$l4] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3][$l4]);
 							break;
 						case 4 :
 							$l1 = $list[1];
 							$l2 = $list[2];
 							$l3 = $list[3];
 							if ($ret[$namespace][$l1][$l2][$l3] == NULL)
-								$ret[$namespace][$l1][$l2][$l3] = $data;
+							$ret[$namespace][$l1][$l2][$l3] = $data;
 							else
-								$ret[$namespace][$l1][$l2][$l3] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3]);
+							$ret[$namespace][$l1][$l2][$l3] = array_merge_recursive($data, $ret[$namespace][$l1][$l2][$l3]);
 							break;
 						case 3 :
 							$l1 = $list[1];
 							$l2 = $list[2];
-							
+								
 							if ($ret[$namespace][$l1][$l2] == NULL)
-								$ret[$namespace][$l1][$l2] = $data;
+							$ret[$namespace][$l1][$l2] = $data;
 							else
-								$ret[$namespace][$l1][$l2] = array_merge_recursive($data, $ret[$namespace][$l1][$l2]);
+							$ret[$namespace][$l1][$l2] = array_merge_recursive($data, $ret[$namespace][$l1][$l2]);
 							break;
 						case 2 :
 							$l1 = $list[1];
@@ -317,9 +317,9 @@ function expando_dojo($array){
 					}
 					break;
 			}
-			
+				
 		}
-		
+
 	}
 	return $ret;
 }

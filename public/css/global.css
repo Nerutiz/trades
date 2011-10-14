@@ -1,39 +1,40 @@
 @CHARSET "UTF-8";
 
-td{
+td {
 	padding: 5px;
 }
 
-form td:first-child{
+form td:first-child {
 	text-align: right;
-	vertical-align:top;
+	vertical-align: top;
 }
 
-form td:last-child{
+form td:last-child {
 	text-align: right;
 }
 
-form label{
-	top:5px;
-	position:relative;
+form label {
+	top: 5px;
+	position: relative;
 }
 
-ul{
+ul {
 	padding: 0px;
 	margin: 0px;
 }
 
-li{
+li {
 	padding: 3px;
 }
 
-.imagesBlock img{
+.imagesBlock img {
 	margin: 5px 10px;
 }
-.errors{
+
+.errors {
 	list-style: none;
 	font-size: 11px;
-	color:red;
+	color: red;
 }
 
 table .dijitTextBox {
@@ -44,87 +45,87 @@ form .dijitTextBoxFocused {
 	outline: 0px;
 }
 
-form .dijitPlaceHolder{
+form .dijitPlaceHolder {
 	color: #777;
 	font-size: 12px;
 	font-style: normal;
-	top:2px;
-	
+	top: 2px;
 }
 
-table td, table th{
+table td,table th {
 	padding: 5px;
-	text-align:left;
+	text-align: left;
 }
 
-table{
+table {
 	border-collapse: collapse;
 }
 
-.mythingsTable tr{
-	cursor:pointer;
+.mythingsTable tr {
+	cursor: pointer;
 }
 
-.mythingsTable tr:hover{
+.mythingsTable tr:hover {
 	background: #bfbfbf;
 }
 
-.tradesFileUploader{
-	width:auto !important;
+.tradesFileUploader {
+	width: auto !important;
 	display: inline-block;
-	cursor:pointer;
+	cursor: pointer;
 }
 
-.tradesFileUploader input{
-	cursor:pointer !important;
+.tradesFileUploader input {
+	cursor: pointer !important;
 }
 
-.tradesFileUploader:hover .dijitButtonText{
+.tradesFileUploader:hover .dijitButtonText {
 	text-decoration: underline;
 }
 
-.tradesFileUploader span{
+.tradesFileUploader span {
 	border: 0px !important;
-	font-size:12px;
+	font-size: 12px;
 	padding: 0px !important;
 	background: transparent !important;
 	box-shadow: none !important;
 	-webkit-box-shadow: none !important;
-	-moz-box-shadow:none !important;
+	-moz-box-shadow: none !important;
 	color: #3E5787;
-	cursor:pointer;
+	cursor: pointer;
 }
 
-.imageContainer{
+.imageContainer {
 	position: relative;
 	display: inline-block;
+	text-align: center;
 }
 
-.deleteImage{
+.deleteImage {
 	background: url("../images/deleteX.png");
 	display: inline-block;
 	position: absolute;
 	width: 14px;
 	height: 14px;
-	top:0px;
+	top: 0px;
 	right: 0px;
 	display: none;
 }
 
-.imageContainer:hover .deleteImage{
+.imageContainer:hover .deleteImage {
 	display: inline-block;
 }
 
-.menu{
+.menu {
 	margin-left: 160px;
 }
 
-.menu a{
-	 display: inline-block;
-	 padding: 5px;
+.menu a {
+	display: inline-block;
+	padding: 5px;
 }
 
-.logo{
+.logo {
 	background: url("../images/logo.png");
 	width: 154px;
 	height: 97px;
@@ -132,16 +133,109 @@ table{
 	top: -12px;
 }
 
-.header{
+.header {
 	margin-top: 15px;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-box-shadow: 0 0 5px 5px #888;
-	-webkit-box-shadow: 0 0 5px 5px#888;
+	-webkit-box-shadow: 0 0 5px 5px #888;
 	box-shadow: 0 0 5px 5px #888;
 	padding: 5px;
 	min-height: 60px;
 	vertical-align: bottom;
 	position: relative;
+}
+
+.sides{
+	display:inline-block;
+	width:45%;
+	padding: 5px;
+}
+
+.sides table{
+	width: 100%;
+}
+
+.sidesContainer{
+	margin-top: 25px;
+	position: relative;
+}
+
+.arrow{
+	display: inline-block;
+	width:10px;
+	height:10px;
+	background: url(../images/arrow.png);
+	position:absolute;
+	left:50px;
+	top:81px;
+}
+
+.tooltip{
+	visibility: hidden;
+}
+
+.imageContainer:hover .tooltip{
+	visibility: visible;
+}
+
+.baloon{
+	cursor:pointer;
+	position:absolute;
+	padding: 4px;
+	top:90px;
+	left:5px;
+	background: #4d4d4d;
+	opacity:0.84;
+	border-radius:14px;
+	color:#fff;
+	font-size: 11px;
+}
+
+.mainImage{
+	-moz-box-shadow: 2px 2px 2px #4955f5;
+	-webkit-box-shadow: 2px 2px 2px #4955f5;
+	box-shadow: 2px 2px 2px #4955f5;
+}
+
+.targetNodes{
+	margin:3px;
+	vertical-align: middle;
+}
+
+.dropPane{
+	position: fixed;
+	left: 0px;
+	bottom:100px;
+}
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: move;
+}
+
+.logoutBlock{
+	float:right;
+}
+
+.logoutBlock span{
+	font-size:14px;
+	font-style:italic;
+	padding: 0px 5px; 
+}
+
+.logoutBlock a{
+	font-size:14px;
+}
+
+.thingsTable tr:hover{
+	cursor:pointer;
+}
+
+.thingsTable thead tr:hover{
+	cursor:default;
 }

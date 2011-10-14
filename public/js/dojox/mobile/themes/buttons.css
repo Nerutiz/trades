@@ -10,8 +10,10 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #366EDF;
-	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9), to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC));
+	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9),
+		to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC) );
 }
+
 .mblDarkBlueMinusButton {
 	position: relative;
 	width: 22px;
@@ -23,8 +25,10 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #5877A2;
-	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 }
+
 .mblRedMinusButton {
 	position: relative;
 	width: 22px;
@@ -36,9 +40,12 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #C9404B;
-	background: -webkit-gradient(linear, left top, left bottom, from(#D3656D), to(#BC1320), color-stop(0.5, #C9404B), color-stop(0.5, #BC1421));
+	background: -webkit-gradient(linear, left top, left bottom, from(#D3656D),
+		to(#BC1320), color-stop(0.5, #C9404B), color-stop(0.5, #BC1421) );
 }
-.mblBlueMinusButton DIV, .mblDarkBlueMinusButton DIV, .mblRedMinusButton DIV {
+
+.mblBlueMinusButton DIV,.mblDarkBlueMinusButton DIV,.mblRedMinusButton DIV
+	{
 	position: absolute;
 	top: 7px;
 	left: 7px;
@@ -62,8 +69,10 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #366EDF;
-	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9), to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC));
+	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9),
+		to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC) );
 }
+
 .mblDarkBluePlusButton {
 	position: relative;
 	width: 22px;
@@ -75,8 +84,10 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #5877A2;
-	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 }
+
 .mblRedPlusButton {
 	position: relative;
 	width: 22px;
@@ -88,9 +99,12 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #C9404B;
-	background: -webkit-gradient(linear, left top, left bottom, from(#D3656D), to(#BC1320), color-stop(0.5, #C9404B), color-stop(0.5, #BC1421));
+	background: -webkit-gradient(linear, left top, left bottom, from(#D3656D),
+		to(#BC1320), color-stop(0.5, #C9404B), color-stop(0.5, #BC1421) );
 }
-.mblBluePlusButton DIV, .mblDarkBluePlusButton DIV, .mblRedPlusButton DIV {
+
+.mblBluePlusButton DIV,.mblDarkBluePlusButton DIV,.mblRedPlusButton DIV
+	{
 	position: absolute;
 	top: 7px;
 	left: 7px;
@@ -101,7 +115,8 @@
 	background-color: white;
 	border-top: 1px solid #4A5A71;
 }
-.mblBluePlusButton P, .mblDarkBluePlusButton P, .mblRedPlusButton P {
+
+.mblBluePlusButton P,.mblDarkBluePlusButton P,.mblRedPlusButton P {
 	position: absolute;
 	top: 4px;
 	left: 10px;
@@ -123,8 +138,10 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #D6D3D6;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EFF3EF), to(#BDBEBD));
+	background: -webkit-gradient(linear, left top, left bottom, from(#EFF3EF),
+		to(#BDBEBD) );
 }
+
 .mblCheckOnButton DIV {
 	position: absolute;
 	top: 15px;
@@ -138,6 +155,7 @@
 	-webkit-border-radius: 2px;
 	-webkit-transform: rotate(50deg);
 }
+
 .mblCheckOnButton P {
 	position: absolute;
 	top: 11px;
@@ -163,8 +181,10 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	background-color: #D6D3D6;
-	background: -webkit-gradient(linear, left top, left bottom, from(#EFF3EF), to(#BDBEBD));
+	background: -webkit-gradient(linear, left top, left bottom, from(#EFF3EF),
+		to(#BDBEBD) );
 }
+
 .mblCheckOffButton DIV {
 	position: absolute;
 	top: 11px;
@@ -177,6 +197,7 @@
 	-webkit-border-radius: 2px;
 	-webkit-transform: rotate(-50deg);
 }
+
 .mblCheckOffButton P {
 	position: absolute;
 	top: 15px;

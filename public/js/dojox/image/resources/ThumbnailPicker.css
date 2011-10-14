@@ -1,7 +1,6 @@
 /* dojox.image.ThumbnailPicker */
-
 .thumbWrapper .thumbNav {
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
 	background-position: center;
 	padding-top: 1px;
 	width: 30px;
@@ -23,17 +22,23 @@
 }
 
 .thumbOuter .enabled {
-	background: transparent url("images/buttons.png") no-repeat center center;
+	background: transparent url("images/buttons.png") no-repeat center
+		center;
 }
-.dj_ie6 .thumbOuter .enabled { background-image: url("images/buttons.gif"); }
+
+.dj_ie6 .thumbOuter .enabled {
+	background-image: url("images/buttons.gif");
+}
 
 .thumbOuter .thumbNav img {
 	width: 48px;
 	height: 75px;
 }
+
 .thumbOuter .thumbClickable div {
 	cursor: pointer;
 }
+
 .thumbOuter .prevHoriz {
 	background-position: -96px 12px;
 	position: relative;
@@ -46,26 +51,27 @@
 	position: relative;
 	float: right;
 	height: 100%;
-/*	margin-top: -85px;*/
+	/*	margin-top: -85px;*/
 }
+
 .thumbOuter .prevVert {
 	background-position: 0px 0px;
 	height: 48px;
-	width:48px;
-	margin-left:24px;
+	width: 48px;
+	margin-left: 24px;
 }
 
 .thumbOuter .nextVert {
 	background-position: -48px 0px;
 	height: 48px;
-	width:48px;
-	margin-left:24px;
+	width: 48px;
+	margin-left: 24px;
 }
 
 .thumbWrapper img {
 	height: 75px;
 	max-width: 100px;
-	width: expression(this.width > 100 ? 100: true);/*IE Hack*/
+	width: expression(this.width >   100 ?   100 :   true); /*IE Hack*/
 }
 
 .thumbWrapper .thumbNav .imageGalleryThumb {
@@ -77,11 +83,11 @@
 	width: 0px;
 	margin-left: 2px;
 	height: 5px;
-	font-size: 1%;/*IE hack to get around the Empty-Div bug*/
+	font-size: 1%; /*IE hack to get around the Empty-Div bug*/
 }
 
 .thumbWrapper .thumbLoaded {
-	background-color: transparent;	
+	background-color: transparent;
 }
 
 .thumbScroller {
@@ -98,7 +104,7 @@
 
 .thumbVert .thumbScroller {
 	height: 500px;
-	width: 100px;	
+	width: 100px;
 }
 
 .thumbWrapper {
@@ -109,8 +115,9 @@
 	width: 100px;
 	height: 10px;
 }
+
 .thumbHoriz .thumbWapper {
-	height:85px;
+	height: 85px;
 	width: 10px;
 }
 
@@ -126,4 +133,3 @@
 .thumbWrapper.thumbVert div {
 	padding-bottom: 2px;
 }
-

@@ -3,8 +3,9 @@
 <title>dojox.gfx: interactive analog clock</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
 </style>
 <script type="text/javascript" src="../../../dojo/dojo.js"></script>
 <script type="text/javascript">
@@ -235,7 +236,9 @@ dojo.addOnLoad(makeShapes);
 
 </script>
 <style type="text/css">
-.movable { cursor: hand; }
+.movable {
+	cursor: hand;
+}
 </style>
 </head>
 <body>
@@ -244,6 +247,8 @@ dojo.addOnLoad(makeShapes);
 <p>Warning: Canvas renderer doesn't implement event handling.</p>
 <div id="gfx_holder" style="width: 385px; height: 385px;"></div>
 <p>Current time: <span id="time"></span>.</p>
-<p><button id="reset">Reset</button></p>
+<p>
+<button id="reset">Reset</button>
+</p>
 </body>
 </html>

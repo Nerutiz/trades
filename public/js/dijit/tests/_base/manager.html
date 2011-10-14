@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>Dijit manager unit test</title>
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../css/dijitTests.css";
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		data-dojo-config="isDebug: true"></script>
-	<script type="text/javascript" src="../_testCommon.js"></script>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Dijit manager unit test</title>
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-	<script type="text/javascript">
+@import "../css/dijitTests.css";
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	data-dojo-config="isDebug: true"></script>
+<script type="text/javascript" src="../_testCommon.js"></script>
+
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dojo.parser");
 		dojo.require("dijit.dijit");
@@ -250,15 +251,19 @@
 	</script>
 </head>
 <body>
-	<h1>Dijit Manager Unit Test</h1>
-	<div id="one" data-dojo-type="foo" data-dojo-props='name:"bob", attr1:10, attr2:10'></div>
-	<div id="two" data-dojo-type="foo" data-dojo-props='name:"is", attr1:5, attr2:10'></div>
-	<div id="three" data-dojo-type="bar" data-dojo-props='name:"your", attr1:5, attr2:5'>
-		<div id="three.one">
-			<div id="three.one.one"></div>
-		</div>
-	</div>
-	<div id="four" data-dojo-type="bar" data-dojo-props='name:"uncle", attr1:10, attr2:5'></div>
-	<div id="not-a-widget"></div>
+<h1>Dijit Manager Unit Test</h1>
+<div id="one" data-dojo-type="foo"
+	data-dojo-props='name:"bob", attr1:10, attr2:10'></div>
+<div id="two" data-dojo-type="foo"
+	data-dojo-props='name:"is", attr1:5, attr2:10'></div>
+<div id="three" data-dojo-type="bar"
+	data-dojo-props='name:"your", attr1:5, attr2:5'>
+<div id="three.one">
+<div id="three.one.one"></div>
+</div>
+</div>
+<div id="four" data-dojo-type="bar"
+	data-dojo-props='name:"uncle", attr1:10, attr2:5'></div>
+<div id="not-a-widget"></div>
 </body>
 </html>

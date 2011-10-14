@@ -2,13 +2,14 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>dojox.av.FLAudio</title>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
+<title>dojox.av.FLAudio</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-    <script>
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+
+<script>
 		passthrough = function(msg){
 			//for catching messages from Flash
 			if(window.console){
@@ -17,8 +18,8 @@
 		}
 		var djConfig={isDebug:true, parseOnLoad: true, debugAtAllCosts:false};
     </script>
-	<script type="text/javascript" src="../../../dojo/dojo.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="../../../dojo/dojo.js"></script>
+<script type="text/javascript">
 		dojo.require("dojox.av.FLAudio");
 		dojo.require("dojo.parser");
 
@@ -69,34 +70,39 @@
 
 
 	</script>
-    <style>
-		html, body{
-			height:100%;
-			padding:0;
-		}
-		#aud{
-			width:320px;
-			margin:0px auto;
-		}
-	</style>
+<style>
+html,body {
+	height: 100%;
+	padding: 0;
+}
+
+#aud {
+	width: 320px;
+	margin: 0px auto;
+}
+</style>
 </head>
 <body>
-	<div style="margin:10px;">
-		<h2>dojox.av.FLAudio</h2>
-		<div id="aud"></div>
-		<button onclick="mixer.doPlay({index:0, volume:1, pan:-1})">Ola Left</button>
-		<button onclick="mixer.doPlay({index:0, volume:.1})">Ola Quiet</button>
-		<button onclick="mixer.doPlay({index:1})">Hio</button>
-		<button onclick="mixer.doPlay({id:'Ola', volume:1, pan:-1}); mixer.doPlay({id:'Hio', volume:1, pan:1});">Ola Left - Hio Right</button>
-		<button onclick="mixer.doPlay({index:0, volume:1})">Ola Loud</button>
-		<button onclick="mixer.doPlay({id:'Ola', volume:1, pan:1})">Ola Right</button>
-		<br/>
-		<button onclick="mixer.doPlay({id:'Wah', volume:.7, pan:1})">Play FuzzWah</button>
-		<button onclick="mixer.pause({id:'Wah'})">Pause FuzzWah</button>
-		<button onclick="mixer.stop({id:'Wah'})">Stop FuzzWah</button>
+<div style="margin: 10px;">
+<h2>dojox.av.FLAudio</h2>
+<div id="aud"></div>
+<button onclick="mixer.doPlay({index:0, volume:1, pan:-1})">Ola
+Left</button>
+<button onclick="mixer.doPlay({index:0, volume:.1})">Ola Quiet</button>
+<button onclick="mixer.doPlay({index:1})">Hio</button>
+<button
+	onclick="mixer.doPlay({id:'Ola', volume:1, pan:-1}); mixer.doPlay({id:'Hio', volume:1, pan:1});">Ola
+Left - Hio Right</button>
+<button onclick="mixer.doPlay({index:0, volume:1})">Ola Loud</button>
+<button onclick="mixer.doPlay({id:'Ola', volume:1, pan:1})">Ola
+Right</button>
+<br />
+<button onclick="mixer.doPlay({id:'Wah', volume:.7, pan:1})">Play
+FuzzWah</button>
+<button onclick="mixer.pause({id:'Wah'})">Pause FuzzWah</button>
+<button onclick="mixer.stop({id:'Wah'})">Stop FuzzWah</button>
 
-	<br/>
-		<textarea cols="50" rows="2" id="ta"></textarea>
-	</div>
+<br />
+<textarea cols="50" rows="2" id="ta"></textarea></div>
 </body>
 </html>

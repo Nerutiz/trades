@@ -1,5 +1,4 @@
-.dojoxEllipsis,
-.dojoxEllipsisShown {
+.dojoxEllipsis,.dojoxEllipsisShown {
 	white-space: nowrap;
 	width: 100%;
 	overflow: hidden;
@@ -9,15 +8,17 @@
 }
 
 .dojoxEllipsis window {
-    width:100%;
-    -moz-user-focus:normal;
-    -moz-user-select:text;
+	width: 100%;
+	-moz-user-focus: normal;
+	-moz-user-select: text;
 }
-.dojoxEllipsis description{
-    -moz-user-focus:normal;
-    -moz-user-select:text;
+
+.dojoxEllipsis description {
+	-moz-user-focus: normal;
+	-moz-user-select: text;
 }
-.dojoxEllipsisIFrame{
+
+.dojoxEllipsisIFrame {
 	white-space: normal;
 	border: none;
 	width: 100%;
@@ -26,9 +27,11 @@
 	margin-top: -1px;
 	clear: both;
 }
-.dojoxEllipsisContainer{
+
+.dojoxEllipsisContainer {
 	width: 100%;
 }
-.dojoxEllipsisShown:after{
+
+.dojoxEllipsisShown:after {
 	content: "\2026"
 }

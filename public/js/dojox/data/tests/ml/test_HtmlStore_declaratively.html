@@ -3,9 +3,11 @@
 <head>
 <title>Dojox HtmlDataStore Widget</title>
 <style>
-	@import "../../../../dijit/themes/tundra/tundra.css";
-	@import "../../../../dojo/resources/dojo.css";
-	@import "../../../../dijit/tests/css/dijitTests.css";
+@import "../../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
 </style>
 <script type="text/javascript">
 	djConfig = {
@@ -64,109 +66,121 @@
 
 </head>
 <body class="tundra">
-	<h1>Dojox HtmlDataStore Widget</h1>
-	<hr/>
-	<br/>
-	<br/>
+<h1>Dojox HtmlDataStore Widget</h1>
+<hr />
+<br />
+<br />
 
-	<!-- Instantiate the HtmlStore and bind it to global name tableStore -->
-	<div dojoType="dojox.data.HtmlStore" dataId="tableExample" jsId="tableStore"></div>
-	<div dojoType="dojox.data.HtmlStore" dataId="ulExample" jsId="ulStore"></div>
-	<div dojoType="dojox.data.HtmlStore" dataId="olExample" jsId="olStore"></div>
-	<div dojoType="dojox.data.HtmlStore" dataId="divExample" jsId="divStore"></div>
+<!-- Instantiate the HtmlStore and bind it to global name tableStore -->
+<div dojoType="dojox.data.HtmlStore" dataId="tableExample"
+	jsId="tableStore"></div>
+<div dojoType="dojox.data.HtmlStore" dataId="ulExample" jsId="ulStore"></div>
+<div dojoType="dojox.data.HtmlStore" dataId="olExample" jsId="olStore"></div>
+<div dojoType="dojox.data.HtmlStore" dataId="divExample" jsId="divStore"></div>
 
-	<!-- The table to link into with the HtmlStore-->
-	<table id="tableExample">
-		<thead>
-			<tr>
-				<th>X</th>
-				<th>Y</th>
-				<th>A</th>
-				<th>B</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr id="test">
-				<td>2</td>
-				<td>3</td>
-				<td></td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>3</td>
-				<td>5</td>
-				<td>7</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>9</td>
-				<td>22</td>
-				<td>777</td>
-			</tr>
-			<tr>
-				<td>3231</td>
-				<td>3</td>
-				<td>535</td>
-				<td>747</td>
-			</tr>
-		</tbody>
-	</table>
+<!-- The table to link into with the HtmlStore-->
+<table id="tableExample">
+	<thead>
+		<tr>
+			<th>X</th>
+			<th>Y</th>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="test">
+			<td>2</td>
+			<td>3</td>
+			<td></td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>3</td>
+			<td>5</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>9</td>
+			<td>22</td>
+			<td>777</td>
+		</tr>
+		<tr>
+			<td>3231</td>
+			<td>3</td>
+			<td>535</td>
+			<td>747</td>
+		</tr>
+	</tbody>
+</table>
 
-	<br/>
-	<br/>
-	<blockquote>
-		<b>Table Rows: <br/><i>(Just to show that the tree can determine that the tableStore works like a store).<br/>Should have three branches, where the row had attr Y value of 3.</i></b>
-		<div dojoType="dijit.Tree" id="tree" store="tableStore" query="{Y:3}"></div>
-	</blockquote>
-	
-	<ul id="ulExample">
-		<li>Red</li>
-		<li>Orange</li>
-		<li>Yellow</li>
-		<li>Green</li>
-		<li>Blue</li>
-		<li>Violet</li>
-	</ul>
-	
-	<label for="combo1">Unordered List in ComboBox: </label>
-	<input dojoType="dijit.form.ComboBox" value="Red" class="medium" store="ulStore" searchAttr="name" style="width: 300px;" name="ul.item1" id="combo1"	>
+<br />
+<br />
+<blockquote><b>Table Rows: <br />
+<i>(Just to show that the tree can determine that the tableStore
+works like a store).<br />
+Should have three branches, where the row had attr Y value of 3.</i></b>
+<div dojoType="dijit.Tree" id="tree" store="tableStore" query="{Y:3}"></div>
+</blockquote>
 
-	<blockquote>
-		<b>Unordered List in Tree: <br/></b>
-		<div dojoType="dijit.Tree" id="tree2" labelAttr="name" store="ulStore" query="{name:'*'}"></div>
-	</blockquote>
+<ul id="ulExample">
+	<li>Red</li>
+	<li>Orange</li>
+	<li>Yellow</li>
+	<li>Green</li>
+	<li>Blue</li>
+	<li>Violet</li>
+</ul>
 
-	<ol id="olExample">
-		<li>Every</li>
-		<li>Good</li>
-		<li>Boy</li>
-		<li>Does</li>
-		<li>Fine</li>
-	</ol>
+<label for="combo1">Unordered List in ComboBox: </label>
+<input dojoType="dijit.form.ComboBox" value="Red" class="medium"
+	store="ulStore" searchAttr="name" style="width: 300px;" name="ul.item1"
+	id="combo1">
 
-	<label for="combo2">Ordered List in ComboBox: </label>
-	<input dojoType="dijit.form.ComboBox" value="Every" class="medium" store="olStore" searchAttr="name" style="width: 300px;" name="ol.item1" id="combo2" >
+<blockquote><b>Unordered List in Tree: <br />
+</b>
+<div dojoType="dijit.Tree" id="tree2" labelAttr="name" store="ulStore"
+	query="{name:'*'}"></div>
+</blockquote>
 
-	<blockquote>
-		<b>Ordered List in Tree: <br/></b>
-		<div dojoType="dijit.Tree" id="tree3" labelAttr="name" store="olStore" query="{name:'*'}"></div>
-	</blockquote>
+<ol id="olExample">
+	<li>Every</li>
+	<li>Good</li>
+	<li>Boy</li>
+	<li>Does</li>
+	<li>Fine</li>
+</ol>
 
-	
-	<div id="divExample">
-		<div><b>bold</b></div>
-		<div><i>italic</i></div>
-		<div><i>normal</i></div>
-	</div>
-	
-	<label for="combo3">Div List in ComboBox: </label>
-	<input dojoType="dijit.form.ComboBox" value="bold" class="medium" store="divStore" searchAttr="name" style="width: 300px;" name="bold" id="combo3" >
+<label for="combo2">Ordered List in ComboBox: </label>
+<input dojoType="dijit.form.ComboBox" value="Every" class="medium"
+	store="olStore" searchAttr="name" style="width: 300px;" name="ol.item1"
+	id="combo2">
 
-	<blockquote>
-		<b>Div list in tree: <br/></b>
-		<div dojoType="dijit.Tree" id="tree4" labelAttr="name" store="divStore" query="{name:'*'}"></div>
-	</blockquote>
-	
+<blockquote><b>Ordered List in Tree: <br />
+</b>
+<div dojoType="dijit.Tree" id="tree3" labelAttr="name" store="olStore"
+	query="{name:'*'}"></div>
+</blockquote>
+
+
+<div id="divExample">
+<div><b>bold</b></div>
+<div><i>italic</i></div>
+<div><i>normal</i></div>
+</div>
+
+<label for="combo3">Div List in ComboBox: </label>
+<input dojoType="dijit.form.ComboBox" value="bold" class="medium"
+	store="divStore" searchAttr="name" style="width: 300px;" name="bold"
+	id="combo3">
+
+<blockquote><b>Div list in tree: <br />
+</b>
+<div dojoType="dijit.Tree" id="tree4" labelAttr="name" store="divStore"
+	query="{name:'*'}"></div>
+</blockquote>
+
 </body>
 </html>

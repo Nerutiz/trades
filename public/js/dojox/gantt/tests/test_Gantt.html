@@ -1,18 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-	<head>
-		<title>Gantt Chart</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<style type="text/css">
-			@import "../../../dojo/resources/dojo.css";
-			@import "../../../dijit/tests/css/dijitTests.css";
-		</style>
-		<!-- required: the default dijit theme: -->
-		<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/claro/claro.css"/>
-		<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="parseOnLoad: true">
+<head>
+<title>Gantt Chart</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+<!-- required: the default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/claro/claro.css" />
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="parseOnLoad: true">
 		</script>
-		<link type="text/css" rel="stylesheet" href="../resources/gantt.css">
-		<script type="text/javascript" language="JavaScript">
+<link type="text/css" rel="stylesheet" href="../resources/gantt.css">
+<script type="text/javascript" language="JavaScript">
 			dojo.require("dojo.parser"); // scan page for widgets and instantiate them
 			dojo.require("dojox.gantt.GanttChart");
 			
@@ -145,11 +148,10 @@
 				
 			});
 		</script>
-	</head>
-	<body class="claro">
-		<div class="ganttContent">
-			<div id="gantt">
-			</div>
-		</div>
-	</body>
+</head>
+<body class="claro">
+<div class="ganttContent">
+<div id="gantt"></div>
+</div>
+</body>
 </html>

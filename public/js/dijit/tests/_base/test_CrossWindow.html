@@ -1,19 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-	<head>
-		<title>Templated in IE Popup Test</title>
-		<style>
-			body{
-			font-family:Arial, Helvetica, sans-serif;
-			font-size:12px;
-			}
-		</style>
-		<script type="text/javascript"
-			src="../../../dojo/dojo.js"
-			debugAtAllCosts="false"
-			djConfig="isDebug:true, popup:false, parseOnLoad:false">
+<head>
+<title>Templated in IE Popup Test</title>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	debugAtAllCosts="false"
+	djConfig="isDebug:true, popup:false, parseOnLoad:false">
 		</script>
-		<script type="text/javascript">
+<script type="text/javascript">
 
 			dojo.require("dijit._Widget");
 			dojo.require("dijit._Templated");
@@ -109,21 +108,19 @@
 				speedTest();
 			});
 		</script>
-	</head>
-	<body id="mainpage">
-		<h2>Test for cross window widget building</h2>
-		<p>
-			This test will create a widget in the main window, then in a popup, then another in the main window.
-			Tests issues on IE, namely making sure that nodes are created in the right document, see
-			<a href="http://trac.dojotoolkit.org/ticket/6791">#6791</a>.
-		</p>
-		<p>
-			You must allow popups before running this test.
-			Check console for results.
-		</p>
-		<div id="main"></div>
-		<iframe name="mywin" src="about:blank"></iframe>
-		
-		<a id="popupLink" href="nowhere.html" onclick="popwin = openPopup();return false;">run popup test</a>
-	</body>
+</head>
+<body id="mainpage">
+<h2>Test for cross window widget building</h2>
+<p>This test will create a widget in the main window, then in a
+popup, then another in the main window. Tests issues on IE, namely
+making sure that nodes are created in the right document, see <a
+	href="http://trac.dojotoolkit.org/ticket/6791">#6791</a>.</p>
+<p>You must allow popups before running this test. Check console for
+results.</p>
+<div id="main"></div>
+<iframe name="mywin" src="about:blank"></iframe>
+
+<a id="popupLink" href="nowhere.html"
+	onclick="popwin = openPopup();return false;">run popup test</a>
+</body>
 </html>

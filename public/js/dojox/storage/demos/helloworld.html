@@ -1,9 +1,9 @@
 <html>
-  <head>
-    <script src="../../../dojo/dojo.js"></script>
-    <script src="../storage-browser.js"></script>
-    
-    <script>
+<head>
+<script src="../../../dojo/dojo.js"></script>
+<script src="../storage-browser.js"></script>
+
+<script>
       dojo.require("dojox.storage");
       
       function runDemo(){
@@ -64,27 +64,26 @@
       	dojo.connect(dojo, "loaded", runDemo);
       }
     </script>
-  </head>
-  
-  <body>
-    <h1>Dojo Storage Hello World</h1>
-    
-    <p>Simple Dojo Storage example. Enter values below to have them
-      persisted in Dojo Storage; refresh browser page or close browser
-      and then return to this page to see the values again. Note that
-      Dojo Storage will not work from file:// URLs.</p>
-      
-    <h2>Save Values:</h2>
-    <div>
-      <input id="saveValue" type="text"></input>
-      <button id="saveButton">Save Value</button>
-    </div>
-    
-    <h2>All Saved Values:</h2>
-    <p id="allValues"></p>
-    
-    <p>Using Dojo Storage Provider (autodetected): 
-      <span id="currentProvider"></span>
-    <p>
-  </body>
+</head>
+
+<body>
+<h1>Dojo Storage Hello World</h1>
+
+<p>Simple Dojo Storage example. Enter values below to have them
+persisted in Dojo Storage; refresh browser page or close browser and
+then return to this page to see the values again. Note that Dojo Storage
+will not work from file:// URLs.</p>
+
+<h2>Save Values:</h2>
+<div><input id="saveValue" type="text"></input>
+<button id="saveButton">Save Value</button>
+</div>
+
+<h2>All Saved Values:</h2>
+<p id="allValues"></p>
+
+<p>Using Dojo Storage Provider (autodetected): <span
+	id="currentProvider"></span>
+<p>
+</body>
 </html>

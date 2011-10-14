@@ -3,11 +3,15 @@
 <head>
 <title>Test the Feed Viewer (using ATOM)</title>
 <style type="text/css">
-	@import "../../widget/templates/css/EntryHeader.css";
-	@import "../../widget/templates/css/HtmlFeedViewer.css";
-	@import "../../widget/templates/css/HtmlFeedViewerGrouping.css";
-	@import "../../widget/templates/css/HtmlFeedViewerEntry.css";
-	@import "../../widget/templates/css/HtmlFeedEntryViewer.css";
+@import "../../widget/templates/css/EntryHeader.css";
+
+@import "../../widget/templates/css/HtmlFeedViewer.css";
+
+@import "../../widget/templates/css/HtmlFeedViewerGrouping.css";
+
+@import "../../widget/templates/css/HtmlFeedViewerEntry.css";
+
+@import "../../widget/templates/css/HtmlFeedEntryViewer.css";
 </style>
 <script type="text/javascript">
   var djConfig = {isDebug: true, parseOnLoad: true};
@@ -42,12 +46,12 @@
 </script>
 </head>
 <body>
-	<div> 
-		<div dojoType="dojox.atom.widget.FeedViewer" id="fv1"></div>
-	</div>  
-	<div>  
-		<div id="feedTitle" style="font-size: large;font-weight: bold;"></div>  
-		<div dojoType="dijit.layout.ContentPane" id="feedPane"></div>
-	</div>
+<div>
+<div dojoType="dojox.atom.widget.FeedViewer" id="fv1"></div>
+</div>
+<div>
+<div id="feedTitle" style="font-size: large; font-weight: bold;"></div>
+<div dojoType="dijit.layout.ContentPane" id="feedPane"></div>
+</div>
 </body>
 </html>

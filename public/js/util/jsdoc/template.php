@@ -12,5 +12,5 @@ function phptemplate_jsdoc_object_form($form) {
 
 // function theme_jsdoc_object_children($children) {
 function phptemplate_jsdoc_object_children($children) {
-  return _phptemplate_callback('jsdoc_object_children', array('children' => $children));
+	return _phptemplate_callback('jsdoc_object_children', array('children' => $children));
 }

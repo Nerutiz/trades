@@ -1,13 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Test Reflection and Projection matrices</title>
-    <style>
-        @import "../../../dojo/resources/dojo.css";
-        @import "../../../dijit/themes/tundra/tundra.css";
-    </style>
-    <script src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-    <script>
+<title>Test Reflection and Projection matrices</title>
+<style>
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+</style>
+<script src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script>
         dojo.require("dojox.gfx");
         dojo.require("dojo.colors");
         
@@ -96,16 +98,23 @@
     </script>
 </head>
 <body class="tundra">
-    <h1>Test Reflection and Projection matrices</h1>
-    <div id="shifter" dojoType="dijit.form.HorizontalSlider" 
-            value="0" minimum="-100" maximum="100" value="0" discreteValues="21" showButtons="false" intermediateChanges="true" style="width: 500px;">
-        <div dojoType="dijit.form.HorizontalRule" container="topDecoration" count="21" style="height: 5px;"></div>
-        <div dojoType="dijit.form.HorizontalRule" container="bottomDecoration" count="5" style="height: 5px;"></div>
-        <div dojoType="dijit.form.HorizontalRuleLabels" container="bottomDecoration" labels="-100,-50,0,50,100" style="height: 1.2em; font-size: 75%; color: gray;"></div>
-    </div>
-    <div id="surf"></div>
-    <p>Legend: <span style="background: yellow;">yellow</span> is your point, <span style="color: red;">red</span> is a reflected point,
-    <span style="color: green;">green</span> is a projected point.</p>
-    <p>Click anywhere on the surface to set a point and see its reflection and projection.</p>
+<h1>Test Reflection and Projection matrices</h1>
+<div id="shifter" dojoType="dijit.form.HorizontalSlider" value="0"
+	minimum="-100" maximum="100" value="0" discreteValues="21"
+	showButtons="false" intermediateChanges="true" style="width: 500px;">
+<div dojoType="dijit.form.HorizontalRule" container="topDecoration"
+	count="21" style="height: 5px;"></div>
+<div dojoType="dijit.form.HorizontalRule" container="bottomDecoration"
+	count="5" style="height: 5px;"></div>
+<div dojoType="dijit.form.HorizontalRuleLabels"
+	container="bottomDecoration" labels="-100,-50,0,50,100"
+	style="height: 1.2em; font-size: 75%; color: gray;"></div>
+</div>
+<div id="surf"></div>
+<p>Legend: <span style="background: yellow;">yellow</span> is your
+point, <span style="color: red;">red</span> is a reflected point, <span
+	style="color: green;">green</span> is a projected point.</p>
+<p>Click anywhere on the surface to set a point and see its
+reflection and projection.</p>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Test DataStore</title>
-<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 dojo.provide("dojox.wire.ml.tests.markup.DataStore");
 
@@ -39,28 +40,19 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body>
-<div dojoType="dojox.wire.ml.DataStore"
-	id="DataStore1"
-	storeClass="dojox.data.XmlStore"
-	url="DataStore.xml"></div>
-<div dojoType="dojox.wire.ml.Invocation"
-	triggerTopic="invokeFetch"
-	object="DataStore1"
-	method="fetch"
-	parameters="dojox.wire.ml.tests.markup.DataStore.request">
-</div>
+<div dojoType="dojox.wire.ml.DataStore" id="DataStore1"
+	storeClass="dojox.data.XmlStore" url="DataStore.xml"></div>
+<div dojoType="dojox.wire.ml.Invocation" triggerTopic="invokeFetch"
+	object="DataStore1" method="fetch"
+	parameters="dojox.wire.ml.tests.markup.DataStore.request"></div>
 <div dojoType="dojox.wire.ml.Transfer"
 	trigger="dojox.wire.ml.tests.markup.DataStore.request"
-	triggerEvent="onComplete"
-	source="arguments[0]"
+	triggerEvent="onComplete" source="arguments[0]"
 	sourceStore="DataStore1.store"
 	target="dojox.wire.ml.tests.markup.DataStore.target">
-	<div dojoType="dojox.wire.ml.ColumnWire"
-		column="a" attribute="x"></div>
-	<div dojoType="dojox.wire.ml.ColumnWire"
-		column="b" attribute="y"></div>
-	<div dojoType="dojox.wire.ml.ColumnWire"
-		column="c" attribute="z"></div>
+<div dojoType="dojox.wire.ml.ColumnWire" column="a" attribute="x"></div>
+<div dojoType="dojox.wire.ml.ColumnWire" column="b" attribute="y"></div>
+<div dojoType="dojox.wire.ml.ColumnWire" column="c" attribute="z"></div>
 </div>
 </body>
 </html>

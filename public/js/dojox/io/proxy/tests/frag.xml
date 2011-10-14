@@ -1,4 +1,4 @@
 <response>
-<foo>This is the foo text node value</foo>
-<bar>This is the bar text node value</bar>
+	<foo>This is the foo text node value</foo>
+	<bar>This is the bar text node value</bar>
 </response>

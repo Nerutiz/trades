@@ -2,24 +2,26 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dojox Recorder Test</title>
+<title>Dojox Recorder Test</title>
 
-	<style>
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
+<style>
+@import "../../../dojo/resources/dojo.css";
 
-	<!-- required: the default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/tundra/tundra.css">
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
 
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="isDebug: true, parseOnLoad: true"></script>
+<!-- required: the default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/tundra/tundra.css">
 
-	<!-- only needed for alternate theme testing: -->
-	<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 
-	<script type="text/javascript">
+<!-- only needed for alternate theme testing: -->
+<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dijit.form.ComboBox");
 		dojo.require("dijit.robot");
@@ -90,12 +92,13 @@
 	</script>
 </head>
 <body class="tundra">
-<h1 id="safeclick">Recorder will use the DOH robot to record a test by itself.</h1>
+<h1 id="safeclick">Recorder will use the DOH robot to record a test
+by itself.</h1>
 <p>dijit.form.ComboBox:</p>
 <select dojoType="dijit.form.ComboBox" id="combo">
-<option>A</option>
-<option>B</option>
-<option>C</option>
+	<option>A</option>
+	<option>B</option>
+	<option>C</option>
 </select>
 <p>Native element:</p>
 <input type="text" id="textbox">

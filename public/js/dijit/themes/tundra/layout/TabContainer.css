@@ -1,21 +1,22 @@
 /* Tabs, shared classes */
 .tundra .dijitTabPaneWrapper {
-	background:#fff;
-	border:1px solid #ccc;
+	background: #fff;
+	border: 1px solid #ccc;
 	margin: 0;
 	padding: 0;
 }
 
 .tundra .dijitTab {
-	line-height:normal;
-	margin-right:4px;	/* space between one tab and the next in top/bottom mode */
-	padding:0;
-	border:1px solid #ccc;
-	background:#e2e2e2 url("../images/tabEnabled.png") repeat-x;
+	line-height: normal;
+	margin-right: 4px;
+	/* space between one tab and the next in top/bottom mode */
+	padding: 0;
+	border: 1px solid #ccc;
+	background: #e2e2e2 url("../images/tabEnabled.png") repeat-x;
 }
 
 .tundra .dijitTabInnerDiv {
-	padding:2px 8px 2px 9px;
+	padding: 2px 8px 2px 9px;
 }
 
 .tundra .dijitTabSpacer {
@@ -25,6 +26,7 @@
 .tundra .dijitTabContainer .tabStripRBtn {
 	margin-right: 20px;
 }
+
 .tundra .dijitTabContainer .tabStripLBtn {
 	margin-left: 20px;
 }
@@ -32,6 +34,7 @@
 .tundra .nowrapTabStrip .dijitTab {
 	top: 2px;
 }
+
 .tundra .dijitTabContainerBottom .nowrapTabStrip .dijitTab {
 	top: 0;
 	bottom: 2px;
@@ -40,41 +43,41 @@
 /* checked tab*/
 .tundra .dijitTabChecked {
 	/* the selected tab (with or without hover) */
-	background-color:#fff;
+	background-color: #fff;
 	border-color: #ccc;
-	background-image:none;
+	background-image: none;
 }
 
 /* hovered tab */
 .tundra .dijitTabHover {
 	color: #243C5F;
-	border-top-color:#92a0b3;
-	border-left-color:#92a0b3;
-	border-right-color:#92a0b3;
-	border-bottom-color:#92a0b3;
-	background:#e2e2e2 url("../images/tabHover.gif") repeat-x;
+	border-top-color: #92a0b3;
+	border-left-color: #92a0b3;
+	border-right-color: #92a0b3;
+	border-bottom-color: #92a0b3;
+	background: #e2e2e2 url("../images/tabHover.gif") repeat-x;
 }
 
 .tundra .dijitTabContainerTop .dijitTabHover {
-	border-bottom-color:#ccc;
+	border-bottom-color: #ccc;
 }
 
 .tundra .dijitTabContainerBottom .dijitTabHover {
-	border-top-color:#ccc;
+	border-top-color: #ccc;
 }
 
 .tundra .dijitTabContainerLeft .dijitTabHover {
-	border-right-color:#ccc;
+	border-right-color: #ccc;
 }
 
 .tundra .dijitTabContainerRight .dijitTabHover {
-	border-left-color:#ccc;
+	border-left-color: #ccc;
 }
 
 .tundra .dijitTabContainer .dijitTabCheckedHover {
 	color: inherit;
-	border:1px solid #ccc;
-	background:#fff;
+	border: 1px solid #ccc;
+	background: #fff;
 }
 
 .tundra .dijitTab .tabLabel {
@@ -84,7 +87,6 @@
 }
 
 /* Nested Tabs */
-
 .tundra .dijitTabContainerNested .dijitTabListWrapper {
 	height: auto;
 }
@@ -96,49 +98,57 @@
 .tundra .dijitTabContainerTabListNested .dijitTab {
 	background: none;
 	border: none;
-	top: 0;		/* to override top: 1px/-1px for normal tabs */
+	top: 0; /* to override top: 1px/-1px for normal tabs */
 }
+
 .tundra .dijitTabContainerTabListNested .dijitTab .dijitTabContent {
+	
 }
-.tundra .dijitTabContainerTabListNested .dijitTabHover .dijitTabContent .tabLabel {
+
+.tundra .dijitTabContainerTabListNested .dijitTabHover .dijitTabContent .tabLabel
+	{
 	text-decoration: underline;
 }
-.tundra .dijitTabContainerTabListNested .dijitTabChecked .dijitTabContent .tabLabel {
+
+.tundra .dijitTabContainerTabListNested .dijitTabChecked .dijitTabContent .tabLabel
+	{
 	text-decoration: underline;
 	font-weight: bold;
 	/*background:#f3f3f3;*/
 }
+
 .tundra .dijitTabContainer .dijitTabPaneWrapperNested {
-	border: none;	/* prevent double border */
+	border: none; /* prevent double border */
 }
 
 /* Close button */
-
 .tundra .dijitTabCloseButton {
 	background: url("../images/tabClose.png") no-repeat right top;
 	width: 12px;
 	height: 12px;
 }
+
 .dj_ie6 .tundra .dijitTabCloseButton {
-	background-image : url("../images/tabClose.gif");
+	background-image: url("../images/tabClose.gif");
 }
 
 .tundra .dijitTabCloseButtonHover {
-	background-image : url("../images/tabCloseHover.png");
+	background-image: url("../images/tabCloseHover.png");
 }
+
 .dj_ie6 .tundra .dijitTabCloseButtonHover {
-	background-image : url("../images/tabCloseHover.gif");
+	background-image: url("../images/tabCloseHover.gif");
 }
 
 /* ================================ */
 /* top tabs */
-
 .tundra .dijitTabContainerTop-tabs {
 	margin-bottom: 0;
 	border-color: #cccccc;
 	padding-left: 3px;
 	background-position: bottom;
 }
+
 .tundra .dijitTabContainerTop-tabs .dijitTab {
 	top: 0;
 	margin-bottom: -1px;
@@ -151,11 +161,11 @@
 
 /* checked tabs */
 .tundra .dijitTabContainerTop-tabs .dijitTabChecked {
-	border-bottom-color:white;
+	border-bottom-color: white;
 }
 
-.tundra .dijitTabContainerTop-tabs,
-.tundra .dijitTabContainerBottom-tabs {
+.tundra .dijitTabContainerTop-tabs,.tundra .dijitTabContainerBottom-tabs
+	{
 	padding-left: 3px;
 	padding-right: 3px;
 }
@@ -173,7 +183,6 @@
 	padding-top: 0;
 }
 
-
 /* ================================ */
 /* bottom tabs */
 .tundra .dijitTabContainerBottom-tabs {
@@ -182,6 +191,7 @@
 	background-position: top;
 	padding-left: 3px;
 }
+
 .tundra .dijitTabContainerBottom-tabs .dijitTab {
 	bottom: 0;
 	margin-top: -1px;
@@ -194,7 +204,7 @@
 
 /* checked tabs */
 .tundra .dijitTabContainerBottom-tabs .dijitTabChecked {
-	border-top-color:white;
+	border-top-color: white;
 }
 
 /* strip */
@@ -224,7 +234,7 @@
 
 /* checked tabs */
 .tundra .dijitTabContainerRight-tabs .dijitTabChecked {
-	border-left-color:white;
+	border-left-color: white;
 }
 
 /* strip */
@@ -252,7 +262,7 @@
 
 /* checked tabs */
 .tundra .dijitTabContainerLeft-tabs .dijitTabChecked {
-	border-right-color:white;
+	border-right-color: white;
 }
 
 /* strip */
@@ -265,16 +275,17 @@
 
 /* ================================ */
 /* left/right tabs */
-.tundra .dijitTabContainerLeft-tabs .dijitTab,
-.tundra .dijitTabContainerRight-tabs .dijitTab {
-	margin-right:0;
-	margin-bottom:4px;	/* space between one tab and the next in left/right mode */
+.tundra .dijitTabContainerLeft-tabs .dijitTab,.tundra .dijitTabContainerRight-tabs .dijitTab
+	{
+	margin-right: 0;
+	margin-bottom: 4px;
+	/* space between one tab and the next in left/right mode */
 }
 
 /* ================================ */
-
 /* this resets the tabcontainer stripe when within a contentpane */
-.tundra .dijitTabContainerTop-dijitContentPane .dijitTabContainerTop-tabs {
+.tundra .dijitTabContainerTop-dijitContentPane .dijitTabContainerTop-tabs
+	{
 	border-left: 0 solid #ccc;
 	border-top: 0 solid #ccc;
 	border-right: 0 solid #ccc;
@@ -283,7 +294,6 @@
 }
 
 /* ================================ */
-
 /* Menu and slider control styles */
 .tundra .dijitTabContainer .tabStripButton {
 	margin-right: 0;
@@ -304,21 +314,21 @@
 	padding: 3px 2px 4px 2px;
 }
 
-.dj_ie6 .tundra .tabStripButton .dijitTabInnerDiv,
-.dj_ie7 .tundra .tabStripButton .dijitTabInnerDiv,
-.dj_opera .tundra .tabStripButton .dijitTabInnerDiv {
+.dj_ie6 .tundra .tabStripButton .dijitTabInnerDiv,.dj_ie7 .tundra .tabStripButton .dijitTabInnerDiv,.dj_opera .tundra .tabStripButton .dijitTabInnerDiv
+	{
 	padding-bottom: 5px;
 }
-.dj_ie6 .tundra .tabStrip-disabled .tabStripButton .dijitTabInnerDiv,
-.dj_ie7 .tundra .tabStrip-disabled .tabStripButton .dijitTabInnerDiv,
-.dj_opera .tundra .tabStrip-disabled .tabStripButton .dijitTabInnerDiv {
+
+.dj_ie6 .tundra .tabStrip-disabled .tabStripButton .dijitTabInnerDiv,.dj_ie7 .tundra .tabStrip-disabled .tabStripButton .dijitTabInnerDiv,.dj_opera .tundra .tabStrip-disabled .tabStripButton .dijitTabInnerDiv
+	{
 	padding-bottom: 4px;
 }
 
 .tundra .dijitTabStripIcon {
 	height: 14px;
 	width: 14px;
-	background: url(../images/spriteRoundedIconsSmall.png) no-repeat left top ;
+	background: url(../images/spriteRoundedIconsSmall.png) no-repeat left
+		top;
 }
 
 .dj_ie6 .tundra .dijitTabStripIcon {
@@ -332,4 +342,3 @@
 .tundra .dijitTabStripMenuIcon {
 	background-position: -15px top;
 }
-

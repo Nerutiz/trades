@@ -1,21 +1,25 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Drag And Drop - stress test</title>
-		
-		<link rel="stylesheet" type="text/css" href="../../../../dojo/resources/dojo.css" />
-		<link rel="stylesheet" type="text/css" href="../../../../dojo/tests/dnd/dndDefault.css" />
-		<link rel="stylesheet" type="text/css" href="../../../../dijit/themes/tundra/tundra.css" />
-		<link rel="stylesheet" type="text/css" href="../../../../dijit/tests/css/dijitTests.css" />
-		
-		<link rel="stylesheet" type="text/css" href="../../resources/dnd.css" />
-		<link rel="stylesheet" type="text/css" href="../resources/test_dnd.css" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Drag And Drop - stress test</title>
 
-		<script type="text/javascript" src="../../../../dojo/dojo.js"
-			djConfig="parseOnLoad:true, isDebug:false"></script>
-	
-		<script type="text/javascript">
+<link rel="stylesheet" type="text/css"
+	href="../../../../dojo/resources/dojo.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../../../dojo/tests/dnd/dndDefault.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../../../dijit/themes/tundra/tundra.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../../../dijit/tests/css/dijitTests.css" />
+
+<link rel="stylesheet" type="text/css" href="../../resources/dnd.css" />
+<link rel="stylesheet" type="text/css" href="../resources/test_dnd.css" />
+
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="parseOnLoad:true, isDebug:false"></script>
+
+<script type="text/javascript">
 			dojo.require("dojox.mdnd.AreaManager");
 			dojo.require("dojox.mdnd.DropIndicator");
 			dojo.require("dojox.mdnd.AutoScroll");
@@ -52,32 +56,43 @@
 				}
 			}
 		</script>
-		<style type="text/css">
-			.item {
-				margin:10px;
-				background-color:#FFF;
-				border:solid 2px #BBB;
-			}
-			.item2 {
-				margin:10px;
-				background-color:#FFF;
-				
-				border:solid 2px #FFF;
-			}
-		</style>
-	</head>
-	<body class="tundra">
-		Pass <code>?count=<i><b>10</b></i></code> in the query string to change the number of div for each column.<br><br>
-		<div id="area1" class="area dndArea container" style="left:0px; width:250px; min-height:400px;">
-			<div class="item">
-				<div class="title dragHandle">title</div>
-				<div>
-					<p>Proin aliquet accumsan nunc. Duis nec tortor. Aliquam erat volutpat. Fusce erat velit, fringilla vel, varius nec, rhoncus sed, quam. Morbi orci. In arcu dolor, tempor sit amet, mattis ac, dignissim sed, purus.</p>
-				</div>
-			</div>
-		</div>
-		<div id="area2" class="area dndArea container" style="left:270px; width:250px; min-height:400px;"></div>
-		<div id="area3" class="area dndArea container" style="left:540px; width:250px; min-height:400px;"></div>
-		<div id="area4" class="area dndArea container" style="left:810px; width:250px; min-height:400px;"></div>
-	</body>
+<style type="text/css">
+.item {
+	margin: 10px;
+	background-color: #FFF;
+	border: solid 2px #BBB;
+}
+
+.item2 {
+	margin: 10px;
+	background-color: #FFF;
+	border: solid 2px #FFF;
+}
+</style>
+</head>
+<body class="tundra">
+Pass
+<code>?count=<i><b>10</b></i></code>
+in the query string to change the number of div for each column.
+<br>
+<br>
+<div id="area1" class="area dndArea container"
+	style="left: 0px; width: 250px; min-height: 400px;">
+<div class="item">
+<div class="title dragHandle">title</div>
+<div>
+<p>Proin aliquet accumsan nunc. Duis nec tortor. Aliquam erat
+volutpat. Fusce erat velit, fringilla vel, varius nec, rhoncus sed,
+quam. Morbi orci. In arcu dolor, tempor sit amet, mattis ac, dignissim
+sed, purus.</p>
+</div>
+</div>
+</div>
+<div id="area2" class="area dndArea container"
+	style="left: 270px; width: 250px; min-height: 400px;"></div>
+<div id="area3" class="area dndArea container"
+	style="left: 540px; width: 250px; min-height: 400px;"></div>
+<div id="area4" class="area dndArea container"
+	style="left: 810px; width: 250px; min-height: 400px;"></div>
+</body>
 </html>

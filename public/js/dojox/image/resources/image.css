@@ -8,9 +8,13 @@
 
 */
 @import "Lightbox.css";
-@import "SlideShow.css";
-@import "ThumbnailPicker.css";
-@import "Gallery.css";
-@import "Badge.css";
-@import "Magnifier.css";
 
+@import "SlideShow.css";
+
+@import "ThumbnailPicker.css";
+
+@import "Gallery.css";
+
+@import "Badge.css";
+
+@import "Magnifier.css";

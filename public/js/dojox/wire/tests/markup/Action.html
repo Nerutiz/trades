@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Test Action</title>
-<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 dojo.provide("dojox.wire.ml.tests.markup.Action");
 
@@ -82,65 +83,54 @@ dojo.addOnLoad(function(){
 </head>
 <body>
 <div dojoType="dojox.wire.ml.Action"
-	trigger="dojox.wire.ml.tests.markup.Action"
-	triggerEvent="transfer">
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Action.source.a"
-		target="dojox.wire.ml.tests.markup.Action.target.a"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Action.source.b"
-		target="dojox.wire.ml.tests.markup.Action.target.b"></div>
+	trigger="dojox.wire.ml.tests.markup.Action" triggerEvent="transfer">
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Action.source.a"
+	target="dojox.wire.ml.tests.markup.Action.target.a"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Action.source.b"
+	target="dojox.wire.ml.tests.markup.Action.target.b"></div>
 </div>
-<div dojoType="dojox.wire.ml.Action"
-	triggerTopic="transfer">
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Action.source.a"
-		target="dojox.wire.ml.tests.markup.Action.target.a"></div>
+<div dojoType="dojox.wire.ml.Action" triggerTopic="transfer">
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Action.source.a"
+	target="dojox.wire.ml.tests.markup.Action.target.a"></div>
 </div>
-<div dojoType="dojox.wire.ml.Action"
-	triggerTopic="transferFilter">
-	<div dojoType="dojox.wire.ml.ActionFilter"
-		required="dojox.wire.ml.tests.markup.Action.required"
-		message="no required"
-		error="dojox.wire.ml.tests.markup.Action.error"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Action.source.a"
-		target="dojox.wire.ml.tests.markup.Action.target.a"></div>
+<div dojoType="dojox.wire.ml.Action" triggerTopic="transferFilter">
+<div dojoType="dojox.wire.ml.ActionFilter"
+	required="dojox.wire.ml.tests.markup.Action.required"
+	message="no required" error="dojox.wire.ml.tests.markup.Action.error"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Action.source.a"
+	target="dojox.wire.ml.tests.markup.Action.target.a"></div>
 </div>
 
-<div dojoType="dojox.wire.ml.Action"
-	triggerTopic="transferFilterNumber">
-	<div dojoType="dojox.wire.ml.ActionFilter"
-		required="dojox.wire.ml.tests.markup.Action.value"
-		requiredValue="20"
-		type="number">
-	</div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Action.source.a"
-		target="dojox.wire.ml.tests.markup.Action.target.a"></div>
+<div dojoType="dojox.wire.ml.Action" triggerTopic="transferFilterNumber">
+<div dojoType="dojox.wire.ml.ActionFilter"
+	required="dojox.wire.ml.tests.markup.Action.value" requiredValue="20"
+	type="number"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Action.source.a"
+	target="dojox.wire.ml.tests.markup.Action.target.a"></div>
 </div>
 
 <div dojoType="dojox.wire.ml.Action"
 	triggerTopic="transferFilterBoolean">
-	<div dojoType="dojox.wire.ml.ActionFilter"
-		required="dojox.wire.ml.tests.markup.Action.value"
-		requiredValue="true"
-		type="boolean">
-	</div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Action.source.a"
-		target="dojox.wire.ml.tests.markup.Action.target.a"></div>
+<div dojoType="dojox.wire.ml.ActionFilter"
+	required="dojox.wire.ml.tests.markup.Action.value" requiredValue="true"
+	type="boolean"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Action.source.a"
+	target="dojox.wire.ml.tests.markup.Action.target.a"></div>
 </div>
 
-<div dojoType="dojox.wire.ml.Action"
-	triggerTopic="transferFilterString">
-	<div dojoType="dojox.wire.ml.ActionFilter"
-		required="dojox.wire.ml.tests.markup.Action.value"
-		requiredValue="executeThis">
-	</div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="dojox.wire.ml.tests.markup.Action.source.a"
-		target="dojox.wire.ml.tests.markup.Action.target.a"></div>
+<div dojoType="dojox.wire.ml.Action" triggerTopic="transferFilterString">
+<div dojoType="dojox.wire.ml.ActionFilter"
+	required="dojox.wire.ml.tests.markup.Action.value"
+	requiredValue="executeThis"></div>
+<div dojoType="dojox.wire.ml.Transfer"
+	source="dojox.wire.ml.tests.markup.Action.source.a"
+	target="dojox.wire.ml.tests.markup.Action.target.a"></div>
 </div>
 
 </body>

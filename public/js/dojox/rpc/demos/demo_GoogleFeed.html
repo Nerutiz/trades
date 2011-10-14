@@ -4,16 +4,19 @@
 <title>Demo of Google SMD Feed Service</title>
 <style type="text/css">
 th {
-	text-align:left;
+	text-align: left;
 }
+
 table {
-	border-collapse:collapse;
+	border-collapse: collapse;
 }
-th, td {
-	border:1px solid #ddd;
+
+th,td {
+	border: 1px solid #ddd;
 }
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 	dojo.require("dojox.rpc.Service");
 	dojo.require("dojo.io.script");
@@ -57,41 +60,42 @@ th, td {
 </head>
 
 <body>
-	<h2>Google API SMD - Feed Reader</h2>
+<h2>Google API SMD - Feed Reader</h2>
 
-	<input id="feedUrl" name="feedUrl" type="text" size="60" value="http://dojotoolkit.org/aggregator/rss">
-	<button id="go" type="submit" value="Read Feed">Read Feed</button>
+<input id="feedUrl" name="feedUrl" type="text" size="60"
+	value="http://dojotoolkit.org/aggregator/rss">
+<button id="go" type="submit" value="Read Feed">Read Feed</button>
 
-	<p>Click the Read Feed button to load the feed data.</p>
+<p>Click the Read Feed button to load the feed data.</p>
 
-	<div id="feedData">
-		<table>
-			<tr>
-				<th>Title</th>
-				<td id="feedTitleNode"><i>none yet</i></td>
-			</tr>
-			<tr>
-				<th>Author</th>
-				<td id="feedAuthorNode"><i>none yet</i></td>
-			</tr>
-			<tr>
-				<th>Link</th>
-				<td id="feedLinkNode"><i>none yet</i></td>
-			</tr>
-			<tr>
-				<th>Type</th>
-				<td id="feedTypeNode"><i>none yet</i></td>
-			</tr>
-			<tr>
-				<th>Description</th>
-				<td id="feedDescriptionNode"><i>none yet</i></td>
-			</tr>
-		</table>
+<div id="feedData">
+<table>
+	<tr>
+		<th>Title</th>
+		<td id="feedTitleNode"><i>none yet</i></td>
+	</tr>
+	<tr>
+		<th>Author</th>
+		<td id="feedAuthorNode"><i>none yet</i></td>
+	</tr>
+	<tr>
+		<th>Link</th>
+		<td id="feedLinkNode"><i>none yet</i></td>
+	</tr>
+	<tr>
+		<th>Type</th>
+		<td id="feedTypeNode"><i>none yet</i></td>
+	</tr>
+	<tr>
+		<th>Description</th>
+		<td id="feedDescriptionNode"><i>none yet</i></td>
+	</tr>
+</table>
 
-		<p><b>Entries:</b></p>
+<p><b>Entries:</b></p>
 
-		<ul id="feedEntriesNode">
-		</ul>
-	</div>
+<ul id="feedEntriesNode">
+</ul>
+</div>
 </body>
 </html>

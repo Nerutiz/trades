@@ -1,12 +1,20 @@
-﻿<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+﻿<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <title>Inspect DojoX GFX JSON</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	td.cell { padding: 1em 1em 0em 0em; }
-	td.note { font-size: 80%; }
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+td.cell {
+	padding: 1em 1em 0em 0em;
+}
+
+td.note {
+	font-size: 80%;
+}
 </style>
 <script type="text/javascript" src="../../../dojo/dojo.js"></script>
 <script type="text/javascript">
@@ -132,30 +140,81 @@ dojo.addOnLoad(init);
 </script>
 </head>
 <body>
-	<h1>Inspect DojoX GFX JSON</h1>
-	<p>Help: load a file, select an object, and add it, move it around, or apply operations to selected items:<br />
-	F &mdash; bring to front, B &mdash; bring to back, Q &mdash; rotate CCW, W &mdash; rotate CW, D &mdash; delete.<br />
-	(all operations work on currently dragged item).</p>
-	<p><strong>VML note:</strong> VML doesn't process PNG images with opacity correctly.</p>
-	<table><tr>
-		<td align="left" valign="top" class="cell"><div id="gfx" style="width: 500px; height: 500px; border: solid 1px black;"></div></td>
-		<td align="left" valign="top" class="cell"><table>
-			<tr><td>Source:</td></tr>
-			<tr><td><input type="text" id="source" value="data/Lars.json" size="30" />&nbsp;<button id="load">Load</button><br />
-			<input type="checkbox" id="named" checked="checked" />&nbsp;<label for="named">Load only named objects</label></td></tr>
-			<tr><td class="note"><em>Available sources:</em></td></tr>
-			<tr><td class="note"><em>data/Lars.json &mdash; vectors from SVG</em></td></tr>
-			<tr><td class="note"><em>data/Nils.json &mdash; vectors from SVG</em></td></tr>
-			<tr><td class="note"><em>data/LarsDreaming.json &mdash; vectors from SVG</em></td></tr>
-			<tr><td class="note"><em>data/buratino.json &mdash; images</em></td></tr>
-			<tr><td class="note"><em>data/transform.json &mdash; from dojox.gfx</em></td></tr>
-			<tr><td>&nbsp;</td></tr>
-			<tr><td>Objects<span id="names_info"></span>:</td></tr>
-			<tr><td><select id="names" multiple="multiple" size="10" style="width: 300px;"></select></td></tr>
-			<tr><td><button id="add">Add Selected</button></td></tr>
-			<tr><td class="note"><div  style="width: 300px;">Object names are hierarchical and separated by "/". Adding a selected object creates a group for this object. 
-			A higher-level object (a group) always includes lower-level objects as children.</div></td></tr>
-		</table></td>
-	</tr></table>
+<h1>Inspect DojoX GFX JSON</h1>
+<p>Help: load a file, select an object, and add it, move it around,
+or apply operations to selected items:<br />
+F &mdash; bring to front, B &mdash; bring to back, Q &mdash; rotate CCW,
+W &mdash; rotate CW, D &mdash; delete.<br />
+(all operations work on currently dragged item).</p>
+<p><strong>VML note:</strong> VML doesn't process PNG images with
+opacity correctly.</p>
+<table>
+	<tr>
+		<td align="left" valign="top" class="cell">
+		<div id="gfx"
+			style="width: 500px; height: 500px; border: solid 1px black;"></div>
+		</td>
+		<td align="left" valign="top" class="cell">
+		<table>
+			<tr>
+				<td>Source:</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="source" value="data/Lars.json"
+					size="30" />&nbsp;
+				<button id="load">Load</button>
+				<br />
+				<input type="checkbox" id="named" checked="checked" />&nbsp;<label
+					for="named">Load only named objects</label></td>
+			</tr>
+			<tr>
+				<td class="note"><em>Available sources:</em></td>
+			</tr>
+			<tr>
+				<td class="note"><em>data/Lars.json &mdash; vectors from
+				SVG</em></td>
+			</tr>
+			<tr>
+				<td class="note"><em>data/Nils.json &mdash; vectors from
+				SVG</em></td>
+			</tr>
+			<tr>
+				<td class="note"><em>data/LarsDreaming.json &mdash;
+				vectors from SVG</em></td>
+			</tr>
+			<tr>
+				<td class="note"><em>data/buratino.json &mdash; images</em></td>
+			</tr>
+			<tr>
+				<td class="note"><em>data/transform.json &mdash; from
+				dojox.gfx</em></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>Objects<span id="names_info"></span>:</td>
+			</tr>
+			<tr>
+				<td><select id="names" multiple="multiple" size="10"
+					style="width: 300px;"></select></td>
+			</tr>
+			<tr>
+				<td>
+				<button id="add">Add Selected</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="note">
+				<div style="width: 300px;">Object names are hierarchical and
+				separated by "/". Adding a selected object creates a group for this
+				object. A higher-level object (a group) always includes lower-level
+				objects as children.</div>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
 </body>
 </html>

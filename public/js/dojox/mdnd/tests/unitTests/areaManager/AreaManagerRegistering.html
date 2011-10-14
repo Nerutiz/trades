@@ -3,10 +3,11 @@
 <html>
 <head>
 
-	<title>AreaManager</title>
-	<script type="text/javascript" src="../../../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<title>AreaManager</title>
+<script type="text/javascript" src="../../../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 
-	<script type="text/javascript">
+<script type="text/javascript">
 		dojo.require("doh.runner");		
 		dojo.require("dojo.parser");
 		dojo.require("dojox.mdnd.AreaManager");
@@ -88,37 +89,41 @@
 		});
 		//--------------------------------------
 	</script>
-		<style type="text/css">
-			.area{
-				position:absolute;
-				top:10px;
-				border:5px solid #AAA;
-				background-color:#DDD;
-				margin-left:0;
-				padding:0px;
-				height: 400px;
-			}
-			#area1{
-				left:10px;
-				width : 300px;
-			}
-			#area2{
-				left:330px;
-				width : 100px;
-			}
-			#area3{
-				left:450px;
-				width : 200px;
-			}
-		</style>
-	</head>
-	<body class="tundra">
-		<div id="area2" class="dojoxDndArea area"></div>
-		<div id="area1" class="dojoxDndArea area"></div>
-		<div id="area3" class="area">
-			<div class="item">
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec ante eros, dignissim quis, facilisis nec, euismod vitae, metus. Nunc dolor sapien, euismod eget, consectetuer id, egestas ut, neque.
-			</div>
-		</div>
-	</body>
+<style type="text/css">
+.area {
+	position: absolute;
+	top: 10px;
+	border: 5px solid #AAA;
+	background-color: #DDD;
+	margin-left: 0;
+	padding: 0px;
+	height: 400px;
+}
+
+#area1 {
+	left: 10px;
+	width: 300px;
+}
+
+#area2 {
+	left: 330px;
+	width: 100px;
+}
+
+#area3 {
+	left: 450px;
+	width: 200px;
+}
+</style>
+</head>
+<body class="tundra">
+<div id="area2" class="dojoxDndArea area"></div>
+<div id="area1" class="dojoxDndArea area"></div>
+<div id="area3" class="area">
+<div class="item">Lorem ipsum dolor sit amet, consectetuer
+adipiscing elit. Donec ante eros, dignissim quis, facilisis nec, euismod
+vitae, metus. Nunc dolor sapien, euismod eget, consectetuer id, egestas
+ut, neque.</div>
+</div>
+</body>
 </html>

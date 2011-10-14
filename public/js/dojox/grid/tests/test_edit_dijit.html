@@ -2,36 +2,43 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Test dojox.grid.Grid Editing</title>
-	<style type="text/css">
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/tundra/tundra_rtl.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-		#controls button {
-			margin-left: 10px;
-		}
-		#grid {
-			width: 850px;
-			height: 350px;
-			border: 1px solid silver;
-		}
-		</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug: true, parseOnLoad: true"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test dojox.grid.Grid Editing</title>
+<style type="text/css">
+@import "../resources/Grid.css";
 
-	<script type="text/javascript">
+@import "../resources/tundraGrid.css";
+
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/themes/tundra/tundra_rtl.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+#controls button {
+	margin-left: 10px;
+}
+
+#grid {
+	width: 850px;
+	height: 350px;
+	border: 1px solid silver;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.grid.cells.dijit");
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript" src="support/test_data_date.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="support/test_data_date.js"></script>
+<script type="text/javascript">
 		// ==========================================================================
 		// Custom formatters
 		// ==========================================================================
@@ -92,21 +99,24 @@
 	</script>
 </head>
 <body class="tundra">
-	<h1>dojox.grid.DataGrid Basic Editing test</h1>
-	<br />
-	<div id="controls">
-		<button onclick="grid.render()">Refresh</button>
-		<button onclick="grid.edit.focusEditor()">Focus Editor</button>
-		<button onclick="grid.focus.next()">Next Focus</button>
-		<button onclick="addRow()">Add Row</button>
-		<button onclick="grid.removeSelectedRows()">Remove</button>
-		<button onclick="grid.edit.apply()">Apply</button>
-		<button onclick="grid.edit.cancel()">Cancel</button>
-		<button onclick="grid.singleClickEdit = !grid.singleClickEdit">Toggle singleClickEdit</button>
-	</div>
-	<br />
-	<div id="grid" jsId="grid" dojoType="dojox.grid.DataGrid" store="test_store" rowSelector="20px" structure="gridLayout" escapeHTMLInData="false"></div>
-	<br />
-	<div id="rowCount"></div>
+<h1>dojox.grid.DataGrid Basic Editing test</h1>
+<br />
+<div id="controls">
+<button onclick="grid.render()">Refresh</button>
+<button onclick="grid.edit.focusEditor()">Focus Editor</button>
+<button onclick="grid.focus.next()">Next Focus</button>
+<button onclick="addRow()">Add Row</button>
+<button onclick="grid.removeSelectedRows()">Remove</button>
+<button onclick="grid.edit.apply()">Apply</button>
+<button onclick="grid.edit.cancel()">Cancel</button>
+<button onclick="grid.singleClickEdit = !grid.singleClickEdit">Toggle
+singleClickEdit</button>
+</div>
+<br />
+<div id="grid" jsId="grid" dojoType="dojox.grid.DataGrid"
+	store="test_store" rowSelector="20px" structure="gridLayout"
+	escapeHTMLInData="false"></div>
+<br />
+<div id="rowCount"></div>
 </body>
 </html>

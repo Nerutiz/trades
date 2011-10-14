@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editor Test</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2"/>
+<title>Editor Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" />
 
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-	</style>
+<style type="text/css">
+@import "../../themes/claro/document.css";
+</style>
 
-	<!-- required: a default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/claro/claro.css"/>
+<!-- required: a default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/claro/claro.css" />
 
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		data-dojo-config="isDebug: true"></script>
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	data-dojo-config="isDebug: true"></script>
 
-	<script type="text/javascript" src="../_testCommon.js"></script>
-		
-	<script type="text/javascript">
+<script type="text/javascript" src="../_testCommon.js"></script>
+
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dijit.dijit");
 		dojo.require("dijit.Editor");
@@ -60,17 +61,17 @@
 </head>
 <body class="claro">
 <form method="post">
-<p>
-Plain text: ęóąśłżźćńĘÓŁĄŚŁŻŹĆŃ
-</p>
+<p>Plain text: ęóąśłżźćńĘÓŁĄŚŁŻŹĆŃ</p>
 
-<p>
-Same text should show up in the Editor:
-</p>
-<div id="editor" data-dojo-type="dijit.Editor" data-dojo-props='name:"field"'>ęóąśłżźćńĘÓŁĄŚŁŻŹĆŃ</div>
+<p>Same text should show up in the Editor:</p>
+<div id="editor" data-dojo-type="dijit.Editor"
+	data-dojo-props='name:"field"'>ęóąśłżźćńĘÓŁĄŚŁŻŹĆŃ</div>
 <input type="submit" value="Save" />
-<button type=button onclick="console.log(dijit.byId('editor').get('value'))">getValue</button>
-<button type=button onclick="dijit.byId('editor').set('value', '\u65e5\u672c\u8a9e')">set value to &#x65e5;&#x672c;&#x8a9e;</button>
+<button type=button
+	onclick="console.log(dijit.byId('editor').get('value'))">getValue</button>
+<button type=button
+	onclick="dijit.byId('editor').set('value', '\u65e5\u672c\u8a9e')">set
+value to &#x65e5;&#x672c;&#x8a9e;</button>
 
 </form>
 </body>

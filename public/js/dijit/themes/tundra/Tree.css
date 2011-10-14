@@ -1,24 +1,23 @@
 /* Tree */
-
 .tundra .dijitTreeNode {
-    background-image : url('images/i.gif');
-    background-repeat : repeat-y;
-    zoom: 1;	/* force layout on IE (TODO: may not be needed anymore) */
+	background-image: url('images/i.gif');
+	background-repeat: repeat-y;
+	zoom: 1; /* force layout on IE (TODO: may not be needed anymore) */
 }
 
 /* left vertical line (grid) for all nodes */
 .tundra .dijitTreeIsLast {
-    background: url('images/i_half.gif') no-repeat;
+	background: url('images/i_half.gif') no-repeat;
 }
 
 .tundra .dijitTreeIsRoot {
-    margin-left: 0;
-    background-image: none;
+	margin-left: 0;
+	background-image: none;
 }
 
 .tundra .dijitTreeExpando {
-    width: 18px;
-    height: 18px;
+	width: 18px;
+	height: 18px;
 }
 
 .tundra .dijitTreeRow {
@@ -27,13 +26,14 @@
 }
 
 .tundra .dijitTreeContent {
-    min-height: 18px;
-    min-width: 18px;
+	min-height: 18px;
+	min-width: 18px;
 }
 
 .tundra .dijitTreeRowSelected .dijitTreeLabel {
-	background:#e2ebfe;
+	background: #e2ebfe;
 }
+
 .tundra .dijitTreeRowHover {
 	/* using a transparent png so that we can still see grid lines, which are (unfortunately) behind the dijitRowNode that we are hovering over */
 	background-image: url(images/treeHover.png);
@@ -79,8 +79,8 @@
  * (ie, indented equally with) target element, even
  * though dijitTreeRowNode is the actual "drag object"
  */
-.tundra .dijitTreeNode .dojoDndItemBefore,
-.tundra .dijitTreeNode .dojoDndItemAfter {
+.tundra .dijitTreeNode .dojoDndItemBefore,.tundra .dijitTreeNode .dojoDndItemAfter
+	{
 	border-bottom: none;
 	border-top: none;
 }

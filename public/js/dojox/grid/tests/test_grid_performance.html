@@ -2,30 +2,36 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Test dojox.grid.DataGrid Basic</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}
-		.heading {
-			font-weight: bold;
-			padding-bottom: 0.25em;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:false"></script>
-	<script type="text/javascript">
+<title>Test dojox.grid.DataGrid Basic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.heading {
+	font-weight: bold;
+	padding-bottom: 0.25em;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit"); // optimize: load dijit layer
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojo.data.ItemFileWriteStore");
 	</script>
-	<script type="text/javascript" src="support/test_data.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="support/test_data.js"></script>
+<script type="text/javascript">
 		var layout = [[
 			{name: 'Column 1', field: 'col1'},
 			{name: 'Column 2', field: 'col2'},
@@ -39,7 +45,7 @@
 			{name: 'Column 9', field: 'col3', colSpan: 2}
 		]];
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 		var startCreationTests = function(){
 			setTimeout(function(){
 				var total_time = 0;
@@ -115,8 +121,9 @@
 	</script>
 </head>
 <body>
-	<div class="heading">dojox.grid.DataGrid Performance Test</div>
-	<button onclick="startCreationTests()">Start Creation Tests</button>
-	<button onclick="startStoreReuseTests()">Start Store Re-use Tests</button>
+<div class="heading">dojox.grid.DataGrid Performance Test</div>
+<button onclick="startCreationTests()">Start Creation Tests</button>
+<button onclick="startStoreReuseTests()">Start Store Re-use
+Tests</button>
 </body>
 </html>

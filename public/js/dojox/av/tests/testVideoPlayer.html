@@ -4,10 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>dojox.av.widget.Player</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
 </style>
-<link href="../widget/resources/Player.css" rel="stylesheet" type="text/css" />
+<link href="../widget/resources/Player.css" rel="stylesheet"
+	type="text/css" />
 
 <script>
 	djConfig={
@@ -32,17 +34,16 @@ console.log("ready")
 </head>
 <body>
 <h1>dojox.av.widget.Player</h1>
-    <div dojoType="dojox.av.widget.Player" playerWidth="100%">
-        <!--testing download progress: "https://user.sitepen.com/~mwilcox/dojotoolkit/dojox/av/tests/video/Grog.flv" -->
-        <div controlType="video" initialVolume=".1"
-			mediaUrl="video/Grog.flv" autoPlay="true" isDebug="false" dojoType="dojox.av.FLVideo"></div>
-        
-        <div controlType="play" dojoType="dojox.av.widget.PlayButton"></div>
-        <div controlType="volume" dojoType="dojox.av.widget.VolumeButton"></div>
-        <div controlType="progress" dojoType="dojox.av.widget.ProgressSlider"></div>
-        <div controlType="status" dojoType="dojox.av.widget.Status"></div>
-    
-    </div>
+<div dojoType="dojox.av.widget.Player" playerWidth="100%"><!--testing download progress: "https://user.sitepen.com/~mwilcox/dojotoolkit/dojox/av/tests/video/Grog.flv" -->
+<div controlType="video" initialVolume=".1" mediaUrl="video/Grog.flv"
+	autoPlay="true" isDebug="false" dojoType="dojox.av.FLVideo"></div>
+
+<div controlType="play" dojoType="dojox.av.widget.PlayButton"></div>
+<div controlType="volume" dojoType="dojox.av.widget.VolumeButton"></div>
+<div controlType="progress" dojoType="dojox.av.widget.ProgressSlider"></div>
+<div controlType="status" dojoType="dojox.av.widget.Status"></div>
+
+</div>
 
 </body>
 </html>

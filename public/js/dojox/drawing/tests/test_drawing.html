@@ -1,47 +1,57 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <title>Drawing GFX Toolbar Test</title>
-	<style>
-		@import url("../../../dijit/themes/dijit.css");
-		@import url("../../../dojox/drawing/resources/drawing.css");
-		@import url("../../../dojox/drawing/resources/toolbar.css");
-		@import url("../../../dojox/drawing/resources/GreekPalette.css");
-		href, body{
-		}
-		.drawing{
-			width:800px;
-			height:500px;
-			border:1px solid #ccc;
-			cursor:crosshair;
-		}
-		#data{
-			display:block;
-			height:100px;
-			width:800px;
-			margin-top:5px;
-		}
-		button{
-			border:2px solid #ccc;
-			border-color:#D9E1F9 #B5BCD0 #878E9D #C6CEE4;
-			background-color:#CDDCF3;
-			cursor:pointer;
-		}
-		.gfxToolbar{
-			width:800px;
-			height:50px;
-			margin-bottom:10px;
-			border:1px solid #ccc;
-		}
-	</style>
+<title>Drawing GFX Toolbar Test</title>
+<style>
+@import url("../../../dijit/themes/dijit.css");
 
-	<script>
+@import url("../../../dojox/drawing/resources/drawing.css");
+
+@import url("../../../dojox/drawing/resources/toolbar.css");
+
+@import url("../../../dojox/drawing/resources/GreekPalette.css");
+
+href,body {
+	
+}
+
+.drawing {
+	width: 800px;
+	height: 500px;
+	border: 1px solid #ccc;
+	cursor: crosshair;
+}
+
+#data {
+	display: block;
+	height: 100px;
+	width: 800px;
+	margin-top: 5px;
+}
+
+button {
+	border: 2px solid #ccc;
+	border-color: #D9E1F9 #B5BCD0 #878E9D #C6CEE4;
+	background-color: #CDDCF3;
+	cursor: pointer;
+}
+
+.gfxToolbar {
+	width: 800px;
+	height: 50px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+</style>
+
+<script>
 		djConfig = {
 			isDebug:false,
 			parseOnLoad:true
 		};
 	</script>
-	<script src="../../../dojo/dojo.js"></script>
-	<script>
+<script src="../../../dojo/dojo.js"></script>
+<script>
 		dojo.require("dojo.parser");
 		dojo.require("dojox.drawing");
 
@@ -134,27 +144,28 @@
 
 </head>
 <body>
-    <h2>Drawing Test</h2>
-	<div id="conEdit" contenteditable="true"></div>
-	<div id="wrapper">
-		<div dojoType="dojox.drawing.Drawing" id="drawingNode" jsId="myDrawing" class="drawing"
-			 plugins="[{'name':'dojox.drawing.plugins.drawing.Grid', 'options':{minor:20, major:100}},{'name':'dojox.drawing.plugins.drawing.GreekPalette'}]">
-		</div>
-	</div>
+<h2>Drawing Test</h2>
+<div id="conEdit" contenteditable="true"></div>
+<div id="wrapper">
+<div dojoType="dojox.drawing.Drawing" id="drawingNode" jsId="myDrawing"
+	class="drawing"
+	plugins="[{'name':'dojox.drawing.plugins.drawing.Grid', 'options':{minor:20, major:100}},{'name':'dojox.drawing.plugins.drawing.GreekPalette'}]">
+</div>
+</div>
 
-	<br/>
-	<button id="import">Import</button>
-	<button id="export">Export</button>
-	<button id="selectall">Select All</button>
-	<button id="clear">Clear Drawing</button>
-	&nbsp;&nbsp;&nbsp;
-	<button id="blue">Change defaults to Blue</button>
-	<button id="red">Change defaults to Red</button>
-	<button id="yellow">Change selected to Yellow</button>
-	<br/>
-	<br/>
+<br />
+<button id="import">Import</button>
+<button id="export">Export</button>
+<button id="selectall">Select All</button>
+<button id="clear">Clear Drawing</button>
+&nbsp;&nbsp;&nbsp;
+<button id="blue">Change defaults to Blue</button>
+<button id="red">Change defaults to Red</button>
+<button id="yellow">Change selected to Yellow</button>
+<br />
+<br />
 
-	<textarea id="data"></textarea>
+<textarea id="data"></textarea>
 
 </body>
 </html>

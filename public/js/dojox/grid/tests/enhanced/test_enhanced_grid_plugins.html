@@ -2,55 +2,62 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html dir="ltr">
 <head>
-	<title>Test all plugins of dojox.grid.EnhancedGrid</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<link rel=stylesheet href="support/common.css"/>
-	<style type="text/css">
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-			padding-right: 5em;
-		}
-		.title {
-			text-align:center;
-			margin:1em;
-		}
-		.supporter {
-			display: block;
-			border: 3px solid #ccc;
-			width: 100em;
-			padding: 1em 3em; 
-			cursor: default;
-			radius: 8pt;
-			background: #fff;
-			-moz-border-radius: 8pt 8pt;
-		}
-		.selectReport {
-			display: inline-block;
-		}
-		.tutor h2{
-			font-weight: bolder;
-		}
-		.tutor td:first-child{
-			font-weight: bolder;
-		}
- 		#gridContainer{
-			width: 100em;
-			height: 35em;
-			border: 1px solid #D5CDB5;
-		}
-		/*Sample - overwrite default cell style
+<title>Test all plugins of dojox.grid.EnhancedGrid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel=stylesheet href="support/common.css" />
+<style type="text/css">
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	padding-right: 5em;
+}
+
+.title {
+	text-align: center;
+	margin: 1em;
+}
+
+.supporter {
+	display: block;
+	border: 3px solid #ccc;
+	width: 100em;
+	padding: 1em 3em;
+	cursor: default;
+	radius: 8pt;
+	background: #fff;
+	-moz-border-radius: 8pt 8pt;
+}
+
+.selectReport {
+	display: inline-block;
+}
+
+.tutor h2 {
+	font-weight: bolder;
+}
+
+.tutor td:first-child {
+	font-weight: bolder;
+}
+
+#gridContainer {
+	width: 100em;
+	height: 35em;
+	border: 1px solid #D5CDB5;
+}
+/*Sample - overwrite default cell style
 		.claro .dojoxGridCell{
 			border-color: transparent #D5CDB5 #D5CDB5 transparent !important;
 		}
 		.dj_ie6 .claro .dojoxGridCell{
 			border: 1px solid #F1F1F1 !important;
 		}*/
-	</style>
-	<script type="text/javascript" src="../../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../../../../dijit/tests/_testCommon.js"></script>
-	<script type="text/javascript">
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript"
+	src="../../../../dijit/tests/_testCommon.js"></script>
+<script type="text/javascript">
 		dojo.require("dijit.form.CheckBox");
 		dojo.require("dojox.grid.enhanced.plugins.Filter");
 		dojo.require("dojox.grid.enhanced.plugins.exporter.CSVWriter");
@@ -80,10 +87,10 @@
 				}
 			};
 	</script>
-	<script type="text/javascript" src="support/test_write_store_music.js"></script>
-	<script type="text/javascript" src="support/test_layout_music.js"></script>
-	<script type="text/javascript" src="support/test_repeat.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="support/test_write_store_music.js"></script>
+<script type="text/javascript" src="support/test_layout_music.js"></script>
+<script type="text/javascript" src="support/test_repeat.js"></script>
+<script type="text/javascript">
 		var plugins = {
 			"nestedSorting": {},
 			"indirectSelection": {
@@ -642,234 +649,280 @@
 	</script>
 </head>
 <body class="claro">
-	<h1 class="title">dojox.grid.EnhancedGrid - plugins</h1>
-	<div id="ctrlBtns"></div><br/>
-	<div id="pluginList" dojoType="PluginTable" style="float:right;"></div>
-	<div id="gridContainer"></div><br/>
-	<div id="ctrlBtns2"></div><br/>
-	
-	<div id="menusSupport" style="display: none;">
-		<div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Header Menu Item 1</div>
-			<div dojoType="dijit.MenuItem">Header Menu Item 2</div>
-			<div dojoType="dijit.MenuItem">Header Menu Item 3</div>
-			<div dojoType="dijit.MenuItem">Header Menu Item 4</div>
-		</div>
-		<div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Row Menu Item 1</div>
-			<div dojoType="dijit.MenuItem">Row Menu Item 2</div>
-			<div dojoType="dijit.MenuItem">Row Menu Item 3</div>
-			<div dojoType="dijit.MenuItem">Row Menu Item 4</div>
-		</div>
-		<div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
-			<div dojoType="dijit.MenuItem">Cell Menu Item 2</div>
-			<div dojoType="dijit.MenuItem">Cell Menu Item 3</div>
-			<div dojoType="dijit.MenuItem">Cell Menu Item 4</div>
-		</div>
-		<div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
-			<div dojoType="dijit.MenuItem">Action 2 for Selected Region</div>
-			<div dojoType="dijit.MenuItem">Action 3 for Selected Region</div>
-			<div dojoType="dijit.MenuItem">Action 4 for Selected Region</div>
-		</div>
-	</div>
-	<div id="exporterSupport" class="supporter" style="display: none;">
-		<input type='button' value='Export All to CSV' onclick='exportCSV()' />
-		<input type='button' value='Export Selected to CSV' onclick='exportSelected()' />
-		Separator is:<input id='sep' type='text' value=',' />
-		Results:<br />
-	    <textarea rows="10" cols="100" id="csvResults"></textarea>
-	</div>
-	<div id="printerSupport" class="supporter" style="display: none;">
-		<input type='button' value='Print All' onclick='printGrid()' />
-		<input type='button' value='Print Selected' onclick='printSelected()' />
-		<input type='button' value='Print Preview' onclick='printPreview()' />
-		Use Title:<input id='print_title' type='text' value='Favorite Music' />
-	</div>
-	<div id="cellMergeSupport" class="supporter" style="display: none;">
-		<table>
-			<tr>
-				<td>At Row</td>
-				<td><input id="inputRow" type="text" value="3"/></td>
-			</tr>
-			<tr>
-				<td>From Column</td>
-				<td><input id="inputStart" type="text" value="1"/></td>
-			</tr>
-			<tr>
-				<td>To Column</td>
-				<td><input id="inputEnd" type="text" value="3"/></td>
-			</tr>
-			<tr>
-				<td>Use Value of Column</td>
-				<td><input id="inputMajor" type="text" value="2"/></td>
-			</tr>
-			<tr>
-				<td><button onclick="mergeCells()">Merge Cells</button></td>
-			</tr>
-		</table>
-	</div>
-	<div id="searchSupport" class="supporter" style="display: none;">
-		Search all: Use "/.../" for Regular Expressions. Wildcards (* and ?) are available when not using "/.../".
-		<hr />
-		<div>Search all columns for<input id="allcolumnsInput" type="text" size="30" value="/void/i" />
-		<button onclick="onSearchAll(dojo.byId('allcolumnsInput').value)">Go =></button>
-		<span id="result1"></span>
-		</div>
-		<hr />
-		Search with a query object (extends the functionality of the standard store query).
-		<table>
-			<thead>
-				<tr>
-					<th>Column</th>
-					<th>Query String or Regular Expression</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>id</td>
-					<td><input name="id" class="searchInput" type="text" size="30" /></td>
-					<td rowspan="11" align="center" valign="center" style="padding-left: 50px;">
-						<button onclick="onSearch()">Search =></button>
-						<span id="result2"></span>
-					</td>
-				</tr>
-				<tr>
-					<td>Genre</td>
-					<td><input name="Genre" class="searchInput" type="text" size="30" /></td>
-				</tr>
-				<tr>
-					<td>Artist</td>
-					<td><input name="Artist" class="searchInput" type="text" size="30" value="/an/i" /></td>
-				</tr>
-				<tr>
-					<td>Year</td>
-					<td><input name="Year" class="searchInput" type="text" size="30" /></td>
-				</tr>
-				<tr>
-					<td>Album</td>
-					<td><input name="Album" class="searchInput" type="text" size="30" value="/t.*t/i" /></td>
-				</tr>
-				<tr>
-					<td>Name</td>
-					<td><input name="Name" class="searchInput" type="text" size="30" /></td>
-				</tr>
-				<tr>
-					<td>Length</td>
-					<td><input name="Length" class="searchInput" type="text" size="30" /></td>
-				</tr>
-				<tr>
-					<td>Track</td>
-					<td><input name="Track" class="searchInput" type="text" size="30" /></td>
-				</tr>
-				<tr>
-					<td>Composer</td>
-					<td><input name="Composer" class="searchInput" type="text" size="30" value="*ss*" /></td>
-				</tr>
-				<tr>
-					<td>Download Date</td>
-					<td><input name="Download Date" class="searchInput" type="text" size="30" /></td>
-				</tr>
-				<tr>
-					<td>Last Played</td>
-					<td><input name="Last Played" class="searchInput" type="text" size="30" /></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div id="cookieSupport" class="supporter" style="display: none;">
-		<p>
-			When destroying the grid...
-		</p>
-		<input id='enableGridCookieCB' type="checkbox" onchange="enableCookie(null, !this.checked)" />Do not persist anything<br />
-		<input id='enableGridCWidthCookieCB' type="checkbox" onchange="enableCookie('cellWidths',!this.checked)" />Do not persist column width<br />
-		<input id='enableGridSortCookieCB' type="checkbox" onchange="enableCookie('sortProps',!this.checked)" />Do not persist single sorting order<br />
-		<input id='enableGridNSortCookieCB' type="checkbox" onchange="enableCookie('nestedSortProps',!this.checked)" />Do not persist nested sorting order<br />
-		<input id='enableGridCOrderCookieCB' type="checkbox" onchange="enableCookie('columnOrder',!this.checked)" />Do not persist column arrangement<br />
-	</div>
-	<div id="selectorSupport" class="supporter" style="display: none;">
-		<div class="selectReport">
-			<h2>Selected Cells:&nbsp;&nbsp;&nbsp;
-			Count: <input type="text" id="cellCnt" value="0"/>
-			</h2>
-			<textarea id="cells" rows="10" cols="40"></textarea>
-		</div>
-		<div class="selectReport">
-			<h2>Selected Columns:&nbsp;&nbsp;&nbsp;
-			Count: <input type="text" id="colCnt" value="0"/>
-			</h2>
-			<textarea id="cols" rows="10" cols="40"></textarea>	
-		</div>
-		<div class="selectReport">
-			<h2>Selected Rows:&nbsp;&nbsp;&nbsp;
-			Count: <input type="text" id="rowCnt" value="0"/>
-			</h2>
-			<textarea id="rows" rows="10" cols="40"></textarea>	
-		</div>
-	</div>
-	<div id="dndSupport" class="supporter" style="display:none; width: 40em;">
-		<form id="songForm">
-		  <table>
-		    <tr>
-		      <td><label for="inputName">Song name</label></td>
-		      <td><input id="inputName" type="text" /></td>
-		    </tr>
-		    <tr>
-		      <td><label for="inputAuthor">Artist</label></td>
-		      <td><input id="inputAuthor" type="text" /></td>
-		    </tr>
-		    <tr>
-		      <td><label for="inputAlbum">Album</label></td>
-		      <td><input id="inputAlbum" type="text" /></td>
-		    </tr>
-		  </table>
-		</form>
-	</div>
-	<div id="paginationSupport" class="supporter" style="display:none;">
-		<table>
-			<tr>
-				<td><input id="inputScrollToRowIdx" type="text" /></td>
-				<td><button onclick="scrollToRow()">Scroll to row</button></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-	</div>
-	<div class="tutor">
-		<p>
-			<h2>How to use this page:</h2>
-			<ol>
-				<li>Select plugins/options at right side.</li>
-				<li>Press "Create" button.</li>
-			</ol>	
-		</p>
-		<p>
-			<h2>Meaning of buttons:</h2>
-			<table>
-				<tr><td>Create</td><td>Create a grid using current plugins/options.</td></tr>
-				<tr><td>Destroy</td><td>Destroy the current grid.</td></tr>
-				<tr><td>Prev</td><td>Create a grid with previous layout</td></tr>
-				<tr><td>Next</td><td>Create a grid with next layout</td></tr>
-				<tr><td>Start</td><td>Keep creating and destorying grid (to test memory leak)</td></tr>
-				<tr><td>End</td><td>Stop the process that "Start" begins.</td></tr>
-				<tr><td>Select All</td><td>Select all plugins</td></tr>
-				<tr><td>Deselect All</td><td>Deselect all plugins</td></tr>
-				<tr><td>Refresh</td><td>Refresh the grid.</td></tr>
-			</table>
-		</p>
-	</div>
-	<div id="repeatcounter" style="float: left;"></div>
+<h1 class="title">dojox.grid.EnhancedGrid - plugins</h1>
+<div id="ctrlBtns"></div>
+<br />
+<div id="pluginList" dojoType="PluginTable" style="float: right;"></div>
+<div id="gridContainer"></div>
+<br />
+<div id="ctrlBtns2"></div>
+<br />
+
+<div id="menusSupport" style="display: none;">
+<div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+<div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+<div dojoType="dijit.MenuItem">Header Menu Item 2</div>
+<div dojoType="dijit.MenuItem">Header Menu Item 3</div>
+<div dojoType="dijit.MenuItem">Header Menu Item 4</div>
+</div>
+<div dojoType="dijit.Menu" id="rowMenu" style="display: none;">
+<div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+<div dojoType="dijit.MenuItem">Row Menu Item 2</div>
+<div dojoType="dijit.MenuItem">Row Menu Item 3</div>
+<div dojoType="dijit.MenuItem">Row Menu Item 4</div>
+</div>
+<div dojoType="dijit.Menu" id="cellMenu" style="display: none;">
+<div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+<div dojoType="dijit.MenuItem">Cell Menu Item 2</div>
+<div dojoType="dijit.MenuItem">Cell Menu Item 3</div>
+<div dojoType="dijit.MenuItem">Cell Menu Item 4</div>
+</div>
+<div dojoType="dijit.Menu" id="selectedRegionMenu"
+	style="display: none;">
+<div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+<div dojoType="dijit.MenuItem">Action 2 for Selected Region</div>
+<div dojoType="dijit.MenuItem">Action 3 for Selected Region</div>
+<div dojoType="dijit.MenuItem">Action 4 for Selected Region</div>
+</div>
+</div>
+<div id="exporterSupport" class="supporter" style="display: none;">
+<input type='button' value='Export All to CSV' onclick='exportCSV()' />
+<input type='button' value='Export Selected to CSV'
+	onclick='exportSelected()' /> Separator is:<input id='sep' type='text'
+	value=',' /> Results:<br />
+<textarea rows="10" cols="100" id="csvResults"></textarea></div>
+<div id="printerSupport" class="supporter" style="display: none;">
+<input type='button' value='Print All' onclick='printGrid()' /> <input
+	type='button' value='Print Selected' onclick='printSelected()' /> <input
+	type='button' value='Print Preview' onclick='printPreview()' /> Use
+Title:<input id='print_title' type='text' value='Favorite Music' /></div>
+<div id="cellMergeSupport" class="supporter" style="display: none;">
+<table>
+	<tr>
+		<td>At Row</td>
+		<td><input id="inputRow" type="text" value="3" /></td>
+	</tr>
+	<tr>
+		<td>From Column</td>
+		<td><input id="inputStart" type="text" value="1" /></td>
+	</tr>
+	<tr>
+		<td>To Column</td>
+		<td><input id="inputEnd" type="text" value="3" /></td>
+	</tr>
+	<tr>
+		<td>Use Value of Column</td>
+		<td><input id="inputMajor" type="text" value="2" /></td>
+	</tr>
+	<tr>
+		<td>
+		<button onclick="mergeCells()">Merge Cells</button>
+		</td>
+	</tr>
+</table>
+</div>
+<div id="searchSupport" class="supporter" style="display: none;">
+Search all: Use "/.../" for Regular Expressions. Wildcards (* and ?) are
+available when not using "/.../".
+<hr />
+<div>Search all columns for<input id="allcolumnsInput" type="text"
+	size="30" value="/void/i" />
+<button onclick="onSearchAll(dojo.byId('allcolumnsInput').value)">Go
+=></button>
+<span id="result1"></span></div>
+<hr />
+Search with a query object (extends the functionality of the standard
+store query).
+<table>
+	<thead>
+		<tr>
+			<th>Column</th>
+			<th>Query String or Regular Expression</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>id</td>
+			<td><input name="id" class="searchInput" type="text" size="30" /></td>
+			<td rowspan="11" align="center" valign="center"
+				style="padding-left: 50px;">
+			<button onclick="onSearch()">Search =></button>
+			<span id="result2"></span></td>
+		</tr>
+		<tr>
+			<td>Genre</td>
+			<td><input name="Genre" class="searchInput" type="text"
+				size="30" /></td>
+		</tr>
+		<tr>
+			<td>Artist</td>
+			<td><input name="Artist" class="searchInput" type="text"
+				size="30" value="/an/i" /></td>
+		</tr>
+		<tr>
+			<td>Year</td>
+			<td><input name="Year" class="searchInput" type="text" size="30" /></td>
+		</tr>
+		<tr>
+			<td>Album</td>
+			<td><input name="Album" class="searchInput" type="text"
+				size="30" value="/t.*t/i" /></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><input name="Name" class="searchInput" type="text" size="30" /></td>
+		</tr>
+		<tr>
+			<td>Length</td>
+			<td><input name="Length" class="searchInput" type="text"
+				size="30" /></td>
+		</tr>
+		<tr>
+			<td>Track</td>
+			<td><input name="Track" class="searchInput" type="text"
+				size="30" /></td>
+		</tr>
+		<tr>
+			<td>Composer</td>
+			<td><input name="Composer" class="searchInput" type="text"
+				size="30" value="*ss*" /></td>
+		</tr>
+		<tr>
+			<td>Download Date</td>
+			<td><input name="Download Date" class="searchInput" type="text"
+				size="30" /></td>
+		</tr>
+		<tr>
+			<td>Last Played</td>
+			<td><input name="Last Played" class="searchInput" type="text"
+				size="30" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div id="cookieSupport" class="supporter" style="display: none;">
+<p>When destroying the grid...</p>
+<input id='enableGridCookieCB' type="checkbox"
+	onchange="enableCookie(null, !this.checked)" />Do not persist anything<br />
+<input id='enableGridCWidthCookieCB' type="checkbox"
+	onchange="enableCookie('cellWidths',!this.checked)" />Do not persist
+column width<br />
+<input id='enableGridSortCookieCB' type="checkbox"
+	onchange="enableCookie('sortProps',!this.checked)" />Do not persist
+single sorting order<br />
+<input id='enableGridNSortCookieCB' type="checkbox"
+	onchange="enableCookie('nestedSortProps',!this.checked)" />Do not
+persist nested sorting order<br />
+<input id='enableGridCOrderCookieCB' type="checkbox"
+	onchange="enableCookie('columnOrder',!this.checked)" />Do not persist
+column arrangement<br />
+</div>
+<div id="selectorSupport" class="supporter" style="display: none;">
+<div class="selectReport">
+<h2>Selected Cells:&nbsp;&nbsp;&nbsp; Count: <input type="text"
+	id="cellCnt" value="0" /></h2>
+<textarea id="cells" rows="10" cols="40"></textarea></div>
+<div class="selectReport">
+<h2>Selected Columns:&nbsp;&nbsp;&nbsp; Count: <input type="text"
+	id="colCnt" value="0" /></h2>
+<textarea id="cols" rows="10" cols="40"></textarea></div>
+<div class="selectReport">
+<h2>Selected Rows:&nbsp;&nbsp;&nbsp; Count: <input type="text"
+	id="rowCnt" value="0" /></h2>
+<textarea id="rows" rows="10" cols="40"></textarea></div>
+</div>
+<div id="dndSupport" class="supporter"
+	style="display: none; width: 40em;">
+<form id="songForm">
+<table>
+	<tr>
+		<td><label for="inputName">Song name</label></td>
+		<td><input id="inputName" type="text" /></td>
+	</tr>
+	<tr>
+		<td><label for="inputAuthor">Artist</label></td>
+		<td><input id="inputAuthor" type="text" /></td>
+	</tr>
+	<tr>
+		<td><label for="inputAlbum">Album</label></td>
+		<td><input id="inputAlbum" type="text" /></td>
+	</tr>
+</table>
+</form>
+</div>
+<div id="paginationSupport" class="supporter" style="display: none;">
+<table>
+	<tr>
+		<td><input id="inputScrollToRowIdx" type="text" /></td>
+		<td>
+		<button onclick="scrollToRow()">Scroll to row</button>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+</div>
+<div class="tutor">
+<p>
+<h2>How to use this page:</h2>
+<ol>
+	<li>Select plugins/options at right side.</li>
+	<li>Press "Create" button.</li>
+</ol>
+</p>
+<p>
+<h2>Meaning of buttons:</h2>
+<table>
+	<tr>
+		<td>Create</td>
+		<td>Create a grid using current plugins/options.</td>
+	</tr>
+	<tr>
+		<td>Destroy</td>
+		<td>Destroy the current grid.</td>
+	</tr>
+	<tr>
+		<td>Prev</td>
+		<td>Create a grid with previous layout</td>
+	</tr>
+	<tr>
+		<td>Next</td>
+		<td>Create a grid with next layout</td>
+	</tr>
+	<tr>
+		<td>Start</td>
+		<td>Keep creating and destorying grid (to test memory leak)</td>
+	</tr>
+	<tr>
+		<td>End</td>
+		<td>Stop the process that "Start" begins.</td>
+	</tr>
+	<tr>
+		<td>Select All</td>
+		<td>Select all plugins</td>
+	</tr>
+	<tr>
+		<td>Deselect All</td>
+		<td>Deselect all plugins</td>
+	</tr>
+	<tr>
+		<td>Refresh</td>
+		<td>Refresh the grid.</td>
+	</tr>
+</table>
+</p>
+</div>
+<div id="repeatcounter" style="float: left;"></div>
 </body>
 </html>

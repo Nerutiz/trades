@@ -1,16 +1,12 @@
 <?php
-	echo $this->thingsForm;
+echo $this->thingsForm;
 ?>
-<form enctype="multipart/form-data" action="/things/upload" method="POST">
-    <input type="file" id="newUploader"> 
-	<?php /*?>
-    	<input dojoType="dojox.form.Uploader" multiple="true" uploadOnSelect="true" baseClass="tradesFileUploader" name="uploadedfile" id="uploadedfile" type="file" />
-	<?php */ ?> 
-	<div id="files" dojoType="dojox.form.uploader.FileList" uploaderId="uploadedfile"></div>
+<form enctype="multipart/form-data" action="/things/upload"
+	method="POST"><input type="file" id="newUploader">
+<div id="files" dojoType="dojox.form.uploader.FileList" uploaderId="uploadedfile"></div>
 </form>
 
-<div id="imagesBlock" class="imagesBlock">
-</div>
+<div id="imagesBlock" class="imagesBlock"></div>
 
 <script>
 	var u = new dojox.form.Uploader({
@@ -27,7 +23,7 @@
 			       console.debug(height);
 			       dojo.create("img", {src:'/uploads/' + d.uuid + '.' + d.ext, width:100, height: height}, dojo.byId('imagesBlock'));
 			    }); 
-			   dojo.byId('images').value = imagesString;
+			   dojo.byId('images').value =  dojo.byId('images').value + imagesString;
 			}
 		}, 'newUploader');
 </script>

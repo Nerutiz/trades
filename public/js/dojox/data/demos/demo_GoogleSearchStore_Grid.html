@@ -2,20 +2,25 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/tundra/tundra_rtl.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-		@import "../../../dojox/grid/resources/tundraGrid.css";
-	</style>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<title>Google Search Store with Grid</title>
+@import "../../../dijit/themes/tundra/tundra.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../../../dijit/dijit.js"></script>
-	<script type="text/javascript" src="../GoogleSearchStore.js"></script>
-	<script type="text/javascript">
+@import "../../../dijit/themes/tundra/tundra_rtl.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dojox/grid/resources/tundraGrid.css";
+</style>
+
+<title>Google Search Store with Grid</title>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../dijit/dijit.js"></script>
+<script type="text/javascript" src="../GoogleSearchStore.js"></script>
+<script type="text/javascript">
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dijit.form.TextBox");
 		dojo.require("dijit.form.Button");
@@ -37,37 +42,32 @@
 		var newQuery = {text: 'dojo ajax' }; 
 	</script>
 </head>
-<body class="tundra" style="margin:20px;">
-	<h1>dojox.data.GoogleSearchStore:</h1>
-	<i>Displays a list of results from a google query.</i>
-	<div dojoType="dojox.data.GoogleSearchStore" jsId="googleStore"></div>
-	<br>
-	<br>
-	<div dojoType="dijit.form.TextBox" id="searchText" value="dojo ajax"></div> 
-	<button dojoType="dijit.form.Button" id="searchButton">Search</button>
-	<br>
-	<br>
-	<br>
+<body class="tundra" style="margin: 20px;">
+<h1>dojox.data.GoogleSearchStore:</h1>
+<i>Displays a list of results from a google query.</i>
+<div dojoType="dojox.data.GoogleSearchStore" jsId="googleStore"></div>
+<br>
+<br>
+<div dojoType="dijit.form.TextBox" id="searchText" value="dojo ajax"></div>
+<button dojoType="dijit.form.Button" id="searchButton">Search</button>
+<br>
+<br>
+<br>
 
-	<div dojoType="dojox.grid.DataGrid" 
-		rowsPerPage="8"
-		store="googleStore" 
-		structure="layoutResults" 
-		query="{ text: 'dojo ajax' }"
-		jsId="grid"
-		style="width: 800px; height: 500px;"
-		>
-	</div>
-	
-	<!-- 
+<div dojoType="dojox.grid.DataGrid" rowsPerPage="8" store="googleStore"
+	structure="layoutResults" query="{ text: 'dojo ajax' }" jsId="grid"
+	style="width: 800px; height: 500px;"></div>
+
+<!-- 
 		Link the button to updating the query, then triggering the refresh of the grid. 
 		Handy use of dojox.wire!
-	-->    
-	<div dojoType="dojox.wire.ml.Action"
-		trigger="searchButton"
-		triggerEvent="onClick">
-		<div dojoType="dojox.wire.ml.Transfer" source="searchText.value" target="newQuery.text"></div>
-		<div dojoType="dojox.wire.ml.Invocation" object="grid" method="setQuery" parameters="newQuery"></div>
-	</div>    
+	-->
+<div dojoType="dojox.wire.ml.Action" trigger="searchButton"
+	triggerEvent="onClick">
+<div dojoType="dojox.wire.ml.Transfer" source="searchText.value"
+	target="newQuery.text"></div>
+<div dojoType="dojox.wire.ml.Invocation" object="grid" method="setQuery"
+	parameters="newQuery"></div>
+</div>
 </body>
 </html>

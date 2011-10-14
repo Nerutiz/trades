@@ -1,6 +1,7 @@
 .dijitRtl .nihilo .dijitTab {
-	margin-right:0;
-	margin-left:2px;		/* space between one tab and the next in top/bottom mode */
+	margin-right: 0;
+	margin-left: 2px;
+	/* space between one tab and the next in top/bottom mode */
 }
 
 /* tab strips */
@@ -8,10 +9,8 @@
 	margin-left: 0;
 }
 
-.dijitRtl .nihilo .dijitTabContainerTopStrip,
-.dijitRtl .nihilo .dijitTabContainerBottomStrip,
-.dijitRtl .nihilo .dijitTabContainerTop-tabs,
-.dijitRtl .nihilo .dijitTabContainerBottom-tabs {
+.dijitRtl .nihilo .dijitTabContainerTopStrip,.dijitRtl .nihilo .dijitTabContainerBottomStrip,.dijitRtl .nihilo .dijitTabContainerTop-tabs,.dijitRtl .nihilo .dijitTabContainerBottom-tabs
+	{
 	padding-left: 0;
 	padding-right: 3px;
 }
@@ -21,8 +20,8 @@
 	padding-right: 4px;
 }
 
-.dijitRtl .nihilo .dijitTabPaneWrapper {
-	#zoom: 1;
+.dijitRtl .nihilo .dijitTabPaneWrapper { #
+	zoom: 1;
 }
 
 .dj_ie-rtl .nihilo .dijitTabContainerLeft-tabs {
@@ -33,11 +32,11 @@
 	margin-right: 0 !important;
 }
 
-.dijitRtl .nihilo .dijitTabContainerLeft-tabs .dijitTab,
-.dijitRtl .nihilo .dijitTabContainerRight-tabs .dijitTab {
-	margin-left:0;
+.dijitRtl .nihilo .dijitTabContainerLeft-tabs .dijitTab,.dijitRtl .nihilo .dijitTabContainerRight-tabs .dijitTab
+	{
+	margin-left: 0;
 }
 
-.dj_ie-rtl .nihilo .dijitTab .dijitTabInnerDiv{
-	width : 1%;
+.dj_ie-rtl .nihilo .dijitTab .dijitTabInnerDiv {
+	width: 1%;
 }

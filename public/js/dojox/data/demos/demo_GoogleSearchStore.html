@@ -2,23 +2,26 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/tundra/tundra_rtl.css";
-		
-		.search-result {
-			float: left;
-			width: 150px;
-			border: 2px dashed;
-			padding: 4px;
-		}
-	</style>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<title>Google Search store</title>
+@import "../../../dijit/themes/tundra/tundra.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript">
+@import "../../../dijit/themes/tundra/tundra_rtl.css";
+
+.search-result {
+	float: left;
+	width: 150px;
+	border: 2px dashed;
+	padding: 4px;
+}
+</style>
+
+<title>Google Search store</title>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dojox.data.GoogleSearchStore");
 		dojo.require("dijit.form.ComboBox");
 		dojo.require("dijit.form.FilteringSelect");
@@ -102,24 +105,20 @@
 		}
 	</script>
 </head>
-<body class="tundra" style="margin:20px;">
-	<form>
-		Text: <input id="searchText" type="text" value="dojo ajax"/>
-		Count: <input id="count" type="text" value="8" width=20/>
-		<input id="searchButton" type="button" value="store.fetch()" onclick="doSearch()" />
-		Type 
-			<select id="typeText" name="typeText">
-				<option selected value="web">Web</option>
-				<option value="local">Local</option>
-				<option value="video">Video</option>
-				<option value="blogs">Blogs</option>
-				<option value="news">News</option>
-				<option value="books">Books</option>
-				<option value="images">Images</option>			
-			</select> 
-		<div id="output">
-			
-		</div>
-	</form>
+<body class="tundra" style="margin: 20px;">
+<form>Text: <input id="searchText" type="text" value="dojo ajax" />
+Count: <input id="count" type="text" value="8" width=20 /> <input
+	id="searchButton" type="button" value="store.fetch()"
+	onclick="doSearch()" /> Type <select id="typeText" name="typeText">
+	<option selected value="web">Web</option>
+	<option value="local">Local</option>
+	<option value="video">Video</option>
+	<option value="blogs">Blogs</option>
+	<option value="news">News</option>
+	<option value="books">Books</option>
+	<option value="images">Images</option>
+</select>
+<div id="output"></div>
+</form>
 </body>
 </html>

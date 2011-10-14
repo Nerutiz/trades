@@ -2,37 +2,40 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dijit.popup and BackgroundIFrame unit test</title>
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../../themes/dijit.css";
-		@import "../css/dijitTests.css";
+<title>Dijit.popup and BackgroundIFrame unit test</title>
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-		body {
-			height: 100%;
-			padding: 0px;
-			margin: 0px;
-		}
+@import "../../themes/dijit.css";
 
-		div {
-			background: white;
-			border: solid 1px gray;
-		}
+@import "../css/dijitTests.css";
 
-		/* the menu type test widgets */
-		.choice div {
-			width: 200px;
-			cursor: pointer;
-		}
-		.choice div:hover {
-			background: #ccc;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="isDebug: true, parseOnLoad: false"></script>
-	<script type="text/javascript" src="../_testCommon.js"></script>
+body {
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+}
 
-	<script type="text/javascript">
+div {
+	background: white;
+	border: solid 1px gray;
+}
+
+/* the menu type test widgets */
+.choice div {
+	width: 200px;
+	cursor: pointer;
+}
+
+.choice div:hover {
+	background: #ccc;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: false"></script>
+<script type="text/javascript" src="../_testCommon.js"></script>
+
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 
 		function log(str){
@@ -263,9 +266,9 @@
 	</script>
 </head>
 <body>
-	<h1>dijit.popup and BackgroundIFrame Unit Test</h1>
-	<input id="inputAtStart">
-	<span id="widgets"></span>
-	<input id="inputAtEnd">
+<h1>dijit.popup and BackgroundIFrame Unit Test</h1>
+<input id="inputAtStart">
+<span id="widgets"></span>
+<input id="inputAtEnd">
 </body>
 </html>

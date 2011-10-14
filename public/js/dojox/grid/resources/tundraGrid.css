@@ -6,24 +6,21 @@
 }
 
 /* master messages */
-
 .tundra .dojoxGridMasterMessages {
 	background-color: #fefefe;
 }
 
-.tundra .dojoxGridLoading, 
-.tundra .dojoxGridError {
-	background-position:left center;
+.tundra .dojoxGridLoading,.tundra .dojoxGridError {
+	background-position: left center;
 	background-repeat: no-repeat;
-	padding-left:25px;
+	padding-left: 25px;
 }
 
-.dijitRtl .tundra .dojoxGridLoading, 
-.dijitRtl .tundra .dojoxGridError,
-.dijitRtl .tundra .dojoxGridNoData {
-	background-position:right;
-	padding-right:25px;
-	padding-left:0px;
+.dijitRtl .tundra .dojoxGridLoading,.dijitRtl .tundra .dojoxGridError,.dijitRtl .tundra .dojoxGridNoData
+	{
+	background-position: right;
+	padding-right: 25px;
+	padding-left: 0px;
 }
 
 .tundra .dojoxGridLoading {
@@ -35,61 +32,67 @@
 }
 
 /* header */
-
 .tundra .dojoxGridHeader {
-	background-color:  #e9e9e9;
+	background-color: #e9e9e9;
 }
 
-.tundra .dojoxGridHeader .dojoxGridCell { 
+.tundra .dojoxGridHeader .dojoxGridCell {
 	border-width: 1px;
 	padding-bottom: 0px;
 	border-color: transparent #ACA899 #919191 transparent;
-	background: url(../../../dijit/themes/tundra/images/tabEnabled.png) #e9e9e9 repeat-x top;
+	background: url(../../../dijit/themes/tundra/images/tabEnabled.png)
+		#e9e9e9 repeat-x top;
 	color: #000 !important;
 }
 
 .tundra .dojoxGridHeader .dojoxGridCellOver {
-	background: url(../../../dijit/themes/tundra/images/tabHover.png) #e9e9e9 repeat-x top;
+	background: url(../../../dijit/themes/tundra/images/tabHover.png)
+		#e9e9e9 repeat-x top;
 	color: #000 !important;
 }
+
 .tundra .dojoxGridHeader .dojoxGridCellFocus {
 	border-color: #ACA899 #919191;
 	border-style: dashed;
 }
+
 .tundra .dojoxGridArrowButtonChar {
 	float: right;
 	display: none;
 }
+
 .tundra .dojoxGridArrowButtonNode {
 	display: block !important;
 	padding-left: 0px;
 	float: right;
-	background:url("../../../dijit/themes/tundra/images/spriteArrows.png") no-repeat left center;
+	background: url("../../../dijit/themes/tundra/images/spriteArrows.png")
+		no-repeat left center;
 	width: 7px;
 	height: 1em;
 	margin: 2px 4px 0px 5px;
 }
+
 .dj_ie6 .tundra .dojoxGridArrowButtonNode {
-	background-image:url("../../../dijit/themes/tundra/images/spriteArrows.gif");
+	background-image:
+		url("../../../dijit/themes/tundra/images/spriteArrows.gif");
 	margin-left: 0px;
 }
 
 .tundra .dojoxGridSortUp .dojoxGridArrowButtonNode {
 	background-position: -21px;
 }
+
 .dijit_a11y .tundra .dojoxGridArrowButtonNode {
 	display: none !important;
 }
 
 /* content */
-
 .tundra .dojoxGridScrollbox {
 	background-color: #fefefe;
 }
 
 /* rowbar */
-
-.tundra .dojoxGridRowbar { 
+.tundra .dojoxGridRowbar {
 	border: none;
 	background: url(images/tabEnabled_rotated.png) #e9e9e9 repeat-y right;
 	border-right: 1px solid #ccc;
@@ -106,12 +109,12 @@
 }
 
 .tundra .dojoxGridRowbarSelected {
-	background: url(../../../dijit/themes/tundra/images/tabDisabled.png) #D8E8F9 no-repeat center;
+	background: url(../../../dijit/themes/tundra/images/tabDisabled.png)
+		#D8E8F9 no-repeat center;
 	border-right: 1px solid #ccc;
 }
 
 /* rows */
-
 .tundra .dojoxGridRow {
 	border: none;
 	background-color: white;
@@ -123,8 +126,8 @@
 }
 
 .tundra .dojoxGridRowOver .dojoxGridCell {
-	background-color: #60a1ea; 
-	color:#fff;
+	background-color: #60a1ea;
+	color: #fff;
 }
 
 .tundra .dojoxGridRowOver .dojoxGridCell .dijit {
@@ -143,13 +146,12 @@
 	background-color: #aec7e3 !important;
 }
 
-.dijit_a11y .tundra .dojoxGridRowSelected { 
-    background-color: #aec7e3;     
-    border-style: solid;     
-}   
+.dijit_a11y .tundra .dojoxGridRowSelected {
+	background-color: #aec7e3;
+	border-style: solid;
+}
 
 /* cells */
-
 .tundra .dojoxGridCell {
 	border: 1px dotted #D5CDB5;
 	border-left-color: transparent;
@@ -179,29 +181,29 @@
 }
 
 /* editing */
-
 /* FIXME: these colors are off! */
-.tundra .dojoxGridRowEditing td {
-	/* background-color: #F4FFF4; */
-	background-color: #60a1ea; 
+.tundra .dojoxGridRowEditing td { /* background-color: #F4FFF4; */
+	background-color: #60a1ea;
 	/* padding: 0px 3px 0px 3px; */
 }
 
 .tundra .dojoxGridRow-inserting td {
 	background-color: #F4FFF4;
 }
+
 .tundra .dojoxGridRow-inflight td {
 	background-color: #F2F7B7;
 }
+
 .tundra .dojoxGridRow-error td {
 	background-color: #F8B8B6;
 }
 
 /* Drag and Drop */
-
 .tundra .dojoxGrid .dojoDndItemBefore {
 	border-left-color: #3559ac;
 }
+
 .tundra .dojoxGrid .dojoDndItemAfter {
 	border-right-color: #3559ac;
 }
@@ -214,55 +216,70 @@
 	text-align: center;
 	margin-top: -3px;
 }
+
 .dijitRtl .tundra .dojoxGridExpando {
 	float: right;
 }
+
 .tundra .dojoxGridExpandoCell {
 	padding-top: 5px;
 }
+
 .tundra .dojoxGridExpandoNode {
 	height: 18px;
-	background-image: url('../../../dijit/themes/tundra/images/treeExpand_plus.gif');
+	background-image:
+		url('../../../dijit/themes/tundra/images/treeExpand_plus.gif');
 }
+
 .tundra .dojoxGridExpandoOpened .dojoxGridExpandoNode {
-	background-image: url('../../../dijit/themes/tundra/images/treeExpand_minus.gif');		
+	background-image:
+		url('../../../dijit/themes/tundra/images/treeExpand_minus.gif');
 }
+
 .tundra .dojoxGridExpandoLoading .dojoxGridExpandoNode {
-	background-image: url('../../../dijit/themes/tundra/images/treeExpand_loading.gif');		
+	background-image:
+		url('../../../dijit/themes/tundra/images/treeExpand_loading.gif');
 }
+
 .tundra .dojoxGridTreeModel .dojoxGridNoChildren .dojoxGridExpando {
 	visibility: visible !important;
 	width: 18px !important;
 }
+
 .tundra .dojoxGridTreeModel .dojoxGridNoChildren .dojoxGridExpandoNode {
-	background-image: url('../../../dijit/themes/tundra/images/treeExpand_leaf.gif');
+	background-image:
+		url('../../../dijit/themes/tundra/images/treeExpand_leaf.gif');
 	background-position: -3px;
 }
+
 .tundra .dojoxGridExpandoNodeInner {
 	visibility: hidden;
 }
+
 .dijit_a11y .dojoxGridExpandoNodeInner {
 	visibility: visible;
 }
-		
+
 .tundra .dojoxGridSummaryRow .dojoxGridCell {
 	border-top-color: #999;
 	border-top-style: solid;
 }
-.tundra .dojoxGridSpacerCell,
-.tundra .dojoxGridExpandoCell,
-.tundra .dojoxGridSummaryRow .dojoxGridSpacerCell {
+
+.tundra .dojoxGridSpacerCell,.tundra .dojoxGridExpandoCell,.tundra .dojoxGridSummaryRow .dojoxGridSpacerCell
+	{
 	border-color: transparent;
 	border-right-color: #D5CDB5;
 }
-.tundra .dojoxGridSummaryRow .dojoxGridTotalCell,
-.tundra .dojoxGridRowCollapsed .dojoxGridExpandoCell,
-.tundra .dojoxGridTreeModel .dojoxGridExpandoCell {
+
+.tundra .dojoxGridSummaryRow .dojoxGridTotalCell,.tundra .dojoxGridRowCollapsed .dojoxGridExpandoCell,.tundra .dojoxGridTreeModel .dojoxGridExpandoCell
+	{
 	border-bottom-color: #D5CDB5;
 }
+
 .tundra .dojoxGridSubRowAlt {
 	background-color: #F8F8F8;
 }
+
 .tundra .dojoxGridRowOdd .dojoxGridSubRowAlt {
 	background-color: #EDEFF3;
 }

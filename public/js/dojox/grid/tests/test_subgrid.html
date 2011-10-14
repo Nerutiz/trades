@@ -2,41 +2,49 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>dojox.grid.Grid Subgrid Test</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	</meta>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		
-		body { font-size: 1.0em; }
-		#grid {
-			height: 400px;
-			border: 1px solid silver;
-		}
-		.text-oneline {
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-		.textScrolling {
-			height: 4em;
-			overflow: auto;
-		}
-		.textScrolling {
-			width: 21.5em;
-		}
-	</style>
-	
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:true, debugAtAllCosts: false, parseOnLoad: true"></script>
-	<script type="text/javascript">
+<title>dojox.grid.Grid Subgrid Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</meta>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+body {
+	font-size: 1.0em;
+}
+
+#grid {
+	height: 400px;
+	border: 1px solid silver;
+}
+
+.text-oneline {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.textScrolling {
+	height: 4em;
+	overflow: auto;
+}
+
+.textScrolling {
+	width: 21.5em;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, debugAtAllCosts: false, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 		data = [ 
 			[ '3 stars', 'Averagia', 'Averagia', 8.99, 'An authentic experience defined by the intense layer of frothy, real facts. This combination package includes special T DISCS that work with your system to produce a perfectly serene experience. $8.99 per package. Please choose Regular (#NS1) or Decaffeinated (#NS4).' ],
 		 	[ '2 stars', 'Cheapy', 'Cheapy', 6.29, 'Power and subtlety intersect for an experience with real character. Imported from Europe just for you. 16 T DISCS per package. $6.29 per package. #NJ4.' ],
@@ -186,10 +194,8 @@
 	</script>
 </head>
 <body class="tundra">
-	<h3>dojox.grid.Grid showing sub-grid.</h3>
-	<div id="grid" dojoType="dojox.grid._Grid" 
-		structure="gridCells" 
-		rowCount="100000" 
-		autoWidth="true"></div>
+<h3>dojox.grid.Grid showing sub-grid.</h3>
+<div id="grid" dojoType="dojox.grid._Grid" structure="gridCells"
+	rowCount="100000" autoWidth="true"></div>
 </body>
 </html>

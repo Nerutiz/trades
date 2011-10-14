@@ -2,55 +2,62 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html dir="ltr">
 <head>
-	<title>EnhancedGrid Memory Leak Test - Great/Destroy</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<link rel=stylesheet href="support/common.css"/>
-	<style type="text/css">
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-			padding-right: 5em;
-		}
-		.title {
-			text-align:center;
-			margin:1em;
-		}
-		.supporter {
-			display: block;
-			border: 3px solid #ccc;
-			width: 100em;
-			padding: 1em 3em; 
-			cursor: default;
-			radius: 8pt;
-			background: #fff;
-			-moz-border-radius: 8pt 8pt;
-		}
-		.selectReport {
-			display: inline-block;
-		}
-		.tutor h2{
-			font-weight: bolder;
-		}
-		.tutor td:first-child{
-			font-weight: bolder;
-		}
- 		#gridContainer{
-			width: 100em;
-			height: 35em;
-			border: 1px solid #D5CDB5;
-		}
-		/*Sample - overwrite default cell style
+<title>EnhancedGrid Memory Leak Test - Great/Destroy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel=stylesheet href="support/common.css" />
+<style type="text/css">
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	padding-right: 5em;
+}
+
+.title {
+	text-align: center;
+	margin: 1em;
+}
+
+.supporter {
+	display: block;
+	border: 3px solid #ccc;
+	width: 100em;
+	padding: 1em 3em;
+	cursor: default;
+	radius: 8pt;
+	background: #fff;
+	-moz-border-radius: 8pt 8pt;
+}
+
+.selectReport {
+	display: inline-block;
+}
+
+.tutor h2 {
+	font-weight: bolder;
+}
+
+.tutor td:first-child {
+	font-weight: bolder;
+}
+
+#gridContainer {
+	width: 100em;
+	height: 35em;
+	border: 1px solid #D5CDB5;
+}
+/*Sample - overwrite default cell style
 		.claro .dojoxGridCell{
 			border-color: transparent #D5CDB5 #D5CDB5 transparent !important;
 		}
 		.dj_ie6 .claro .dojoxGridCell{
 			border: 1px solid #F1F1F1 !important;
 		}*/
-	</style>
-	<script type="text/javascript" src="../../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../../../../dijit/tests/_testCommon.js"></script>
-	<script type="text/javascript">
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript"
+	src="../../../../dijit/tests/_testCommon.js"></script>
+<script type="text/javascript">
 		dojo.require("dijit.form.CheckBox");
 		dojo.require("dojox.grid.enhanced.plugins.Filter");
 		dojo.require("dojox.grid.enhanced.plugins.exporter.CSVWriter");
@@ -78,10 +85,10 @@
 				plugins: {}
 			};
 	</script>
-	<script type="text/javascript" src="support/test_write_store_music.js"></script>
-	<script type="text/javascript" src="support/test_layout_music.js"></script>
-	<script type="text/javascript" src="support/test_repeat.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="support/test_write_store_music.js"></script>
+<script type="text/javascript" src="support/test_layout_music.js"></script>
+<script type="text/javascript" src="support/test_repeat.js"></script>
+<script type="text/javascript">
 		var plugins = {
 			"nestedSorting": {},
 			"indirectSelection": {
@@ -258,37 +265,43 @@
 	</script>
 </head>
 <body class="claro">
-	<h1 class="title">EnhancedGrid Memory Leak Test - Great/Destroy</h1>
-	<h2><p>Repeat creating/destroying Grid instances:</p></h2>
-	<div id="ctrlBtns"></div><br/>
-	<div id="pluginList" dojoType="PluginTable" style="float:right;"></div>
-	<div id="gridContainer"></div><br/>
-	<div id="ctrlBtns2"></div><br/>
-	<div id="menusSupport" style="display: none;">
-		<div dojoType="dijit.Menu" id="headerMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Header Menu Item 1</div>
-			<div dojoType="dijit.MenuItem">Header Menu Item 2</div>
-			<div dojoType="dijit.MenuItem">Header Menu Item 3</div>
-			<div dojoType="dijit.MenuItem">Header Menu Item 4</div>
-		</div>
-		<div dojoType="dijit.Menu" id="rowMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Row Menu Item 1</div>
-			<div dojoType="dijit.MenuItem">Row Menu Item 2</div>
-			<div dojoType="dijit.MenuItem">Row Menu Item 3</div>
-			<div dojoType="dijit.MenuItem">Row Menu Item 4</div>
-		</div>
-		<div dojoType="dijit.Menu" id="cellMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
-			<div dojoType="dijit.MenuItem">Cell Menu Item 2</div>
-			<div dojoType="dijit.MenuItem">Cell Menu Item 3</div>
-			<div dojoType="dijit.MenuItem">Cell Menu Item 4</div>
-		</div>
-		<div dojoType="dijit.Menu" id="selectedRegionMenu"  style="display: none;">
-			<div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
-			<div dojoType="dijit.MenuItem">Action 2 for Selected Region</div>
-			<div dojoType="dijit.MenuItem">Action 3 for Selected Region</div>
-			<div dojoType="dijit.MenuItem">Action 4 for Selected Region</div>
-		</div>
-	</div>
+<h1 class="title">EnhancedGrid Memory Leak Test - Great/Destroy</h1>
+<h2>
+<p>Repeat creating/destroying Grid instances:</p>
+</h2>
+<div id="ctrlBtns"></div>
+<br />
+<div id="pluginList" dojoType="PluginTable" style="float: right;"></div>
+<div id="gridContainer"></div>
+<br />
+<div id="ctrlBtns2"></div>
+<br />
+<div id="menusSupport" style="display: none;">
+<div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+<div dojoType="dijit.MenuItem">Header Menu Item 1</div>
+<div dojoType="dijit.MenuItem">Header Menu Item 2</div>
+<div dojoType="dijit.MenuItem">Header Menu Item 3</div>
+<div dojoType="dijit.MenuItem">Header Menu Item 4</div>
+</div>
+<div dojoType="dijit.Menu" id="rowMenu" style="display: none;">
+<div dojoType="dijit.MenuItem">Row Menu Item 1</div>
+<div dojoType="dijit.MenuItem">Row Menu Item 2</div>
+<div dojoType="dijit.MenuItem">Row Menu Item 3</div>
+<div dojoType="dijit.MenuItem">Row Menu Item 4</div>
+</div>
+<div dojoType="dijit.Menu" id="cellMenu" style="display: none;">
+<div dojoType="dijit.MenuItem">Cell Menu Item 1</div>
+<div dojoType="dijit.MenuItem">Cell Menu Item 2</div>
+<div dojoType="dijit.MenuItem">Cell Menu Item 3</div>
+<div dojoType="dijit.MenuItem">Cell Menu Item 4</div>
+</div>
+<div dojoType="dijit.Menu" id="selectedRegionMenu"
+	style="display: none;">
+<div dojoType="dijit.MenuItem">Action 1 for Selected Region</div>
+<div dojoType="dijit.MenuItem">Action 2 for Selected Region</div>
+<div dojoType="dijit.MenuItem">Action 3 for Selected Region</div>
+<div dojoType="dijit.MenuItem">Action 4 for Selected Region</div>
+</div>
+</div>
 </body>
 </html>

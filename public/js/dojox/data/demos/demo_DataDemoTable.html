@@ -2,20 +2,28 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dojo Visual Loader Test</title>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/dijit.css";
-		@import "../../../dijit/tests/css/dijitTests.css"; 
+<title>Dojo Visual Loader Test</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-		.oddRow { background-color: #f2f5f9; }
-		.population { text-align: right; }
-	</style>
+@import "../../../dijit/themes/tundra/tundra.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug: false, parseOnLoad: true"></script>
-	<script type="text/javascript">
+@import "../../../dijit/themes/dijit.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+.oddRow {
+	background-color: #f2f5f9;
+}
+
+.population {
+	text-align: right;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: false, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojo.parser");
 		dojo.require("dijit.Declaration");
@@ -24,26 +32,25 @@
 	</script>
 </head>
 <body class="tundra">
-	<span dojoType="dojo.data.ItemFileReadStore" 
-		jsId="continentStore"
-		url="../../../dijit/tests/_data/countries.json"></span>
-	<span dojoType="dojox.data.FlickrStore" jsId="flickrStore"></span>
+<span dojoType="dojo.data.ItemFileReadStore" jsId="continentStore"
+	url="../../../dijit/tests/_data/countries.json"></span>
+<span dojoType="dojox.data.FlickrStore" jsId="flickrStore"></span>
 
 
-	<h1 class="testTitle">Dojox Data Demo Table</h1>
+<h1 class="testTitle">Dojox Data Demo Table</h1>
 
-	<table dojoType="dijit.Declaration" 
-		widgetClass="demo.Table" class="dojoTabular" 
-		defaults="{ store: null, query: { query: { name: '*' } }, columns: [ { name: 'Name', attribute: 'name' } ] }">
-		<thead dojoAttachPoint="head">
-			<tr dojoAttachPoint="headRow"></tr>
-		</thead>
-		<tbody dojoAttachPoint="body">
-			<tr dojoAttachPoint="row">
-			</tr>
-		</tbody>
+<table dojoType="dijit.Declaration" widgetClass="demo.Table"
+	class="dojoTabular"
+	defaults="{ store: null, query: { query: { name: '*' } }, columns: [ { name: 'Name', attribute: 'name' } ] }">
+	<thead dojoAttachPoint="head">
+		<tr dojoAttachPoint="headRow"></tr>
+	</thead>
+	<tbody dojoAttachPoint="body">
+		<tr dojoAttachPoint="row">
+		</tr>
+	</tbody>
 
-		<script type="dojo/method">
+	<script type="dojo/method">
 			dojo.forEach(this.columns, function(item, idx){
 				var icn = item.className||"";
 				// add a header for each column
@@ -59,7 +66,7 @@
 			}, this);
 			this.runQuery();
 		</script>
-		<script type="dojo/method" event="onSort" args="index">
+	<script type="dojo/method" event="onSort" args="index">
 			var ca = this.columns[index].attribute;
 			var qs = this.query.sort;
 			// clobber an existing sort arrow
@@ -77,7 +84,7 @@
 			th.style.background = "url(\""+dojo.moduleUrl("dijit", "themes/tundra/images/arrow"+(this.query.sort[0].descending ? "Up" : "Down")+((dojo.isIE == 6) ? ".gif" : ".png")) + "\") no-repeat 98% 4px";
 			this.runQuery();
 		</script>
-		<script type="dojo/method" event="runQuery">
+	<script type="dojo/method" event="runQuery">
 			this.query.onBegin = dojo.hitch(this, function(){ dojo.query("tr", this.body).orphan(); });
 			this.query.onItem = dojo.hitch(this, "onItem");
 			this.query.onComplete = dojo.hitch(this, function(){
@@ -86,7 +93,7 @@
 			});
 			this.store.fetch(this.query);
 		</script>
-		<script type="dojo/method" event="onItem" args="item">
+	<script type="dojo/method" event="onItem" args="item">
 			var tr = this.row.cloneNode(true);
 			dojo.query("td", tr).forEach(function(n, i, a){
 				var tc = this.columns[i];
@@ -96,12 +103,11 @@
 			}, this);
 			this.body.appendChild(tr);
 		</script>
-	</table>
+</table>
 
-	<span dojoType="demo.Table" store="continentStore"
-		query="{ query: { type: 'country' }, sort: [ { attribute: 'name', descending: true } ]  }" 
-		id="foo">
-		<script type="dojo/method" event="preamble">
+<span dojoType="demo.Table" store="continentStore"
+	query="{ query: { type: 'country' }, sort: [ { attribute: 'name', descending: true } ]  }"
+	id="foo"> <script type="dojo/method" event="preamble">
 			this.columns = [
 				{ name: "Name", attribute: "name" },
 				{	name: 		"Population",
@@ -109,13 +115,12 @@
 					className:	"population"
 				}
 			];
-		</script>
-	</span>
-	<span dojoType="demo.Table" store="continentStore"
-		query="{ query: { name: 'A*' } }"></span>
-	<span dojoType="demo.Table" store="flickrStore"
-		query="{ query: { groupid: '27475260@N00' } }">
-		<script type="dojo/method" event="preamble">
+		</script> </span>
+<span dojoType="demo.Table" store="continentStore"
+	query="{ query: { name: 'A*' } }"></span>
+<span dojoType="demo.Table" store="flickrStore"
+	query="{ query: { groupid: '27475260@N00' } }"> <script
+	type="dojo/method" event="preamble">
 			this.columns = [
 				{	name: "", attribute: "imageUrlSmall", 
 					format: function(value, item, store){
@@ -124,11 +129,10 @@
 				},
 				{ name: "Title", attribute: "title" }
 			];
-		</script>
-	</span>
-	<span dojoType="demo.Table" store="flickrStore"
-		query="{ query: { tags: 'dojotoolkit' } }">
-		<script type="dojo/method" event="preamble">
+		</script> </span>
+<span dojoType="demo.Table" store="flickrStore"
+	query="{ query: { tags: 'dojotoolkit' } }"> <script
+	type="dojo/method" event="preamble">
 			this.columns = [
 				{	name: "", attribute: "imageUrlSmall", 
 					format: function(value, item, store){
@@ -137,7 +141,6 @@
 				},
 				{ name: "Title", attribute: "title" }
 			];
-		</script>
-	</span>
+		</script> </span>
 </body>
 </html>

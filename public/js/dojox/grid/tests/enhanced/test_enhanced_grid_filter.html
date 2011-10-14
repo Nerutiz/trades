@@ -2,28 +2,32 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html dir="ltr">
 <head>
-	<title>Test Filter plugin of dojox.grid.EnhancedGrid</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<link rel=stylesheet href="support/common.css"/>
-	<style type="text/css">
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-			padding-right: 10em;
-		}
-		.title {
-			text-align:center;
-			margin:1em;
-		}
- 		#grid{
-			width: 100em;
-			height: 30em;
-		}
-	</style>
-	<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug:false, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../../../../dijit/tests/_testCommon.js"></script>
-	<script type="text/javascript" src="support/test_write_store_music.js"></script>
-	<script type="text/javascript">
+<title>Test Filter plugin of dojox.grid.EnhancedGrid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel=stylesheet href="support/common.css" />
+<style type="text/css">
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	padding-right: 10em;
+}
+
+.title {
+	text-align: center;
+	margin: 1em;
+}
+
+#grid {
+	width: 100em;
+	height: 30em;
+}
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript"
+	src="../../../../dijit/tests/_testCommon.js"></script>
+<script type="text/javascript" src="support/test_write_store_music.js"></script>
+<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.Filter");
 		
@@ -98,10 +102,13 @@
 	</script>
 </head>
 <body class="claro">
-	<h1 class="title">dojox.grid.EnhancedGrid - Filter</h1>
-	<div id="gridContainer">
-		<div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store[0]" structure="layout" plugins="plugins"></div>
-	</div><br/>
-	<p><strong>Note:</strong> To see the tundra theme, just append <b style="color:blue;">?theme=tundra</b> to the URL.</p>
+<h1 class="title">dojox.grid.EnhancedGrid - Filter</h1>
+<div id="gridContainer">
+<div id="grid" dojoType="dojox.grid.EnhancedGrid" store="test_store[0]"
+	structure="layout" plugins="plugins"></div>
+</div>
+<br />
+<p><strong>Note:</strong> To see the tundra theme, just append <b
+	style="color: blue;">?theme=tundra</b> to the URL.</p>
 </body>
 </html>

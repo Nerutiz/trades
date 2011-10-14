@@ -2,29 +2,33 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html debug="true">
 <head>
-	<title>dojox.grid.Grid Test: Mysql Table Editing</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style>
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
+<title>dojox.grid.Grid Test: Mysql Table Editing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style>
+@import "../resources/Grid.css";
 
-		.grid {
-			height: 30em;
-		}
-	</style>
+@import "../resources/tundraGrid.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:true, parseOnLoad: true"></script>
-	<script type="text/javascript">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+.grid {
+	height: 30em;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.data.QueryReadStore");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 		dojo.declare("DbStore", dojox.data.QueryReadStore, {
 			fetch: function(request){
 				request.serverQuery = {
@@ -129,17 +133,24 @@
 	</script>
 </head>
 <body class="tundra">
-	<h1>dojox.grid.Grid Test: Mysql Table Editing</h1>
-	<br>
-	<button onclick="addRow()">Add Row</button>&nbsp;&nbsp;
-	<button onclick="removeSelected()">Remove Selected</button>&nbsp;&nbsp;
-	<button onclick="grid.edit.apply()">Apply Edit</button>&nbsp;&nbsp;
-	<button onclick="grid.edit.cancel()">Cancel Edit</button>&nbsp;&nbsp;
-	<button onclick="grid.render()">Refresh</button>
-	<br><br>
-	<div jsId="grid" class="grid" structure="gridLayout" dojoType="dojox.grid.Grid" 
-		store="model" singleClickEdit="true" autoWidth="true"></div>
-	<div id="rowCount"></div>
-	<p>Note: This test requires MySql and PHP and works with the database table available in support/testtbl.sql.</p>
+<h1>dojox.grid.Grid Test: Mysql Table Editing</h1>
+<br>
+<button onclick="addRow()">Add Row</button>
+&nbsp;&nbsp;
+<button onclick="removeSelected()">Remove Selected</button>
+&nbsp;&nbsp;
+<button onclick="grid.edit.apply()">Apply Edit</button>
+&nbsp;&nbsp;
+<button onclick="grid.edit.cancel()">Cancel Edit</button>
+&nbsp;&nbsp;
+<button onclick="grid.render()">Refresh</button>
+<br>
+<br>
+<div jsId="grid" class="grid" structure="gridLayout"
+	dojoType="dojox.grid.Grid" store="model" singleClickEdit="true"
+	autoWidth="true"></div>
+<div id="rowCount"></div>
+<p>Note: This test requires MySql and PHP and works with the
+database table available in support/testtbl.sql.</p>
 </body>
 </html>

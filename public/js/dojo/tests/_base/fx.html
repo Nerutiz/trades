@@ -1,14 +1,13 @@
 <html>
-	<head>
-		<title>testing Core FX</title>
-		<style type="text/css">
-			@import "../../resources/dojo.css";
-		</style>
-		<script type="text/javascript" 
-			src="../../dojo.js" 
-			djConfig="isDebug: true"></script>
-		<script type="text/javascript" src="../../_base/fx.js"></script>
-		<script type="text/javascript">
+<head>
+<title>testing Core FX</title>
+<style type="text/css">
+@import "../../resources/dojo.css";
+</style>
+<script type="text/javascript" src="../../dojo.js"
+	djConfig="isDebug: true"></script>
+<script type="text/javascript" src="../../_base/fx.js"></script>
+<script type="text/javascript">
 			var duration = 500;
 			var timeout = 750;
 			dojo.require("doh.runner");
@@ -464,104 +463,94 @@
 				doh.run();
 			});
 		</script>
-		<style type="text/css">
-			body {
-				margin: 1em;
-				background-color: #DEDEDE;
-			}
+<style type="text/css">
+body {
+	margin: 1em;
+	background-color: #DEDEDE;
+}
 
-			.box {
-				color: #292929;
-				/* color: #424242; */
-				/* text-align: left; */
-				width: 300px;
-				border: 1px solid #BABABA;
-				background-color: white;
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-left: 10px;
-				-o-border-radius: 10px;
-				-moz-border-radius: 12px;
-				-webkit-border-radius: 10px;
-				/* -opera-border-radius: 10px; */
-				border-radius: 10px;
-				-moz-box-sizing: border-box;
-				-opera-sizing: border-box;
-				-webkit-box-sizing: border-box;
-				-khtml-box-sizing: border-box;
-				box-sizing: border-box;
-				overflow: hidden;
-				/* position: absolute; */
-			}
-		</style>
-	</head>
-	<body>
-		<h1>testing Core FX</h1>
-		<form name="testForm">
-		<input type="button" onClick="dojo.fadeOut({ node: 'foo', duration: 1000 }).play()" value="fade out"></input>
-		<input type="button" onClick="dojo.fadeIn({ node: 'foo', duration: 1000 }).play()" value="fade in"></input>
-		</form>
-		<div id="foo" class="box" style="float: left;">
-			<p>
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-			semper sagittis velit. Cras in mi. Duis porta mauris ut ligula.
-			Proin porta rutrum lacus. Etiam consequat scelerisque quam. Nulla
-			facilisi.  Maecenas luctus venenatis nulla. In sit amet dui non mi
-			semper iaculis.  Sed molestie tortor at ipsum. Morbi dictum rutrum
-			magna. Sed vitae risus.
-			</p>
-			<p>
-			Aliquam vitae enim. Duis scelerisque metus auctor est venenatis
-			imperdiet. Fusce dignissim porta augue. Nulla vestibulum. Integer
-			lorem nunc, ullamcorper a, commodo ac, malesuada sed, dolor. Aenean
-			id mi in massa bibendum suscipit. Integer eros. Nullam suscipit
-			mauris. In pellentesque. Mauris ipsum est, pharetra semper,
-			pharetra in, viverra quis, tellus. Etiam purus. Quisque egestas,
-			tortor ac cursus lacinia, felis leo adipiscing nisi, et rhoncus
-			elit dolor eget eros. Fusce ut quam. Suspendisse eleifend leo vitae
-			ligula. Nulla facilisi. Nulla rutrum, erat vitae lacinia dictum,
-			pede purus imperdiet lacus, ut semper velit ante id metus. Praesent
-			massa dolor, porttitor sed, pulvinar in, consequat ut, leo. Nullam
-			nec est. Aenean id risus blandit tortor pharetra congue.
-			Suspendisse pulvinar.
-			</p>
-		</div>
-		<p id="bar" style="display: none;">
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean semper
-		sagittis velit. Cras in mi. Duis porta mauris ut ligula.  Proin porta
-		rutrum lacus. Etiam consequat scelerisque quam. Nulla facilisi.
-		Maecenas luctus venenatis nulla. In sit amet dui non mi semper iaculis.
-		Sed molestie tortor at ipsum. Morbi dictum rutrum magna. Sed vitae
-		risus.
-		</p>
-		<p id="baz" style="display: none;">
-		Aliquam vitae enim. Duis scelerisque metus auctor est venenatis
-		imperdiet. Fusce dignissim porta augue. Nulla vestibulum. Integer lorem
-		nunc, ullamcorper a, commodo ac, malesuada sed, dolor. Aenean id mi in
-		massa bibendum suscipit. Integer eros. Nullam suscipit mauris. In
-		pellentesque. Mauris ipsum est, pharetra semper, pharetra in, viverra
-		quis, tellus. Etiam purus. Quisque egestas, tortor ac cursus lacinia,
-		felis leo adipiscing nisi, et rhoncus elit dolor eget eros. Fusce ut
-		quam. Suspendisse eleifend leo vitae ligula. Nulla facilisi. Nulla
-		rutrum, erat vitae lacinia dictum, pede purus imperdiet lacus, ut
-		semper velit ante id metus. Praesent massa dolor, porttitor sed,
-		pulvinar in, consequat ut, leo. Nullam nec est. Aenean id risus blandit
-		tortor pharetra congue.  Suspendisse pulvinar.
-		</p>
-		<p id="thud" style="display: none;">
-		Aliquam vitae enim. Duis scelerisque metus auctor est venenatis
-		imperdiet. Fusce dignissim porta augue. Nulla vestibulum. Integer lorem
-		nunc, ullamcorper a, commodo ac, malesuada sed, dolor. Aenean id mi in
-		massa bibendum suscipit. Integer eros. Nullam suscipit mauris. In
-		pellentesque. Mauris ipsum est, pharetra semper, pharetra in, viverra
-		quis, tellus. Etiam purus. Quisque egestas, tortor ac cursus lacinia,
-		felis leo adipiscing nisi, et rhoncus elit dolor eget eros. Fusce ut
-		quam. Suspendisse eleifend leo vitae ligula. Nulla facilisi. Nulla
-		rutrum, erat vitae lacinia dictum, pede purus imperdiet lacus, ut
-		semper velit ante id metus. Praesent massa dolor, porttitor sed,
-		pulvinar in, consequat ut, leo. Nullam nec est. Aenean id risus blandit
-		tortor pharetra congue.  Suspendisse pulvinar.
-		</p>
-	</body>
+.box {
+	color: #292929;
+	/* color: #424242; */
+	/* text-align: left; */
+	width: 300px;
+	border: 1px solid #BABABA;
+	background-color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px;
+	-o-border-radius: 10px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 10px;
+	/* -opera-border-radius: 10px; */
+	border-radius: 10px;
+	-moz-box-sizing: border-box;
+	-opera-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	/* position: absolute; */
+}
+</style>
+</head>
+<body>
+<h1>testing Core FX</h1>
+<form name="testForm"><input type="button"
+	onClick="dojo.fadeOut({ node: 'foo', duration: 1000 }).play()"
+	value="fade out"></input> <input type="button"
+	onClick="dojo.fadeIn({ node: 'foo', duration: 1000 }).play()"
+	value="fade in"></input></form>
+<div id="foo" class="box" style="float: left;">
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+semper sagittis velit. Cras in mi. Duis porta mauris ut ligula. Proin
+porta rutrum lacus. Etiam consequat scelerisque quam. Nulla facilisi.
+Maecenas luctus venenatis nulla. In sit amet dui non mi semper iaculis.
+Sed molestie tortor at ipsum. Morbi dictum rutrum magna. Sed vitae
+risus.</p>
+<p>Aliquam vitae enim. Duis scelerisque metus auctor est venenatis
+imperdiet. Fusce dignissim porta augue. Nulla vestibulum. Integer lorem
+nunc, ullamcorper a, commodo ac, malesuada sed, dolor. Aenean id mi in
+massa bibendum suscipit. Integer eros. Nullam suscipit mauris. In
+pellentesque. Mauris ipsum est, pharetra semper, pharetra in, viverra
+quis, tellus. Etiam purus. Quisque egestas, tortor ac cursus lacinia,
+felis leo adipiscing nisi, et rhoncus elit dolor eget eros. Fusce ut
+quam. Suspendisse eleifend leo vitae ligula. Nulla facilisi. Nulla
+rutrum, erat vitae lacinia dictum, pede purus imperdiet lacus, ut semper
+velit ante id metus. Praesent massa dolor, porttitor sed, pulvinar in,
+consequat ut, leo. Nullam nec est. Aenean id risus blandit tortor
+pharetra congue. Suspendisse pulvinar.</p>
+</div>
+<p id="bar" style="display: none;">Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aenean semper sagittis velit. Cras in mi.
+Duis porta mauris ut ligula. Proin porta rutrum lacus. Etiam consequat
+scelerisque quam. Nulla facilisi. Maecenas luctus venenatis nulla. In
+sit amet dui non mi semper iaculis. Sed molestie tortor at ipsum. Morbi
+dictum rutrum magna. Sed vitae risus.</p>
+<p id="baz" style="display: none;">Aliquam vitae enim. Duis
+scelerisque metus auctor est venenatis imperdiet. Fusce dignissim porta
+augue. Nulla vestibulum. Integer lorem nunc, ullamcorper a, commodo ac,
+malesuada sed, dolor. Aenean id mi in massa bibendum suscipit. Integer
+eros. Nullam suscipit mauris. In pellentesque. Mauris ipsum est,
+pharetra semper, pharetra in, viverra quis, tellus. Etiam purus. Quisque
+egestas, tortor ac cursus lacinia, felis leo adipiscing nisi, et rhoncus
+elit dolor eget eros. Fusce ut quam. Suspendisse eleifend leo vitae
+ligula. Nulla facilisi. Nulla rutrum, erat vitae lacinia dictum, pede
+purus imperdiet lacus, ut semper velit ante id metus. Praesent massa
+dolor, porttitor sed, pulvinar in, consequat ut, leo. Nullam nec est.
+Aenean id risus blandit tortor pharetra congue. Suspendisse pulvinar.</p>
+<p id="thud" style="display: none;">Aliquam vitae enim. Duis
+scelerisque metus auctor est venenatis imperdiet. Fusce dignissim porta
+augue. Nulla vestibulum. Integer lorem nunc, ullamcorper a, commodo ac,
+malesuada sed, dolor. Aenean id mi in massa bibendum suscipit. Integer
+eros. Nullam suscipit mauris. In pellentesque. Mauris ipsum est,
+pharetra semper, pharetra in, viverra quis, tellus. Etiam purus. Quisque
+egestas, tortor ac cursus lacinia, felis leo adipiscing nisi, et rhoncus
+elit dolor eget eros. Fusce ut quam. Suspendisse eleifend leo vitae
+ligula. Nulla facilisi. Nulla rutrum, erat vitae lacinia dictum, pede
+purus imperdiet lacus, ut semper velit ante id metus. Praesent massa
+dolor, porttitor sed, pulvinar in, consequat ut, leo. Nullam nec est.
+Aenean id risus blandit tortor pharetra congue. Suspendisse pulvinar.</p>
+</body>
 </html>
 

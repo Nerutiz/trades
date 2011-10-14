@@ -2,13 +2,14 @@
 
 <html>
 <head>
-	<style type="text/css">
-		@import "../../dojo/resources/dojo.css";
-	</style>
-	
-	<script type="text/javascript" djConfig="isDebug: true" src="../../dojo.js"></script>
-	
-	<script type="text/javascript">
+<style type="text/css">
+@import "../../dojo/resources/dojo.css";
+</style>
+
+<script type="text/javascript" djConfig="isDebug: true"
+	src="../../dojo.js"></script>
+
+<script type="text/javascript">
 		dojo.addOnLoad(function() {
 			// Log of events on typer <input>, used by automated test harness
 			events = [];
@@ -59,25 +60,37 @@
 <body class="tundra">
 <h1>onkeypress and disconnect test</h1>
 
-<p>This page tests the operation of keypress in a text input. Safari 3.1 changed its key model.
-Look in the console for log message about getting keypress events.</p>
+<p>This page tests the operation of keypress in a text input. Safari
+3.1 changed its key model. Look in the console for log message about
+getting keypress events.</p>
 
-<p>This page also tests that we can dojo.disconnect correctly. Clicking on the Disconnect buttons
-should turn off the console logs associated with the matching connect calls.</p>
+<p>This page also tests that we can dojo.disconnect correctly.
+Clicking on the Disconnect buttons should turn off the console logs
+associated with the matching connect calls.</p>
 
 <p>The input <input name="typer" type="text" id="typer" /></p>
 
-<p><button onclick="dojo.disconnect(kp1)">Disconnect first keypress</button>
-<button onclick="dojo.disconnect(kp2)">Disconnect second keypress</button></p>
+<p>
+<button onclick="dojo.disconnect(kp1)">Disconnect first
+keypress</button>
+<button onclick="dojo.disconnect(kp2)">Disconnect second
+keypress</button>
+</p>
 
-<p><button onclick="dojo.disconnect(kd1)">Disconnect keydown</button>
-<button onclick="dojo.disconnect(ku1)">Disconnect keyup</button></p>
+<p>
+<button onclick="dojo.disconnect(kd1)">Disconnect keydown</button>
+<button onclick="dojo.disconnect(ku1)">Disconnect keyup</button>
+</p>
 
 
-<p><button onclick="dojo.disconnect(m1)">Disconnect mouseentered</button>
-<button onclick="dojo.disconnect(m2)">Disconnect mouseleave</button></p>
+<p>
+<button onclick="dojo.disconnect(m1)">Disconnect mouseentered</button>
+<button onclick="dojo.disconnect(m2)">Disconnect mouseleave</button>
+</p>
 
-<p><button onclick="dojo.disconnect(c1)">Disconnect click</button></p>
+<p>
+<button onclick="dojo.disconnect(c1)">Disconnect click</button>
+</p>
 
 
 </body>

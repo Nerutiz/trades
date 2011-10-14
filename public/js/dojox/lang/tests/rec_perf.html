@@ -1,18 +1,19 @@
 <html>
-	<head>
-		<title>Clocking recursion combinators</title>
-		<style type="text/css">
-			@import "../../../dojo/resources/dojo.css";
-		</style>
-		<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:true"></script>
-		<script type="text/javascript" src="../functional.js"></script>
-		<script type="text/javascript" src="../functional/linrec.js"></script>
-		<script type="text/javascript" src="../functional/tailrec.js"></script>
-		<script type="text/javascript" src="../functional/numrec.js"></script>
-		<script type="text/javascript" src="../functional/binrec.js"></script>
-		<script type="text/javascript" src="../functional/multirec.js"></script>
-		<script type="text/javascript" src="../functional/sequence.js"></script>
-		<script type="text/javascript">
+<head>
+<title>Clocking recursion combinators</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true"></script>
+<script type="text/javascript" src="../functional.js"></script>
+<script type="text/javascript" src="../functional/linrec.js"></script>
+<script type="text/javascript" src="../functional/tailrec.js"></script>
+<script type="text/javascript" src="../functional/numrec.js"></script>
+<script type="text/javascript" src="../functional/binrec.js"></script>
+<script type="text/javascript" src="../functional/multirec.js"></script>
+<script type="text/javascript" src="../functional/sequence.js"></script>
+<script type="text/javascript">
 			// reference implementations
 			
 			var linrec1 = function(cond, then, before, after){
@@ -476,9 +477,12 @@
 				console.log("sanity check finished");
 			});
 		</script>
-	</head>
-	<body>
-		<p>This test is meant to run with Firebug. Open the console to see the output.</p>
-		<p><button onclick="test()">Start</button></p>
-	</body>
+</head>
+<body>
+<p>This test is meant to run with Firebug. Open the console to see
+the output.</p>
+<p>
+<button onclick="test()">Start</button>
+</p>
+</body>
 </html>

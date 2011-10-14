@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Test Service</title>
-<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 dojo.provide("dojox.wire.ml.tests.markup.Service");
 
@@ -54,30 +55,18 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body>
-<div dojoType="dojox.wire.ml.Service"
-	id="Service1"
+<div dojoType="dojox.wire.ml.Service" id="Service1"
 	url="Service/XML.smd"></div>
-<div dojoType="dojox.wire.ml.Invocation"
-	id="Invocation1"
-	triggerTopic="invokeGetXml"
-	object="Service1"
-	method="get"
-	parameters="dojox.wire.ml.tests.markup.Service.query">
-</div>
-<div dojoType="dojox.wire.ml.Transfer"
-	trigger="Invocation1"
-	triggerEvent="onComplete"
-	source="arguments[0].item.name"
+<div dojoType="dojox.wire.ml.Invocation" id="Invocation1"
+	triggerTopic="invokeGetXml" object="Service1" method="get"
+	parameters="dojox.wire.ml.tests.markup.Service.query"></div>
+<div dojoType="dojox.wire.ml.Transfer" trigger="Invocation1"
+	triggerEvent="onComplete" source="arguments[0].item.name"
 	target="dojox.wire.ml.tests.markup.Service.target.a"></div>
-<div dojoType="dojox.wire.ml.Service"
-	id="Service2"
-	serviceType="JSON"
+<div dojoType="dojox.wire.ml.Service" id="Service2" serviceType="JSON"
 	serviceUrl="Service/{name}.json"></div>
-<div dojoType="dojox.wire.ml.Invocation"
-	id="Invocation2"
-	triggerTopic="invokeGetJson"
-	object="Service2"
-	method="get"
+<div dojoType="dojox.wire.ml.Invocation" id="Invocation2"
+	triggerTopic="invokeGetJson" object="Service2" method="get"
 	parameters="dojox.wire.ml.tests.markup.Service.query"
 	result="dojox.wire.ml.tests.markup.Service.result"></div>
 </body>

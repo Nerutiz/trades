@@ -1,14 +1,12 @@
 /* Tree */
-
-.dijitRtl .soria .dijitTreeNode,
-.dijitRtl .soria .dijitTreeExpandoLeaf {
+.dijitRtl .soria .dijitTreeNode,.dijitRtl .soria .dijitTreeExpandoLeaf {
 	/* disable grid lines for Tree in RTL mode, too hard to support */
-    background-image: none;
+	background-image: none;
 }
 
 .dijitRtl .soria .dijitTreeContent {
-    padding-left: 0;
-    padding-right: 1px;
+	padding-left: 0;
+	padding-right: 1px;
 }
 
 .dijitRtl .soria .dijitTreeExpandoOpened {

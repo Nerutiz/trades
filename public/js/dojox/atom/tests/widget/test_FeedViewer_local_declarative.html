@@ -3,11 +3,15 @@
 <head>
 <title>Test the Feed Viewer (using ATOM)</title>
 <style type="text/css">
-	@import "../../widget/templates/css/EntryHeader.css";
-	@import "../../widget/templates/css/HtmlFeedViewer.css";
-	@import "../../widget/templates/css/HtmlFeedViewerGrouping.css";
-	@import "../../widget/templates/css/HtmlFeedViewerEntry.css";
-	@import "../../widget/templates/css/HtmlFeedEntryViewer.css";
+@import "../../widget/templates/css/EntryHeader.css";
+
+@import "../../widget/templates/css/HtmlFeedViewer.css";
+
+@import "../../widget/templates/css/HtmlFeedViewerGrouping.css";
+
+@import "../../widget/templates/css/HtmlFeedViewerEntry.css";
+
+@import "../../widget/templates/css/HtmlFeedEntryViewer.css";
 </style>
 <script type="text/javascript">
   var djConfig = {isDebug: true, parseOnLoad: true};
@@ -22,23 +26,17 @@
 </script>
 </head>
 <body>
-	<div> 
-		<div dojoType="dojox.atom.widget.FeedViewer" 
-			 widgetId="fv1"
-			 url="samplefeed.xml"
-			 entrySelectionTopic="atomfeed/entry/topic">
-		 </div>
-	</div>  
-	
-	<div dojoType="dojox.atom.widget.FeedEntryViewer" 
-		 widgetId="feedEditor"
-		 enableMenu="true"
-		 enableMenuFade="true"
-		 enableEdit="true"
-		 displayEntrySections="title,authors,summary"
-		 entrySelectionTopic="atomfeed/entry/topic">
-	</div>
-	
+<div>
+<div dojoType="dojox.atom.widget.FeedViewer" widgetId="fv1"
+	url="samplefeed.xml" entrySelectionTopic="atomfeed/entry/topic">
+</div>
+</div>
+
+<div dojoType="dojox.atom.widget.FeedEntryViewer" widgetId="feedEditor"
+	enableMenu="true" enableMenuFade="true" enableEdit="true"
+	displayEntrySections="title,authors,summary"
+	entrySelectionTopic="atomfeed/entry/topic"></div>
+
 </body>
 </html>
 

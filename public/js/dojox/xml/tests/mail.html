@@ -2,18 +2,21 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Demo Mail Application</title>
+<title>Demo Mail Application</title>
 
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/soria/soria.css";
-		@import "mail/mail.css";
-	</style>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="isDebug: true, parseOnLoad: true, defaultTestTheme: 'soria'"></script>
-	<script type="text/javascript" src="../../../dijit/tests/tests/_testCommon.js"></script>
-	<script type="text/javascript">
+@import "../../../dijit/themes/soria/soria.css";
+
+@import "mail/mail.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true, defaultTestTheme: 'soria'"></script>
+<script type="text/javascript"
+	src="../../../dijit/tests/tests/_testCommon.js"></script>
+<script type="text/javascript">
 		// Use profile builds, if available. Since we use pretty much all of
 		// the widgets, just use dijit-all. A custom profile would provide some
 		// additional savings.
@@ -108,14 +111,14 @@
 	</script>
 </head>
 <body class="soria">
-	<script type="text/xml" dojoType="dojox.xml.Script">
+<script type="text/xml" dojoType="dojox.xml.Script">
 		<ui xmlns:dojo="dojo" xmlns="html">
 			<dojo:data.ItemFileWriteStore jsId="mailStore" url="mail/mail.json"/>
 		</ui>
 	</script>
 
-	<!-- Inline declaration of a table widget (thanks Alex!) -->
-	<script type="text/xml" dojoType="dojox.xml.Script">
+<!-- Inline declaration of a table widget (thanks Alex!) -->
+<script type="text/xml" dojoType="dojox.xml.Script">
 		<ui xmlns:dijit="dijit" xmlns:html="html" xmlns:dojo="dojo" xmlns="html">
 
 		<table dojoType="dijit.Declaration"
@@ -201,7 +204,7 @@
 		</ui>
 	</script>
 
-	<script type="text/xml" dojoType="dojox.xml.Script">
+<script type="text/xml" dojoType="dojox.xml.Script">
 	<ui xmlns:dijit="dijit" xmlns:html="html" xmlns:dojo="dojo" xmlns="html">
 	<!-- Inline declaration for programmatically created "New Message" tabs -->
 	<dijit:Declaration widgetClass="mail.NewMessage">

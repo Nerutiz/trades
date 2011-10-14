@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>ContentPane layout-related DOH test</title>
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../../themes/claro/claro.css";
-		@import "../css/dijitTests.css";
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>ContentPane layout-related DOH test</title>
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-		.resizableWidget {
-			border: 1px dashed red;
-			background-color: #C0E209;
-		}
-	</style>
+@import "../../themes/claro/claro.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		data-dojo-config="isDebug: true"></script>
+@import "../css/dijitTests.css";
 
-	<script type="text/javascript">
+.resizableWidget {
+	border: 1px dashed red;
+	background-color: #C0E209;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	data-dojo-config="isDebug: true"></script>
+
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dojo.parser");
 
@@ -597,126 +599,150 @@
 	</script>
 </head>
 <body class="claro">
-	<h2>dijit.layout.ContentPane layout related DOH test</h2>
+<h2>dijit.layout.ContentPane layout related DOH test</h2>
 
-	<p>
-		Tests ContentPane in it's role as a layout widget, including as child of another layout widgets (especially TabContainer).
-	</p>
+<p>Tests ContentPane in it's role as a layout widget, including as
+child of another layout widgets (especially TabContainer).</p>
 
-	<p>Tests that href gets loaded when ContentPane is first made visible:</p>
-	<div id="outerTC" data-dojo-type="dijit.layout.TabContainer" data-dojo-props='style:"width: 880px; height: 200px;"'>
-		<div id="pane1" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc0.html", title:"Initially Selected", onLoad:myOnLoad'>
-			initially selected pane
-		</div>
-		<div id="pane2" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc1.html", title:"Initially Hidden", onLoad:myOnLoad'>
-			unselected pane
-		</div>
-		<div id="innerTC" data-dojo-type="dijit.layout.TabContainer" data-dojo-props='nested:true, title:"Nested TabContainer"'>
-			<div id="innerPane1" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc0.html", title:"Initially Selected", onLoad:myOnLoad'>
-				initially selected inner pane
-			</div>
-			<div id="innerPane2" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc1.html", title:"Initially Hidden", onLoad:myOnLoad'>
-				unselected pane
-			</div>
-		</div>
-		<div id="bc" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props='title:"BorderContainer"'>
-			<div id="bcPane1" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc0.html", region:"left", style:"width: 200px;", onLoad:myOnLoad'>
-				left pane
-			</div>
-			<div id="bcPane2" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc1.html", region:"center", onLoad:myOnLoad'>
-				center pane
-
-				<!-- when this ContentPane is shown each of these widgets should get a resize()
+<p>Tests that href gets loaded when ContentPane is first made
+visible:</p>
+<div id="outerTC" data-dojo-type="dijit.layout.TabContainer"
+	data-dojo-props='style:"width: 880px; height: 200px;"'>
+<div id="pane1" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc0.html", title:"Initially Selected", onLoad:myOnLoad'>
+initially selected pane</div>
+<div id="pane2" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc1.html", title:"Initially Hidden", onLoad:myOnLoad'>
+unselected pane</div>
+<div id="innerTC" data-dojo-type="dijit.layout.TabContainer"
+	data-dojo-props='nested:true, title:"Nested TabContainer"'>
+<div id="innerPane1" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc0.html", title:"Initially Selected", onLoad:myOnLoad'>
+initially selected inner pane</div>
+<div id="innerPane2" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc1.html", title:"Initially Hidden", onLoad:myOnLoad'>
+unselected pane</div>
+</div>
+<div id="bc" data-dojo-type="dijit.layout.BorderContainer"
+	data-dojo-props='title:"BorderContainer"'>
+<div id="bcPane1" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc0.html", region:"left", style:"width: 200px;", onLoad:myOnLoad'>
+left pane</div>
+<div id="bcPane2" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc1.html", region:"center", onLoad:myOnLoad'>
+center pane <!-- when this ContentPane is shown each of these widgets should get a resize()
 				 	 call w/no size specification -->
-				<div id="bcResizable1" data-dojo-type="ResizableWidget" ></div>
-				<div id="bcResizable2" data-dojo-type="ResizableWidget" ></div>
-			</div>
-		</div>
-	</div>
+<div id="bcResizable1" data-dojo-type="ResizableWidget"></div>
+<div id="bcResizable2" data-dojo-type="ResizableWidget"></div>
+</div>
+</div>
+</div>
 
-	<p>Tests for resizing in a layout container hierarchy:</p>
-	<div id="resizeTC" data-dojo-type="dijit.layout.TabContainer" data-dojo-props='style:"width: 880px; height: 200px;"'>
-		<div id="resizePane1" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"Initially Selected", onLoad:myOnLoad'>
-			initially selected pane
-		</div>
-		<div id="singleChildPane" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"Single ResizableChild", onLoad:myOnLoad'>
-			<div id="singleChildResizable" data-dojo-type="ResizableWidget" ></div>
-		</div>
-		<div id="multipleChildPanes" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"Multiple ResizableChild", onLoad:myOnLoad'>
-			<div id="multipleChildResizable1" data-dojo-type="ResizableWidget" ></div>
-			<div style="border: groove blue medium;">
-				<span>hide the second widget to see if ContentPane can still find it</span>
-				<div id="multipleChildResizable2" data-dojo-type="ResizableWidget" ></div>
-				<span>ending text</span>
-			</div>
-		</div>
-		<div id="multipleResizableInForm" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"Multiple resizable in form", onLoad:myOnLoad'>
-			<div data-dojo-type="dijit.form.Form">
-				<div id="resizableInForm1" data-dojo-type="ResizableWidget" ></div>
-				<div id="resizableInForm2" data-dojo-type="ResizableWidget" ></div>
-			</div>
-		</div>
-		<div id="singleResizableInForm" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"Single resizable in form", onLoad:myOnLoad'>
-			<div data-dojo-type="dijit.form.Form">
-				<div id="resizableInForm0" data-dojo-type="ResizableWidget" ></div>
-			</div>
-		</div>
-		<div id="singleChildHref" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"Href Single Child",
+<p>Tests for resizing in a layout container hierarchy:</p>
+<div id="resizeTC" data-dojo-type="dijit.layout.TabContainer"
+	data-dojo-props='style:"width: 880px; height: 200px;"'>
+<div id="resizePane1" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"Initially Selected", onLoad:myOnLoad'>
+initially selected pane</div>
+<div id="singleChildPane" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"Single ResizableChild", onLoad:myOnLoad'>
+<div id="singleChildResizable" data-dojo-type="ResizableWidget"></div>
+</div>
+<div id="multipleChildPanes" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"Multiple ResizableChild", onLoad:myOnLoad'>
+<div id="multipleChildResizable1" data-dojo-type="ResizableWidget"></div>
+<div style="border: groove blue medium;"><span>hide the
+second widget to see if ContentPane can still find it</span>
+<div id="multipleChildResizable2" data-dojo-type="ResizableWidget"></div>
+<span>ending text</span></div>
+</div>
+<div id="multipleResizableInForm"
+	data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"Multiple resizable in form", onLoad:myOnLoad'>
+<div data-dojo-type="dijit.form.Form">
+<div id="resizableInForm1" data-dojo-type="ResizableWidget"></div>
+<div id="resizableInForm2" data-dojo-type="ResizableWidget"></div>
+</div>
+</div>
+<div id="singleResizableInForm"
+	data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"Single resizable in form", onLoad:myOnLoad'>
+<div data-dojo-type="dijit.form.Form">
+<div id="resizableInForm0" data-dojo-type="ResizableWidget"></div>
+</div>
+</div>
+<div id="singleChildHref" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"Href Single Child",
 			href:"borderContainer.php?id=singleChildHref", onLoad:myOnLoad'></div>
-		<div id="multipleChildHref" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"Href Multiple Children",
+<div id="multipleChildHref" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"Href Multiple Children",
 			href:"multipleLayoutWidgets.php?id=multipleChildHref", onLoad:myOnLoad'></div>
-	</div>
+</div>
 
-	<p>Tests that ContentPane resize doesn't trigger reload:</p>
-	<div id="reloadTC" data-dojo-type="dijit.layout.TabContainer" data-dojo-props='style:"width: 880px; height: 200px;"'>
-		<div id="reloadTC_pane1" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc0.html", title:"Initially Selected", onLoad:myOnLoad, refreshOnShow:true'>
-			initially selected pane
-		</div>
-		<div id="reloadTC_pane2" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='href:"doc1.html", title:"Initially Hidden", onLoad:myOnLoad'>
-			unselected pane
-		</div>
-	</div>
+<p>Tests that ContentPane resize doesn't trigger reload:</p>
+<div id="reloadTC" data-dojo-type="dijit.layout.TabContainer"
+	data-dojo-props='style:"width: 880px; height: 200px;"'>
+<div id="reloadTC_pane1" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc0.html", title:"Initially Selected", onLoad:myOnLoad, refreshOnShow:true'>
+initially selected pane</div>
+<div id="reloadTC_pane2" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='href:"doc1.html", title:"Initially Hidden", onLoad:myOnLoad'>
+unselected pane</div>
+</div>
 
-	<p>Test the ContentPane loads href and resizes children (as per it's contract a layout widget)
-			when it's not a child of a layout container itself:</p>
-	<div id="ctpHsc" data-dojo-type="dijit.TitlePane" data-dojo-props='title:"Closed TitlePane Href Single Child", open:false,
+<p>Test the ContentPane loads href and resizes children (as per it's
+contract a layout widget) when it's not a child of a layout container
+itself:</p>
+<div id="ctpHsc" data-dojo-type="dijit.TitlePane"
+	data-dojo-props='title:"Closed TitlePane Href Single Child", open:false,
 		href:"borderContainer.php?id=ctpHsc&amp;sized=true", onLoad:myOnLoad'></div>
-	<br><br>
+<br>
+<br>
 
-	<div id="ctpHmc" data-dojo-type="dijit.TitlePane" data-dojo-props='title:"Closed TitlePane Href Multiple Children", open:false,
+<div id="ctpHmc" data-dojo-type="dijit.TitlePane"
+	data-dojo-props='title:"Closed TitlePane Href Multiple Children", open:false,
 		href:"multipleLayoutWidgets.php?id=ctpHmc", onLoad:myOnLoad'></div>
-	<br><br>
+<br>
+<br>
 
-	<div id="otpHsc" data-dojo-type="dijit.TitlePane" data-dojo-props='title:"Opened TitlePane Href Single Child",
+<div id="otpHsc" data-dojo-type="dijit.TitlePane"
+	data-dojo-props='title:"Opened TitlePane Href Single Child",
 		href:"borderContainer.php?id=otpHsc&amp;sized=true", onLoad:myOnLoad'></div>
-	<br><br>
+<br>
+<br>
 
-	<div id="otpHmc" data-dojo-type="dijit.TitlePane" data-dojo-props='title:"Opened TitlePane Href Multiple Children",
+<div id="otpHmc" data-dojo-type="dijit.TitlePane"
+	data-dojo-props='title:"Opened TitlePane Href Multiple Children",
 		href:"multipleLayoutWidgets.php?id=otpHmc", onLoad:myOnLoad'></div>
-	<br><br>
+<br>
+<br>
 
-	<div id="otpMc" data-dojo-type="dijit.TitlePane" data-dojo-props='title:"Opened TitlePane Multiple Children"'>
-		<!-- these widgets should get a resize on page load -->
-		<div id="otpMc_child1" data-dojo-type="ResizableWidget" ></div>
-		<div id="otpMc_child2" data-dojo-type="ResizableWidget" ></div>
-	</div>
-	<br><br>
+<div id="otpMc" data-dojo-type="dijit.TitlePane"
+	data-dojo-props='title:"Opened TitlePane Multiple Children"'><!-- these widgets should get a resize on page load -->
+<div id="otpMc_child1" data-dojo-type="ResizableWidget"></div>
+<div id="otpMc_child2" data-dojo-type="ResizableWidget"></div>
+</div>
+<br>
+<br>
 
-	<div id="ctpMc" data-dojo-type="dijit.TitlePane" data-dojo-props='title:"Closed TitlePane Multiple Children", open:false'>
-		<!-- these widgets should get a resize() when the TitlePane is opened -->
-		<div id="ctpMc_child1" data-dojo-type="ResizableWidget" ></div>
-		<div id="ctpMc_child2" data-dojo-type="ResizableWidget" ></div>
-	</div>
-	<br><br>
+<div id="ctpMc" data-dojo-type="dijit.TitlePane"
+	data-dojo-props='title:"Closed TitlePane Multiple Children", open:false'>
+<!-- these widgets should get a resize() when the TitlePane is opened -->
+<div id="ctpMc_child1" data-dojo-type="ResizableWidget"></div>
+<div id="ctpMc_child2" data-dojo-type="ResizableWidget"></div>
+</div>
+<br>
+<br>
 
-	<div id="dlgHmc" data-dojo-type="dijit.Dialog" data-dojo-props='title:"Dialog Href Multiple Children",
+<div id="dlgHmc" data-dojo-type="dijit.Dialog"
+	data-dojo-props='title:"Dialog Href Multiple Children",
 		href:"multipleLayoutWidgets.php?id=dlgHmc", onLoad:myOnLoad'></div>
 
-	<div id="dlgMc" data-dojo-type="dijit.Dialog" data-dojo-props='title:"Dialog Multiple Children"'>
-		<!-- these widgets should get a resize() when the Dialog is opened -->
-		<div id="dlgMc_child1" data-dojo-type="ResizableWidget" ></div>
-		<div id="dlgMc_child2" data-dojo-type="ResizableWidget" ></div>
-	</div>
+<div id="dlgMc" data-dojo-type="dijit.Dialog"
+	data-dojo-props='title:"Dialog Multiple Children"'><!-- these widgets should get a resize() when the Dialog is opened -->
+<div id="dlgMc_child1" data-dojo-type="ResizableWidget"></div>
+<div id="dlgMc_child2" data-dojo-type="ResizableWidget"></div>
+</div>
 
 </body>
 </html>

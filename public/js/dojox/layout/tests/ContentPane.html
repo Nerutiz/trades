@@ -2,8 +2,8 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>dojox.layout.ContentPane test</title>
-	<script >
+<title>dojox.layout.ContentPane test</title>
+<script>
 	function fixPngIE6(){
 		if(this.complete && dojo.isIE < 7){
 			var r = this.runtimeStyle;
@@ -18,17 +18,18 @@
 		}
 	}
 	</script>
-	<style type='text/css'>
-		.run_png_fix {
-			background-image:url(images/blank.gif);
-			behaviour: expression(fixPngIE6.call(this));
-		}
-	</style>
-	<script src='../../../dojo/dojo.js' djConfig='isDebug:true, parseOnLoad:true'></script>
-	<script src='../../../dojo/html.js'></script>
-	<script src='../../../dojox/html/_base.js'></script>
-	<script src='../../../dojox/layout/ContentPane.js'></script>
-	<script>
+<style type='text/css'>
+.run_png_fix {
+	background-image: url(images/blank.gif);
+	behaviour: expression(fixPngIE6.call ( this) );
+}
+</style>
+<script src='../../../dojo/dojo.js'
+	djConfig='isDebug:true, parseOnLoad:true'></script>
+<script src='../../../dojo/html.js'></script>
+<script src='../../../dojox/html/_base.js'></script>
+<script src='../../../dojox/layout/ContentPane.js'></script>
+<script>
 		dojo.require('doh.runner');
 		dojo.require('dojox.layout.ContentPane');
 		dojo.require('dojo.parser');
@@ -1048,48 +1049,51 @@
 			doh.run();
 		});
 	</script>
-	<style>
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
+<style>
+@import "../../../dojo/resources/dojo.css";
 
-		.box {
-			border: 1px solid black;
-			height: 190px;
-			width: 80%;
-			overflow: auto;
-		}
+@import "../../../dijit/themes/tundra/tundra.css";
 
-		.red {
-			color: red;
-		}
+@import "../../../dijit/tests/css/dijitTests.css";
 
-		.dojoxTestWidget {
-			border: 1px dashed red;
-			background-color: #C0E209 ;
-		}
-	</style>
+.box {
+	border: 1px solid black;
+	height: 190px;
+	width: 80%;
+	overflow: auto;
+}
+
+.red {
+	color: red;
+}
+
+.dojoxTestWidget {
+	border: 1px dashed red;
+	background-color: #C0E209;
+}
+</style>
 </head>
 <body class='tundra'>
-	<h1>dojox.layout.ContentPane</h1>
-	<h3>As dojox ContentPane is derived from dijit ContentPane, make sure that the dijit test passes before running this test</h3>
-	<h3 class='red'>Test relies on a php page as backend, so you need php installed on your server</h3>
+<h1>dojox.layout.ContentPane</h1>
+<h3>As dojox ContentPane is derived from dijit ContentPane, make
+sure that the dijit test passes before running this test</h3>
+<h3 class='red'>Test relies on a php page as backend, so you need
+php installed on your server</h3>
 
-	<div class='box' dojoType="dojox.layout.ContentPane" id='parsedPane'>
-		Initial value
-	</div>
+<div class='box' dojoType="dojox.layout.ContentPane" id='parsedPane'>
+Initial value</div>
 
-	<table id='tableTest' class='box'>
-		<thead>
-			<tr>
-				<td></td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-			</tr>
-		<tbody>
-	</table>
+<table id='tableTest' class='box'>
+	<thead>
+		<tr>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	<tbody>
+</table>
 </body>
 </html>

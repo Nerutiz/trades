@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>dijit.layout.BorderContainer DOH Test</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>dijit.layout.BorderContainer DOH Test</title>
 
-	<!-- only needed for test files: -->
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../css/dijitTests.css";
-	</style>
+<!-- only needed for test files: -->
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-	<!-- required: the default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/claro/claro.css"/>
+@import "../css/dijitTests.css";
+</style>
 
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		data-dojo-config="isDebug: true"></script>
+<!-- required: the default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/claro/claro.css" />
 
-	<!-- only needed for alternate theme testing: -->
-	<script type="text/javascript" src="../_testCommon.js"></script>
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	data-dojo-config="isDebug: true"></script>
 
-	<script type="text/javascript" src="robot/borderContainerTestFunctions.js"></script>
-	<script type="text/javascript" src="../helpers.js"></script>
+<!-- only needed for alternate theme testing: -->
+<script type="text/javascript" src="../_testCommon.js"></script>
 
-	<script type="text/javascript">
+<script type="text/javascript"
+	src="robot/borderContainerTestFunctions.js"></script>
+<script type="text/javascript" src="../helpers.js"></script>
+
+<script type="text/javascript">
 		dojo.require("dijit.dijit"); // optimize: load dijit layer
 		dojo.require("dijit.layout.BorderContainer");
 		dojo.require("dijit.layout.ContentPane");
@@ -197,63 +200,62 @@
 	</script>
 </head>
 <body class="claro">
-	<p>Headline layout (default), left is constrained - min:150, max:250</p>
-	<div id="border1" data-dojo-type="dijit.layout.BorderContainer"
-		data-dojo-props='style:"width: 1000px; height: 300px; border: 2px solid blue;"'>
-		<div role="banner" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border1-top", region:"top", style:"background-color: #b39b86; border: 15px black solid; height: 50px;", splitter:true'>
-			top bar (resizable)
-		</div>
-		<div role="navigation" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border1-left", region:"left", style:"background-color: #acb386; border: 10px green solid; width: 100px;",
+<p>Headline layout (default), left is constrained - min:150, max:250</p>
+<div id="border1" data-dojo-type="dijit.layout.BorderContainer"
+	data-dojo-props='style:"width: 1000px; height: 300px; border: 2px solid blue;"'>
+<div role="banner" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border1-top", region:"top", style:"background-color: #b39b86; border: 15px black solid; height: 50px;", splitter:true'>
+top bar (resizable)</div>
+<div role="navigation" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border1-left", region:"left", style:"background-color: #acb386; border: 10px green solid; width: 100px;",
 		splitter:true, minSize:150, maxSize:250'>
-			left (resizable b/w 150 &rarr; 250)
-		</div>
-		<div role="main" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border1-center", region:"center", style:"background-color: #f5ffbf; padding: 30px;"'>
-			main panel with <a href="http://www.dojotoolkit.org/">a link</a>.<br />
-			(to check we're copying children around properly).<br />
-			<select data-dojo-type="dijit.form.FilteringSelect">
-				<option value="1">foo</option>
-				<option value="2">bar</option>
-				<option value="3">baz</option>
-			</select>
-			Here's some text that comes AFTER the combo box.
-		</div>
-		<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border1-right", region:"right", style:"background-color: #acb386; width: 100px;"'>
-			right (fixed size)
-		</div>
-		<div role="contentinfo" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border1-bottom", region:"bottom", style:"background-color: #b39b86; height: 50px;", splitter:true'>
-			bottom bar (resizable)
-		</div>
-	</div>
+left (resizable b/w 150 &rarr; 250)</div>
+<div role="main" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border1-center", region:"center", style:"background-color: #f5ffbf; padding: 30px;"'>
+main panel with <a href="http://www.dojotoolkit.org/">a link</a>.<br />
+(to check we're copying children around properly).<br />
+<select data-dojo-type="dijit.form.FilteringSelect">
+	<option value="1">foo</option>
+	<option value="2">bar</option>
+	<option value="3">baz</option>
+</select> Here's some text that comes AFTER the combo box.</div>
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border1-right", region:"right", style:"background-color: #acb386; width: 100px;"'>
+right (fixed size)</div>
+<div role="contentinfo" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border1-bottom", region:"bottom", style:"background-color: #b39b86; height: 50px;", splitter:true'>
+bottom bar (resizable)</div>
+</div>
 
-	<p>Sidebar layout, BiDi sensitive, liveSplitters: false</p>
-	<div id="border2" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props='design:"sidebar", liveSplitters:false,
+<p>Sidebar layout, BiDi sensitive, liveSplitters: false</p>
+<div id="border2" data-dojo-type="dijit.layout.BorderContainer"
+	data-dojo-props='design:"sidebar", liveSplitters:false,
 		style:"border: 20px solid black; width: 1000px; height: 300px;"'>
-		<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border2-leading", region:"leading", style:"background-color: #acb386; width: 100px;"'>
-			leading (fixed size)
-		</div>
-		<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border2-top", region:"top", style:"background-color: #b39b86; height: 80px;"'>
-			top bar (fixed size)
-		</div>
-		<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border2-center", region:"center", style:"background-color: #f5ffbf; padding: 10px;"'>
-			main panel with <a href="http://www.dojotoolkit.org/">a link</a>.<br />
-			(to check we're copying children around properly).<br />
-			<select data-dojo-type="dijit.form.FilteringSelect">
-				<option value="1">foo</option>
-				<option value="2">bar</option>
-				<option value="3">baz</option>
-			</select>
-			Here's some text that comes AFTER the combo box.
-		</div>
-		<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border2-bottom", region:"bottom", style:"background-color: #b39b86; height: 80px;", splitter:true'>
-			bottom bar (resizable)
-		</div>
-		<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"border2-trailing", region:"trailing", style:"background-color: #acb386; width: 100px;", splitter:true'>
-			trailing (resizable)
-		</div>
-	</div>
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border2-leading", region:"leading", style:"background-color: #acb386; width: 100px;"'>
+leading (fixed size)</div>
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border2-top", region:"top", style:"background-color: #b39b86; height: 80px;"'>
+top bar (fixed size)</div>
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border2-center", region:"center", style:"background-color: #f5ffbf; padding: 10px;"'>
+main panel with <a href="http://www.dojotoolkit.org/">a link</a>.<br />
+(to check we're copying children around properly).<br />
+<select data-dojo-type="dijit.form.FilteringSelect">
+	<option value="1">foo</option>
+	<option value="2">bar</option>
+	<option value="3">baz</option>
+</select> Here's some text that comes AFTER the combo box.</div>
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border2-bottom", region:"bottom", style:"background-color: #b39b86; height: 80px;", splitter:true'>
+bottom bar (resizable)</div>
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"border2-trailing", region:"trailing", style:"background-color: #acb386; width: 100px;", splitter:true'>
+trailing (resizable)</div>
+</div>
 
-	<p>Programatically created</p>
-	<div id='main'></div>
+<p>Programatically created</p>
+<div id='main'></div>
 
 </body>
 </html>

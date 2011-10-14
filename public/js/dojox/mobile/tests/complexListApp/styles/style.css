@@ -12,7 +12,6 @@
 	font-size: smaller;
 }
 
-
 .iconList .row {
 	min-height: 36px;
 }
@@ -20,22 +19,27 @@
 .row .listButton1 {
 	background: url(../images/i-icon-1.png) no-repeat;
 }
+
 .row .listButton2 {
 	background: url(../images/i-icon-2.png) no-repeat;
 }
+
 .row .listButton3 {
 	background: url(../images/i-icon-3.png) no-repeat;
 }
+
 .row .listButton4 {
 	background: url(../images/i-icon-4.png) no-repeat;
 }
-.row .listButtonText {
 
+.row .listButtonText {
+	
 }
 
 .row .listButtonHidden {
 	display: none;
 }
+
 .divider {
 	padding: 2px;
 	background-color: lightblue;

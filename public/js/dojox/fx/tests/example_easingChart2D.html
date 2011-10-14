@@ -2,25 +2,26 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>visualising dojo.Animation.easing via dojox.charting</title>
+<title>visualising dojo.Animation.easing via dojox.charting</title>
 
-	<link rel="stylesheet" type="text/css" media="screen"
-		href="../../../dojo/resources/dojo.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="../../../dojo/resources/dojo.css">
 
-	<link rel="stylesheet" type="text/css" media="screen"
-		href="../../../dijit/themes/tundra/tundra.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="../../../dijit/themes/tundra/tundra.css">
 
-	<style type="text/css">
-	.box { padding:14px; 
-		border:1px solid #b7b7b7;
-		-moz-border-radius:8pt;
-	}
-	</style>
-	
-	<script type="text/javascript" djConfig="isDebug:false, parseOnLoad: true"
-		src="../../../dojo/dojo.js"></script>
+<style type="text/css">
+.box {
+	padding: 14px;
+	border: 1px solid #b7b7b7;
+	-moz-border-radius: 8pt;
+}
+</style>
 
-	<script type="text/javascript">
+<script type="text/javascript"
+	djConfig="isDebug:false, parseOnLoad: true" src="../../../dojo/dojo.js"></script>
+
+<script type="text/javascript">
 		// one simple theme, and the charting engine:
 		dojo.require("dojox.charting.Chart2D");
 		// and easing functions:
@@ -129,19 +130,20 @@
 		
 	</script>
 </head>
-<body class="tundra" style="padding:20px">
+<body class="tundra" style="padding: 20px">
 
-	<h1>dojo.fx.easing</h1>
-	
-	<p>this chart shows time (x axis) vs. position (y axis) for a movement from 0px to 30px modified by easing functions</p>
+<h1>dojo.fx.easing</h1>
 
-		<select id="select" multiple="true" size="7" name="easing">
-				<option class="clone" value="dojo._defaultEasing">dojo._defaultEasing</option>
-		</select>
-	
-		<div class="box">
-			<div id="easingChart" style="height:300px"></div>
-		</div>
+<p>this chart shows time (x axis) vs. position (y axis) for a
+movement from 0px to 30px modified by easing functions</p>
+
+<select id="select" multiple="true" size="7" name="easing">
+	<option class="clone" value="dojo._defaultEasing">dojo._defaultEasing</option>
+</select>
+
+<div class="box">
+<div id="easingChart" style="height: 300px"></div>
+</div>
 
 </body>
 </html>

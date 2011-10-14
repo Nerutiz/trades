@@ -1,12 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<title>testing Core _docScroll function</title>
-		<script type="text/javascript" 
-			src="../../dojo.js" 
-			djConfig="isDebug: true"></script>
-		<script type="text/javascript">
+<head>
+<title>testing Core _docScroll function</title>
+<script type="text/javascript" src="../../dojo.js"
+	djConfig="isDebug: true"></script>
+<script type="text/javascript">
 			dojo.require("doh.runner");
 			
 			dojo.addOnLoad(function(){
@@ -85,18 +84,19 @@
 				doh.run();
 			});
 		</script>
-	</head>
-	<body>
-		<h1>testing Core _docScroll function</h1>
-		<div id='div' style="border:0px;padding:0px;margin:0px;">
-			<iframe id="iframe" src="javascript:'&lt;html&gt;&lt;head&gt;&lt;script&gt;frameElement.iframeContentWindow=window&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div style=\'height:500px;width:500px;\'&gt;&nbsp;&lt;/div&gt;&lt;/body&gt;'"></iframe>
-		</div>
-		<script type="text/javascript">
+</head>
+<body>
+<h1>testing Core _docScroll function</h1>
+<div id='div' style="border: 0px; padding: 0px; margin: 0px;"><iframe
+	id="iframe"
+	src="javascript:'&lt;html&gt;&lt;head&gt;&lt;script&gt;frameElement.iframeContentWindow=window&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div style=\'height:500px;width:500px;\'&gt;&nbsp;&lt;/div&gt;&lt;/body&gt;'"></iframe>
+</div>
+<script type="text/javascript">
 			// make sure div is too big to display
 			var div = dojo.byId('div');
 			div.style.height = (dojo.doc.documentElement.clientHeight + 2) + "px";
 			div.style.width = (dojo.doc.documentElement.clientWidth + 1) + "px";
 		</script>
-	</body>
+</body>
 </html>
 

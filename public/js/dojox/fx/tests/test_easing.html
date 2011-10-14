@@ -2,37 +2,40 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>dojox.fx.easing functions:</title>
-		
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:true, parseOnLoad: true" ></script>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/dijit.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
+<title>dojox.fx.easing functions:</title>
 
-		.bounce {
-			position:absolute;
-			top:300px;
-			left:400px;
-			width:25px;
-			height:25px;
-			border:1px solid #b7b7b7;
-			background:#ededed;
-		}
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-		.block {
-			width:200px;
-			height:100px;
-			background:#666;
-			border:1px solid #ccc;
-			display:block; 
-			color:#fff;
-			text-align:center; 
-		}
-	
-	</style>
-	<script type="text/javascript">
+@import "../../../dijit/themes/dijit.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+.bounce {
+	position: absolute;
+	top: 300px;
+	left: 400px;
+	width: 25px;
+	height: 25px;
+	border: 1px solid #b7b7b7;
+	background: #ededed;
+}
+
+.block {
+	width: 200px;
+	height: 100px;
+	background: #666;
+	border: 1px solid #ccc;
+	display: block;
+	color: #fff;
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
 		dojo.require("dojo.fx"); // chain and combine should be in core :) (when they work)
 		dojo.require("dojo.fx.easing"); 
 
@@ -109,22 +112,26 @@
 </head>
 <body class="tundra">
 
-	<h1 class="testTitle">dojox.fx.easing function tests:</h1>
+<h1 class="testTitle">dojox.fx.easing function tests:</h1>
 
-	(click block to play animation, or <a href="#" onclick="allAnim.play()">here to do all three</a>)
+(click block to play animation, or
+<a href="#" onclick="allAnim.play()">here to do all three</a>
+)
 
-	<div id="easeIn" class="block">dojo.fx.easing.easeIn</div>
-	<br><br>
-	<div id="easeOut" class="block">dojo.fx.easing.easeOut</div>
-	<br><br>
-	<div id="linearEase" class="block">dojo.fx.easing.linear</div>
-	<br><br>
-	<div id="easeInOut" class="block">dojo default easing</div>
-	
-	<p>
-	dojo.fx.easing is stand-alone, and does not require the dojox.fx base files. to see a chart
-	of these functions see <a href="example_easingChart2D.html">example_easingChart2D.html</a> 
-	</p>	
+<div id="easeIn" class="block">dojo.fx.easing.easeIn</div>
+<br>
+<br>
+<div id="easeOut" class="block">dojo.fx.easing.easeOut</div>
+<br>
+<br>
+<div id="linearEase" class="block">dojo.fx.easing.linear</div>
+<br>
+<br>
+<div id="easeInOut" class="block">dojo default easing</div>
+
+<p>dojo.fx.easing is stand-alone, and does not require the dojox.fx
+base files. to see a chart of these functions see <a
+	href="example_easingChart2D.html">example_easingChart2D.html</a></p>
 
 </body>
 </html>

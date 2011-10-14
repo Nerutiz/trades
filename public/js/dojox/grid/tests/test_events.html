@@ -2,49 +2,56 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Test dojox.grid.Grid Events</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">
-		@import "../resources/Grid.css";
-		body,td,th {
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}	
-		#grid { 
-			border: 1px solid;
-			border-top-color: #F6F4EB;
-			border-right-color: #ACA899;
-			border-bottom-color: #ACA899;
-			border-left-color: #F6F4EB;
-		}
-		#grid {
-			width: 50em;
-			height: 20em;
-			padding: 1px;
-			overflow: hidden;
-			font-size: small;
-		}
-		h3 {
-			margin: 10px 0 2px 0;
-		}
-		.fade {
-			/*background-image:url(images/fade.gif);*/
-		}
-		.no-fade {
-			/*background-image: none;*/
-		}
-		#eventGrid {
-			float: right;
-			font-size: small;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: true"></script>
-	<script type="text/javascript">
+<title>Test dojox.grid.Grid Events</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../resources/Grid.css";
+
+body,td,th {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+#grid {
+	border: 1px solid;
+	border-top-color: #F6F4EB;
+	border-right-color: #ACA899;
+	border-bottom-color: #ACA899;
+	border-left-color: #F6F4EB;
+}
+
+#grid {
+	width: 50em;
+	height: 20em;
+	padding: 1px;
+	overflow: hidden;
+	font-size: small;
+}
+
+h3 {
+	margin: 10px 0 2px 0;
+}
+
+.fade { /*background-image:url(images/fade.gif);*/
+	
+}
+
+.no-fade { /*background-image: none;*/
+	
+}
+
+#eventGrid {
+	float: right;
+	font-size: small;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojox.grid._Grid");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 		// events to track
 		var eventRows = [
 			{ name: 'onCellClick' },
@@ -182,10 +189,10 @@
 	</script>
 </head>
 <body>
-	<h3>dojox.grid.Grid Event Tracking</h3>
-	<div id="eventGrid" jsId="eventGrid" autoWidth="true" autoHeight="true" 
-		structure="eventLayout" dojoType="dojox.grid._Grid"></div>
-	<div id="grid" jsId="grid" rowCount="100" structure="layout" 
-		rowSelector="20px" dojoType="dojox.grid._Grid"></div>
+<h3>dojox.grid.Grid Event Tracking</h3>
+<div id="eventGrid" jsId="eventGrid" autoWidth="true" autoHeight="true"
+	structure="eventLayout" dojoType="dojox.grid._Grid"></div>
+<div id="grid" jsId="grid" rowCount="100" structure="layout"
+	rowSelector="20px" dojoType="dojox.grid._Grid"></div>
 </body>
 </html>

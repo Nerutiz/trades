@@ -4,23 +4,19 @@
 }
 
 /* Menu */
-
 .dijitMenuItemRtl {
 	text-align: right;
 }
 
 /* Button */
-
 .dj_iequirks .dijitComboButtonRtl BUTTON {
 	/* workaround bug where label invisible (themeTesterQuirk.html?dir=rtl) */
-	float:left;
+	float: left;
 }
 
 /* TextBox, ComboBox, Spinner */
-
-.dijitTextBoxRtl .dijitValidationContainer,
-.dijitTextBoxRtl .dijitSpinnerButtonContainer,
-.dijitComboBoxRtl .dijitArrowButtonContainer {
+.dijitTextBoxRtl .dijitValidationContainer,.dijitTextBoxRtl .dijitSpinnerButtonContainer,.dijitComboBoxRtl .dijitArrowButtonContainer
+	{
 	/* combobox and spinner: line between the input area and the drop down button */
 	border-right-width: 1px !important;
 	border-left-width: 0 !important;
@@ -31,69 +27,64 @@
 	left: auto;
 }
 
-.dijitTextBoxRtl .dijitSpinnerButtonContainer,
-.dijitTextBoxRtl .dijitValidationContainer,
-.dijitTextBoxRtl .dijitArrowButtonContainer {
+.dijitTextBoxRtl .dijitSpinnerButtonContainer,.dijitTextBoxRtl .dijitValidationContainer,.dijitTextBoxRtl .dijitArrowButtonContainer
+	{
 	float: left;
 }
 
 /* Calendar */
-
 .dijitCalendarRtl .dijitCalendarNextYear {
-	margin:0 0.55em 0 0;
+	margin: 0 0.55em 0 0;
 }
 
 .dijitCalendarRtl .dijitCalendarPreviousYear {
-	margin:0 0 0 0.55em;
+	margin: 0 0 0 0.55em;
 }
 
-
 /* Slider */
-
 .dijitSliderRtl .dijitSliderImageHandleV {
-	left:auto;
+	left: auto;
 }
 
 .dijitSliderRtl .dijitSliderImageHandleH {
-	left:-50%;
+	left: -50%;
 }
 
 .dijitSliderRtl .dijitSliderMoveableH {
-	right:auto;
-	left:0;
+	right: auto;
+	left: 0;
 }
 
 .dijitSliderRtl .dijitRuleContainerV {
-	float:right;
+	float: right;
 }
 
 .dj_ie .dijitSliderRtl .dijitRuleContainerV {
-	text-align:right;
+	text-align: right;
 }
 
 .dj_ie .dijitSliderRtl .dijitRuleLabelV {
-	text-align:left;
+	text-align: left;
 }
 
 .dj_ie .dijitSliderRtl .dijitRuleLabelH {
-	zoom:1;
+	zoom: 1;
 }
 
 .dijitSliderRtl .dijitSliderProgressBarH {
 	/* workarounds for IE and FF */
-	float:right;
-	right:0;
-	left:auto;
+	float: right;
+	right: 0;
+	left: auto;
 }
 
 /* ContentPane*/
-.dijitRtl .dijitContentPaneLoading, .dijitRtl .dijitContentPaneError {
-	background-position:right;
-	padding-right:25px;
+.dijitRtl .dijitContentPaneLoading,.dijitRtl .dijitContentPaneError {
+	background-position: right;
+	padding-right: 25px;
 }
 
 /* TabContainer */
-
 .dijitTabRtl .dijitTabCloseButton {
 	margin-left: 0;
 	margin-right: 1em;
@@ -101,9 +92,8 @@
 
 /* TimePicker */
 .dj_ie .dijitTimePickerRtl .dijitTimePickerItem {
-	width:100%;
+	width: 100%;
 }
-
 
 /* ColorPalette */
 .dijitColorPaletteRtl .dijitColorPaletteUnder {

@@ -5,10 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>Testing series order</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dojo/resources/dnd.css";
-	@import "../../../dojo/tests/dnd/dndDefault.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dojo/resources/dnd.css";
+
+@import "../../../dojo/tests/dnd/dndDefault.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
 </style>
 <script src="../../../dojo/dojo.js" djConfig="isDebug: true"></script>
 <script>
@@ -80,9 +83,18 @@ dojo.ready(makeObjects);
 <p>Chart:</p>
 <div id="chart1" style="width: 200px; height: 200px;"></div>
 <div id="legend1"></div>
-<p id="s1">Series A: <button>Front</button> <button>Back</button></p>
-<p id="s2">Series B: <button>Front</button> <button>Back</button></p>
-<p id="s3">Series C: <button>Front</button> <button>Back</button></p>
+<p id="s1">Series A:
+<button>Front</button>
+<button>Back</button>
+</p>
+<p id="s2">Series B:
+<button>Front</button>
+<button>Back</button>
+</p>
+<p id="s3">Series C:
+<button>Front</button>
+<button>Back</button>
+</p>
 <p>Series (rearrange using drag-and-drop):</p>
 <div id="dnd1" class="container"></div>
 <p>That's all Folks!</p>

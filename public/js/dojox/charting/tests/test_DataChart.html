@@ -5,48 +5,59 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>DataChart Test</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	@import "../../../dijit/themes/tundra/form/Button.css";
-	@import "../../../dijit/themes/tundra/form/Common.css";
-	@import "../../../dijit/themes/tundra/Common.css";
-	@import "../../../dijit/themes/dijit.css";
-	
-	#spinners{
-		clear:both;
-	}
-	#spinners label{
-		width:60px;
-		line-height:30px;
-		margin-top:10px;
-	}
-	.tundra #spinners .dijitSpinner	{
-		width:70px !important;
-		margin:5px !important;
-	}
-	.tundra #spinners .dijitSpinner{
-		width:80px !important;
-	}
-	.dijitSpinner{
-		padding:0px !important;
-	}
-	#spinners .dijitSpinnerButtonContainer{
-		line-height:23px;
-	}
-	.dj_ie #spinners .dijitSpinnerButtonContainer{
-		height:25px;
-	}
-	.dijitInputLayoutContainer .dijitInputField input{
-		padding:5px 0px 0px 5px;
-	}
-	.dj_webkit .dijitInputLayoutContainer .dijitInputField input{
-		padding:10px 0px 0px 5px;
-	}
-	
-	
+@import "../../../dojo/resources/dojo.css";
 
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/tundra/form/Button.css";
+
+@import "../../../dijit/themes/tundra/form/Common.css";
+
+@import "../../../dijit/themes/tundra/Common.css";
+
+@import "../../../dijit/themes/dijit.css";
+
+#spinners {
+	clear: both;
+}
+
+#spinners label {
+	width: 60px;
+	line-height: 30px;
+	margin-top: 10px;
+}
+
+.tundra #spinners .dijitSpinner {
+	width: 70px !important;
+	margin: 5px !important;
+}
+
+.tundra #spinners .dijitSpinner {
+	width: 80px !important;
+}
+
+.dijitSpinner {
+	padding: 0px !important;
+}
+
+#spinners .dijitSpinnerButtonContainer {
+	line-height: 23px;
+}
+
+.dj_ie #spinners .dijitSpinnerButtonContainer {
+	height: 25px;
+}
+
+.dijitInputLayoutContainer .dijitInputField input {
+	padding: 5px 0px 0px 5px;
+}
+
+.dj_webkit .dijitInputLayoutContainer .dijitInputField input {
+	padding: 10px 0px 0px 5px;
+}
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: false, parseOnLoad:true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: false, parseOnLoad:true"></script>
 <script type="text/javascript">
 
 dojo.require("dojox.charting.DataChart");
@@ -130,70 +141,79 @@ handleSpinner = function(){
 </script>
 
 <style>
-	#charts{
-		clear:both;
-		margin-bottom:50px;
-	}
-	#charts span{
-		padding:0 10px;
-		display:block;
-		font-size:10px;
-	}
-	.lines, .linesC, .cols, .bars, .pie{
-		float:left;
-		border:1px solid #ccc;
-	}
-	.lines, #lines, .linesC, #linesC, .cols, #cols, .bars, #bars, .pie, #pie{
-		width:200px;
-		height:200px;
-	}
-	.lines, .linesC, .cols, .bars, .pie{
-		height:250px;
-		margin:3px;
-	}
-	.cols, #cols{
-		width:280px;
-	}
-	.linesC, #linesC{
-		width:260px;
-	}
-	.lines, #lines,.bars, #bars{
-		width:260px;
-	}
+#charts {
+	clear: both;
+	margin-bottom: 50px;
+}
+
+#charts span {
+	padding: 0 10px;
+	display: block;
+	font-size: 10px;
+}
+
+.lines,.linesC,.cols,.bars,.pie {
+	float: left;
+	border: 1px solid #ccc;
+}
+
+.lines,#lines,.linesC,#linesC,.cols,#cols,.bars,#bars,.pie,#pie {
+	width: 200px;
+	height: 200px;
+}
+
+.lines,.linesC,.cols,.bars,.pie {
+	height: 250px;
+	margin: 3px;
+}
+
+.cols,#cols {
+	width: 280px;
+}
+
+.linesC,#linesC {
+	width: 260px;
+}
+
+.lines,#lines,.bars,#bars {
+	width: 260px;
+}
 </style>
 </head>
 <body class="tundra">
-	<h1>DataChart</h1>
-	<p>
-		DataChart extends dojox.charting.Chart2D and allows for a simple connection to a data store. When adding a store to a chart, it is necessary to also supply which
-		item property you wish charted. There are two types of properties supported: numbers and arrays of numbers (bubble charts take an array of objects and are not currently
-		supported). If the property is an array, a segment of the array is taken from the end that fits in the display range of the chart. Animated charts are also possible.
-	</p>
-	<p>
-		Use the spinner fields at the bottom to change the data. The charts listen to store changes an update automatically.
-	</p>
-	<div id="charts">
-		<div class="lines">
-			<div id="lines"></div>
-			<span>This line chart uses a different data field than the rest, which is an array. This chart will not upate using the spinners.</span>	
-		</div>
-		<div class="linesC">
-			<div id="linesC"></div>
-			<span>This chart uses <em>comparitive</em> to compare the price of each item. Without compartive, the items would each be a separate series and not be connected. Will update.</span>	
-		</div>
-		<div class="cols">
-			<div id="cols"></div>
-			<span>Each column in this chart is a separate series. Will update. </span>	
-		</div>	
-		<div class="bars">
-			<div id="bars"></div>
-			<span>Each bar in this chart is a separate series. Will update.</span>			
-		</div>
-		<div class="pie">
-			<div id="pie"></div>
-			<span>This chart also uses <em>comparitive</em> to create one series from several items. Will update.</span>	
-		</div>
-	</div>
-	<div id="spinners"></div>
+<h1>DataChart</h1>
+<p>DataChart extends dojox.charting.Chart2D and allows for a simple
+connection to a data store. When adding a store to a chart, it is
+necessary to also supply which item property you wish charted. There are
+two types of properties supported: numbers and arrays of numbers (bubble
+charts take an array of objects and are not currently supported). If the
+property is an array, a segment of the array is taken from the end that
+fits in the display range of the chart. Animated charts are also
+possible.</p>
+<p>Use the spinner fields at the bottom to change the data. The
+charts listen to store changes an update automatically.</p>
+<div id="charts">
+<div class="lines">
+<div id="lines"></div>
+<span>This line chart uses a different data field than the rest,
+which is an array. This chart will not upate using the spinners.</span></div>
+<div class="linesC">
+<div id="linesC"></div>
+<span>This chart uses <em>comparitive</em> to compare the price
+of each item. Without compartive, the items would each be a separate
+series and not be connected. Will update.</span></div>
+<div class="cols">
+<div id="cols"></div>
+<span>Each column in this chart is a separate series. Will
+update. </span></div>
+<div class="bars">
+<div id="bars"></div>
+<span>Each bar in this chart is a separate series. Will update.</span></div>
+<div class="pie">
+<div id="pie"></div>
+<span>This chart also uses <em>comparitive</em> to create one
+series from several items. Will update.</span></div>
+</div>
+<div id="spinners"></div>
 </body>
 </html>

@@ -5,10 +5,10 @@
 <web-app>
 	<display-name>Dojo Web Builder</display-name>
 	<description></description>
-	
+
 	<context-param>
 		<param-name>someContextParam</param-name>
-			<param-value>someContextParamValue</param-value>
+		<param-value>someContextParamValue</param-value>
 		<description>
 		</description>
 	</context-param>

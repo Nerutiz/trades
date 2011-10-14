@@ -2,15 +2,16 @@ body {
 	visibility: hidden;
 }
 
-html.mobile, .mobile body {
+html.mobile,.mobile body {
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
 }
+
 .mobile body {
 	overflow-x: hidden;
 	-webkit-text-size-adjust: none;
-	background-color: rgb(197,204,211);
+	background-color: rgb(197, 204, 211);
 	font-family: Helvetica;
 	font-size: 17px;
 }
@@ -24,6 +25,7 @@ html.mobile, .mobile body {
 }
 
 .mblView.out {
+	
 }
 
 .mblView.in {
@@ -36,81 +38,177 @@ html.mobile, .mobile body {
 	-webkit-animation-timing-function: linear;
 	-webkit-transform: translateX(-100%);
 }
+
 .slide.in {
 	-webkit-animation-duration: .4s;
 	-webkit-animation-name: slideIn;
 	-webkit-animation-timing-function: linear;
 	-webkit-transform: translateX(0px);
 }
+
 .slide.out.reverse {
 	-webkit-animation-name: slideOutReverse;
 }
+
 .slide.in.reverse {
 	-webkit-animation-name: slideInReverse;
 }
-@-webkit-keyframes slideOut {
-	from { -webkit-transform: translateX(0px); }
-	to { -webkit-transform: translateX(-100%); }
-}
-@-webkit-keyframes slideIn {
-	from { -webkit-transform: translateX(100%); }
-	to { -webkit-transform: translateX(0px); }
-}
-@-webkit-keyframes slideOutReverse {
-	from { -webkit-transform: translateX(0px); }
-	to { -webkit-transform: translateX(100%); }
-}
-@-webkit-keyframes slideInReverse {
-	from { -webkit-transform: translateX(-100%); }
-	to { -webkit-transform: translateX(0px); }
+
+@
+-webkit-keyframes slideOut {from { -webkit-transform:translateX(0px);
+	
 }
 
+to {
+	-webkit-transform: translateX(-100%);
+}
+
+}
+@
+-webkit-keyframes slideIn {from { -webkit-transform:translateX(100%);
+	
+}
+
+to {
+	-webkit-transform: translateX(0px);
+}
+
+}
+@
+-webkit-keyframes slideOutReverse {from { -webkit-transform:translateX(0px);
+	
+}
+
+to {
+	-webkit-transform: translateX(100%);
+}
+
+}
+@
+-webkit-keyframes slideInReverse {from { -webkit-transform:translateX(-100%);
+	
+}
+
+to {
+	-webkit-transform: translateX(0px);
+}
+
+}
 .flip.out {
 	-webkit-animation-duration: .6s;
 	-webkit-animation-name: flipOut;
 	-webkit-animation-timing-function: ease-in;
 	-webkit-transform: rotateY(90deg);
 }
+
 .flip.in {
 	-webkit-animation-duration: .6s;
 	-webkit-animation-name: flipIn;
 	-webkit-animation-timing-function: ease-out;
 }
-@-webkit-keyframes flipOut {
-	0% { -webkit-transform: rotateY(0deg) scale(1); }
-	50% { -webkit-transform: rotateY(90deg) scale(.8); }
-	100% { -webkit-transform: rotateY(90deg) scale(.8); }
+
+@
+-webkit-keyframes flipOut { 0% {
+	-webkit-transform: rotateY(0deg) scale(1);
 }
 
-@-webkit-keyframes flipIn {
-	0% { -webkit-transform: rotateY(90deg) scale(.8); }
-	50% { -webkit-transform: rotateY(90deg) scale(.8); }
-	100% { -webkit-transform: rotateY(0deg) scale(1); }
+50%
+{
+-webkit-transform
+:
+ 
+rotateY
+(90deg)
+ 
+scale
+(
+.8
+);
+ 
+}
+100%
+{
+-webkit-transform
+:
+ 
+rotateY
+(90deg)
+ 
+scale
+(
+.8
+);
+ 
+}
+}
+@
+-webkit-keyframes flipIn { 0% {
+	-webkit-transform: rotateY(90deg) scale(.8);
 }
 
+50%
+{
+-webkit-transform
+:
+ 
+rotateY
+(90deg)
+ 
+scale
+(
+.8
+);
+ 
+}
+100%
+{
+-webkit-transform
+:
+ 
+rotateY
+(0deg)
+ 
+scale
+(1);
+ 
+}
+}
 .fade.out {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-name: fadeOut;
 	-webkit-animation-timing-function: ease-in;
 }
+
 .fade.out.fast {
 	-webkit-animation-duration: 0.3s;
 }
+
 .fade.in {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-name: fadeIn;
 	-webkit-animation-timing-function: ease-out;
 }
-@-webkit-keyframes fadeOut {
-	from { opacity: 1; }
-	to { opacity: 0; }
+
+@
+-webkit-keyframes fadeOut {from { opacity:1;
+	
 }
 
-@-webkit-keyframes fadeIn {
-	from { opacity: 0; }
-	to { opacity: 1; }
+to {
+	opacity: 0;
 }
 
+}
+@
+-webkit-keyframes fadeIn {from { opacity:0;
+	
+}
+
+to {
+	opacity: 1;
+}
+
+}
 /* dojox.mobile.Heading */
 .mblHeading {
 	position: relative;
@@ -118,7 +216,8 @@ html.mobile, .mobile body {
 	margin: 0px;
 	padding: 0px;
 	background-color: #889BB3;
-	background: -webkit-gradient(linear, left top, left bottom, from(#B0BCCD), to(#6D84A2), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF));
+	background: -webkit-gradient(linear, left top, left bottom, from(#B0BCCD),
+		to(#6D84A2), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF) );
 	border-top: 1px solid #CDD5DF;
 	border-bottom: 1px solid #2D3642;
 	font-family: Helvetica;
@@ -126,7 +225,7 @@ html.mobile, .mobile body {
 	color: white;
 	text-align: center;
 	line-height: 44px;
-	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -140,6 +239,7 @@ html.mobile, .mobile body {
 	height: 42px;
 	margin-right: 6px;
 }
+
 .mblArrowButtonHead {
 	position: absolute;
 	top: 11px;
@@ -149,9 +249,11 @@ html.mobile, .mobile body {
 	border-width: 1px;
 	border-style: solid;
 	border-color: #3A4655;
-	-webkit-transform: scale(.8,1) rotate(45deg);
-	background: -webkit-gradient(linear, left top, right bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	-webkit-transform: scale(.8, 1) rotate(45deg);
+	background: -webkit-gradient(linear, left top, right bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 }
+
 .mblArrowButtonBody {
 	position: absolute;
 	top: 6px;
@@ -169,9 +271,11 @@ html.mobile, .mobile body {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	background-color: #5877A2;
-	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 	-webkit-tap-highlight-color: transparent;
 }
+
 .mblArrowButtonNeck {
 	position: absolute;
 	top: 6px;
@@ -181,13 +285,19 @@ html.mobile, .mobile body {
 	border-width: 1px 0px 1px 0px;
 	border-style: inset;
 	border-color: #9CACC0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 }
+
 .mblArrowButtonSelected .mblArrowButtonHead {
-	background: -webkit-gradient(linear, left top, right bottom, from(#7C87A4), to(#263E6C), color-stop(0.5, #394D77), color-stop(0.5, #243B69));
+	background: -webkit-gradient(linear, left top, right bottom, from(#7C87A4),
+		to(#263E6C), color-stop(0.5, #394D77), color-stop(0.5, #243B69) );
 }
-.mblArrowButtonSelected .mblArrowButtonBody, .mblArrowButtonSelected .mblArrowButtonNeck {
-	background: -webkit-gradient(linear, left top, left bottom, from(#7C87A4), to(#263E6C), color-stop(0.5, #394D77), color-stop(0.5, #243B69));
+
+.mblArrowButtonSelected .mblArrowButtonBody,.mblArrowButtonSelected .mblArrowButtonNeck
+	{
+	background: -webkit-gradient(linear, left top, left bottom, from(#7C87A4),
+		to(#263E6C), color-stop(0.5, #394D77), color-stop(0.5, #243B69) );
 }
 
 /* ToolBarButton */
@@ -218,7 +328,8 @@ html.mobile, .mobile body {
 	margin: 0px;
 	padding: 0px;
 	background-color: #000000;
-	background: -webkit-gradient(linear, left top, left bottom, from(#2D2D2D), to(#000000), color-stop(0.5, #141414), color-stop(0.5, #000000));
+	background: -webkit-gradient(linear, left top, left bottom, from(#2D2D2D),
+		to(#000000), color-stop(0.5, #141414), color-stop(0.5, #000000) );
 	border-top: 1px solid #000000;
 	color: white;
 	text-align: center;
@@ -234,42 +345,53 @@ html.mobile, .mobile body {
 
 /* dojox.mobile.TabBarButton */
 .mblTabBarButton {
+	
 }
+
 .mblTabBarButtonAnchor {
 	display: block;
 	text-decoration: none;
 }
+
 .mblTabButton .mblTabBarButtonAnchor {
 	height: 28px;
 }
+
 .mblTabBarButtonDiv {
 	position: relative;
 	height: 34px;
 	width: 29px;
 	left: 50%;
 }
+
 .mblTabButton .mblTabBarButtonDiv {
 	display: none;
 }
+
 .mblTabBarButtonDivInner {
 	left: -50%;
 }
+
 .mblTabBarButtonIcon {
 	position: absolute;
 	left: 0px;
 	top: 2px;
 }
+
 .mblTabBar .mblTabBarButton.mblTabButtonSelected {
 	background-color: #404040;
-	background: -webkit-gradient(linear, left top, left bottom, from(#484848), to(#242424), color-stop(0.5, #353535), color-stop(0.5, #242424));
+	background: -webkit-gradient(linear, left top, left bottom, from(#484848),
+		to(#242424), color-stop(0.5, #353535), color-stop(0.5, #242424) );
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 }
+
 .mblTabBarButtonTextBox {
 	color: #979797;
 	font-family: "Helvetica Neue", Helvetica;
 	font-size: 11px;
 }
+
 .mblTabButtonSelected .mblTabBarButtonTextBox {
 	color: white;
 }
@@ -283,6 +405,7 @@ html.mobile, .mobile body {
 	-moz-border-radius: 8px;
 	background-color: white;
 }
+
 .mblRoundRect.mblShadow {
 	-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -295,13 +418,14 @@ html.mobile, .mobile body {
 	padding: 0px 10px;
 	border-top: 1px solid #A4B0B9;
 	border-bottom: 1px solid #979DA3;
-	background: -webkit-gradient(linear, left top, left bottom, from(#8F9EA9), to(#B7C0C7));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8F9EA9),
+		to(#B7C0C7) );
 	font-family: Helvetica;
 	font-weight: bold;
 	font-size: 16px;
 	color: white;
 	line-height: 22px;
-	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -351,31 +475,39 @@ html.mobile, .mobile body {
 	vertical-align: bottom; /* To avoid IE6 LI bug */
 	padding-left: 8px;
 }
+
 .mblListItemIcon {
 	position: absolute;
 	top: 7px;
 }
+
 .mblListItem.mblVariableHeight {
 	line-height: normal;
 	height: auto;
 	padding: 11px 6px 10px 6px;
 }
+
 .mblItemSelected {
 	background-color: #048BF4;
-	background: -webkit-gradient(linear, left top, left bottom, from(#048BF4), to(#005CE5));
+	background: -webkit-gradient(linear, left top, left bottom, from(#048BF4),
+		to(#005CE5) );
 }
+
 .mblListItemTextBox {
 	padding-right: 28px;
 }
+
 .mblListItemTextBoxSelected {
 	background-color: #048BF4;
 }
+
 .mblRoundRectList .mblListItem:first-child {
 	-webkit-border-top-left-radius: 8px;
 	-webkit-border-top-right-radius: 8px;
 	-moz-border-radius-topleft: 8px;
 	-moz-border-radius-topright: 8px;
 }
+
 .mblRoundRectList .mblListItem:last-child {
 	border-bottom-width: 0px;
 	-webkit-border-bottom-left-radius: 8px;
@@ -383,9 +515,11 @@ html.mobile, .mobile body {
 	-moz-border-radius-bottomleft: 8px;
 	-moz-border-radius-bottomright: 8px;
 }
+
 .mblEdgeToEdgeList .mblListItem:last-child {
 	border-bottom-color: #707C84;
 }
+
 .mblListItem a.mblListItemAnchor {
 	background-position: 9px 7px;
 	display: block;
@@ -393,12 +527,15 @@ html.mobile, .mobile body {
 	text-decoration: none;
 	-webkit-tap-highlight-color: transparent;
 }
+
 .mblListItem a.mblListItemAnchorNoIcon {
 	padding-left: 10px;
 }
+
 .mblItemSelected a.mblListItemAnchor {
 	color: white;
 }
+
 .mblListItem a.mblListItemAnchorHasRightButton {
 	padding-right: 40px;
 }
@@ -415,9 +552,11 @@ html.mobile, .mobile body {
 	border-style: solid;
 	border-color: #808080;
 }
+
 .mblItemSelected .mblArrow {
 	border-color: white;
 }
+
 .mblVariableHeight div.mblArrow {
 	top: 50%;
 	margin-top: -4px;
@@ -430,11 +569,13 @@ html.mobile, .mobile body {
 	color: #324F85;
 	line-height: normal;
 }
+
 .mblListItem .mblRightButtonContainer {
 	position: absolute;
 	top: 50%;
 	right: 12px;
 }
+
 .mblListItem .mblRightButton {
 	position: absolute;
 	top: -50%;
@@ -447,26 +588,32 @@ html.mobile, .mobile body {
 	height: 27px;
 	overflow: hidden;
 }
+
 .mblItemSwitch {
 	position: absolute;
 	top: 8px;
 	right: 12px;
 }
+
 .mblSwitchInner {
 	position: absolute;
 	top: 0px;
 	height: 27px;
 }
+
 .mblSwitchAnimation .mblSwitchInner {
 	-webkit-transition-property: left;
 	-webkit-transition-duration: .3s;
 }
+
 .mblSwitchOn .mblSwitchInner {
 	left: 0px;
 }
+
 .mblSwitchOff .mblSwitchInner {
 	left: -53px;
 }
+
 .mblSwitchBg {
 	position: absolute;
 	top: 0px;
@@ -484,20 +631,25 @@ html.mobile, .mobile body {
 	-moz-box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
 }
+
 .mblSwitchBgLeft {
 	left: 0px;
 	width: 94px;
 	color: white;
 	background-color: #3F84EB;
-	background: -webkit-gradient(linear, left top, left bottom, from(#2859B1), to(#75ACFB), color-stop(0.5, #3F84EB), color-stop(0.5, #4C8EEE));
+	background: -webkit-gradient(linear, left top, left bottom, from(#2859B1),
+		to(#75ACFB), color-stop(0.5, #3F84EB), color-stop(0.5, #4C8EEE) );
 }
+
 .mblSwitchBgRight {
 	left: 53px;
 	width: 94px;
 	color: #7F7F7F;
 	background-color: #EEEEEE;
-	background: -webkit-gradient(linear, left top, left bottom, from(#CECECE), to(#FDFDFD), color-stop(0.5, #EEEEEE), color-stop(0.5, #F8F8F8));
+	background: -webkit-gradient(linear, left top, left bottom, from(#CECECE),
+		to(#FDFDFD), color-stop(0.5, #EEEEEE), color-stop(0.5, #F8F8F8) );
 }
+
 .mblSwitchKnob {
 	position: absolute;
 	top: 1px;
@@ -510,12 +662,14 @@ html.mobile, .mobile body {
 	border-color: #EFEFEF #A5A5A5 #969696 #325E9E;
 	line-height: 29px;
 	background-color: #CCCCCC;
-	background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#FAFAFA));
+	background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC),
+		to(#FAFAFA) );
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
+
 .mblSwitchText {
 	position: relative;
 	top: 0px;
@@ -524,9 +678,11 @@ html.mobile, .mobile body {
 	padding: 0px;
 	text-align: center;
 }
+
 .mblSwitchTextLeft {
 	left: 0px;
 }
+
 .mblSwitchTextRight {
 	left: 40px;
 }
@@ -537,15 +693,18 @@ html.mobile, .mobile body {
 	margin: 20px 0px 0px 10px;
 	padding: 0px 0px 40px 0px;
 }
+
 .mblIconItem {
 	list-style-type: none;
 	float: left;
 }
+
 .mblIconItemTerminator {
 	list-style-type: none;
 	height: 20px;
 	clear: both;
 }
+
 .mblIconItemSub {
 	list-style-type: none;
 	margin-left: -10px;
@@ -582,7 +741,7 @@ table.mblClose {
 	cursor: pointer;
 }
 
-.mblVibrate{
+.mblVibrate {
 	position: relative;
 	-webkit-animation-duration: .5s;
 	-webkit-animation-timing-function: ease-in-out;
@@ -590,73 +749,192 @@ table.mblClose {
 	-webkit-animation-name: vibrate;
 	-webkit-transform: rotate(0deg);
 }
-@-webkit-keyframes vibrate{
-	0%{
-		-webkit-transform: rotate(-2deg);
-		bottom: -1px;
-		left: -1px;
-	}
-	25% {
-		-webkit-transform: rotate(1deg);
-		bottom: 2px;
-		left: 1px;
-	}
-	50% {
-		-webkit-transform: rotate(-1deg);
-		bottom: -2px;
-		left: -1px;
-	}
-	75% {
-		-webkit-transform: rotate(2deg);
-		bottom: 2px;
-		left: 1px;
-	}
-	100% {
-		-webkit-transform: rotate(-2deg);
-		bottom: -1px;
-		left: -1px;
-	}
+
+@
+-webkit-keyframes vibrate { 0%{
+	-webkit-transform: rotate(-2deg);
+	bottom: -1px;
+	left: -1px;
 }
 
-.mblCloseContent{
+25%
+{
+-webkit-transform
+:
+ 
+rotate
+(1deg);
+
+		
+bottom
+:
+ 
+2
+px
+;
+
+		
+left
+:
+ 
+1
+px
+;
+
+	
+}
+50%
+{
+-webkit-transform
+:
+ 
+rotate
+(-1deg);
+
+		
+bottom
+:
+ 
+-2
+px
+;
+
+		
+left
+:
+ 
+-1
+px
+;
+
+	
+}
+75%
+{
+-webkit-transform
+:
+ 
+rotate
+(2deg);
+
+		
+bottom
+:
+ 
+2
+px
+;
+
+		
+left
+:
+ 
+1
+px
+;
+
+	
+}
+100%
+{
+-webkit-transform
+:
+ 
+rotate
+(-2deg);
+
+		
+bottom
+:
+ 
+-1
+px
+;
+
+		
+left
+:
+ 
+-1
+px
+;
+
+	
+}
+}
+.mblCloseContent {
 	-webkit-animation-duration: .3s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-name: shrink;
 	-webkit-transform: scale(0.01);
 }
-.mblCloseContent.mblShrink0{
+
+.mblCloseContent.mblShrink0 {
 	-webkit-animation-name: shrink0;
 }
-.mblCloseContent.mblShrink1{
+
+.mblCloseContent.mblShrink1 {
 	-webkit-animation-name: shrink1;
 }
-.mblCloseContent.mblShrink2{
+
+.mblCloseContent.mblShrink2 {
 	-webkit-animation-name: shrink2;
 }
-.mblCloseContent.mblShrink3{
+
+.mblCloseContent.mblShrink3 {
 	-webkit-animation-name: shrink3;
 }
-@-webkit-keyframes shrink{
-	from { -webkit-transform: scale(1); }
-	to { -webkit-transform: scale(0.01); }
-}
-@-webkit-keyframes shrink0{
-	from { -webkit-transform: scale(1); }
-	to { -webkit-transform: translate(-40%,-70%) scale(0.01); }
-}
-@-webkit-keyframes shrink1{
-	from { -webkit-transform: scale(1); }
-	to { -webkit-transform: translate(-14%,-70%) scale(0.01); }
-}
-@-webkit-keyframes shrink2{
-	from { -webkit-transform: scale(1); }
-	to { -webkit-transform: translate(14%,-70%) scale(0.01); }
-}
-@-webkit-keyframes shrink3{
-	from { -webkit-transform: scale(1); }
-	to { -webkit-transform: translate(40%,-70%) scale(0.01); }
+
+@
+-webkit-keyframes shrink {from { -webkit-transform:scale(1);
+	
 }
 
+to {
+	-webkit-transform: scale(0.01);
+}
+
+}
+@
+-webkit-keyframes shrink0 {from { -webkit-transform:scale(1);
+	
+}
+
+to {
+	-webkit-transform: translate(-40%, -70%) scale(0.01);
+}
+
+}
+@
+-webkit-keyframes shrink1 {from { -webkit-transform:scale(1);
+	
+}
+
+to {
+	-webkit-transform: translate(-14%, -70%) scale(0.01);
+}
+
+}
+@
+-webkit-keyframes shrink2 {from { -webkit-transform:scale(1);
+	
+}
+
+to {
+	-webkit-transform: translate(14%, -70%) scale(0.01);
+}
+
+}
+@
+-webkit-keyframes shrink3 {from { -webkit-transform:scale(1);
+	
+}
+
+to {
+	-webkit-transform: translate(40%, -70%) scale(0.01);
+}
+
+}
 /* Icon Content Heading */
 .mblIconContentHeading {
 	position: relative;
@@ -664,14 +942,15 @@ table.mblClose {
 	height: 25px;
 	padding-left: 40px;
 	margin-top: 0px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#E0E4E7), to(#B4BEC6), color-stop(0.5, #C4CCD2), color-stop(0.5, #BFC8CE));
+	background: -webkit-gradient(linear, left top, left bottom, from(#E0E4E7),
+		to(#B4BEC6), color-stop(0.5, #C4CCD2), color-stop(0.5, #BFC8CE) );
 	border-top: 1px solid #F1F3F4;
 	border-bottom: 1px solid #717D85;
 	font-family: Helvetica;
 	font-size: 14px;
 	color: white;
 	line-height: 26px;
-	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -691,27 +970,36 @@ table.mblClose {
 	-moz-border-radius: 5px;
 	-webkit-tap-highlight-color: transparent;
 }
+
 .mblBlueButton {
 	border-color: #9CACC0;
 	background-color: #366EDF;
-	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9), to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC));
+	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9),
+		to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC) );
 	-webkit-tap-highlight-color: transparent;
 }
+
 .mblBlueButtonSelected {
-	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 }
+
 .mblRedButton {
 	border-color: #9CACC0;
 	background-color: #366EDF;
-	background: -webkit-gradient(linear, left top, left bottom, from(#FA9D58), to(#EE4115), color-stop(0.5, #FF4D25), color-stop(0.5, #ED4D15));
+	background: -webkit-gradient(linear, left top, left bottom, from(#FA9D58),
+		to(#EE4115), color-stop(0.5, #FF4D25), color-stop(0.5, #ED4D15) );
 	-webkit-tap-highlight-color: transparent;
 }
+
 .mblRedButtonSelected {
-	background: -webkit-gradient(linear, left top, left bottom, from(#C1A48E), to(#9B6C4A), color-stop(0.5, #A27758), color-stop(0.5, #996947));
+	background: -webkit-gradient(linear, left top, left bottom, from(#C1A48E),
+		to(#9B6C4A), color-stop(0.5, #A27758), color-stop(0.5, #996947) );
 }
 
 /* Tab Container */
 .mblTabContainer {
+	
 }
 
 .mblTabButton {
@@ -730,9 +1018,11 @@ table.mblClose {
 	color: white;
 	cursor: pointer;
 	line-height: 29px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#ABB9CA), to(#788DA9), color-stop(0.5, #8297AF), color-stop(0.5, #768BA7));
+	background: -webkit-gradient(linear, left top, left bottom, from(#ABB9CA),
+		to(#788DA9), color-stop(0.5, #8297AF), color-stop(0.5, #768BA7) );
 	-webkit-tap-highlight-color: transparent;
 }
+
 .mblTabButton:first-child {
 	-webkit-border-top-left-radius: 5px;
 	-webkit-border-bottom-left-radius: 5px;
@@ -740,6 +1030,7 @@ table.mblClose {
 	-moz-border-radius-bottomleft: 5px;
 	border-left-width: 1px;
 }
+
 .mblTabButton:last-child {
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
@@ -747,10 +1038,13 @@ table.mblClose {
 	-moz-border-radius-bottomright: 5px;
 	border-right-color: #9CACC0;
 }
+
 .mblTabPanelHeader .mblTabButton.mblTabButtonSelected {
 	background-color: #5877A2;
-	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 }
+
 .mblTabButtonImgDiv {
 	display: none;
 }
@@ -761,7 +1055,8 @@ table.mblClose {
 	margin: 0px;
 	padding: 3px 0px 0px 0px;
 	background-color: #889BB3;
-	background: -webkit-gradient(linear, left top, left bottom, from(#B0BCCD), to(#6D84A2), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF));
+	background: -webkit-gradient(linear, left top, left bottom, from(#B0BCCD),
+		to(#6D84A2), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF) );
 	border-top: 1px solid #CDD5DF;
 	border-bottom: 1px solid #2D3642;
 	font-family: Helvetica;
@@ -769,16 +1064,18 @@ table.mblClose {
 	color: white;
 	text-align: center;
 	line-height: 44px;
-	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 
 .mblTabPanelPane {
+	
 }
 
 .mblTabPane {
+	
 }
 
 /* Progress Indicator */
@@ -790,6 +1087,7 @@ table.mblClose {
 	left: 50%;
 	margin: -18px 0px 0px -18px;
 }
+
 .mblProg {
 	position: absolute;
 	left: 0px;
@@ -803,56 +1101,71 @@ table.mblClose {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 }
+
 .mblProg0 {
-	-webkit-transform: translate(18px,10px) rotate(-90deg);
+	-webkit-transform: translate(18px, 10px) rotate(-90deg);
 }
+
 .mblProg1 {
-	-webkit-transform: translate(22px,11px) rotate(-60deg);
+	-webkit-transform: translate(22px, 11px) rotate(-60deg);
 }
+
 .mblProg2 {
-	-webkit-transform: translate(25px,14px) rotate(-30deg);
+	-webkit-transform: translate(25px, 14px) rotate(-30deg);
 }
+
 .mblProg3 {
-	-webkit-transform: translate(26px,18px) rotate(0deg);
+	-webkit-transform: translate(26px, 18px) rotate(0deg);
 }
+
 .mblProg4 {
-	-webkit-transform: translate(25px,22px) rotate(30deg);
+	-webkit-transform: translate(25px, 22px) rotate(30deg);
 }
+
 .mblProg5 {
-	-webkit-transform: translate(22px,25px) rotate(60deg);
+	-webkit-transform: translate(22px, 25px) rotate(60deg);
 }
+
 .mblProg6 {
-	-webkit-transform: translate(18px,26px) rotate(90deg);
+	-webkit-transform: translate(18px, 26px) rotate(90deg);
 }
+
 .mblProg7 {
-	-webkit-transform: translate(14px,25px) rotate(120deg);
+	-webkit-transform: translate(14px, 25px) rotate(120deg);
 }
+
 .mblProg8 {
-	-webkit-transform: translate(11px,22px) rotate(150deg);
+	-webkit-transform: translate(11px, 22px) rotate(150deg);
 }
+
 .mblProg9 {
-	-webkit-transform: translate(10px,18px) rotate(180deg);
+	-webkit-transform: translate(10px, 18px) rotate(180deg);
 }
+
 .mblProg10 {
-	-webkit-transform: translate(11px,14px) rotate(210deg);
+	-webkit-transform: translate(11px, 14px) rotate(210deg);
 }
+
 .mblProg11 {
-	-webkit-transform: translate(14px,11px) rotate(240deg);
+	-webkit-transform: translate(14px, 11px) rotate(240deg);
 }
 
 /* Button Colors */
 .mblColorBlue {
 	background-color: #366EDF;
-	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9), to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC));
+	background: -webkit-gradient(linear, left top, left bottom, from(#7A9DE9),
+		to(#2362DD), color-stop(0.5, #366EDF), color-stop(0.5, #215FDC) );
 }
 
 /* Default Button Colors */
 .mblColorDefault { /* Dark Blue */
 	background-color: #5877A2;
-	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1), to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999));
+	background: -webkit-gradient(linear, left top, left bottom, from(#8EA4C1),
+		to(#4A6C9B), color-stop(0.5, #5877A2), color-stop(0.5, #476999) );
 }
 
 .mblColorDefaultSel { /* More Dark Blue */
 	background-color: #394D77;
-	background: -webkit-gradient(linear, left top, left bottom, from(#7C87A4), to(#263E6C), color-stop(0.5, #394D77), color-stop(0.5, #243B69));
+	background: -webkit-gradient(linear, left top, left bottom, from(#7C87A4),
+		to(#263E6C), color-stop(0.5, #394D77), color-stop(0.5, #243B69) );
 }

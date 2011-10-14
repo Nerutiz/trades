@@ -4,10 +4,10 @@
 if(!$_GET['url']){ return; }
 
 $url = str_replace(array(';;;;', '%%%%'), array('?', '&'), $_GET['url']);
-if(stripos($url, "http://intertwingly.net/") === 0 || 
-	stripos($url, "http://www.intertwingly.net/") === 0 || 
-	stripos($url, "http://www.shutterpoint.com/") === 0 || 
-	stripos($url, "http://technorati.com/") === 0){
+if(stripos($url, "http://intertwingly.net/") === 0 ||
+stripos($url, "http://www.intertwingly.net/") === 0 ||
+stripos($url, "http://www.shutterpoint.com/") === 0 ||
+stripos($url, "http://technorati.com/") === 0){
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	$results = curl_exec($ch);

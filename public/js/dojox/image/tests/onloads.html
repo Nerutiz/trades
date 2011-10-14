@@ -1,23 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-	
-	<title>Sample Dojo / Dijit Page</title>
-	<style type="text/css">
-		#container {
-			position:absolute;
-			left:-9999px;
-			width:9000px;
-			overflow:hidden;
-		}
-		#randomimage {
-			height:100px;
-		}
-	</style>
-	<!-- load Dojo -->
-	<script>var djConfig = { isDebug:true }</script>
-	<script src="../../../dojo/dojo.js"></script>
-	<script type="text/javascript">
+
+<title>Sample Dojo / Dijit Page</title>
+<style type="text/css">
+#container {
+	position: absolute;
+	left: -9999px;
+	width: 9000px;
+	overflow: hidden;
+}
+
+#randomimage {
+	height: 100px;
+}
+</style>
+<!-- load Dojo -->
+<script>var djConfig = { isDebug:true }</script>
+<script src="../../../dojo/dojo.js"></script>
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.addOnLoad(function(){
 			
@@ -306,12 +307,13 @@
 
 </head>
 <body class="tundra">
-	<h2>These tests are all expected to take a long time (image loading)</h2>
-	<p>Some of them might fail</p>
-	<div id="container">
-		<div id="container2"></div>
-	</div>
-	<img id="randomimage" src="images/square.jpg">
-	<img id="fixedimage">
+<h2>These tests are all expected to take a long time (image
+loading)</h2>
+<p>Some of them might fail</p>
+<div id="container">
+<div id="container2"></div>
+</div>
+<img id="randomimage" src="images/square.jpg"> <img
+	id="fixedimage">
 </body>
 </html>

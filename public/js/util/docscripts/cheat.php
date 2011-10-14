@@ -1,10 +1,10 @@
 <?php
-	
-	// for this to work, the file api.html needs to be writable locally. pass a "?build" to
-	// this url to trigger the generation. otherwise, work live from here. No JS ends up 
-	// in the output. api.css gets inlined in the output, making api.html standalone. 
-	
-	$head = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+
+// for this to work, the file api.html needs to be writable locally. pass a "?build" to
+// this url to trigger the generation. otherwise, work live from here. No JS ends up
+// in the output. api.css gets inlined in the output, making api.html standalone.
+
+$head = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 		"http://www.w3.org/TR/html4/strict.dtd">
 	<html>
 		<head>
@@ -12,31 +12,33 @@
 		
 		';
 
-	$foot = '</body></html>';
+$foot = '</body></html>';
 
-	if(!empty($_POST['body'])){
+if(!empty($_POST['body'])){
+
+	$head .= "<style type='text/css'>" . file_get_contents("cheat/cheat.css") ."</style></head><body>";
+	$page = $head . $_POST['body'] . $foot;
 		
-		$head .= "<style type='text/css'>" . file_get_contents("cheat/cheat.css") ."</style></head><body>";
-		$page = $head . $_POST['body'] . $foot;
-			
-		if(is_writable("./cheat.html")){
-			file_put_contents("./cheat.html", stripslashes($page));
-		}else{
-			header("HTTP", true, 500);
-			print "Unwritable File: cheat.html";
-		}
-		die;
+	if(is_writable("./cheat.html")){
+		file_put_contents("./cheat.html", stripslashes($page));
+	}else{
+		header("HTTP", true, 500);
+		print "Unwritable File: cheat.html";
 	}
-	
-	print $head;
-	
+	die;
+}
+
+print $head;
+
 ?>
 
-		<link rel="stylesheet" href="cheat/cheat.css">
+<link rel="stylesheet"
+	href="cheat/cheat.css">
 
-		<script type="text/javascript" src="../../dojo/dojo.js"></script>
+<script
+	type="text/javascript" src="../../dojo/dojo.js"></script>
 
-		<script type="text/javascript">		
+<script type="text/javascript">		
 			dojo.require("util.docscripts.cheat.lib");
 			dojo.ready(function(){
 				
@@ -125,26 +127,25 @@
 				
 			});
 		</script>
-	
-	<body>
-		<fieldset id="top"><div>
-			<legend>Dojo API CheatSheet</legend>
-				<ul id="nav">
-					<li><a href="#top">Top</a></li>
-				</ul>
-				<div id="key">
-					<fieldset>
-						<legend>var</legend>
-						<ul>
-							<li>d = dojo,</li>
-							<li>$ = d.query,</li>
-							<li>dk = d.keys</li>
-						</ul>
-					</fieldset>
-				</div>
-			</div>
-		</fieldset>
-		<div id="container"></div>
-		<span id="version"></span>
-	</body>
+
+<body>
+<fieldset id="top">
+<div><legend>Dojo API CheatSheet</legend>
+<ul id="nav">
+	<li><a href="#top">Top</a></li>
+</ul>
+<div id="key">
+<fieldset><legend>var</legend>
+<ul>
+	<li>d = dojo,</li>
+	<li>$ = d.query,</li>
+	<li>dk = d.keys</li>
+</ul>
+</fieldset>
+</div>
+</div>
+</fieldset>
+<div id="container"></div>
+<span id="version"></span>
+</body>
 </html>

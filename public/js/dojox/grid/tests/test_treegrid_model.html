@@ -1,20 +1,25 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <title>dojox.grid.TreeGrid Model-based test</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-        <style type="text/css">
-            @import "../../../dojo/resources/dojo.css";
-            @import "../../../dijit/themes/claro/claro.css";
-            @import "../../../dojox/grid/resources/Grid.css";
-            @import "../../../dojox/grid/resources/claroGrid.css";
-            .grid {
-                width: 70em;
-                height: 40em;
-            }
-        </style>
-        <script type="text/javascript" src="../../../dojo/dojo.js"  djConfig="isDebug:true, parseOnLoad: true"></script>
-        <script type="text/javascript">
+<head>
+<title>dojox.grid.TreeGrid Model-based test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/claro/claro.css";
+
+@import "../../../dojox/grid/resources/Grid.css";
+
+@import "../../../dojox/grid/resources/claroGrid.css";
+
+.grid {
+	width: 70em;
+	height: 40em;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<script type="text/javascript">
             dojo.require("dojox.grid.TreeGrid");
             dojo.require("dijit.tree.ForestStoreModel");
             dojo.require("dojo.data.ItemFileWriteStore");
@@ -104,28 +109,24 @@
 				dojo.connect(window, "onresize", grid2, "resize");
 			});
         </script>
-    </head>
-    <body class="claro">
-        <h1 class="testTitle">Test: dojox.grid.TreeGrid - Model-based</h1>
-        <span dojoType="dojo.data.ItemFileWriteStore"
-              jsId="jsonStore" data="dataItems">
-        </span>
+</head>
+<body class="claro">
+<h1 class="testTitle">Test: dojox.grid.TreeGrid - Model-based</h1>
+<span dojoType="dojo.data.ItemFileWriteStore" jsId="jsonStore"
+	data="dataItems"> </span>
 
-        <div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel"
-        store="jsonStore" query="{type:'continent'}"
-        rootId="continentRoot" rootLabel="Continents" childrenAttrs="children"></div>
+<div dojoType="dijit.tree.ForestStoreModel" jsId="continentModel"
+	store="jsonStore" query="{type:'continent'}" rootId="continentRoot"
+	rootLabel="Continents" childrenAttrs="children"></div>
 
-        <h4 class="testSubtitle">dojox.grid.TreeGrid n-Level</h4>
-        <button dojoType="dijit.form.Button">
-            Add Belgium
-            <script type="dojo/connect" event="onClick">
+<h4 class="testSubtitle">dojox.grid.TreeGrid n-Level</h4>
+<button dojoType="dijit.form.Button">Add Belgium <script
+	type="dojo/connect" event="onClick">
                 add_item({ id: 'EU_BE', name: 'Belgium', type: 'country' }, "EU");
 				this.set("disabled", true);
-            </script>
-        </button>
-        <button dojoType="dijit.form.Button">
-            Delete Italy
-            <script type="dojo/connect" event="onClick">
+            </script></button>
+<button dojoType="dijit.form.Button">Delete Italy <script
+	type="dojo/connect" event="onClick">
 				jsonStore.fetchItemByIdentity({
 					identity: 'IT',
 					onItem: function(item){
@@ -135,19 +136,15 @@
 					}
 				});
 				this.set("disabled", true);
-            </script>
-        </button>
-        <button dojoType="dijit.form.Button">
-            Add California
-            <script type="dojo/connect" event="onClick">
+            </script></button>
+<button dojoType="dijit.form.Button">Add California <script
+	type="dojo/connect" event="onClick">
                 add_item({ id: 'US_CA', name: 'California', type: 'state' }, "US");
 				delCal.attr("disabled", false);
 				this.set("disabled", true);
-            </script>
-        </button>
-        <button dojoType="dijit.form.Button" disabled jsId="delCal">
-            Delete California
-            <script type="dojo/connect" event="onClick">
+            </script></button>
+<button dojoType="dijit.form.Button" disabled jsId="delCal">
+Delete California <script type="dojo/connect" event="onClick">
 				jsonStore.fetchItemByIdentity({
 					identity: 'US_CA',
 					onItem: function(item){
@@ -157,11 +154,9 @@
 					}
 				});
 				this.set("disabled", true);
-            </script>
-        </button>
-        <button dojoType="dijit.form.Button" jsId="delEU">
-            Delete Europe
-            <script type="dojo/connect" event="onClick">
+            </script></button>
+<button dojoType="dijit.form.Button" jsId="delEU">Delete Europe
+<script type="dojo/connect" event="onClick">
 				jsonStore.fetchItemByIdentity({
 					identity: 'EU',
 					onItem: function(item){
@@ -171,11 +166,9 @@
 					}
 				});
 				this.set("disabled", true);
-            </script>
-        </button>
-        <button dojoType="dijit.form.Button" jsId="empty">
-            Empty
-            <script type="dojo/connect" event="onClick">
+            </script></button>
+<button dojoType="dijit.form.Button" jsId="empty">Empty <script
+	type="dojo/connect" event="onClick">
 				jsonStore.fetch({
 					query: { id: '*' },
 					queryOptions: { deep: true },
@@ -189,19 +182,20 @@
 				});
 				jsonStore.save();
 				this.set("disabled", true);
-            </script>
-        </button>
-        <table jsid="grid" dojoType="dojox.grid.TreeGrid" class="grid" treeModel="continentModel">
-            <thead>
-                <tr>
-                    <th field="name" width="auto">Name</th>
-                    <th field="population" width="auto">Population</th>
-                    <th field="timezone" width="auto">Timezone</th>
-                </tr>
-            </thead>
-        </table>
-		<h4 class="testSubtitle">dojox.grid.TreeGrid Programmatic - defaultOpen true</h4>
-		<div id="programmatic_grid"></div>
-    </body>
+            </script></button>
+<table jsid="grid" dojoType="dojox.grid.TreeGrid" class="grid"
+	treeModel="continentModel">
+	<thead>
+		<tr>
+			<th field="name" width="auto">Name</th>
+			<th field="population" width="auto">Population</th>
+			<th field="timezone" width="auto">Timezone</th>
+		</tr>
+	</thead>
+</table>
+<h4 class="testSubtitle">dojox.grid.TreeGrid Programmatic -
+defaultOpen true</h4>
+<div id="programmatic_grid"></div>
+</body>
 </html>
 

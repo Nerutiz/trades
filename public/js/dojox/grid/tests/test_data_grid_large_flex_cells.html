@@ -2,35 +2,40 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Test dojox.grid.DataGrid Large Data Set with Flex cells</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}
-		.heading {
-			font-weight: bold;
-			padding-bottom: 0.25em;
-		}
-		#grid {
-			width: 100%;
-			height: 25em;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: false"></script>
-	<script type="text/javascript">
+<title>Test dojox.grid.DataGrid Large Data Set with Flex cells</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.heading {
+	font-weight: bold;
+	padding-bottom: 0.25em;
+}
+
+#grid {
+	width: 100%;
+	height: 25em;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: false"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript" src="support/test_data.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="support/test_data.js"></script>
+<script type="text/javascript">
 		// a grid layout is an array of views.
 		var layout = [
 			[
@@ -79,16 +84,17 @@
 	</script>
 </head>
 <body class="tundra">
-	<div class="heading">dojox.grid.DataGrid Large Data Set Test with Flex Cells</div>
-	<table dojoType="dojox.grid.DataGrid"
-		jsid="grid" id="grid" columnReordering="true" 
-		store="test_store" query="{ id: '*' }" rowsPerPage="20" structure="layout">
-		<thead>
-			<tr>
-				<th field="name" width="300px">Country/Continent Name</th>
-				<th field="type" width="auto">Type</th>
-			</tr>
-		</thead>
-	</table>
+<div class="heading">dojox.grid.DataGrid Large Data Set Test with
+Flex Cells</div>
+<table dojoType="dojox.grid.DataGrid" jsid="grid" id="grid"
+	columnReordering="true" store="test_store" query="{ id: '*' }"
+	rowsPerPage="20" structure="layout">
+	<thead>
+		<tr>
+			<th field="name" width="300px">Country/Continent Name</th>
+			<th field="type" width="auto">Type</th>
+		</tr>
+	</thead>
+</table>
 </body>
 </html>

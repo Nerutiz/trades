@@ -4,12 +4,12 @@
 	border-style: solid;
 	border-color: #000000;
 	border-collapse: separate;
-        width: 100%;
+	width: 100%;
 }
 
 .picasaView th {
 	text-align: left;
-} 
+}
 
 .picasaView tr {
 	padding: 3 3 3 3;
@@ -27,18 +27,17 @@
 
 .picasaView {
 	background-color: #EFEFEF;
-        float: left;
-        width: 250px;
-        height: 250px;
+	float: left;
+	width: 250px;
+	height: 250px;
 }
 
-.picasaSummary { 
-       width: 250px;
-       height: 30px;
-       overflow: hidden;
- }
+.picasaSummary {
+	width: 250px;
+	height: 30px;
+	overflow: hidden;
+}
 
 .picasaTitle {
 	background-color: #CCCCCC;
 }
-

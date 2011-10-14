@@ -4,13 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Editor File Upload Plugin</title>
 <style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/dijit.css";
-	</style>
-    
-    <link href="../../form/resources/FileInput.css" type="text/css" rel="stylesheet" />
-    <link href="../plugins/resources/editorPlugins.css" type="text/css" rel="stylesheet" />
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/themes/dijit.css";
+</style>
+
+<link href="../../form/resources/FileInput.css" type="text/css"
+	rel="stylesheet" />
+<link href="../plugins/resources/editorPlugins.css" type="text/css"
+	rel="stylesheet" />
 
 <script type="text/javascript">
 passthrough = function(msg){
@@ -41,29 +45,32 @@ var djConfig = {
 		
 </script>
 <style>
-#main{
-width:auto;
-margin:20px 100px;
+#main {
+	width: auto;
+	margin: 20px 100px;
 }
 </style>
 </head>
 <body class="tundra">
 <div id="main">
-	<div dojoType="dijit.Editor" plugins="[
+<div dojoType="dijit.Editor"
+	plugins="[
                        'undo', 'redo', 'bold','italic','underline','|', 'copy', 'cut', 				
                        'paste','|',
                         {name: 'dojox.editor.plugins.UploadImage', command: 'uploadImage',
                         uploadUrl:'../../form/resources/UploadFile.php', 
 						downloadPath:'../../form/resources/uploads/', tempImageUrl:'../plugins/resources/images/busy.gif'} 
                     ]">
-         <p>Click the upload icon to open a system dialog. Note that this will need to call a server script for the upload to work.</p>
-         <p> 
-         <font style="font-size:10px; color:#999;"><strong>Test Disclaimers:</strong><br />
-         A PHP test file is being used for server code.<br />
-         Folder permissions will need to be set to system level for uploads to work on your local system.<br />
-         The code uses the GD library (to get image sizes), that sometimes is not pre-installed in a standard PHP build.</font> 
-       </p>
-    </div>
+<p>Click the upload icon to open a system dialog. Note that this
+will need to call a server script for the upload to work.</p>
+<p><font style="font-size: 10px; color: #999;"><strong>Test
+Disclaimers:</strong><br />
+A PHP test file is being used for server code.<br />
+Folder permissions will need to be set to system level for uploads to
+work on your local system.<br />
+The code uses the GD library (to get image sizes), that sometimes is not
+pre-installed in a standard PHP build.</font></p>
+</div>
 </div>
 </body>
 </html>

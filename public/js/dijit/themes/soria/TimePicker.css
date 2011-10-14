@@ -1,16 +1,15 @@
 /* Time Picker */
-.soria .dijitTimePickerTick,
-.soria .dijitTimePickerMarker {
+.soria .dijitTimePickerTick,.soria .dijitTimePickerMarker {
 	border-color: #b1badf;
 }
 
 .soria .dijitTimePickerTick {
-	color:white;
+	color: white;
 }
 
 .soria .dijitTimePickerMarker {
-	background:#bed7f0 url("images/titleBar.png") repeat-x top;
-	color:#293a4b;
+	background: #bed7f0 url("images/titleBar.png") repeat-x top;
+	color: #293a4b;
 	font-weight: bold;
 }
 
@@ -21,31 +20,29 @@
 
 .soria .dijitTimePickerItemHover {
 	background: #60a1ea none;
-	color:white;
+	color: white;
 }
 
-.soria .dijitTimePickerItemHover,
-.soria .dijitTimePickerItemSelected {
+.soria .dijitTimePickerItemHover,.soria .dijitTimePickerItemSelected {
 	position: relative;
 	z-index: 10;
 }
 
 .soria .dijitTimePickerTick .dijitTimePickerItemInner {
-	font-size:0.4em;
+	font-size: 0.4em;
 }
 
-.soria .dijitTimePickerItemHover .dijitTimePickerItemInner,
-.soria .dijitTimePickerItemSelected .dijitTimePickerItemInner {
-	font-size:1em;
+.soria .dijitTimePickerItemHover .dijitTimePickerItemInner,.soria .dijitTimePickerItemSelected .dijitTimePickerItemInner
+	{
+	font-size: 1em;
 }
 
 .soria .dijitTimePickerMarkerHover {
 	border-top: 1px solid #94b9ef;
 }
 
-.soria .dijitTimePickerTickHover,
-.soria .dijitTimePickerTickSelected {
-	margin-top:-0.3em;
-	margin-bottom:-0.3em;
+.soria .dijitTimePickerTickHover,.soria .dijitTimePickerTickSelected {
+	margin-top: -0.3em;
+	margin-bottom: -0.3em;
 	border-bottom: none;
 }

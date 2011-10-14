@@ -2,16 +2,18 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Typematic Test</title>
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../../themes/claro/claro.css";
-		@import "../css/dijitTests.css";
-	</style>
+<title>Typematic Test</title>
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="isDebug: true, debugAtAllCosts: true"></script>
-	<script type="text/javascript">
+@import "../../themes/claro/claro.css";
+
+@import "../css/dijitTests.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, debugAtAllCosts: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit._base.typematic");
 
 		var lastCount = 0;
@@ -56,10 +58,17 @@
 </head>
 <body class="claro">
 
-	<h2>Dijit typematic tests</h2>
-	Press and hold the <b>ctrl+F11</b> keys (ALT optional, but not Shift or Meta) to see a's typed (constant rate) in the input field,<br>
-	or left-mouse click the button and hold down to see b's typed (increasing rate) in the input field.<br>
-	<input id="typematicInput" size="500"><button id="typematicButton">to B or not to B</button>
+<h2>Dijit typematic tests</h2>
+Press and hold the
+<b>ctrl+F11</b>
+keys (ALT optional, but not Shift or Meta) to see a's typed (constant
+rate) in the input field,
+<br>
+or left-mouse click the button and hold down to see b's typed
+(increasing rate) in the input field.
+<br>
+<input id="typematicInput" size="500">
+<button id="typematicButton">to B or not to B</button>
 
 </body>
 </html>

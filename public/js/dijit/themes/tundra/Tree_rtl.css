@@ -1,9 +1,7 @@
 /* Tree */
-
-.tundra .dijitTreeNodeRtl,
-.tundra .dijitTreeNodeRtl .dijitTreeExpandoLeaf {
-	/* disable grid lines in RTL mode; too hard to support */
-    background-image: none;
+.tundra .dijitTreeNodeRtl,.tundra .dijitTreeNodeRtl .dijitTreeExpandoLeaf
+	{ /* disable grid lines in RTL mode; too hard to support */
+	background-image: none;
 }
 
 .tundra .dijitTreeNodeRtl .dijitTreeExpandoOpened {

@@ -1,9 +1,9 @@
 <html>
-	<head>
-		<title>Demo using dojox.dtl._DomTemplated inline in DOM</title>
-		<script type="text/javascript" src="../../../dojo/dojo.js"
-			djConfig="isDebug: true, parseOnLoad: true"></script>
-		<script type="text/javascript">
+<head>
+<title>Demo using dojox.dtl._DomTemplated inline in DOM</title>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
 			dojo.require("dojo.parser");
 			dojo.require("dojox.dtl.Inline");
 			dojo.require("dojox.dtl.DomInline");
@@ -29,9 +29,10 @@
 				}, 3000);
 			});
 		</script>
-	</head>
-	<body>
-		<script type="text/html" dojoType="dojox.dtl.Inline" id="inline" context="{items: ['apple', 'banana', 'orange']}">
+</head>
+<body>
+<script type="text/html" dojoType="dojox.dtl.Inline" id="inline"
+	context="{items: ['apple', 'banana', 'orange']}">
 			<ul>
 				{% for item in items %}
 					<li>{{ item }}</li>
@@ -39,13 +40,14 @@
 			</ul>
 		</script>
 
-		<!-- Use the DOM-based version with an external context -->
-		<script type="text/html" dojoType="dojox.dtl.DomInline" id="dominline" context="gContext">
+<!-- Use the DOM-based version with an external context -->
+<script type="text/html" dojoType="dojox.dtl.DomInline" id="dominline"
+	context="gContext">
 			<ul>
 				{% for item in items %}
 					<li>{{ item }}</li>
 				{% endfor %}
 			</ul>
 		</script>
-	</body>
+</body>
 </html>

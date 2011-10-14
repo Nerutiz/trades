@@ -1,11 +1,16 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <title>Create DojoX GFX JSON</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	td.cell { padding: 1em 1em 0em 0em; }
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+td.cell {
+	padding: 1em 1em 0em 0em;
+}
 </style>
 <script type="text/javascript" src="../../../dojo/dojo.js"></script>
 <script type="text/javascript">
@@ -102,18 +107,22 @@ dojo.addOnLoad(init);
 </script>
 </head>
 <body>
-	<h1>Create DojoX GFX JSON</h1>
-	<p>This is a helper file, which serves as a template to generate static pictures.</p>
-	<table>
-		<tr>
-			<td align="left" valign="top" class="cell">
-				<div id="gfx" style="width: 500px; height: 500px; border: solid 1px black;">
-				</div>
-			</td>
-		</tr>
-	</table>
-	<p><textarea id="io" cols="80" rows="10" wrap="off"></textarea></p>
-	<p><button onclick="dump()">Dump!</button>
-	&nbsp;&nbsp;&nbsp;<input type="checkbox" id="pprint" checked="checked" />&nbsp;<label for="pprint">Pretty-print JSON</label></p>
+<h1>Create DojoX GFX JSON</h1>
+<p>This is a helper file, which serves as a template to generate
+static pictures.</p>
+<table>
+	<tr>
+		<td align="left" valign="top" class="cell">
+		<div id="gfx"
+			style="width: 500px; height: 500px; border: solid 1px black;">
+		</div>
+		</td>
+	</tr>
+</table>
+<p><textarea id="io" cols="80" rows="10" wrap="off"></textarea></p>
+<p>
+<button onclick="dump()">Dump!</button>
+&nbsp;&nbsp;&nbsp;<input type="checkbox" id="pprint" checked="checked" />&nbsp;<label
+	for="pprint">Pretty-print JSON</label></p>
 </body>
 </html>

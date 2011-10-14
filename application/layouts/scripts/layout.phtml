@@ -1,47 +1,54 @@
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Zend Framework Quickstart Application</title>
-  	
-    <?php //echo $this->headLink()->appendStylesheet('/css/global.css') ?>
-    
-	<?php echo $this->headTitle() ?>
-    
-	<?php echo $this->headMeta() ?>
-    
-	<?php echo $this->headLink() ?>
-    
-	<?php echo $this->headStyle() ?>
-	<?php
-   		$this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOption('isDebug', true);
-     ?>
-    
-	<?php if ($this->dojo()->isEnabled())
-			{
-				$this->dojo()->setLocalPath('/js/dojo/dojo.js')
-                 ->addStyleSheetModule('dijit.themes.claro');
-    			echo $this->dojo();
-			}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Zend Framework Quickstart Application</title>
+
+<?php //echo $this->headLink()->appendStylesheet('/css/global.css') ?>
+
+<?php echo $this->headTitle() ?>
+
+<?php echo $this->headMeta() ?>
+
+<?php echo $this->headLink() ?>
+
+<?php echo $this->headStyle() ?>
+<?php
+$this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOption('isDebug', true);
 ?>
-    <?php echo $this->headScript(); ?>
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/js/dojox/widget/Dialog/Dialog.css" />
-    <script type="text/javascript" src="/js/trades/trades.js"></script>
+
+<?php if ($this->dojo()->isEnabled())
+{
+	$this->dojo()->setLocalPath('/js/dojo/dojo.js')
+	->addStyleSheetModule('dijit.themes.claro');
+	echo $this->dojo();
+}
+?>
+<?php echo $this->headScript(); ?>
+<link rel="stylesheet" href="/css/global.css" />
+<link rel="stylesheet" href="/js/dojox/widget/Dialog/Dialog.css" />
+<script type="text/javascript" src="/js/trades/trades.js"></script>
 </head>
 <body class="claro">
 <div id="header" class="header">
-	<a href="/account/logout" style="float:right;"><?php echo 'Logout'; ?></a>
-	<div class="logo"></div>
-	<div class="menu">
-		<a href="/things/mythings">
-			Mano daiktai
-		</a>
+<div class="logo"></div>
+<?php if(Zend_Auth::getInstance()->hasIdentity())
+{
+	$userInfo = Zend_Auth::getInstance()->getStorage()->read();
+	?>
+    <div class="logoutBlock">
+    	<span class="username"><?php echo $userInfo->username;?></span>
+		<a href="/account/logout"><?php echo 'Logout'; ?></a> 
+    </div>
+    <div class="menu">
+		<a href="/things/mythings"> Mano daiktai </a>
+	 	<a href="/things"> Kurti daikta </a>
+	 	<a href="/trades">  Mainai </a>
 	</div>
-</div>
-<?php echo $this->layout()->content ?>
-<div class="footer">
-	Footer'is
-</div>
+	<?php }else{
+		//echo $this->partial('account/index.phtml', array('loginform' => new Application_Form_LoginForm()));
+	}?></div>
+	<?php echo $this->layout()->content ?>
+<div class="footer">Footer'is</div>
 </body>
 </html>

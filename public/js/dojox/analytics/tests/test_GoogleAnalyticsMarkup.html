@@ -2,15 +2,16 @@
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dojox Analytics Test</title>
+<title>Dojox Analytics Test</title>
 
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
-	
-	<!-- required: dojo.js -->
-	<script type="text/javascript">
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+
+<!-- required: dojo.js -->
+<script type="text/javascript">
 		var djConfig = { 
 			parseOnLoad: true, 
 			isDebug: true //,
@@ -19,13 +20,13 @@
 //			urchin: "UA-123456-7"
 		};
 	</script>
-	<script type="text/javascript" src="../../../dojo/dojo.js"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"></script>
 
-	<!-- do not use: only for testing alternate themes -->
-	<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
-	<script type="text/javascript" src="../Urchin.js"></script>
-	
-	<script language="JavaScript" type="text/javascript">
+<!-- do not use: only for testing alternate themes -->
+<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+<script type="text/javascript" src="../Urchin.js"></script>
+
+<script language="JavaScript" type="text/javascript">
 		// include the analytics system
 		dojo.require("dojo.parser");
 		dojo.require("dojox.analytics.Urchin");
@@ -43,10 +44,12 @@
 </head>
 <body>
 
-	<h1>Simple Lazy loading of Google Analytics Code</h1>
-	
-	<div jsId="fromconfig" dojoType="dojox.analytics.Urchin" acct="UA-123456-7"></div>
-	<div jsId="inmarkup" dojoType="dojox.analytics.Urchin" acct="UA-12345-6785"></div>
+<h1>Simple Lazy loading of Google Analytics Code</h1>
+
+<div jsId="fromconfig" dojoType="dojox.analytics.Urchin"
+	acct="UA-123456-7"></div>
+<div jsId="inmarkup" dojoType="dojox.analytics.Urchin"
+	acct="UA-12345-6785"></div>
 
 </body>
 </html>

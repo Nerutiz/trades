@@ -11,6 +11,7 @@
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 }
+
 .mblDomButtonSearch_2 DIV DIV {
 	top: 10px;
 	left: 7px;
@@ -25,9 +26,11 @@
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 }
+
 .mblTabPanelHeader .mblDomButtonSearch_2 DIV {
 	left: 11px;
 }
+
 .mblTabPanelHeader .mblDomButtonSearch_2 DIV DIV {
 	left: 7px;
 }

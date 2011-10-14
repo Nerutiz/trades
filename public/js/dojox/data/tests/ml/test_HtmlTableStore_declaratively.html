@@ -3,9 +3,11 @@
 <head>
 <title>Dojox HtmlDataStore Widget</title>
 <style>
-	@import "../../../../dijit/themes/tundra/tundra.css";
-	@import "../../../../dojo/resources/dojo.css";
-	@import "../../../../dijit/tests/css/dijitTests.css";
+@import "../../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
 </style>
 <script type="text/javascript">
 	djConfig = {
@@ -63,58 +65,62 @@
 
 </head>
 <body class="tundra">
-	<h1>Dojox HtmlDataStore Widget</h1>
-	<hr/>
-	<br/>
-	<br/>
+<h1>Dojox HtmlDataStore Widget</h1>
+<hr />
+<br />
+<br />
 
-	<!-- Instantiate the HtmlTableStore and bind it to global name tableStore -->
-	<div dojoType="dojox.data.HtmlTableStore" tableId="tableExample" jsId="tableStore"></div>
+<!-- Instantiate the HtmlTableStore and bind it to global name tableStore -->
+<div dojoType="dojox.data.HtmlTableStore" tableId="tableExample"
+	jsId="tableStore"></div>
 
-	<!-- The table to link into with the HtmlTableStore-->
-	<table id="tableExample">
-		<thead>
-			<tr>
-				<th>X</th>
-				<th>Y</th>
-				<th>A</th>
-				<th>B</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr id="test">
-				<td>2</td>
-				<td>3</td>
-				<td></td>
-				<td>8</td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td>3</td>
-				<td>5</td>
-				<td>7</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>9</td>
-				<td>22</td>
-				<td>777</td>
-			</tr>
-			<tr>
-				<td>3231</td>
-				<td>3</td>
-				<td>535</td>
-				<td>747</td>
-			</tr>
+<!-- The table to link into with the HtmlTableStore-->
+<table id="tableExample">
+	<thead>
+		<tr>
+			<th>X</th>
+			<th>Y</th>
+			<th>A</th>
+			<th>B</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="test">
+			<td>2</td>
+			<td>3</td>
+			<td></td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>3</td>
+			<td>5</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>9</td>
+			<td>22</td>
+			<td>777</td>
+		</tr>
+		<tr>
+			<td>3231</td>
+			<td>3</td>
+			<td>535</td>
+			<td>747</td>
+		</tr>
 
-		</tbody>
-	</table>
+	</tbody>
+</table>
 
-	<br/>
-	<br/>
-	<blockquote>
-		<b>Table Rows: <br/><i>(Just to show that the tree can determine that the tableStore works like a store).<br/>Should have three branches, where the row had attr Y value of 3.</i></b>
-		<div dojoType="dijit.Tree" id="tree" store="tableStore" query="{Y:3}" label="Test tree"></div>
-	</blockquote>
+<br />
+<br />
+<blockquote><b>Table Rows: <br />
+<i>(Just to show that the tree can determine that the tableStore
+works like a store).<br />
+Should have three branches, where the row had attr Y value of 3.</i></b>
+<div dojoType="dijit.Tree" id="tree" store="tableStore" query="{Y:3}"
+	label="Test tree"></div>
+</blockquote>
 </body>
 </html>

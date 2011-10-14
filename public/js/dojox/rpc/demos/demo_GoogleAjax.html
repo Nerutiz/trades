@@ -2,37 +2,46 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Demo of Google SMD</title>
-	<style type="text/css">
-		@import "../../image/resources/image.css";
-		body, html {
-			width:100%;
-			margin:0; padding:0;
-		}
-		.logo {
-			border:0; vertical-align:middle;
-		}
-		.summary {
-			color:#666;
-			font:8pt Arial,sans-serif;
-		}
-		#container {
-			width:720px;
-			margin:0 auto;
-		}
-		#loader {
-			position:absolute;
-			top:3px;
-			left:3px;
-			visibility:hidden;
-			height:50px; 
-			width:50px;
-			background:url("../../../dojox/image/resources/images/loading.gif") no-repeat center center;
-		}
-	</style>
+<title>Demo of Google SMD</title>
+<style type="text/css">
+@import "../../image/resources/image.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript">
+body,html {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	border: 0;
+	vertical-align: middle;
+}
+
+.summary {
+	color: #666;
+	font: 8pt Arial, sans-serif;
+}
+
+#container {
+	width: 720px;
+	margin: 0 auto;
+}
+
+#loader {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	visibility: hidden;
+	height: 50px;
+	width: 50px;
+	background: url("../../../dojox/image/resources/images/loading.gif")
+		no-repeat center center;
+}
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dojox.rpc.Service");
 		dojo.require("dojo.io.script");
 
@@ -83,39 +92,43 @@
 </head>
 
 <body>
-		<div id="loader"></div>
-		<div id="container">
-			<h2><a href="http://google.com"><img class="logo" src="http://www.google.com/logos/Logo_40wht.gif" alt="Google" /></a> Ajax API SMD</h2>
+<div id="loader"></div>
+<div id="container">
+<h2><a href="http://google.com"><img class="logo"
+	src="http://www.google.com/logos/Logo_40wht.gif" alt="Google" /></a> Ajax
+API SMD</h2>
 
-			<input id="test" name="test" type="text" size="30" value="The Dojo Toolkit"/> &nbsp;
-			<select id="searchType">
-				<option value="webSearch">web</option>
-				<option value="localSearch">local</option>
-				<option value="videoSearch">videos</option>
-				<option value="blogSearch">blog</option>
-				<option value="newsSearch">news</option>
-				<option value="bookSearch">books</option>
-				<option value="imageSearch">images</option>
-			</select> &nbsp; 
-			<button id="doit" type="submit" value="search">Search</button>
-		
-			<div id="current">
-				<h3>Results:</h3>
-				<ul id="top"></ul>
-			</div>
-		
-			<div id="past">
-				<h3>Old Searches:</h3>
-				<ul id="archive"></ul>
-			</div>
+<input id="test" name="test" type="text" size="30"
+	value="The Dojo Toolkit" /> &nbsp; <select id="searchType">
+	<option value="webSearch">web</option>
+	<option value="localSearch">local</option>
+	<option value="videoSearch">videos</option>
+	<option value="blogSearch">blog</option>
+	<option value="newsSearch">news</option>
+	<option value="bookSearch">books</option>
+	<option value="imageSearch">images</option>
+</select> &nbsp;
+<button id="doit" type="submit" value="search">Search</button>
 
-			<hr>
-			
-			<p>There are many per-serivce options available. This demo just pulls data and tries ...</p>
-			<p>That's all folks. Unit tests to come when we address the io.script issue.</p>
-			
-			
-		</div>
+<div id="current">
+<h3>Results:</h3>
+<ul id="top"></ul>
+</div>
+
+<div id="past">
+<h3>Old Searches:</h3>
+<ul id="archive"></ul>
+</div>
+
+<hr>
+
+<p>There are many per-serivce options available. This demo just
+pulls data and tries ...</p>
+<p>That's all folks. Unit tests to come when we address the
+io.script issue.</p>
+
+
+</div>
 
 
 </body>

@@ -1,54 +1,52 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-	<head>
-		<style type="text/css">
-			@import "../../../dojo/resources/dojo.css";
-			@import "../../../dijit/themes/dijit.css";
-			@import "../../../dijit/themes/tundra/tundra.css";
-	
-			html,body {
-				width: 100%;
-				height: 100%;
-				overflow: none;
-			}
-			
-			.dijitSplitPane{
-				margin: 5px;
-			}
+<head>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-			#buddyList {
-				cursor:pointer;
-			}
-			
-			.presence {
-				background:#525252;
-				height: 10px;
-				width: 10px;
-				margin:5px;
-			}
-			
-			.online, 
-			.available {
-				background: #00AC00;
-			}
-			
-			
-			.away {
-				background: #E20000;
-			}
-			
-		
-			.offline {
-				background: #ccc;
-			}	
+@import "../../../dijit/themes/dijit.css";
 
-		</style>
-		<title>xmpp test page</title>
+@import "../../../dijit/themes/tundra/tundra.css";
 
-		<script type="text/javascript" 
-			src="../../../dojo/dojo.js" djConfig="isDebug:true,parseOnLoad:true">
+html,body {
+	width: 100%;
+	height: 100%;
+	overflow: none;
+}
+
+.dijitSplitPane {
+	margin: 5px;
+}
+
+#buddyList {
+	cursor: pointer;
+}
+
+.presence {
+	background: #525252;
+	height: 10px;
+	width: 10px;
+	margin: 5px;
+}
+
+.online,.available {
+	background: #00AC00;
+}
+
+.away {
+	background: #E20000;
+}
+
+.offline {
+	background: #ccc;
+}
+</style>
+<title>xmpp test page</title>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true,parseOnLoad:true">
 		</script>
-		<script type="text/javascript">
+<script type="text/javascript">
 			
 			dojo.require('dijit.layout.LayoutContainer');
 			dojo.require('dijit.layout.ContentPane');
@@ -67,7 +65,7 @@
 			dojo.require("dojo.parser");
 		</script>
 
-		<script type="text/javascript">
+<script type="text/javascript">
 		
 			
 			//We want to know which chat instance is selected, so we can associate
@@ -422,94 +420,110 @@
 			}
 
 		</script>
-	</head>
+</head>
 
-	<body class="tundra">
-		foo
-		<div dojoType="dijit.Dialog" id="loginDialog" style="display: none; width:400px" title="Login">
-			<table>
-				<tr>
-					<td><label for="name">JID: </label></td>
-					<td><input dojoType="dijit.form.TextBox" type="text"  id="loginJid" value="foo"></td>
-				</tr>
-				<tr>
-					<td><label for="loc">Password: </label></td>
-					<td><input dojoType="dijit.form.TextBox" type="password"  id="loginPassword" value="papajeza"></td>
-				</tr>
-				<tr>
-					<td><label for="loc">Domain: </label></td>
-					<td><input dojoType="dijit.form.TextBox" type="text"  id="loginDomain" value="mac"></td>
-				</tr>
-				<tr>
-					<td><label for="loc">HTTP-Bind URL: </label></td>
-					<td><input dojoType="dijit.form.TextBox" type="text"  id="bindUrl" value="http://127.0.0.1:7070/http-bind/"></td>
-				</tr>
-				<tr>
-					<td colspan="2"><small>Note: a relative Bind URL will use the standard XHR transport and a full URL will use the cross-domain BOSH script syntax.</small></td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center">
-						<button dojoType="dijit.form.Button" onClick="login()" type="submit">Login</button></td>
-				</tr>
-			</table>
-		</div>
-		
-		<div dojoType="dijit.Dialog" id="addUser" style="display: none" title="Add User">
-			<table>
-				<tr>
-					<td><label for="name">JID: </label></td>
-					<td><input dojoType="dijit.form.TextBox" type="text"  id="userJID" value=""></td>
-				</tr>
-				<tr>
-					<td><label for="name">Alias: </label></td>
-					<td><input dojoType="dijit.form.TextBox" type="text"  id="userAlias" value=""></td>
-				</tr>
-				<tr>
-					<td><label for="name">Groups: </label></td>
-					<td><input dojoType="dijit.form.TextBox" type="text"  id="userGroups" value=""></td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center">
-						<button dojoType="dijit.form.Button"  onClick="addUser()" type="submit">Save</button>
-						<button dojoType="dijit.form.Button" onClick="dijit.byId('addUser').hide();" type="submit">Cancel</button></td>
-				</tr>
-			</table>
-		</div>
-			<div dojoType="dijit.Menu" id="buddyMenu" style="display:none; width: 190px;">
-			
-				<div dojoType="dijit.MenuItem"  onClick="showEditBuddy" >
-				 	Edit Buddy
-				</div>
-				<div dojoType="dijit.MenuItem"   onClick="subscribeBuddy">
-					Re-request subscription
-				</div>
-				<div dojoType="dijit.MenuItem"   onClick="deleteBuddy">
-					Delete
-				</div>
+<body class="tundra">
+foo
+<div dojoType="dijit.Dialog" id="loginDialog"
+	style="display: none; width: 400px" title="Login">
+<table>
+	<tr>
+		<td><label for="name">JID: </label></td>
+		<td><input dojoType="dijit.form.TextBox" type="text"
+			id="loginJid" value="foo"></td>
+	</tr>
+	<tr>
+		<td><label for="loc">Password: </label></td>
+		<td><input dojoType="dijit.form.TextBox" type="password"
+			id="loginPassword" value="papajeza"></td>
+	</tr>
+	<tr>
+		<td><label for="loc">Domain: </label></td>
+		<td><input dojoType="dijit.form.TextBox" type="text"
+			id="loginDomain" value="mac"></td>
+	</tr>
+	<tr>
+		<td><label for="loc">HTTP-Bind URL: </label></td>
+		<td><input dojoType="dijit.form.TextBox" type="text" id="bindUrl"
+			value="http://127.0.0.1:7070/http-bind/"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><small>Note: a relative Bind URL will use
+		the standard XHR transport and a full URL will use the cross-domain
+		BOSH script syntax.</small></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+		<button dojoType="dijit.form.Button" onClick="login()" type="submit">Login</button>
+		</td>
+	</tr>
+</table>
+</div>
 
-			</div>
-		
-		<div dojoType="dijit.layout.LayoutContainer" style="width: 100%; height: 100%;">
-			<div dojoType="dijit.layout.ContentPane" layoutAlign="top" style="height: 50px; background: #999999;">
-				XMPP Test Client
-				<div style="top:10px; float: right;">
-					Status: <select dojoType="dijit.form.FilteringSelect" id="presence" name="presence" autoComplete="false" onChange="updatePresence(arguments[0]);">
-						<option value="available" selected>Online</option>
-						<option value="away">Away</option>
-						<option value="chat">Free to Chat</option>
-						<option value="dnd">Do Not Disturb</option>
-						<option value="xa">Extended Away</option>
-					</select>
-					<button dojoType="dijit.form.Button" id="addUserButton" onClick="showAddBuddy()">Add Buddy</button>
-				</div>
-			</div>
-		
-			<div id="buddyListCP" dojoType="dijit.layout.ContentPane" layoutAlign="right" style="width: 200px; border: 1px solid #999999; overflow:auto;">
-				
-			  	<div id="buddyList">
-				</div>
-			</div>
-			<div id="chatTabs" dojoType="dijit.layout.TabContainer" layoutAlign="client" style="border: 1px solid #999999; height:100%"></div>
-		</div>	
-	</body>
+<div dojoType="dijit.Dialog" id="addUser" style="display: none"
+	title="Add User">
+<table>
+	<tr>
+		<td><label for="name">JID: </label></td>
+		<td><input dojoType="dijit.form.TextBox" type="text" id="userJID"
+			value=""></td>
+	</tr>
+	<tr>
+		<td><label for="name">Alias: </label></td>
+		<td><input dojoType="dijit.form.TextBox" type="text"
+			id="userAlias" value=""></td>
+	</tr>
+	<tr>
+		<td><label for="name">Groups: </label></td>
+		<td><input dojoType="dijit.form.TextBox" type="text"
+			id="userGroups" value=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+		<button dojoType="dijit.form.Button" onClick="addUser()" type="submit">Save</button>
+		<button dojoType="dijit.form.Button"
+			onClick="dijit.byId('addUser').hide();" type="submit">Cancel</button>
+		</td>
+	</tr>
+</table>
+</div>
+<div dojoType="dijit.Menu" id="buddyMenu"
+	style="display: none; width: 190px;">
+
+<div dojoType="dijit.MenuItem" onClick="showEditBuddy">Edit Buddy
+</div>
+<div dojoType="dijit.MenuItem" onClick="subscribeBuddy">
+Re-request subscription</div>
+<div dojoType="dijit.MenuItem" onClick="deleteBuddy">Delete</div>
+
+</div>
+
+<div dojoType="dijit.layout.LayoutContainer"
+	style="width: 100%; height: 100%;">
+<div dojoType="dijit.layout.ContentPane" layoutAlign="top"
+	style="height: 50px; background: #999999;">XMPP Test Client
+<div style="top: 10px; float: right;">Status: <select
+	dojoType="dijit.form.FilteringSelect" id="presence" name="presence"
+	autoComplete="false" onChange="updatePresence(arguments[0]);">
+	<option value="available" selected>Online</option>
+	<option value="away">Away</option>
+	<option value="chat">Free to Chat</option>
+	<option value="dnd">Do Not Disturb</option>
+	<option value="xa">Extended Away</option>
+</select>
+<button dojoType="dijit.form.Button" id="addUserButton"
+	onClick="showAddBuddy()">Add Buddy</button>
+</div>
+</div>
+
+<div id="buddyListCP" dojoType="dijit.layout.ContentPane"
+	layoutAlign="right"
+	style="width: 200px; border: 1px solid #999999; overflow: auto;">
+
+<div id="buddyList"></div>
+</div>
+<div id="chatTabs" dojoType="dijit.layout.TabContainer"
+	layoutAlign="client" style="border: 1px solid #999999; height: 100%"></div>
+</div>
+</body>
 </html>

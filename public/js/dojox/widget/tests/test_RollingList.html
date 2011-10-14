@@ -2,27 +2,30 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dojox Rolling List Test</title>
+<title>Dojox Rolling List Test</title>
 
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<!-- required: a default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/tundra/tundra.css">
-	
-	<!-- the additional styles for the widget -->
-	<link id="widgetStyle" rel="stylesheet" href="../RollingList/RollingList.css">
-	
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		djConfig="parseOnLoad: true, isDebug: true"></script>
-	
-	<!-- not needed, for testing alternate themes -->
-	<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
 
-	<script language="JavaScript" type="text/javascript">
+<!-- required: a default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/tundra/tundra.css">
+
+<!-- the additional styles for the widget -->
+<link id="widgetStyle" rel="stylesheet"
+	href="../RollingList/RollingList.css">
+
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="parseOnLoad: true, isDebug: true"></script>
+
+<!-- not needed, for testing alternate themes -->
+<script type="text/javascript" src="../../../dijit/tests/_testCommon.js"></script>
+
+<script language="JavaScript" type="text/javascript">
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojox.widget.RollingList");
 		dojo.require("dijit.form.Button");
@@ -152,24 +155,24 @@
 </head>
 <body class="tundra">
 
-	<h1 class="testTitle">Dojox Rolling List Test</h1>
+<h1 class="testTitle">Dojox Rolling List Test</h1>
 
-	<div dojoType="dojox.widget.RollingStore" jsId="continentStore" 
-		url="../../../dijit/tests/_data/countries.json">
-	</div>
-	
-	<h3>Rolling List - <input dojoType="dijit.form.TextBox" type="text" id="clickWatch" disabled value="None Selected..."></h3>
-	<div dojoType="dojox.widget.RollingList" jsId="myList" id="myList" store="continentStore"
-		query="{type:'continent'}">
-		<script type="dojo/method" event="onChange" args="value">
+<div dojoType="dojox.widget.RollingStore" jsId="continentStore"
+	url="../../../dijit/tests/_data/countries.json"></div>
+
+<h3>Rolling List - <input dojoType="dijit.form.TextBox" type="text"
+	id="clickWatch" disabled value="None Selected..."></h3>
+<div dojoType="dojox.widget.RollingList" jsId="myList" id="myList"
+	store="continentStore" query="{type:'continent'}"><script
+	type="dojo/method" event="onChange" args="value">
 			console.debug("Set Value:", value);
 			if(value){
 				dijit.byId("clickWatch").attr("value", this.store.getIdentity(value));
 			}else{
 				dijit.byId("clickWatch").attr("value", "None Selected...");
 			}
-		</script>
-		<script type="dojo/method" event="getPaneForItem" args="item,parentPane,children">
+		</script> <script type="dojo/method" event="getPaneForItem"
+	args="item,parentPane,children">
 			var ret = dojox.widget.RollingList.prototype.getPaneForItem.apply(this, arguments);
 
 			if(!ret){
@@ -181,23 +184,38 @@
 									}});
 			}
 			return ret;
-		</script>
-	</div>
-	<hr>
-	<button dojoType="dijit.form.Button" onClick="doResize()">Resize widget</button>
-	<hr>
-	<button dojoType="dijit.form.Button" onClick="setValue('Guadalajara')">Set Value to Guadalajara</button>
-	<button dojoType="dijit.form.Button" onClick="setValue('AF')">Set Value to Africa</button>
-	<button dojoType="dijit.form.Button" onClick="setValue('Toronto')">Set Value to Toronto</button>
-	<button dojoType="dijit.form.Button" onClick="setValue('')">Set No Value</button>
-	<hr>
-	<button dojoType="dijit.form.Button" onClick="addTijuana()">Add Item To Mexico (Tijuana)</button>
-	<button dojoType="dijit.form.Button" onClick="removeTijuana()">Remove Tijuana</button><br>
-	<button dojoType="dijit.form.Button" onClick="addDC()">Add Item To USA (Washington DC)</button>
-	<button dojoType="dijit.form.Button" onClick="changeDC()">Change Washington DC</button>
-	<button dojoType="dijit.form.Button" onClick="removeDC()">Remove Washington DC</button><br>
-	<button dojoType="dijit.form.Button" onClick="addAntarctica()">Add Item To Top-level (Antarctica)</button><br>
-	<button dojoType="dijit.form.Button" onClick="removeCanada()">Remove Canada</button>
-	<button dojoType="dijit.form.Button" onClick="removeEurope()">Remove Europe</button>
+		</script></div>
+<hr>
+<button dojoType="dijit.form.Button" onClick="doResize()">Resize
+widget</button>
+<hr>
+<button dojoType="dijit.form.Button" onClick="setValue('Guadalajara')">Set
+Value to Guadalajara</button>
+<button dojoType="dijit.form.Button" onClick="setValue('AF')">Set
+Value to Africa</button>
+<button dojoType="dijit.form.Button" onClick="setValue('Toronto')">Set
+Value to Toronto</button>
+<button dojoType="dijit.form.Button" onClick="setValue('')">Set
+No Value</button>
+<hr>
+<button dojoType="dijit.form.Button" onClick="addTijuana()">Add
+Item To Mexico (Tijuana)</button>
+<button dojoType="dijit.form.Button" onClick="removeTijuana()">Remove
+Tijuana</button>
+<br>
+<button dojoType="dijit.form.Button" onClick="addDC()">Add Item
+To USA (Washington DC)</button>
+<button dojoType="dijit.form.Button" onClick="changeDC()">Change
+Washington DC</button>
+<button dojoType="dijit.form.Button" onClick="removeDC()">Remove
+Washington DC</button>
+<br>
+<button dojoType="dijit.form.Button" onClick="addAntarctica()">Add
+Item To Top-level (Antarctica)</button>
+<br>
+<button dojoType="dijit.form.Button" onClick="removeCanada()">Remove
+Canada</button>
+<button dojoType="dijit.form.Button" onClick="removeEurope()">Remove
+Europe</button>
 </body>
 </html>

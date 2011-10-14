@@ -2,25 +2,28 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Animated background position example | The Dojo Toolkit</title>
-		
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:true, parseOnLoad: true" ></script>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/dijit.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
+<title>Animated background position example | The Dojo Toolkit</title>
 
-		#theNode {
-			background:#dedede url('images/longBg.png') 0px 0px;
-			padding:3px 10px 3px 10px; 
-			border:1px solid #b7b7b7;
-			color:#666;
-			cursor:pointer; 
-		}
-	
-	</style>
-	<script type="text/javascript">
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/dijit.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+#theNode {
+	background: #dedede url('images/longBg.png') 0px 0px;
+	padding: 3px 10px 3px 10px;
+	border: 1px solid #b7b7b7;
+	color: #666;
+	cursor: pointer;
+}
+</style>
+<script type="text/javascript">
 		dojo.require("dojo.fx");
 		var anim = null; 
 		var init = function(){
@@ -49,9 +52,9 @@
 </head>
 <body class="tundra">
 
-	<h1 class="testTitle">dojo.Animation test:</h1>
+<h1 class="testTitle">dojo.Animation test:</h1>
 
-	<div class="dijitInline" id="theNode">Test</div>
+<div class="dijitInline" id="theNode">Test</div>
 
 </body>
 </html>

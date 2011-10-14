@@ -4,18 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <style type="text/css" rel="stylesheet" title="dojoDefault">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
 </style>
 
 <style title="altStyle" type="text/css" rel="alternate stylesheet">
-	p{
-		font-size:9px;
-		color:#9999FF;
-	}
+p {
+	font-size: 9px;
+	color: #9999FF;
+}
 </style>
 
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, fontSizeWatch: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, fontSizeWatch: true"></script>
 <script type="text/javascript">
 	
 	dojo.require("dojox.html.styles");
@@ -102,66 +104,62 @@
 
 </script>
 <style>
-	#btnCol{
-		width:220px;
-	}
-	#btnCol div{
-		margin-bottom:10px;
-	}
-	body table td{
-		vertical-align:top;
-		
-	}
-	button{
-		width:70px;
-		text-align:left;
-	}
-	.label{
-		color:#666666;
-	}
+#btnCol {
+	width: 220px;
+}
+
+#btnCol div {
+	margin-bottom: 10px;
+}
+
+body table td {
+	vertical-align: top;
+}
+
+button {
+	width: 70px;
+	text-align: left;
+}
+
+.label {
+	color: #666666;
+}
 </style>
 
 </head>
 
 <body>
 <h1>dojox.html.styles Test</h1>
-<p>With the buttons on the left, insert and remove rules with a dynamically created stylesheet. Use the radio buttons
-to create a second style sheet. Toggle them on and off. See the log for more style sheet tests.</p>
-	<table width="100%" cellspacing="0" cellpadding="0">
-  <tr>
-    <td id="btnCol">
-    	<span class="label">Dynamic Stylesheets</span>
-        <div>
-        	<span style="display:block;">Use Style Sheet:</span>
-            <label for="ssDefault">Default</label>
-            <input type="radio" name="ss" id="ssDefault" checked="true"/>
-            <label for="ssExtra">Extra</label>
-            <input type="radio" name="ss" id="ssExtra" />
-            <br>
-            <button onClick="enableStyleSheet();">Enable</button>
-            <button onClick="disableStyleSheet();">Disable</button>
-        </div>
-    </td>
-    <td>
-    	<p>paragraph text</p>
-    
-    <p class="foo">paragraph class=foo text
-    	<span class="woot">span class=woot</span>
-        with a span inside it
-    </p>
-    
-    <p class="bar">paragraph class=bar text
-    	<span class="zoot">span class=zoot</span>
-    	with a span inside it
-    </p>
-     
-     <span class="xoot">external span class=xoot</span>
-    </td>
-  </tr>
+<p>With the buttons on the left, insert and remove rules with a
+dynamically created stylesheet. Use the radio buttons to create a second
+style sheet. Toggle them on and off. See the log for more style sheet
+tests.</p>
+<table width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td id="btnCol"><span class="label">Dynamic Stylesheets</span>
+		<div><span style="display: block;">Use Style Sheet:</span> <label
+			for="ssDefault">Default</label> <input type="radio" name="ss"
+			id="ssDefault" checked="true" /> <label for="ssExtra">Extra</label> <input
+			type="radio" name="ss" id="ssExtra" /> <br>
+		<button onClick="enableStyleSheet();">Enable</button>
+		<button onClick="disableStyleSheet();">Disable</button>
+		</div>
+		</td>
+		<td>
+		<p>paragraph text</p>
+
+		<p class="foo">paragraph class=foo text <span class="woot">span
+		class=woot</span> with a span inside it</p>
+
+		<p class="bar">paragraph class=bar text <span class="zoot">span
+		class=zoot</span> with a span inside it</p>
+
+		<span class="xoot">external span class=xoot</span></td>
+	</tr>
 </table>
-	
-     
-     
-    	
+
+
+
+
 </body>
 </html>

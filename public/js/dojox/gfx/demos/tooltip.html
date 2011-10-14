@@ -1,17 +1,22 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-	<title>A Sample ToolTip using dijit and dojox.gfx</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		.tooltipBody {
-			color:#fff;
-		}
-	</style>
-	<script type="text/javascript" djConfig="parseOnLoad:true, isDebug:true" src="../../../dojo/dojo.js"></script>
-	<script type="text/javascript">
+<title>A Sample ToolTip using dijit and dojox.gfx</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+.tooltipBody {
+	color: #fff;
+}
+</style>
+<script type="text/javascript" djConfig="parseOnLoad:true, isDebug:true"
+	src="../../../dojo/dojo.js"></script>
+<script type="text/javascript">
 		dojo.require("dijit.form.Button");
 	
 		dojo.require("dojox.gfx");
@@ -173,62 +178,63 @@
 			}	
 		});
 	</script>
-	
+
 </head>
 <body class="tundra">
 
-	<h1>dojox.gfx: A Sample tooltip</h1>
+<h1>dojox.gfx: A Sample tooltip</h1>
 
-	<ul style="width:150px; border:2px solid #ededed; cursor:pointer">
-		
-	
-		<!-- you can put any content you want in there -->
-		<li id="warn2">
-			Tooltip + Button
-			<div attachId="warn2" id="warn2tt" dojoType="demo.Tooltip"><p style="margin-top:0">Canvas renderer doesn't implement event handling.
-				<button dojoType="dijit.form.Button">
-					Button
-					<script type="dojo/method" event="onClick">
+<ul style="width: 150px; border: 2px solid #ededed; cursor: pointer">
+
+
+	<!-- you can put any content you want in there -->
+	<li id="warn2">Tooltip + Button
+	<div attachId="warn2" id="warn2tt" dojoType="demo.Tooltip">
+	<p style="margin-top: 0">Canvas renderer doesn't implement event
+	handling.
+	<button dojoType="dijit.form.Button">Button <script
+		type="dojo/method" event="onClick">
 						alert(" woo hoo! ");
 						dijit.byId("warn2tt")._hide();
-					</script>
-				</button>
-			</p></div>
-		</li>
+					</script></button>
+	</p>
+	</div>
+	</li>
 
-		<!-- a simple tooltip -->
-		<li id="warn1">
-			Hover trigger / persists
-			<div persists="true" attachId="warn1" dojoType="demo.Tooltip">Canvas renderer doesn't implement event handling.</div>
-		</li>
+	<!-- a simple tooltip -->
+	<li id="warn1">Hover trigger / persists
+	<div persists="true" attachId="warn1" dojoType="demo.Tooltip">Canvas
+	renderer doesn't implement event handling.</div>
+	</li>
 
-		<!-- these get the same tooltip from the attachQuery=".multitip" below -->
-		<li class="multitip">MultiTip trigger 1</li>
-		<li>I do nothing</li>
-		<li class="multitip">Trigger two</li>
+	<!-- these get the same tooltip from the attachQuery=".multitip" below -->
+	<li class="multitip">MultiTip trigger 1</li>
+	<li>I do nothing</li>
+	<li class="multitip">Trigger two</li>
 
-		<li><a href="#" onclick="dijit.byId('nohover')._show(arguments[0])">show this way
-			<label dojoType="demo.Tooltip" attachParent="true" attachHover="false" id="nohover">some text</label>
-			</a>	
-		</li>
+	<li><a href="#"
+		onclick="dijit.byId('nohover')._show(arguments[0])">show this way
+	<label dojoType="demo.Tooltip" attachParent="true" attachHover="false"
+		id="nohover">some text</label> </a></li>
 
-		<!-- attachParent makes the tooltip look for domNode.parentNode before moving to body() -->
-		<li>
-			Parent Attached Tooltip
-			<div attachParent="true" persists="true" dojoType="demo.Tooltip">
-				<form id="fooForm">
-					<p style="margin-top:0;">
-					Name:<br> <input type="text" name="username" style="border:1px solid #ededed" /><br>
-					Pass:<br> <input type="password" name="password" style="border:1px solid #ededed" />
-					</p>
-				</form>
-			</div>
-		</li>
+	<!-- attachParent makes the tooltip look for domNode.parentNode before moving to body() -->
+	<li>Parent Attached Tooltip
+	<div attachParent="true" persists="true" dojoType="demo.Tooltip">
+	<form id="fooForm">
+	<p style="margin-top: 0;">Name:<br>
+	<input type="text" name="username" style="border: 1px solid #ededed" /><br>
+	Pass:<br>
+	<input type="password" name="password"
+		style="border: 1px solid #ededed" /></p>
+	</form>
+	</div>
+	</li>
 
-	</ul>
+</ul>
 
-	<!-- attach a single tooltip message to a number of nodes at once -->
-	<div attachQuery=".multitip" dojoType="demo.Tooltip">Canvas renderer doesn't implement event handling. (shared tooltip)</div>
+<!-- attach a single tooltip message to a number of nodes at once -->
+<div attachQuery=".multitip" dojoType="demo.Tooltip">Canvas
+renderer doesn't implement event handling. (shared tooltip)</div>
 
 </body>
 </html>

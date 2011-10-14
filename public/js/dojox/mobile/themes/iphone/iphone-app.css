@@ -21,7 +21,8 @@
 	margin: 0px;
 	padding: 0px;
 	background-color: #889BB3;
-	background: -webkit-gradient(linear, left top, left bottom, from(#B0BCCD), to(#6D84A2), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF));
+	background: -webkit-gradient(linear, left top, left bottom, from(#B0BCCD),
+		to(#6D84A2), color-stop(0.5, #889BB3), color-stop(0.5, #8195AF) );
 	border-top: 1px solid #CDD5DF;
 	border-bottom: 1px solid #2D3642;
 	font-family: Helvetica;
@@ -29,7 +30,7 @@
 	color: white;
 	text-align: center;
 	line-height: 44px;
-	text-shadow: rgba(0,0,0,0.6) 0px -1px 0px;
+	text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -64,15 +65,18 @@
 	-webkit-animation-timing-function: linear;
 	-webkit-transform: translateY(-100%);
 }
+
 .slidev.in {
 	-webkit-animation-duration: .4s;
 	-webkit-animation-name: slideIn;
 	-webkit-animation-timing-function: linear;
 	-webkit-transform: translateY(0px);
 }
+
 .slidev.out.reverse {
 	-webkit-animation-name: slideOutReverse;
 }
+
 .slidev.in.reverse {
 	-webkit-animation-name: slideInReverse;
 }
@@ -102,6 +106,7 @@
 	background-color: white;
 	z-index: 6; /* Must be greater than the .buttons z-index */
 }
+
 .list .row.mblListItem {
 	padding: 0px;
 }
@@ -124,12 +129,13 @@
 }
 
 .list .buttons .mblButton {
+	
 }
 
 .list .buttons .deleteBtn {
 	background-color: red;
-
 }
+
 .list .buttons .cancelBtn {
 	margin-left: 10px;
 	background-color: blue;
@@ -141,17 +147,17 @@
 	-webkit-animation-timing-function: linear;
 }
 
-@-webkit-keyframes collapse-vert {
-	from {
-		height: 100%;
-		padding: 10px;
-	}
-	to {
-		height: 0px;
-		padding: 0px;
-	}
+@
+-webkit-keyframes collapse-vert {from { height:100%;
+	padding: 10px;
 }
 
+to {
+	height: 0px;
+	padding: 0px;
+}
+
+}
 .listSelector {
 	position: absolute;
 	-webkit-border-radius: 10px;
@@ -161,21 +167,23 @@
 	color: #333;
 	z-index: 1000;
 }
+
 .listSelectorRow {
 	padding: 10px;
 	border-bottom: 1px solid #666;
 	white-space: nowrap;
 }
+
 .listSelectorRow-selected {
 	background-color: #666;
 	color: #ccc;
 }
 
 .listSelectorRow.last {
- 	border-bottom: none;
+	border-bottom: none;
 }
 
-.mblImageView, .mblImageView canvas {
+.mblImageView,.mblImageView canvas {
 	width: 100%;
 	height: 100%;
 }
@@ -185,11 +193,9 @@
 }
 
 /* Form Input Styles */
-
 input {
 	-webkit-text-size-adjust: 140%;
 }
-
 
 /* ImageThumbView styles */
 .mblImageThumbView {
@@ -217,6 +223,7 @@ input {
 	z-index: 1;
 	opacity: 0;
 }
+
 .mblImageThumbView .mblThumbInner {
 	width: 102px;
 	height: 102px;
@@ -231,9 +238,11 @@ input {
 	z-index: 20;
 	overflow: hidden;
 }
+
 .mblImageThumbView .mblThumb.selected .mblThumbOverlay {
 	background-position: center bottom;
 }
+
 .mblImageThumbView .mblThumbInner .mblThumbMask {
 	width: 90px;
 	height: 90px;
@@ -242,6 +251,7 @@ input {
 	padding-top: 5px;
 	z-index: 10;
 }
+
 .mblImageThumbView .mblThumbInner .mblThumbMask img {
 	left: 0px;
 	top: 0px;
@@ -270,8 +280,9 @@ input {
 	height: 90px;
 	background-repeat: no-repeat;
 }
-.mblImageThumbView .mblThumb:hover,
-.mblImageThumbView .mblThumb.selected {
+
+.mblImageThumbView .mblThumb:hover,.mblImageThumbView .mblThumb.selected
+	{
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
 }
@@ -282,7 +293,7 @@ input {
 	min-height: 150px;
 }
 
-.mblImageThumbView.large .mblThumbInner{
+.mblImageThumbView.large .mblThumbInner {
 	width: 152px;
 	height: 152px;
 }
@@ -292,10 +303,9 @@ input {
 	width: 152px;
 	height: 152px;
 }
-.mblImageThumbView.large .mblThumbInner .mblThumbMask,
-.mblImageThumbView.large .mblThumbInner .mblThumbMask img,
-.mblImageThumbView.large .mblThumbInner .mblThumbMask .mblThumbSrc,
-.mblImageThumbView.large .mblThumbMask div {
+
+.mblImageThumbView.large .mblThumbInner .mblThumbMask,.mblImageThumbView.large .mblThumbInner .mblThumbMask img,.mblImageThumbView.large .mblThumbInner .mblThumbMask .mblThumbSrc,.mblImageThumbView.large .mblThumbMask div
+	{
 	width: 133px;
 	height: 133px;
 }
@@ -304,13 +314,14 @@ input {
 	left: 9px;
 	top: 7px;
 }
+
 /* Small Images */
 .mblImageThumbView.small .mblThumb {
 	width: 75px;
 	min-height: 75px;
 }
 
-.mblImageThumbView.small .mblThumbInner{
+.mblImageThumbView.small .mblThumbInner {
 	width: 77px;
 	height: 77px;
 }
@@ -320,10 +331,9 @@ input {
 	width: 77px;
 	height: 77px;
 }
-.mblImageThumbView.small .mblThumbInner .mblThumbMask,
-.mblImageThumbView.small .mblThumbInner .mblThumbMask img,
-.mblImageThumbView.small .mblThumbInner .mblThumbMask .mblThumbSrc,
-.mblImageThumbView.small .mblThumbMask div {
+
+.mblImageThumbView.small .mblThumbInner .mblThumbMask,.mblImageThumbView.small .mblThumbInner .mblThumbMask img,.mblImageThumbView.small .mblThumbInner .mblThumbMask .mblThumbSrc,.mblImageThumbView.small .mblThumbMask div
+	{
 	width: 70px;
 	height: 70px;
 }

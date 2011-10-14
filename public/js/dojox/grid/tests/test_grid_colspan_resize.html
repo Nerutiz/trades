@@ -2,30 +2,34 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Test dojox.Grid Basic</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">       
-		@import "../../../dojo/resources/dojo.css";
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}
-		.heading {
-			font-weight: bold;
-			padding-bottom: 0.25em;
-		}
-					   
-		#grid, #gridColspan {
-			width: 45em;
-			height: 25em;
-			border: 1px solid #333;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="debugAtAllCosts: false, isDebug: false, parseOnLoad: true"></script>
-	<script type="text/javascript">
+<title>Test dojox.Grid Basic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.heading {
+	font-weight: bold;
+	padding-bottom: 0.25em;
+}
+
+#grid,#gridColspan {
+	width: 45em;
+	height: 25em;
+	border: 1px solid #333;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="debugAtAllCosts: false, isDebug: false, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojo.data.ItemFileReadStore");
 		dojo.require("dojox.grid.DataGrid");
@@ -72,14 +76,13 @@
 	</script>
 </head>
 <body class="tundra">
-	<div dojoType="dojo.data.ItemFileReadStore"
-		jsId="jsonStore" url="support/test_resize_data.json">
-	</div>
-	<div class="heading">No Colspan</div>
-	<div id="grid" dojoType="dojox.grid.DataGrid" 
-		store="jsonStore" structure="layout"></div>
-	<div class="heading">Colspan</div>
-	<div id="gridColspan" dojoType="dojox.grid.DataGrid" 
-		store="jsonStore" structure="layoutColspan"></div>
+<div dojoType="dojo.data.ItemFileReadStore" jsId="jsonStore"
+	url="support/test_resize_data.json"></div>
+<div class="heading">No Colspan</div>
+<div id="grid" dojoType="dojox.grid.DataGrid" store="jsonStore"
+	structure="layout"></div>
+<div class="heading">Colspan</div>
+<div id="gridColspan" dojoType="dojox.grid.DataGrid" store="jsonStore"
+	structure="layoutColspan"></div>
 </body>
 </html>

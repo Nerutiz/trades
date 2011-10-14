@@ -2,12 +2,12 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>dojo.html.set test</title>
+<title>dojo.html.set test</title>
 
-	<script src='../../dojo.js' djConfig='isDebug:true, parseOnLoad:false'></script>
-	<script src='../../html.js'></script>
-	<script src='../../../util/doh/runner.js'></script>
-	<script>
+<script src='../../dojo.js' djConfig='isDebug:true, parseOnLoad:false'></script>
+<script src='../../html.js'></script>
+<script src='../../../util/doh/runner.js'></script>
+<script>
 		dojo.require('doh.runner');
 		dojo.require('dojo.html');
 		dojo.require('dojo.NodeList-html');
@@ -420,81 +420,93 @@
 			doh.run();
 		}); 
 	</script>
-	<style>
-		@import "../../../dojo/resources/dojo.css";
+<style>
+@import "../../../dojo/resources/dojo.css";
 
-		.box {
-			border: 1px solid black;
-			height: 190px;
-			width: 80%;
-			overflow: auto;
-		}
-		.zork {
-			width: 200px;
-			margin: 10px;
-			list-style-type: none;
-		}
-		.notdone {
-			color: #999; background-color: #ccc;
-		}
-		.done {
-			color: #fff; background-color: #090;
-		}
-		.done li {
-			border: 1px; background-color: orange;
-			width: 180px;
-		}
-		.red {
-			color: red;
-		}
+.box {
+	border: 1px solid black;
+	height: 190px;
+	width: 80%;
+	overflow: auto;
+}
 
-	</style>
+.zork {
+	width: 200px;
+	margin: 10px;
+	list-style-type: none;
+}
+
+.notdone {
+	color: #999;
+	background-color: #ccc;
+}
+
+.done {
+	color: #fff;
+	background-color: #090;
+}
+
+.done li {
+	border: 1px;
+	background-color: orange;
+	width: 180px;
+}
+
+.red {
+	color: red;
+}
+</style>
 </head>
 <body class='tundra'>
-	<h1>dojo.html.set</h1>
+<h1>dojo.html.set</h1>
 
-	<div id="pane1"></div>
-	<div id="pane2"></div>
-	<table id='tableTest' class='box'>
-		<thead>
-			<tr>
-				<td></td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-			</tr>
-		<tbody>
-	</table>
-	<ul class="zork notdone">initial content</ul>
-	<ul class="zork notdone">initial content</ul>
-	<ul class="zork notdone">initial content</ul>
+<div id="pane1"></div>
+<div id="pane2"></div>
+<table id='tableTest' class='box'>
+	<thead>
+		<tr>
+			<td></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	<tbody>
+</table>
+<ul class="zork notdone">
+	initial content
+</ul>
+<ul class="zork notdone">
+	initial content
+</ul>
+<ul class="zork notdone">
+	initial content
+</ul>
 
-	<div id="markupPane">initial content</div>
-	<div id="markupSetContentOp">
-		<div dojoType="dojo.html.test.DeclarativeContentSetter" node="markupPane" content="markupSetContentOp: new node content"></div>
-	</div>
-	<div id="markupSetContentOpX">
-		<div dojoType="dojo.html.test.DeclarativeContentSetter" jsId="markupSetContentOpX_setter" node="markupPane" content="markupSetContentOpX: new node content">
-		<script type="dojo/method" event="onBegin">
+<div id="markupPane">initial content</div>
+<div id="markupSetContentOp">
+<div dojoType="dojo.html.test.DeclarativeContentSetter"
+	node="markupPane" content="markupSetContentOp: new node content"></div>
+</div>
+<div id="markupSetContentOpX">
+<div dojoType="dojo.html.test.DeclarativeContentSetter"
+	jsId="markupSetContentOpX_setter" node="markupPane"
+	content="markupSetContentOpX: new node content"><script
+	type="dojo/method" event="onBegin">
 			this.content = this.content.toUpperCase();
 			console.log(this.id + ", made my content look like this:" + this.content);
-		</script>
-		<script type="dojo/method" event="onFoo">
+		</script> <script type="dojo/method" event="onFoo">
 			console.log("dojo/method supplied onBegin");
 			this.content = this.content.toUpperCase();
-		</script>
-		</div>
-	</div>
-	<div id="another">
-		<div id="myTest9" dojoType="dojo.html.test.DeclarativeContentSetter">
-			Some content
-			<script type="dojo/method">
+		</script></div>
+</div>
+<div id="another">
+<div id="myTest9" dojoType="dojo.html.test.DeclarativeContentSetter">
+Some content <script type="dojo/method">
 				console.log("parsed me!");
-			</script>
-		</div>
-	</div>
-	<h1 id="simpleText">test</h1>
+			</script></div>
+</div>
+<h1 id="simpleText">test</h1>
 </body>
 </html>

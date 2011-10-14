@@ -2,8 +2,9 @@
 .mblDomButtonUpArrow_2 DIV {
 	position: absolute;
 	left: 0px;
-	clip: rect(0px 30px 20px 0px);
+	clip: rect(0px, 30px, 20px, 0px);
 }
+
 .mblDomButtonUpArrow_2 DIV DIV {
 	top: 9px;
 	left: 4px;
@@ -16,6 +17,7 @@
 	-webkit-transform: scaleX(0.6) rotate(45deg);
 	-moz-transform: scaleX(0.6) rotate(45deg);
 }
+
 .mblTabPanelHeader .mblDomButtonUpArrow_2 DIV DIV {
 	left: 11px;
 }

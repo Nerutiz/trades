@@ -5,16 +5,18 @@
 -->
 <html>
 <head>
-	<title>Demo of FlickrRestStore</title>
-	<style type="text/css">
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
+<title>Demo of FlickrRestStore</title>
+<style type="text/css">
+@import "../../../dijit/themes/tundra/tundra.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dojo.parser");
 		dojo.require("dijit.form.TextBox");
 		dojo.require("dijit.form.Button");
@@ -98,139 +100,101 @@
 </head>
 
 <body class="tundra">
-	<h1>
-		DEMO:  FlickrRestStore Search
-	</h1>
-	<hr>
-	<h3>
-		Description:
-	</h3>
-	<p>
-		This simple demo shows how services, such as Flickr, can be wrapped by the datastore API.
-		In this demo, you can search public Flickr images through a FlickrRestStore by specifying
-		a series of tags (separated by spaces) to search on.  The results will be displayed below the search box.
-	</p>
-	<p>
-		For fun, search on the 3dny tag!
-	</p>
+<h1>DEMO: FlickrRestStore Search</h1>
+<hr>
+<h3>Description:</h3>
+<p>This simple demo shows how services, such as Flickr, can be
+wrapped by the datastore API. In this demo, you can search public Flickr
+images through a FlickrRestStore by specifying a series of tags
+(separated by spaces) to search on. The results will be displayed below
+the search box.</p>
+<p>For fun, search on the 3dny tag!</p>
 
-	<blockquote>
-
-	<!--
+<blockquote><!--
 		The store instance used by this demo.
 	-->
-	<table>
-		<tbody>
-			<tr>
-				<td>
-					<b>Status:</b>
-				</td>
-				<td>
-					<div dojoType="dijit.form.TextBox" size="50" id="status" jsId="statusWidget" disabled="true"></div>
-				</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>
-					<b>User ID:</b>
-				</td>
-				<td>
-					<div dojoType="dijit.form.TextBox" size="50" id="userid" jsId="idWidget" value="44153025@N00"></div>
-				</td>
-				<td>
-					<b>Set ID</b>
-				</td>
-				<td>
-					  <div dojoType="dijit.form.TextBox" size="50" id="setid" jsId="setIdWidget"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<b>Tags:</b>
-				</td>
-				<td>
-					<div dojoType="dijit.form.TextBox" size="50" id="tags" jsId="tagsWidget" value="rollingstones,kinsale"></div>
-				</td>
-				<td>
-					<b>Full Text</b>
-				</td>
-				<td>
-					  <div dojoType="dijit.form.TextBox" size="50" id="fulltext" jsId="fullTextWidget"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<b>Tagmode:</b>
-				</td>
-				<td>
-					<select id="tagmode"
-							jsId="tagmodeWidget"
-							dojoType="dijit.form.ComboBox"
-							autocomplete="false"
-							value="any"
-					>
-						<option>any</option>
-						<option>all</option>
-					</select>
-				</td>
-				<td>
-					<b>Sort</b>
-				</td>
-				<td>
-					  <select dojoType="dijit.form.ComboBox" size="15" id="sorttype" jsId="sortTypeWidget">
-						<option>date-posted</option>
-						<option>date-taken</option>
-						<option>interestingness</option>
-					  </select>
-					   <select dojoType="dijit.form.ComboBox" size="15" id="sortdirection" jsId="sortDirWidget">
-						<option>ascending</option>
-						<option>descending</option>
-					  </select>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<b>Number of Pictures:</b>
-				</td>
-				<td>
-					<div   
-						id="count"
-						jsId="countWidget"
-						dojoType="dijit.form.NumberSpinner"
-						value="20"
-						constraints="{min:1,max:20,places:0}" 
-					></div>
-				</td>
-				<td>
-					<b>Page:</b>
-				</td>
-				<td>
-					<div   
-						id="page"
-						jsId="pageWidget"
-						dojoType="dijit.form.NumberSpinner"
-						value="1"
-						constraints="{min:1,max:5,places:0}" 
-					></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-				</td>
-				<td>
-					<div dojoType="dijit.form.Button" label="Search" id="searchButton" jsId="searchButtonWidget"></div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<hr/>
-	</blockquote>
-	<div dojoType="dojox.data.FlickrRestStore" jsId="flickrStore" label="title"></div>
-	<div dojoType="dojox.data.demos.widgets.FlickrViewList" 
-		store="flickrStore"
-		id="flickrViews" 
-		jsId="flickrViewsWidget"></div>
+<table>
+	<tbody>
+		<tr>
+			<td><b>Status:</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="status"
+				jsId="statusWidget" disabled="true"></div>
+			</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><b>User ID:</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="userid"
+				jsId="idWidget" value="44153025@N00"></div>
+			</td>
+			<td><b>Set ID</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="setid"
+				jsId="setIdWidget"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><b>Tags:</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="tags"
+				jsId="tagsWidget" value="rollingstones,kinsale"></div>
+			</td>
+			<td><b>Full Text</b></td>
+			<td>
+			<div dojoType="dijit.form.TextBox" size="50" id="fulltext"
+				jsId="fullTextWidget"></div>
+			</td>
+		</tr>
+		<tr>
+			<td><b>Tagmode:</b></td>
+			<td><select id="tagmode" jsId="tagmodeWidget"
+				dojoType="dijit.form.ComboBox" autocomplete="false" value="any">
+				<option>any</option>
+				<option>all</option>
+			</select></td>
+			<td><b>Sort</b></td>
+			<td><select dojoType="dijit.form.ComboBox" size="15"
+				id="sorttype" jsId="sortTypeWidget">
+				<option>date-posted</option>
+				<option>date-taken</option>
+				<option>interestingness</option>
+			</select> <select dojoType="dijit.form.ComboBox" size="15" id="sortdirection"
+				jsId="sortDirWidget">
+				<option>ascending</option>
+				<option>descending</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td><b>Number of Pictures:</b></td>
+			<td>
+			<div id="count" jsId="countWidget"
+				dojoType="dijit.form.NumberSpinner" value="20"
+				constraints="{min:1,max:20,places:0}"></div>
+			</td>
+			<td><b>Page:</b></td>
+			<td>
+			<div id="page" jsId="pageWidget" dojoType="dijit.form.NumberSpinner"
+				value="1" constraints="{min:1,max:5,places:0}"></div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+			<div dojoType="dijit.form.Button" label="Search" id="searchButton"
+				jsId="searchButtonWidget"></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<hr />
+</blockquote>
+<div dojoType="dojox.data.FlickrRestStore" jsId="flickrStore"
+	label="title"></div>
+<div dojoType="dojox.data.demos.widgets.FlickrViewList"
+	store="flickrStore" id="flickrViews" jsId="flickrViewsWidget"></div>
 
 </body>
 </html>

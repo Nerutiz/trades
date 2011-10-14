@@ -2,25 +2,28 @@
 <html>
 <head>
 
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-	<title>_Widget.placeAt tests</title>
+<title>_Widget.placeAt tests</title>
 
-	<!-- test decoration styles -->
-	<style type="text/css">
-		@import "../themes/claro/document.css";
-		@import "../../dijit/tests/css/dijitTests.css";
-	</style>
+<!-- test decoration styles -->
+<style type="text/css">
+@import "../themes/claro/document.css";
 
-	<!-- required: a default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../dijit/themes/claro/claro.css"/>
+@import "../../dijit/tests/css/dijitTests.css";
+</style>
 
-	<!-- required: load the dojo base -->
-	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="isDebug:true" ></script>
-	<!-- for theme-switching, only for dijit -->
-	<script type="text/javascript" src="../../dijit/tests/_testCommon.js"></script>
+<!-- required: a default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../dijit/themes/claro/claro.css" />
 
-	<script type="text/javascript">
+<!-- required: load the dojo base -->
+<script type="text/javascript" src="../../dojo/dojo.js"
+	data-dojo-config="isDebug:true"></script>
+<!-- for theme-switching, only for dijit -->
+<script type="text/javascript" src="../../dijit/tests/_testCommon.js"></script>
+
+<script type="text/javascript">
 		dojo.require("doh.runner");
 
 		// load components need for this test
@@ -129,24 +132,24 @@
 	</script>
 </head>
 <body class="claro">
-	<h1 class="testTitle">_Widget.placeAt tests</h1>
+<h1 class="testTitle">_Widget.placeAt tests</h1>
 
-	<div id="container">
+<div id="container"></div>
 
-	</div>
+<h2>Node2</h2>
+<p>This is where the tab srcNodeRef is, but it gets moved above us
+into the id="container" div. (Should be there already.)</p>
+<div id="otherContainer">
+<div id="tabContainerThinger"></div>
+</div>
 
-	<h2>Node2</h2>
-	<p>This is where the tab srcNodeRef is, but it gets moved above us into the id="container" div.  (Should be there already.)</p>
-	<div id="otherContainer">
-		<div id="tabContainerThinger"></div>
-	</div>
-
-	<h2>BorderContainer sample</h2>
-	<div id="bc1" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props='style:"width:600px; height:400px"'>
-		<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props='id:"center", region:"center"'>
-			<button id="addStuff" data-dojo-type="dijit.form.Button">
-				Add Stuff
-				<script type="dojo/method" data-dojo-event="onClick">
+<h2>BorderContainer sample</h2>
+<div id="bc1" data-dojo-type="dijit.layout.BorderContainer"
+	data-dojo-props='style:"width:600px; height:400px"'>
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='id:"center", region:"center"'>
+<button id="addStuff" data-dojo-type="dijit.form.Button">Add
+Stuff <script type="dojo/method" data-dojo-event="onClick">
 					this.set("disabled", true);
 					var bc = dijit.byId("bc1");
 
@@ -162,10 +165,9 @@
 						style:"height:100px"
 					}).placeAt(bc).set("content","<div>some HTML text</div>");
 
-				</script>
-			</button>
-		</div>
-	</div>
+				</script></button>
+</div>
+</div>
 
 </body>
 </html>

@@ -13,14 +13,14 @@ sleep(3);
 $name = empty($_REQUEST['name'])? "default" : $_REQUEST['name'];
 if(is_array($_FILES)){
 	$ar = array(
-		// lets just pass lots of stuff back and see what we find.
-		// the _FILES aren't coming through in IE6 (maybe 7)
+	// lets just pass lots of stuff back and see what we find.
+	// the _FILES aren't coming through in IE6 (maybe 7)
 		'status' => "success",
 		'name' => $name,
 		'request' => $_REQUEST,
 		'postvars' => $_POST,
 		'details' => $_FILES,
-		// and some static subarray just to see
+	// and some static subarray just to see
 		'foo' => array('foo'=>"bar")
 	);
 
@@ -28,7 +28,7 @@ if(is_array($_FILES)){
 	$ar = array(
 		'status' => "failed",
 		'details' => ""
-	);
+		);
 }
 
 // yeah, seems you have to wrap iframeIO stuff in textareas?

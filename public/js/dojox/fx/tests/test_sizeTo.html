@@ -2,28 +2,35 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>dojox.fx.sizeTo | experimental fx add-ons for the Dojo Toolkit</title>
-		
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:true, parseOnLoad: true" ></script>
-	<script type="text/javascript" src="../_base.js"></script>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/dijit.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-				.testBox {
-						position:absolute;
-						top:0; left:0;
-						width:50px;
-						height:50px;
-						background:#ededed;
-						border:1px solid #b7b7b7;
-						-moz-border-radius:6pt;
-						-webkit-border-radius:5pt;
-						overflow:hidden; 
-				}
-	</style>
-		<script type="text/javascript">
+<title>dojox.fx.sizeTo | experimental fx add-ons for the Dojo
+Toolkit</title>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../_base.js"></script>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/dijit.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+.testBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: #ededed;
+	border: 1px solid #b7b7b7;
+	-moz-border-radius: 6pt;
+	-webkit-border-radius: 5pt;
+	overflow: hidden;
+}
+</style>
+<script type="text/javascript">
 		
 	dojo.require("dojox.fx.ext-dojo.NodeList"); 
 
@@ -122,11 +129,11 @@
 	</script>
 </head>
 <body class="tundra">
-	<h1 class="testTitle">dojox.fx.sizeTo test</h1>
-		
-		<p>quick sizeTo API overview:</p>
+<h1 class="testTitle">dojox.fx.sizeTo test</h1>
 
-		<pre>
+<p>quick sizeTo API overview:</p>
+
+<pre>
 		dojox.fx.sizeTo({
 				// basic requirements:
 				node: "aDomNodeId", // or a domNode reference
@@ -135,37 +142,33 @@
 				method: "chain" // is default, or "combine"
 		});
 		</pre>
-		<p>
-		little test blocks (works in FF/win/mac + ie6) <a href="javascript:void(0)" onClick="dojo.query('.testBox').sizeTo({ width: 200, height: 200, duration:400 }).play()">dojo.query() test</a>
-		</p>
+<p>little test blocks (works in FF/win/mac + ie6) <a
+	href="javascript:void(0)"
+	onClick="dojo.query('.testBox').sizeTo({ width: 200, height: 200, duration:400 }).play()">dojo.query()
+test</a></p>
 
-		<div style="position:relative; height:60px; width:600px; margin:0 auto;">
-			<div id="sizer1" class="testBox">
-			mouse down / mouse up
-			</div>
-			<div id="sizer2" class="testBox" style="left:60px;" >
-			hover / exit
-			</div>
-			<div class="testBox noIdHere" style="left:120px; ">
-			<a href="javascript:noIdTest()">noIdTest()</a>
-			</div>
-			<div class="testBox" id="sizer3" style="left:180px;">
-			all of em'
-			</div>
-		</div>
-		<br style="clear:both;">
-		
-		(click the box labeled "all of em'" again to reset all nodes)
-				
-	HTML AFTER
-	<br>
+<div
+	style="position: relative; height: 60px; width: 600px; margin: 0 auto;">
+<div id="sizer1" class="testBox">mouse down / mouse up</div>
+<div id="sizer2" class="testBox" style="left: 60px;">hover / exit
+</div>
+<div class="testBox noIdHere" style="left: 120px;"><a
+	href="javascript:noIdTest()">noIdTest()</a></div>
+<div class="testBox" id="sizer3" style="left: 180px;">all of em'</div>
+</div>
+<br style="clear: both;">
 
-	<div style="position:relative; height:110px; width:600px; margin:0 auto;">
-		<div id="testNodeCache"	class="testBox" style="top: 0px; left: 0px; z-index: 1; height:90px; width:90px; margin:0 auto; background-color: black; color:#fff">This box moves when clicked to test parameter caching
-		</div>
-	</div>
+(click the box labeled "all of em'" again to reset all nodes) HTML AFTER
+<br>
 
-	<p>That's all, Folks!</p>
+<div
+	style="position: relative; height: 110px; width: 600px; margin: 0 auto;">
+<div id="testNodeCache" class="testBox"
+	style="top: 0px; left: 0px; z-index: 1; height: 90px; width: 90px; margin: 0 auto; background-color: black; color: #fff">This
+box moves when clicked to test parameter caching</div>
+</div>
+
+<p>That's all, Folks!</p>
 
 </body>
 </html>

@@ -23,9 +23,7 @@
 	The Dojo Core uses this stylesheet to quickly style HTML-based tests and demos.  Feel
 	free to use it as you will.
 */
-
 /*****************************************************************************************/
-
 /*
 	The below are borrowed from YUI's reset style sheets for pages and fonts.
 	We've verified w/ the YUI development team that these are entirely
@@ -37,36 +35,35 @@
 	http://developer.yahoo.net/yui/license.txt
 	version: 2.2.1
 */
-
-body, div, dl, dt, dd, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+body,div,dl,dt,dd,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td
+	{
 	margin: 0;
 	padding: 0;
 }
 
-fieldset, img {
+fieldset,img {
 	border: 0 none;
 }
 
-address, caption, cite, code, dfn, th, var {
-	font-style: normal; 
+address,caption,cite,code,dfn,th,var {
+	font-style: normal;
 	font-weight: normal;
 }
 
-caption, th {
+caption,th {
 	text-align: left;
 }
 
-q:before, q:after {
-	content:"";
+q:before,q:after {
+	content: "";
 }
 
-abbr, acronym {
-	border:0;
+abbr,acronym {
+	border: 0;
 }
+
 /* End YUI imported code. */
-
 /*****************************************************************************************/
-
 /* 
 	Begin Dojo additions.
 
@@ -90,71 +87,71 @@ abbr, acronym {
 
 	Default: 12px
 */
-body { 
-	font: 12px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; 
+body {
+	font: 12px Myriad, Helvetica, Tahoma, Arial, clean, sans-serif;
 	*font-size: 75%;
 }
 
 /* Headings */
 h1 {
-	font-size: 1.5em; 
+	font-size: 1.5em;
 	font-weight: normal;
-	line-height: 1em; 
+	line-height: 1em;
 	margin-top: 1em;
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 
-h2 { 
-	font-size: 1.1667em; 
-	font-weight: bold; 
-	line-height: 1.286em; 
-	margin-top: 1.929em; 
-	margin-bottom:0.643em;
+h2 {
+	font-size: 1.1667em;
+	font-weight: bold;
+	line-height: 1.286em;
+	margin-top: 1.929em;
+	margin-bottom: 0.643em;
 }
 
-h3, h4, h5, h6 {
-	font-size: 1em; 
-	font-weight: bold; 
-	line-height: 1.5em; 
-	margin-top: 1.5em; 
+h3,h4,h5,h6 {
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin-top: 1.5em;
 	margin-bottom: 0;
 }
 
 /* paragraphs, quotes and lists */
-p { 
-	font-size: 1em; 
-	margin-top: 1.5em; 
-	margin-bottom: 1.5em; 
+p {
+	font-size: 1em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	line-height: 1.5em;
 }
 
-blockquote { 
-	font-size: 0.916em; 
-	margin-top: 3.272em; 
-	margin-bottom: 3.272em; 
-	line-height: 1.636em; 
-	padding: 1.636em; 
-	border-top: 1px solid #ccc; 
+blockquote {
+	font-size: 0.916em;
+	margin-top: 3.272em;
+	margin-bottom: 3.272em;
+	line-height: 1.636em;
+	padding: 1.636em;
+	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
 
-ol li, ul li { 
-	font-size: 1em; 
-	line-height: 1.5em; 
+ol li,ul li {
+	font-size: 1em;
+	line-height: 1.5em;
 	margin: 0;
 }
 
 /* pre and code */
-pre, code { 
-	font-size:115%;
-	*font-size:100%;
-	font-family: Courier, "Courier New"; 
-	background-color: #efefef; 
+pre,code {
+	font-size: 115%;
+	*font-size: 100%;
+	font-family: Courier, "Courier New";
+	background-color: #efefef;
 	border: 1px solid #ccc;
 }
 
-pre { 
-	border-width: 1px 0; 
+pre {
+	border-width: 1px 0;
 	padding: 1.5em;
 }
 
@@ -169,28 +166,28 @@ pre {
 	These definitions make tabular data look presentable, particularly when presented
 	inline with paragraphs.
 */
-table {  font-size:100%; }
+table {
+	font-size: 100%;
+}
 
-.dojoTabular { 
-	border-collapse: collapse; 
-	border-spacing: 0; 
-	border: 1px solid #ccc; 
+.dojoTabular {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #ccc;
 	margin: 0 1.5em;
 }
 
-.dojoTabular th { 
-	text-align: center; 
+.dojoTabular th {
+	text-align: center;
 	font-weight: bold;
 }
 
-.dojoTabular thead,
-.dojoTabular tfoot { 
-	background-color: #efefef; 
-	border: 1px solid #ccc; 
-	border-width: 1px 0; 
+.dojoTabular thead,.dojoTabular tfoot {
+	background-color: #efefef;
+	border: 1px solid #ccc;
+	border-width: 1px 0;
 }
 
-.dojoTabular th,
-.dojoTabular td { 
+.dojoTabular th,.dojoTabular td {
 	padding: 0.25em 0.5em;
 }

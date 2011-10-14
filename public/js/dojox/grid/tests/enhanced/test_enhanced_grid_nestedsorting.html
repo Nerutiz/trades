@@ -2,33 +2,36 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html dir="ltr">
 <head>
-	<title>Test Nested sorting plugin of dojox.grid.EnhancedGrid</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<link rel=stylesheet href="support/common.css"/>
-	<style type="text/css">
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-			padding: 0.5em;
-		}
-		.title {
-			text-align:center;
-		}
- 		#grid {
-			width: 85.2em;
-			height: 50em;
-		}
-	</style>
-	<script type="text/javascript" src="../../../../dojo/dojo.js" 
-		djConfig="isDebug:true, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../../../../dijit/tests/_testCommon.js"></script>
-	<script type="text/javascript">
+<title>Test Nested sorting plugin of dojox.grid.EnhancedGrid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel=stylesheet href="support/common.css" />
+<style type="text/css">
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	padding: 0.5em;
+}
+
+.title {
+	text-align: center;
+}
+
+#grid {
+	width: 85.2em;
+	height: 50em;
+}
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<script type="text/javascript"
+	src="../../../../dijit/tests/_testCommon.js"></script>
+<script type="text/javascript">
 		dojo.require("dojox.grid.EnhancedGrid");
 		dojo.require("dojox.grid.enhanced.plugins.NestedSorting");
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 			var layout = [[
 				{name: 'Column A', field: 'id'},
 				{name: 'Column B', field: 'col2', nosort: true},
@@ -63,12 +66,19 @@
 				g.setSortIndex(sortFields);
 			}
 	</script>
-	<script type="text/javascript" src="../../tests/support/test_data.js"></script>
+<script type="text/javascript" src="../../tests/support/test_data.js"></script>
 </head>
 <body class="claro">
-	<h1 class="title">dojox.grid.EnhancedGrid - NestedSorting</h1>
-	<p><h3>Column A, ColumnB Column F are unsortable</h3></p>
-	<p><div id="gridDiv"></div></p>
-	<p><h3>Set new sort order as:[Column C(desc), Column H(asc)]:</h3> <input type='button' value='Set new Sorting Order' onclick='newSort()'/></p>
+<h1 class="title">dojox.grid.EnhancedGrid - NestedSorting</h1>
+<p>
+<h3>Column A, ColumnB Column F are unsortable</h3>
+</p>
+<p>
+<div id="gridDiv"></div>
+</p>
+<p>
+<h3>Set new sort order as:[Column C(desc), Column H(asc)]:</h3>
+<input type='button' value='Set new Sorting Order' onclick='newSort()' />
+</p>
 </body>
 </html>

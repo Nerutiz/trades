@@ -21,21 +21,24 @@
  *		adds border for active or selected state
  */
 .claro  .dijitColorPalette {
-  border: 1px solid #b5bcc7;
-  background: #ffffff;
-  -moz-border-radius: 0;
-  border-radius: 0;
+	border: 1px solid #b5bcc7;
+	background: #ffffff;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
+
 .claro .dijitColorPalette .dijitPaletteImg {
-  /* transparent (but clickable) <img> node inside of each <td>, overlaying the color swatch.
+	/* transparent (but clickable) <img> node inside of each <td>, overlaying the color swatch.
 	 * displays border around a color swatch
 	 * overrides border color in dijit.css */
+	border: 1px solid #d3d3d3;
+}
 
-  border: 1px solid #d3d3d3;
-}
 .claro .dijitColorPalette .dijitPaletteCellHover .dijitPaletteImg {
-  border: 1px solid #000000;
+	border: 1px solid #000000;
 }
-.claro .dijitColorPalette .dijitPaletteCellActive .dijitPaletteImg, .claro .dijitColorPalette .dijitPaletteCellSelected .dijitPaletteImg {
-  border: 2px solid #000000;
+
+.claro .dijitColorPalette .dijitPaletteCellActive .dijitPaletteImg,.claro .dijitColorPalette .dijitPaletteCellSelected .dijitPaletteImg
+	{
+	border: 2px solid #000000;
 }

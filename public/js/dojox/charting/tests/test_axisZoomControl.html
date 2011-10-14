@@ -1,22 +1,27 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-	    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
-		<title>Axis Zoom Control</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<style type="text/css">
-			@import "../../../dojo/resources/dojo.css";
-			@import "../../../dijit/themes/tundra/tundra.css";
-			@import "../../../dijit/tests/css/dijitTests.css";
-			@import "../../form/resources/RangeSlider.css";
-			#hrXAxisSlider .dijitSliderProgressBar{
-				height: 12px;
-				overflow: visible;
-				margin-top: -5px;
-			}
-		</style>
-		<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-		<script type="text/javascript">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>Axis Zoom Control</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../form/resources/RangeSlider.css";
+
+#hrXAxisSlider .dijitSliderProgressBar {
+	height: 12px;
+	overflow: visible;
+	margin-top: -5px;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
 			dojo.require("dojo.parser");
 			dojo.require("dojox.charting.Chart");
             dojo.require("dojox.charting.axis2d.Default");
@@ -62,28 +67,39 @@
 			}
 			dojo.addOnLoad(makeObjects);
 		</script>
-	</head>
-	<body class="tundra">
-		<h1>Axis Zoom Control</h1>
-		 Try to drag the slider endpoints and the bar to zoom X axis of the chart.
-		<div style="margin:20px">
-			<div id="chart" style="width: 800px; height: 400px;"></div>
-			<div id="hrXAxisSlider"
-				discreteValues="21"
-				onChange="zoomXAxis"
-				intermediateChanges="false"
-				dojoType="dojox.form.HorizontalRangeSlider"
-				showButtons="false"
-				style="width:748px;margin-left:40px"
-				value="0,100">
-				<ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration" style="height:1.2em;font-size:75%;color:gray;" count="11">
-					<li>0</li><li>10</li><li>20</li><li>30</li><li>40</li><li>50</li><li>60</li><li>70</li><li>80</li><li>90</li><li>100</li>
-				</ol>
-				<div dojoType="dijit.form.HorizontalRule" container="topDecoration" count=11 style="height:10px;"></div>
-			</div>
-		</div>
-		<p>X Axis Lower Value:&nbsp;<input readonly id="minValue" size="10" value="0"/></p>
-		<p>X Axis Upper Value:&nbsp;<input readonly id="maxValue" size="10" value="100"/></p>
-		<p>That's all Folks!</p>
-	</body>
+</head>
+<body class="tundra">
+<h1>Axis Zoom Control</h1>
+Try to drag the slider endpoints and the bar to zoom X axis of the
+chart.
+<div style="margin: 20px">
+<div id="chart" style="width: 800px; height: 400px;"></div>
+<div id="hrXAxisSlider" discreteValues="21" onChange="zoomXAxis"
+	intermediateChanges="false" dojoType="dojox.form.HorizontalRangeSlider"
+	showButtons="false" style="width: 748px; margin-left: 40px"
+	value="0,100">
+<ol dojoType="dijit.form.HorizontalRuleLabels" container="topDecoration"
+	style="height: 1.2em; font-size: 75%; color: gray;" count="11">
+	<li>0</li>
+	<li>10</li>
+	<li>20</li>
+	<li>30</li>
+	<li>40</li>
+	<li>50</li>
+	<li>60</li>
+	<li>70</li>
+	<li>80</li>
+	<li>90</li>
+	<li>100</li>
+</ol>
+<div dojoType="dijit.form.HorizontalRule" container="topDecoration"
+	count=11 style="height: 10px;"></div>
+</div>
+</div>
+<p>X Axis Lower Value:&nbsp;<input readonly id="minValue" size="10"
+	value="0" /></p>
+<p>X Axis Upper Value:&nbsp;<input readonly id="maxValue" size="10"
+	value="100" /></p>
+<p>That's all Folks!</p>
+</body>
 </html>

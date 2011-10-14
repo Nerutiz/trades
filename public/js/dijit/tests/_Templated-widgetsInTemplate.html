@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-		<title>testing widgetsInTemplate support</title>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>testing widgetsInTemplate support</title>
 
-		<style type="text/css">
-			@import "../themes/claro/document.css";
-			@import "../themes/claro/claro.css";
-		</style>
+<style type="text/css">
+@import "../themes/claro/document.css";
 
-		<script type="text/javascript" src="../../dojo/dojo.js"
-			data-dojo-config="isDebug: true"></script>
-		<script type="text/javascript">
+@import "../themes/claro/claro.css";
+</style>
+
+<script type="text/javascript" src="../../dojo/dojo.js"
+	data-dojo-config="isDebug: true"></script>
+<script type="text/javascript">
 			dojo.require("doh.runner");
 
 			dojo.require("dojo.parser");
@@ -397,93 +398,126 @@
 				doh.run();
 			});
 		</script>
-	</head>
-	<body class="claro">
-		<h1>testing widgetsInTemplate support</h1>
-		<textarea id="Test1Template" style="display:none;">
+</head>
+<body class="claro">
+<h1>testing widgetsInTemplate support</h1>
+<textarea id="Test1Template" style="display: none;">
 			<div>
 				<div data-dojo-attach-point="normalNode">normal node</div>
-				<button data-dojo-attach-point="buttonWidget" data-dojo-attach-event="onClick:onClick" data-dojo-type="dijit.form.Button">button #1</button>
-				<div data-dojo-attach-point="checkboxWidget" data-dojo-attach-event="onClick:onClick" data-dojo-type="dijit.form.CheckBox"></div> checkbox #1
-				<div data-dojo-attach-point="progressBarWidget" data-dojo-attach-event="onChange:onClick"
-					data-dojo-type="dijit.ProgressBar" data-dojo-props='value: 20, maximum: 200, style: "width:400px;"'></div>
+				<button data-dojo-attach-point="buttonWidget"
+	data-dojo-attach-event="onClick:onClick"
+	data-dojo-type="dijit.form.Button">button #1</button>
+				<div data-dojo-attach-point="checkboxWidget"
+	data-dojo-attach-event="onClick:onClick"
+	data-dojo-type="dijit.form.CheckBox"></div> checkbox #1
+				<div data-dojo-attach-point="progressBarWidget"
+	data-dojo-attach-event="onChange:onClick"
+	data-dojo-type="dijit.ProgressBar"
+	data-dojo-props='value: 20, maximum: 200, style: "width:400px;"'></div>
 			</div>
 		</textarea>
 
-		<div data-dojo-type="Test1Widget" data-dojo-props="id: 'test1Widget'"></div>
-	
-	
-		<textarea id="Test3Template" style="display:none;">
+<div data-dojo-type="Test1Widget" data-dojo-props="id: 'test1Widget'"></div>
+
+
+<textarea id="Test3Template" style="display: none;">
 			<div>
-				<div data-dojo-attach-point="checkboxWidget" data-dojo-type="dijit.form.CheckBox"></div> checkbox #3
+				<div data-dojo-attach-point="checkboxWidget"
+	data-dojo-type="dijit.form.CheckBox"></div> checkbox #3
 				<div data-dojo-attach-point="containerNode"></div>
 			</div>
 		</textarea>
 
-		<div data-dojo-type="Test3Widget" data-dojo-props="id: 'test3Widget'">
-			<span>hello world</span>
-			<b style="border: 1px solid blue;">this is my
-				<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.1'">first button</button>
-			</b>
-			<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.2'">another button</button>
-			<i>and some more</i>
-			<div style="border: 1px solid red;">
-				<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="style: {border: '1px solid gray'}, id: '3.3'">
-					<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.nested'">a nested button</button>
-					<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.nested2'">another nested button</button>
-				</div>
-				<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.4'">yet another button</button>
-				<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.5'">yet yet another button</button>
-			</div>
-		</div>
+<div data-dojo-type="Test3Widget" data-dojo-props="id: 'test3Widget'">
+<span>hello world</span> <b style="border: 1px solid blue;">this is
+my
+<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.1'">first
+button</button>
+</b>
+<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.2'">another
+button</button>
+<i>and some more</i>
+<div style="border: 1px solid red;">
+<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props="style: {border: '1px solid gray'}, id: '3.3'">
+<button data-dojo-type="dijit.form.Button"
+	data-dojo-props="id: '3.nested'">a nested button</button>
+<button data-dojo-type="dijit.form.Button"
+	data-dojo-props="id: '3.nested2'">another nested button</button>
+</div>
+<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.4'">yet
+another button</button>
+<button data-dojo-type="dijit.form.Button" data-dojo-props="id: '3.5'">yet
+yet another button</button>
+</div>
+</div>
 
-		<!-- Test templated widget containing layout widgets in template -->
-		<textarea id="Test4Template" style="display:none;">
+<!-- Test templated widget containing layout widgets in template -->
+<textarea id="Test4Template" style="display: none;">
 			<div>
-				<div data-dojo-type="dijit.layout.TabContainer" data-dojo-props="style: {height: '5em', width: '100em'}" data-dojo-attach-point="tabCont">
-					<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title: 'Tab 1'" data-dojo-attach-point="tab1">
+				<div data-dojo-type="dijit.layout.TabContainer"
+	data-dojo-props="style: {height: '5em', width: '100em'}"
+	data-dojo-attach-point="tabCont">
+					<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props="title: 'Tab 1'" data-dojo-attach-point="tab1">
 						pane 1
 					</div>
-					<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="title: 'Tab 2'" data-dojo-attach-point="tab2">
+					<div data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props="title: 'Tab 2'" data-dojo-attach-point="tab2">
 						pane 2
 					</div>
 				</div>
 			</div>
 		</textarea>
 
-		<div data-dojo-type="Test4Widget" data-dojo-props="id: 'test4Widget'"></div>
-	
-		<!-- Test templated widget containing container and nested widgets in template -->
-		<textarea id="Test5Template" style="display:none;">
+<div data-dojo-type="Test4Widget" data-dojo-props="id: 'test4Widget'"></div>
+
+<!-- Test templated widget containing container and nested widgets in template -->
+<textarea id="Test5Template" style="display: none;">
 			<div>
-				<div data-dojo-type="TestLayoutWidget" data-dojo-attach-point="layout">
-					<div data-dojo-type="TestCtndWidget" data-dojo-attach-point="layChild1"></div>
-					<div data-dojo-type="TestCtndWidget" data-dojo-attach-point="layChild2"></div>
+				<div data-dojo-type="TestLayoutWidget"
+	data-dojo-attach-point="layout">
+					<div data-dojo-type="TestCtndWidget"
+	data-dojo-attach-point="layChild1"></div>
+					<div data-dojo-type="TestCtndWidget"
+	data-dojo-attach-point="layChild2"></div>
 				</div>
-				<div data-dojo-type="TestCtnrWidget" data-dojo-attach-point="container">
-					<div data-dojo-type="TestCtndWidget" data-dojo-attach-point="contained1"></div>
-					<div data-dojo-type="TestCtndWidget" data-dojo-attach-point="contained2"></div>
+				<div data-dojo-type="TestCtnrWidget"
+	data-dojo-attach-point="container">
+					<div data-dojo-type="TestCtndWidget"
+	data-dojo-attach-point="contained1"></div>
+					<div data-dojo-type="TestCtndWidget"
+	data-dojo-attach-point="contained2"></div>
 				</div>
 				<div data-dojo-type="TestStubWidget" data-dojo-attach-point="stub1"></div>
-				<div data-dojo-type="TestNonCtnrWidget" data-dojo-attach-point="nonContainer">
-					<div data-dojo-type="TestStubWidget" data-dojo-attach-point="nonContained1"></div>
-					<div data-dojo-type="TestStubWidget" data-dojo-attach-point="nonContained2"></div>
+				<div data-dojo-type="TestNonCtnrWidget"
+	data-dojo-attach-point="nonContainer">
+					<div data-dojo-type="TestStubWidget"
+	data-dojo-attach-point="nonContained1"></div>
+					<div data-dojo-type="TestStubWidget"
+	data-dojo-attach-point="nonContained2"></div>
 				</div>
-				<div data-dojo-type="TestCtnrWidget" data-dojo-attach-point="threeLevel">
-					<div data-dojo-type="TestNonCtnrWidget" data-dojo-attach-point="secondLevel">
-						<div data-dojo-type="TestStubWidget" data-dojo-attach-point="bottomLevel"></div>
+				<div data-dojo-type="TestCtnrWidget"
+	data-dojo-attach-point="threeLevel">
+					<div data-dojo-type="TestNonCtnrWidget"
+	data-dojo-attach-point="secondLevel">
+						<div data-dojo-type="TestStubWidget"
+	data-dojo-attach-point="bottomLevel"></div>
 					</div>
 				</div>
-				<div data-dojo-type="TestNonCtnrWidget" data-dojo-attach-point="anotherThree">
-					<div data-dojo-type="TestCtnrWidget" data-dojo-attach-point="anotherSecond">
-						<div data-dojo-type="TestCtndWidget" data-dojo-attach-point="anotherBottom"></div>
+				<div data-dojo-type="TestNonCtnrWidget"
+	data-dojo-attach-point="anotherThree">
+					<div data-dojo-type="TestCtnrWidget"
+	data-dojo-attach-point="anotherSecond">
+						<div data-dojo-type="TestCtndWidget"
+	data-dojo-attach-point="anotherBottom"></div>
 					</div>
 				</div>
 			</div>
 		</textarea>
 
-		<div data-dojo-type="Test5Widget" data-dojo-props="id: 'test5Widget'"></div>
+<div data-dojo-type="Test5Widget" data-dojo-props="id: 'test5Widget'"></div>
 
-		<div data-dojo-type="Missing" data-dojo-props="id: 'missing'"></div>
-	</body>
+<div data-dojo-type="Missing" data-dojo-props="id: 'missing'"></div>
+</body>
 </html>

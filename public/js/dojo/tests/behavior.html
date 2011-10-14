@@ -1,14 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<title>Testing dojo.behavior</title>
-		<style type="text/css">
-			@import "../resources/dojo.css";
-		</style>
-		<script type="text/javascript" 
-			src="../dojo.js" djConfig="isDebug: true, popup: true"></script>
-		<script type="text/javascript">
+<head>
+<title>Testing dojo.behavior</title>
+<style type="text/css">
+@import "../resources/dojo.css";
+</style>
+<script type="text/javascript" src="../dojo.js"
+	djConfig="isDebug: true, popup: true"></script>
+<script type="text/javascript">
 			dojo.require("doh.runner");
 			define("dojo/tests/bahavior/script", ["dojo", "dojo/behavior"], function(dojo) {
 
@@ -94,14 +94,12 @@
 			});
       });
 		</script>
-	</head>
-	<body>
-		<div class="foo" id="fooOne">
-			<span>.foo &gt; span</span>	
-			<div class="bar">
-				<span>.foo &gt; .bar &gt; span</span>	
-			</div>
-		</div>
-		<input type="text" id="blah" class="foo blah" name="thinger" value="thinger" tabIndex="0">
-	</body>
+</head>
+<body>
+<div class="foo" id="fooOne"><span>.foo &gt; span</span>
+<div class="bar"><span>.foo &gt; .bar &gt; span</span></div>
+</div>
+<input type="text" id="blah" class="foo blah" name="thinger"
+	value="thinger" tabIndex="0">
+</body>
 </html>

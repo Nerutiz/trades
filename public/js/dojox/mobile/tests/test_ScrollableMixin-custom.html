@@ -1,34 +1,37 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<title>ScrollableMixin-custom</title>
-		<style>
-		html, body{
-			height: 100%;
-			overflow: hidden;
-			width: 100%;
-			margin: 0px;
-			padding: 0px;
-		}
-		#foo {
-			height: 100%;
-			overflow: hidden;
-		}
-		#header1 {
-			position: absolute;
-			margin: 0px;
-			width: 100%;
-			top: 0px;
-			background-color: cyan;
-			z-index: 1;
-		}
-			
-		</style>
-		<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+<head>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>ScrollableMixin-custom</title>
+<style>
+html,body {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
 
-		<script language="JavaScript" type="text/javascript">
+#foo {
+	height: 100%;
+	overflow: hidden;
+}
+
+#header1 {
+	position: absolute;
+	margin: 0px;
+	width: 100%;
+	top: 0px;
+	background-color: cyan;
+	z-index: 1;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="parseOnLoad: true"></script>
+
+<script language="JavaScript" type="text/javascript">
 			//dojo.require("dojo.parser"); // Use the lightweight parser.
 			dojo.require("dojox.mobile.parser");
 			dojo.require("dojox.mobile");
@@ -59,52 +62,53 @@ dojo.declare(
 });
 			
 		</script>
-	</head>
-	<body>
-		<h1 id="header1">Fixed Header</h1>
-		<div id="foo" dojoType="dojox.mobile.ScrollablePane" fixedHeader="header1">
-			<ol>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-				<li>Item</li>
-			<ol>
-		</div>
-	</body>
+</head>
+<body>
+<h1 id="header1">Fixed Header</h1>
+<div id="foo" dojoType="dojox.mobile.ScrollablePane"
+	fixedHeader="header1">
+<ol>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<li>Item</li>
+	<ol>
+</div>
+</body>
 </html>

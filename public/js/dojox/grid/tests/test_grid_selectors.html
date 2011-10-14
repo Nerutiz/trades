@@ -2,31 +2,36 @@
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Test dojox.grid.Grid Basic</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-	<style type="text/css">
-		@import "../resources/Grid.css";
-		@import "../resources/tundraGrid.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		body {
-			font-size: 0.9em;
-			font-family: Geneva, Arial, Helvetica, sans-serif;
-		}
-		.heading {
-			font-weight: bold;
-			padding-bottom: 0.25em;
-		}
-				
-		#grid {
-			border: 1px solid #333;
-			width: 35em;
-			height: 30em;
-		}
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" 
-		djConfig="isDebug:false, parseOnLoad: true"></script>
-	<script type="text/javascript">
+<title>Test dojox.grid.Grid Basic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<style type="text/css">
+@import "../resources/Grid.css";
+
+@import "../resources/tundraGrid.css";
+
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
+
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.heading {
+	font-weight: bold;
+	padding-bottom: 0.25em;
+}
+
+#grid {
+	border: 1px solid #333;
+	width: 35em;
+	height: 30em;
+}
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dijit.dijit");
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.grid._CheckBoxSelector");
@@ -34,8 +39,8 @@
 		dojo.require("dojo.data.ItemFileWriteStore");
 		dojo.require("dojo.parser");
 	</script>
-	<script type="text/javascript" src="support/test_data.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="support/test_data.js"></script>
+<script type="text/javascript">
 		var layout_check = [{
 			type: "dojox.grid._CheckBoxSelector"
 		},{ cells: [[
@@ -69,17 +74,14 @@
 	</script>
 </head>
 <body class="tundra">
-	<div class="heading">dojox.grid.Grid CheckBox Selector</div>
-	<div jsId="grid_check" id="grid_check" dojoType="dojox.grid.DataGrid" 
-		store="test_store" query="{ id: '*' }" 
-		structure="layout_check"></div>
-	<div class="heading">dojox.grid.Grid Radio Selector</div>
-	<div jsId="grid_radio" id="grid_radio" dojoType="dojox.grid.DataGrid" 
-		store="test_store" query="{ id: '*' }" 
-		structure="layout_radio"></div>
-	<div class="heading">dojox.grid.Grid CheckBox Selector - no data</div>
-	<div jsId="grid_empty" id="grid_empty" dojoType="dojox.grid.DataGrid" 
-		store="test_store" query="{ id: 'abc' }" 
-		structure="layout_check"></div>
+<div class="heading">dojox.grid.Grid CheckBox Selector</div>
+<div jsId="grid_check" id="grid_check" dojoType="dojox.grid.DataGrid"
+	store="test_store" query="{ id: '*' }" structure="layout_check"></div>
+<div class="heading">dojox.grid.Grid Radio Selector</div>
+<div jsId="grid_radio" id="grid_radio" dojoType="dojox.grid.DataGrid"
+	store="test_store" query="{ id: '*' }" structure="layout_radio"></div>
+<div class="heading">dojox.grid.Grid CheckBox Selector - no data</div>
+<div jsId="grid_empty" id="grid_empty" dojoType="dojox.grid.DataGrid"
+	store="test_store" query="{ id: 'abc' }" structure="layout_check"></div>
 </body>
 </html>

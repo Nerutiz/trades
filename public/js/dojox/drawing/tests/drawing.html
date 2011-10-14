@@ -1,42 +1,51 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-    <title>Drawing Test</title>
-	<style>
-		@import url("../../../dijit/themes/dijit.css");
-		@import url("../../../dojox/drawing/resources/drawing.css");
-		@import url("../../../dojox/drawing/resources/toolbar.css");
-		@import url("../../../dojox/drawing/resources/GreekPalette.css");
-		href, body{
-		}
-		.drawing{
-			margin-left:52px;
-			width:800px;
-			height:500px;
-			border:1px solid #ccc;
-			cursor:crosshair;
-		}
-		#data{
-			display:block;
-			height:100px;
-			width:855px;
-			margin-top:5px;
-		}
-		button{
-			border:2px solid #ccc;
-			border-color:#D9E1F9 #B5BCD0 #878E9D #C6CEE4;
-			background-color:#CDDCF3;
-			cursor:pointer;
-		}
-	</style>
+<title>Drawing Test</title>
+<style>
+@import url("../../../dijit/themes/dijit.css");
 
-	<script>
+@import url("../../../dojox/drawing/resources/drawing.css");
+
+@import url("../../../dojox/drawing/resources/toolbar.css");
+
+@import url("../../../dojox/drawing/resources/GreekPalette.css");
+
+href,body {
+	
+}
+
+.drawing {
+	margin-left: 52px;
+	width: 800px;
+	height: 500px;
+	border: 1px solid #ccc;
+	cursor: crosshair;
+}
+
+#data {
+	display: block;
+	height: 100px;
+	width: 855px;
+	margin-top: 5px;
+}
+
+button {
+	border: 2px solid #ccc;
+	border-color: #D9E1F9 #B5BCD0 #878E9D #C6CEE4;
+	background-color: #CDDCF3;
+	cursor: pointer;
+}
+</style>
+
+<script>
 		djConfig = {
 			isDebug:false,
 			parseOnLoad:true
 		};
 	</script>
-	<script src="../../../dojo/dojo.js"></script>
-	<script>
+<script src="../../../dojo/dojo.js"></script>
+<script>
 		dojo.require("dojo.parser");
 		dojo.require("dojox.drawing");
 		// custom Tools and Plugins need to be required
@@ -144,42 +153,45 @@
 
 </head>
 <body>
-    <h2>Drawing Test</h2>
-	<div id="conEdit" contenteditable="true"></div>
-	<div id="wrapper">
-		<div dojoType="dojox.drawing.ui.dom.Toolbar" drawingId="drawingNode" class="drawingToolbar vertical">
-			<div tool="dojox.drawing.tools.Line" selected="false">Line</div>
-			<div tool="dojox.drawing.tools.Rect" selected="false">Rect</div>
-			<div tool="dojox.drawing.tools.Ellipse" selected="false">Ellipse</div>
-			<div tool="dojox.drawing.tools.Path" selected="true">Path</div>
-			<div tool="dojox.drawing.tools.TextBlock" selected="false">Text</div>
-			<div tool="dojox.drawing.tools.Arrow" selected="false">Arrow</div>
-			<div tool="dojox.drawing.tools.custom.Vector" selected="false">Vector</div>
-			<div tool="dojox.drawing.tools.custom.Axes" selected="false">Axes</div>
-			<div plugin="dojox.drawing.ui.dom.Pan" options="{}">Pan</div>
-			<div plugin="dojox.drawing.ui.dom.Zoom" options="{zoomInc:.1,minZoom:.5,maxZoom:2}">Zoom</div>
+<h2>Drawing Test</h2>
+<div id="conEdit" contenteditable="true"></div>
+<div id="wrapper">
+<div dojoType="dojox.drawing.ui.dom.Toolbar" drawingId="drawingNode"
+	class="drawingToolbar vertical">
+<div tool="dojox.drawing.tools.Line" selected="false">Line</div>
+<div tool="dojox.drawing.tools.Rect" selected="false">Rect</div>
+<div tool="dojox.drawing.tools.Ellipse" selected="false">Ellipse</div>
+<div tool="dojox.drawing.tools.Path" selected="true">Path</div>
+<div tool="dojox.drawing.tools.TextBlock" selected="false">Text</div>
+<div tool="dojox.drawing.tools.Arrow" selected="false">Arrow</div>
+<div tool="dojox.drawing.tools.custom.Vector" selected="false">Vector</div>
+<div tool="dojox.drawing.tools.custom.Axes" selected="false">Axes</div>
+<div plugin="dojox.drawing.ui.dom.Pan" options="{}">Pan</div>
+<div plugin="dojox.drawing.ui.dom.Zoom"
+	options="{zoomInc:.1,minZoom:.5,maxZoom:2}">Zoom</div>
 
-		</div>
+</div>
 
-		<div dojoType="dojox.drawing.Drawing" id="drawingNode" jsId="myDrawing" drawingType="canvas" class="drawing"
-			 plugins="[{'name':'dojox.drawing.plugins.drawing.Grid', 'options':{gap:100}},{'name':'dojox.drawing.plugins.drawing.GreekPalette'}]">
+<div dojoType="dojox.drawing.Drawing" id="drawingNode" jsId="myDrawing"
+	drawingType="canvas" class="drawing"
+	plugins="[{'name':'dojox.drawing.plugins.drawing.Grid', 'options':{gap:100}},{'name':'dojox.drawing.plugins.drawing.GreekPalette'}]">
 
-		</div>
-	</div>
+</div>
+</div>
 
-	<br/>
-	<br/>
-	<button id="import">Import</button>
-	<button id="export">Export</button>
-	<button id="selectall">Select All</button>
-	<button id="clear">Clear Drawing</button>
-	&nbsp;&nbsp;&nbsp;
-	<button id="blue">Change defaults to Blue</button>
-	<button id="red">Change defaults to Red</button>
-	<button id="yellow">Change selected to Yellow</button>
-	<br/>
-	<br/>
+<br />
+<br />
+<button id="import">Import</button>
+<button id="export">Export</button>
+<button id="selectall">Select All</button>
+<button id="clear">Clear Drawing</button>
+&nbsp;&nbsp;&nbsp;
+<button id="blue">Change defaults to Blue</button>
+<button id="red">Change defaults to Red</button>
+<button id="yellow">Change selected to Yellow</button>
+<br />
+<br />
 
-	<textarea id="data"></textarea>
+<textarea id="data"></textarea>
 </body>
 </html>

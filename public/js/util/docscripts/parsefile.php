@@ -1,8 +1,8 @@
 <?php
 
-//	Simple single-file doc validation utility, using our php-based `jsdoc` parser. 
+//	Simple single-file doc validation utility, using our php-based `jsdoc` parser.
 //	To be used as a post-commit hook?
-// 
+//
 //	to use:
 //		php -q parsefile.php dojox/data/AndOrReadStore.js
 //
@@ -30,16 +30,16 @@ function doc_passes($ns, $file, $debug){
 
 function doc_test($ns, $file, $debug){
 	// the testing of a single file. this is where the actual testing goes.
-	
+
 	try{
 		$ret = true;
 		$data = dojo_get_contents($ns, $file);
 		// test other things. like we're expecting at the _very_ least a $data['#provides'] key?
 		if(empty($data['#provides'])){
-			if($debug){ 
-				print "Warning: no provide() determined. [" . $ns . "/" . $file . "]\n"; 
+			if($debug){
+				print "Warning: no provide() determined. [" . $ns . "/" . $file . "]\n";
 			}
-			$ret = false;	 
+			$ret = false;
 		}else{
 			if(count($data['#provides']) > 1){
 				if($debug){
@@ -48,12 +48,12 @@ function doc_test($ns, $file, $debug){
 				}
 			}
 		}
-		
+
 		if(count($data) == 0){
 			if($debug){ print "Error: No data found. [" . $ns . "/" . $file . "]"; }
 			$ret = false;
 		}
-		
+
 		return $ret;
 	}catch (Exception $e){
 		print "Error: Exception trapped processing [" . $ns . "/" . $file . "]\nException:\n";
@@ -63,7 +63,7 @@ function doc_test($ns, $file, $debug){
 }
 
 if($argc){
-	
+
 	$argfile = $argv[1];
 	$debug = in_array("--debug", $argv);
 	if($argfile == "--all"){

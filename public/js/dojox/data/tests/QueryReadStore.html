@@ -2,18 +2,23 @@
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/tundra/tundra_rtl.css";
-	</style>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<title>Query read store</title>
+@import "../../../dijit/themes/tundra/tundra.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../../../dojo/data/util/simpleFetch.js"></script>
-	<script type="text/javascript" src="../../../dojox/data/QueryReadStore.js"></script>
-	<script type="text/javascript">
+@import "../../../dijit/themes/tundra/tundra_rtl.css";
+</style>
+
+<title>Query read store</title>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript"
+	src="../../../dojo/data/util/simpleFetch.js"></script>
+<script type="text/javascript"
+	src="../../../dojox/data/QueryReadStore.js"></script>
+<script type="text/javascript">
 		dojo.require("dijit.form.ComboBox");
 		dojo.require("dijit.form.FilteringSelect");
 		dojo.require("dojox.data.QueryReadStore");
@@ -110,44 +115,57 @@
 		}
 	</script>
 
-	<style>
-	     fieldset {
-	         border:1px solid black;
-	         display:inline;
-	         padding:10px;
-	     }
-	     div.disabled {
-	         opacity:0.1;
-	     }
-	</style>
+<style>
+fieldset {
+	border: 1px solid black;
+	display: inline;
+	padding: 10px;
+}
+
+div.disabled {
+	opacity: 0.1;
+}
+</style>
 </head>
-<body class="tundra" style="margin:20px;">
-	<div dojoType="ComboBoxReadStore" jsId="store" url="stores/QueryReadStore.php" requestMethod="get"></div>
-	This is a ComboBox: <input id="cb" dojoType="dijit.form.ComboBox" store="store" pageSize="5" />
-	<br /><br /><hr />
+<body class="tundra" style="margin: 20px;">
+<div dojoType="ComboBoxReadStore" jsId="store"
+	url="stores/QueryReadStore.php" requestMethod="get"></div>
+This is a ComboBox:
+<input id="cb" dojoType="dijit.form.ComboBox" store="store" pageSize="5" />
+<br />
+<br />
+<hr />
 
-	This is a FilteringSelect: <input id="fs" dojoType="dijit.form.FilteringSelect" store="store" pageSize="5" />
-	<br />
-	<form id="filteringSelectForm">
-		<input id="selectById" value="0" size="3" />
-		<input type="button" value="set by id" onclick="dijit.byId('fs').setValue(dojo.byId('selectById').value)" />
-	</form>
-	
-	<br /><br /><hr />
+This is a FilteringSelect:
+<input id="fs" dojoType="dijit.form.FilteringSelect" store="store"
+	pageSize="5" />
+<br />
+<form id="filteringSelectForm"><input id="selectById" value="0"
+	size="3" /> <input type="button" value="set by id"
+	onclick="dijit.byId('fs').setValue(dojo.byId('selectById').value)" />
+</form>
 
-	This ComboBox uses a customized QueryReadStore, it prepares the query-string for the URL that
-	way that the paging parameters "start" and "count" are also send.<br />
-	<div dojoType="ServerPagingReadStore" jsId="serverPagingStore" url="stores/QueryReadStore.php" requestMethod="get"></div>
-	<input dojoType="dijit.form.ComboBox" store="serverPagingStore" pageSize="5" />
-	<br />
-	<a href="javascript://" onclick="var d = dojo.byId('pagingCode'); d.style.display= d.style.display=='none'?'block':'none';">Click here to  see the code!</a>
-<div id="pagingCode" style="display:none;">
-	The HTML might look like this.
-	<pre>
+<br />
+<br />
+<hr />
+
+This ComboBox uses a customized QueryReadStore, it prepares the
+query-string for the URL that way that the paging parameters "start" and
+"count" are also send.
+<br />
+<div dojoType="ServerPagingReadStore" jsId="serverPagingStore"
+	url="stores/QueryReadStore.php" requestMethod="get"></div>
+<input dojoType="dijit.form.ComboBox" store="serverPagingStore"
+	pageSize="5" />
+<br />
+<a href="javascript://"
+	onclick="var d = dojo.byId('pagingCode'); d.style.display= d.style.display=='none'?'block':'none';">Click
+here to see the code!</a>
+<div id="pagingCode" style="display: none;">The HTML might look
+like this. <pre>
 &lt;div dojoType="ServerPagingReadStore" jsId="serverPagingStore" url="stores/QueryReadStore.php" requestMethod="get"&gt;&lt;/div&gt;
 &lt;input dojoType="dijit.form.ComboBox" store="serverPagingStore" pageSize="10" /&gt;
-	</pre>
-	<pre>
+	</pre> <pre>
 		dojo.require("dojox.data.QueryReadStore");
 		dojo.provide("ServerPagingReadStore");
 		dojo.declare("ServerPagingReadStore", dojox.data.QueryReadStore, {
@@ -156,45 +174,40 @@
 				return this.inherited("fetch", arguments);
 			}
 		});
-	</pre>
-</div>
-	<br /><br />
-	
-	<hr />
-	
-	<form id="fetchForm">
-		<fieldset title="requestMethod">
-		    <legend>requestMethod</legend>
-			get <input type="radio" value="get" checked="checked" name="requestMethod" />
-			post <input type="radio" value="post" name="requestMethod" />
-		</fieldset>
-		
-		<fieldset title="queryOptions">
-			<legend>queryOptions</legend>
+	</pre></div>
+<br />
+<br />
 
-			<fieldset id="ignoreCaseFieldset">
-				<legend><input type="checkbox" id="ignoreCaseEnabled" /> ignoreCase</legend>
-				<div class="disabled">
-					true <input type="radio" value="0" checked="checked" name="ignoreCase" />
-					false <input type="radio" value="1" name="ignoreCase" />
-				</div>
-			</fieldset>
-			<fieldset id="deepFieldset">
-				<legend><input type="checkbox" id="deepEnabled" /> deep</legend>
-				<div class="disabled">
-					true <input type="radio" value="0" name="deep" />
-					false <input type="radio" value="1" name="deep" checked="checked" />
-				</div>
-			</fieldset>
-		</fieldset>
-		<fieldset title="paging">
-			<legend>paging</legend>
-			start: <input id="pagingStart" value="0" size="3" />
-			count: <input id="pagingCount" value="10" size="3"  />
-			<br /><br />
-			do client paging: <input id="doClientPaging" type="checkbox" checked="checked" />
-		</fieldset>
-		<script>
+<hr />
+
+<form id="fetchForm">
+<fieldset title="requestMethod"><legend>requestMethod</legend>
+get <input type="radio" value="get" checked="checked"
+	name="requestMethod" /> post <input type="radio" value="post"
+	name="requestMethod" /></fieldset>
+
+<fieldset title="queryOptions"><legend>queryOptions</legend>
+
+<fieldset id="ignoreCaseFieldset"><legend><input
+	type="checkbox" id="ignoreCaseEnabled" /> ignoreCase</legend>
+<div class="disabled">true <input type="radio" value="0"
+	checked="checked" name="ignoreCase" /> false <input type="radio"
+	value="1" name="ignoreCase" /></div>
+</fieldset>
+<fieldset id="deepFieldset"><legend><input
+	type="checkbox" id="deepEnabled" /> deep</legend>
+<div class="disabled">true <input type="radio" value="0"
+	name="deep" /> false <input type="radio" value="1" name="deep"
+	checked="checked" /></div>
+</fieldset>
+</fieldset>
+<fieldset title="paging"><legend>paging</legend> start: <input
+	id="pagingStart" value="0" size="3" /> count: <input id="pagingCount"
+	value="10" size="3" /> <br />
+<br />
+do client paging: <input id="doClientPaging" type="checkbox"
+	checked="checked" /></fieldset>
+<script>
 		    var fieldsets = ["ignoreCaseFieldset", "deepFieldset"];
 		    for (var i=0; i<fieldsets.length; i++) {
 		        dojo.connect(dojo.byId(fieldsets[i]), "onchange", toggleFieldset);
@@ -210,12 +223,12 @@
 					}
 				}
 		    }
-		</script>
-		
-		<br /><br />
-		<input id="searchText" type="text" value="a">
-		<input id="searchButton" type="button" value="store.fetch()" onclick="doSearch()" />
-	</form>
-	<div id="fetchOutput" style="background-color:#FFDDDD; margin-top:1em; float:left;"></div>
+		</script> <br />
+<br />
+<input id="searchText" type="text" value="a"> <input
+	id="searchButton" type="button" value="store.fetch()"
+	onclick="doSearch()" /></form>
+<div id="fetchOutput"
+	style="background-color: #FFDDDD; margin-top: 1em; float: left;"></div>
 </body>
 </html>

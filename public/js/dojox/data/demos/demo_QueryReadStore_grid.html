@@ -1,18 +1,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dojox QueryReadStore+grid Demo</title>
-	<style type="text/css">
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-		/* BE SURE TO NEVER FORGET IMPORTING THE GRID's CSS, or you will wonder why the 
-		   grid looks so strange (or even think that it doesnt work) */
-		@import "../../../dojox/grid/resources/tundraGrid.css";
-	</style>
+<title>Dojox QueryReadStore+grid Demo</title>
+<style type="text/css">
+@import "../../../dijit/themes/tundra/tundra.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:true, parseOnLoad: true, useCommentedJson: true"></script>
-	<script type="text/javascript">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+/* BE SURE TO NEVER FORGET IMPORTING THE GRID's CSS, or you will wonder why the 
+		   grid looks so strange (or even think that it doesnt work) */
+@import "../../../dojox/grid/resources/tundraGrid.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true, useCommentedJson: true"></script>
+<script type="text/javascript">
 		dojo.require("dojox.grid.DataGrid");
 		dojo.require("dojox.data.QueryReadStore");
 		dojo.require("dojo.parser"); // scan page for widgets and instantiate them
@@ -75,34 +79,40 @@
 </head>
 <body class="tundra">
 
-	<h1 class="testTitle">Dojox QueryReadStore + Grid demo - paging, sortable and filterable all server-side</h1>
- 
-	<h2>The grid is in HTML, store, etc. are JS, sorting is added by extending the model class</h2>
-	<b>Capabilities:</b> load data from server, show data, paging (30 rows at a time), sort, filter<br />
-	You can see that data are loaded upon demand by scrolling down in the grid below line #30,
-	open FireBug and you see a server request being issued, to retreive another 30 rows/items.<br />
-	<br /><br />
-	<input type="text" onkeyup="doSearch(this)" />
-	<div id="grid1" jsid="grid1" dojoType="dojox.grid.DataGrid" query="{ name: '*' }" rowsPerPage="30" style="height:300px; width:800px;"></div>
+<h1 class="testTitle">Dojox QueryReadStore + Grid demo - paging,
+sortable and filterable all server-side</h1>
 
-	<h2>The store and grid are "generated" and connected in HTML, filtering is done via JS</h2>
-	This store is by default sorted descending by name (not as the one above, which is ascending).
-	<div dojoType="dojox.data.QueryReadStore"
-		jsId="store2"
-		url="../tests/stores/QueryReadStore.php"
-		requestMethod="post"></div>
-	<!--<div dojoType="dojox.grid._data.DojoData"
+<h2>The grid is in HTML, store, etc. are JS, sorting is added by
+extending the model class</h2>
+<b>Capabilities:</b>
+load data from server, show data, paging (30 rows at a time), sort,
+filter
+<br />
+You can see that data are loaded upon demand by scrolling down in the
+grid below line #30, open FireBug and you see a server request being
+issued, to retreive another 30 rows/items.
+<br />
+<br />
+<br />
+<input type="text" onkeyup="doSearch(this)" />
+<div id="grid1" jsid="grid1" dojoType="dojox.grid.DataGrid"
+	query="{ name: '*' }" rowsPerPage="30"
+	style="height: 300px; width: 800px;"></div>
+
+<h2>The store and grid are "generated" and connected in HTML,
+filtering is done via JS</h2>
+This store is by default sorted descending by name (not as the one
+above, which is ascending).
+<div dojoType="dojox.data.QueryReadStore" jsId="store2"
+	url="../tests/stores/QueryReadStore.php" requestMethod="post"></div>
+<!--<div dojoType="dojox.grid._data.DojoData"
 		jsId="model2"
 		store="store2"
 		sortFields="[{attribute: 'capital', descending: true}]"
 		rowsPerPage="30"></div>-->
-	<div dojoType="dojox.grid.DataGrid"
-		id="grid2" jsid="grid2"
-		store="store2"
-		query="{ name: '*' }"
-		rowsPerPage="30"
-		structure="gridLayout"
-		style="height:300px; width:800px;"></div>
+<div dojoType="dojox.grid.DataGrid" id="grid2" jsid="grid2"
+	store="store2" query="{ name: '*' }" rowsPerPage="30"
+	structure="gridLayout" style="height: 300px; width: 800px;"></div>
 
 
 

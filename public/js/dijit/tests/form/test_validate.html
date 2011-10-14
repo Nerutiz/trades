@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>Test TextBox Validation Widgets</title>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Test TextBox Validation Widgets</title>
 
-		<style type="text/css">
-			@import "../../themes/claro/document.css";
-			@import "../css/dijitTests.css";
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-			.testExample {
-				background-color:#fbfbfb;
-				padding:1em;
-				margin-bottom:1em;
-				border:1px solid #bfbfbf;
-			}
+@import "../css/dijitTests.css";
 
-			body .small {
-				width: 3em;
-			}
-			body .medium {
-				width: 10em;
-			}
-			body .long {
-				width: 20em;
-			}
-			body .verylong {
-				width: 90%;
-			}
+.testExample {
+	background-color: #fbfbfb;
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 1px solid #bfbfbf;
+}
 
-			.noticeMessage {
-				color:#093669;
-				font-size:0.95em;
-				margin-left:0.5em;
-			}
+body .small {
+	width: 3em;
+}
 
-			.dojoTitlePaneLabel label {
-				font-weight:bold;
-			}
-			#widget_q26 .dijitInputField {
-				padding:10px !important;
-			}
+body .medium {
+	width: 10em;
+}
 
-			.monospace .dijitTextBox {
-				font-family: monospace;
-			}
+body .long {
+	width: 20em;
+}
 
-			.sans {
-				font-family: sans-serif;
-			}
-		</style>
+body .verylong {
+	width: 90%;
+}
 
-		<!-- required: the default dijit theme: -->
-		<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/claro/claro.css"/>
+.noticeMessage {
+	color: #093669;
+	font-size: 0.95em;
+	margin-left: 0.5em;
+}
 
-		<!-- required: dojo.js -->
-		<script type="text/javascript" src="../../../dojo/dojo.js"
-			data-dojo-config="isDebug: true, parseOnLoad: true, extraLocale: ['de-de']"></script>
+.dojoTitlePaneLabel label {
+	font-weight: bold;
+}
 
-		<!-- only needed for alternate theme testing: -->
-		<script type="text/javascript" src="../_testCommon.js"></script>
+#widget_q26 .dijitInputField {
+	padding: 10px !important;
+}
 
-		<script type="text/javascript">
+.monospace .dijitTextBox {
+	font-family: monospace;
+}
+
+.sans {
+	font-family: sans-serif;
+}
+</style>
+
+<!-- required: the default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/claro/claro.css" />
+
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	data-dojo-config="isDebug: true, parseOnLoad: true, extraLocale: ['de-de']"></script>
+
+<!-- only needed for alternate theme testing: -->
+<script type="text/javascript" src="../_testCommon.js"></script>
+
+<script type="text/javascript">
 			dojo.require("doh.runner");
 			dojo.require("dijit.dijit"); // optimize: load dijit layer
 			dojo.require("dijit.form.TextBox");
@@ -125,107 +131,119 @@
 				doh.run();
 			});
 		</script>
-	</head>
+</head>
 
-	<body class="claro">
-		<h1 class="testTitle">Dijit Validation Widgets</h1>
-		<!--	to test form submission, you'll need to create an action handler similar to
+<body class="claro">
+<h1 class="testTitle">Dijit Validation Widgets</h1>
+<!--	to test form submission, you'll need to create an action handler similar to
 			http://www.utexas.edu/teamweb/cgi-bin/generic.cgi -->
-		<form id="form1" action="" name="example" method="GET">
+<form id="form1" action="" name="example" method="GET">
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q01">First Name:  </label>
-				<span class="noticeMessage"> TextBox class, <b>tabIndex=2</b>, Attributes: {trim: true, propercase: true, intermediateChanges: true, style: 'width:700px', selectOnClick: true}, First letter of each word is upper case.</span>
-			</div>
-			<div class="testExample">
-				<input id="q01" data-dojo-type="dijit.form.TextBox"
-					data-dojo-props='name:"firstname", value:"testing testing", style:{width:"700px"}, tabIndex:"2",
+<div class="dojoTitlePaneLabel"><label for="q01">First
+Name: </label> <span class="noticeMessage"> TextBox class, <b>tabIndex=2</b>,
+Attributes: {trim: true, propercase: true, intermediateChanges: true,
+style: 'width:700px', selectOnClick: true}, First letter of each word is
+upper case.</span></div>
+<div class="testExample"><input id="q01"
+	data-dojo-type="dijit.form.TextBox"
+	data-dojo-props='name:"firstname", value:"testing testing", style:{width:"700px"}, tabIndex:"2",
 					trim:true,
 					selectOnClick:true,
 					onFocus:function(){ console.log("user onfocus handler"); },
 					onBlur:function(){ console.log("user onblur handler"); },
 					onChange:function(v){ dojo.byId("oc1").value=v; },
 					intermediateChanges:true,
-					propercase:true '/>
-				<br>onChange:<input id="oc1" size="34" disabled value="not fired yet!" autocomplete="off"/>
-				<input tabIndex="-1" type="button" onclick="dijit.byId('q01').set('disabled', true);" value="Disable"/>
-				<input tabIndex="-1" type="button" onclick="dijit.byId('q01').set('disabled', false);" value="Enable"/>
-			</div>
+					propercase:true ' />
+<br>
+onChange:<input id="oc1" size="34" disabled value="not fired yet!"
+	autocomplete="off" /> <input tabIndex="-1" type="button"
+	onclick="dijit.byId('q01').set('disabled', true);" value="Disable" /> <input
+	tabIndex="-1" type="button"
+	onclick="dijit.byId('q01').set('disabled', false);" value="Enable" /></div>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q02">Last Name:  </label>
-				<span class="noticeMessage"> TextBox class, Attributes: {trim: true, uppercase: true, "class": 'verylong'}, all letters converted to upper case. </span>
-			</div>
-			<div class="testExample">
-				<input id="q02" data-dojo-type="dijit.form.TextBox"
-					data-dojo-props='name:"lastname", value:"testing testing", "class":"verylong",
+<div class="dojoTitlePaneLabel"><label for="q02">Last
+Name: </label> <span class="noticeMessage"> TextBox class, Attributes:
+{trim: true, uppercase: true, "class": 'verylong'}, all letters
+converted to upper case. </span></div>
+<div class="testExample"><input id="q02"
+	data-dojo-type="dijit.form.TextBox"
+	data-dojo-props='name:"lastname", value:"testing testing", "class":"verylong",
 					trim:true,
-					uppercase:true '/>
-			</div>
+					uppercase:true ' />
+</div>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q03">Age:  </label>
-				<span class="noticeMessage"> NumberTextBox class, <b>tabIndex=1</b>, Attributes: {trim: true}, no initial value specified, tooltipPosition=[above, below].  Displays a prompt message if field is blank.</span>
-			</div>
-			<div class="testExample">
-				<input id="q03" data-dojo-type="dijit.form.NumberTextBox"
-					data-dojo-props='name:"age", tabIndex:"1",
+<div class="dojoTitlePaneLabel"><label for="q03">Age: </label> <span
+	class="noticeMessage"> NumberTextBox class, <b>tabIndex=1</b>,
+Attributes: {trim: true}, no initial value specified,
+tooltipPosition=[above, below]. Displays a prompt message if field is
+blank.</span></div>
+<div class="testExample"><input id="q03"
+	data-dojo-type="dijit.form.NumberTextBox"
+	data-dojo-props='name:"age", tabIndex:"1",
 					promptMessage:"(optional) Enter an age between 0 and 120",
 					maxLength:"3",
 					"class":"small",
 					constraints:{places:0,min:0,max:120},
 					onChange:function(val){ dojo.byId("oc3").value=""+val; },
 					tooltipPosition:["above", "below"]
-				'/>
-				onChange:<input id="oc3" size="14" disabled value="not fired yet!" autocomplete="off"/>
-				<span style='white-space:nowrap;'>
-				<button id="q03_valid" type=button onclick="dijit.byId('q03').set('value', 120);">set value to 120</button>
-				<button id="q03_outofrange" type=button onclick="dijit.byId('q03').set('value', 121);">set value to 121</button>
-				<button id="q03_invalid" type=button onclick="dijit.byId('q03').set('value', 'two');">set value to two</button>
-				<button id="q03_null" type=button onclick="dijit.byId('q03').set('value', null);">set value to null</button>
-				<button type=button onclick="dojo.byId('gv3').value=''+dijit.byId('q03').get('value');">get value</button>
-				<input id="gv3" size="10" disabled value="" autocomplete="off"/>
-				</span>
-			</div>
+				' />
+onChange:<input id="oc3" size="14" disabled value="not fired yet!"
+	autocomplete="off" /> <span style='white-space: nowrap;'>
+<button id="q03_valid" type=button
+	onclick="dijit.byId('q03').set('value', 120);">set value to
+120</button>
+<button id="q03_outofrange" type=button
+	onclick="dijit.byId('q03').set('value', 121);">set value to
+121</button>
+<button id="q03_invalid" type=button
+	onclick="dijit.byId('q03').set('value', 'two');">set value to
+two</button>
+<button id="q03_null" type=button
+	onclick="dijit.byId('q03').set('value', null);">set value to
+null</button>
+<button type=button
+	onclick="dojo.byId('gv3').value=''+dijit.byId('q03').get('value');">get
+value</button>
+<input id="gv3" size="10" disabled value="" autocomplete="off" /> </span></div>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="fav">Favorite Number (1-100):  </label>
-				<span class="noticeMessage"> NumberTextBox class, Attributes: required=true, must be integer, no messages provided,  no initial value specified, maxlength=3</span>
-			</div>
-			<div class="testExample">
-				<input id="fav" data-dojo-type="dijit.form.NumberTextBox"
-					data-dojo-props='name:"fav", "class":"small",
+<div class="dojoTitlePaneLabel"><label for="fav">Favorite
+Number (1-100): </label> <span class="noticeMessage"> NumberTextBox
+class, Attributes: required=true, must be integer, no messages provided,
+no initial value specified, maxlength=3</span></div>
+<div class="testExample"><input id="fav"
+	data-dojo-type="dijit.form.NumberTextBox"
+	data-dojo-props='name:"fav", "class":"small",
 					maxLength:"3",
 					constraints:{places:0,min:1,max:100},
 					regExpGen:function(){ return "\\d+" },
-					required:true'/>
-					<button onclick="dijit.byId('fav').set('required', true); return false;">attr(required, true)</button>
-					<button onclick="dijit.byId('fav').set('required', false); return false;">attr(required, false)</button>
-			</div>
+					required:true' />
+<button onclick="dijit.byId('fav').set('required', true); return false;">attr(required,
+true)</button>
+<button
+	onclick="dijit.byId('fav').set('required', false); return false;">attr(required,
+false)</button>
+</div>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q04">Occupation:  </label>
-				<span class="noticeMessage">ValidationTextBox class,
-					Attributes: {lowercase: true, required: true, "class": verylong, style: font-size: 15pt;}. Displays a prompt message if field is blank.</span>
-			</div>
-			<div class="testExample">
-				<input id="q04" data-dojo-type="dijit.form.ValidationTextBox"
-					data-dojo-props='name:"occupation", "class":"verylong", style:{fontSize:"15pt"},
+<div class="dojoTitlePaneLabel"><label for="q04">Occupation:
+</label> <span class="noticeMessage">ValidationTextBox class, Attributes:
+{lowercase: true, required: true, "class": verylong, style: font-size:
+15pt;}. Displays a prompt message if field is blank.</span></div>
+<div class="testExample"><input id="q04"
+	data-dojo-type="dijit.form.ValidationTextBox"
+	data-dojo-props='name:"occupation", "class":"verylong", style:{fontSize:"15pt"},
 					lowercase:true,
 					required:true,
-					promptMessage:"Enter an occupation" '/>
-			</div>
+					promptMessage:"Enter an occupation" ' />
+</div>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q05">Elevation:  </label>
-				<span class="noticeMessage">IntegerTextBox class,
-					Attributes: {required: true, min:-20000, max:+20000 }, displays a prompt message if field is blank, thousands separator remains during editing.</span>
-				<span class="noticeMessage">Enter feet above sea level with a sign.</span>
-			</div>
-			<div class="testExample">
-				<input id="q05" class="small"/>
-				onChange:<input id="oc5" size="10" disabled value="not fired yet!" autocomplete="off"/>
-			</div>
+<div class="dojoTitlePaneLabel"><label for="q05">Elevation:
+</label> <span class="noticeMessage">IntegerTextBox class, Attributes:
+{required: true, min:-20000, max:+20000 }, displays a prompt message if
+field is blank, thousands separator remains during editing.</span> <span
+	class="noticeMessage">Enter feet above sea level with a sign.</span></div>
+<div class="testExample"><input id="q05" class="small" />
+onChange:<input id="oc5" size="10" disabled value="not fired yet!"
+	autocomplete="off" /></div>
 <script>
 	// See if we can make a widget in script and attach it to the DOM ourselves.
 	dojo.addOnLoad(function(){
@@ -242,8 +260,7 @@
 		};
 		var w = new dijit.form.NumberTextBox(props, "q05");
 	});
-</script>
-<!--
+</script> <!--
 			<div class="dojoTitlePaneLabel">
 				<label for="attach-here">Population:  </label>
 				<span class="noticeMessage">IntegerTextBox class,
@@ -298,46 +315,47 @@
 			</div>
 			-->
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q08">Annual Income:  </label>
-				<span class="noticeMessage">CurrencyTextBox class,
-					Attributes: {fractional: true}.  Enter whole and cents.  Currency symbol is optional. Cents are MANDATORY.</span>
-			</div>
+<div class="dojoTitlePaneLabel"><label for="q08">Annual
+Income: </label> <span class="noticeMessage">CurrencyTextBox class,
+Attributes: {fractional: true}. Enter whole and cents. Currency symbol
+is optional. Cents are MANDATORY.</span></div>
 
-			<div class="testExample">
-				<input id="q08" data-dojo-type="dijit.form.CurrencyTextBox"
-					data-dojo-props='name:"income1", "class":"medium", value:54775.53,
+<div class="testExample"><input id="q08"
+	data-dojo-type="dijit.form.CurrencyTextBox"
+	data-dojo-props='name:"income1", "class":"medium", value:54775.53,
 					required:true,
 					constraints:{fractional:true},
 					currency:"USD",
 					onChange:function(val){ dojo.byId("oc8").value = val; },
-					invalidMessage:"Invalid amount.  Cents are MANDATORY." '/>USD
-				&nbsp;onChange:<input id="oc8" size="15" disabled value="not fired yet!" autocomplete="off"/>
-			</div>
+					invalidMessage:"Invalid amount.  Cents are MANDATORY." ' />USD
+&nbsp;onChange:<input id="oc8" size="15" disabled value="not fired yet!"
+	autocomplete="off" /></div>
 
-			<div class="testExample">
-				euro currency (local format) fractional part is optional:
-				<input id="q08eur" data-dojo-type="dijit.form.CurrencyTextBox"
-					data-dojo-props='name:"income2",
+<div class="testExample">euro currency (local format) fractional
+part is optional: <input id="q08eur"
+	data-dojo-type="dijit.form.CurrencyTextBox"
+	data-dojo-props='name:"income2",
 					"class":"medium", value:54775.53,
 					required:true,
 					currency:"EUR",
-					invalidMessage:"Invalid amount.  Include cents." '/>EUR
-				<button onclick="dijit.byId('q08eur').set('disabled',true); return false;">Disable</button>
-				<button onclick="dijit.byId('q08eur').set('disabled',false); return false;">Enable</button>
-				<button onclick="dijit.byId('q08eur').reset(); return false;">Reset</button>
-			</div>
+					invalidMessage:"Invalid amount.  Include cents." ' />EUR
+<button
+	onclick="dijit.byId('q08eur').set('disabled',true); return false;">Disable</button>
+<button
+	onclick="dijit.byId('q08eur').set('disabled',false); return false;">Enable</button>
+<button onclick="dijit.byId('q08eur').reset(); return false;">Reset</button>
+</div>
 
-			<!--
+<!--
 				It is unusual to override the lang properties on individual
 				widgets.  Usually it should be the user's default or set on
 				a page basis by the server.  This is for testing purposes
 			-->
-			<div class="testExample">
-				euro currency (fixed lang: de-de) programmatically created, fractional part is optional: <input id="q08eurde" class="medium"/>EUR
-			</div>
+<div class="testExample">euro currency (fixed lang: de-de)
+programmatically created, fractional part is optional: <input
+	id="q08eurde" class="medium" />EUR</div>
 
-			<script>
+<script>
 				// See if we can make a widget in script and attach it
 				// to the DOM ourselves.
 				dojo.addOnLoad(function(){
@@ -352,9 +370,7 @@
 					};
 					var w = new dijit.form.CurrencyTextBox(props, "q08eurde");
 				});
-			</script>
-
-			<!--
+			</script> <!--
 			<div class="dojoTitlePaneLabel">
 				<label for="q08a">Annual Income:  </label>
 				<span class="noticeMessage">Old regexp currency textbox,
@@ -448,37 +464,33 @@
 					invalidMessage="Invalid Email Address List." />
 			</div>
 			-->
-			<div class="dojoTitlePaneLabel">
-				<label for="q22">Regular Expression </label>
-				<span class="noticeMessage">RegexpTextBox class,
-					Attributes: {required: true} </span>
-			</div>
-			<div class="testExample">
-				<input id="q22" data-dojo-type="dijit.form.ValidationTextBox"
-					data-dojo-props='name:"phone", "class":"medium", value:"someTestString",
+<div class="dojoTitlePaneLabel"><label for="q22">Regular
+Expression </label> <span class="noticeMessage">RegexpTextBox class,
+Attributes: {required: true} </span></div>
+<div class="testExample"><input id="q22"
+	data-dojo-type="dijit.form.ValidationTextBox"
+	data-dojo-props='name:"phone", "class":"medium", value:"someTestString",
 					regExp:"[\\w]+",
 					required:true,
-					invalidMessage:"Invalid Non-Space Text."'/>
-			</div>
+					invalidMessage:"Invalid Non-Space Text."' />
+</div>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q23"> Password </label>
-				<span class="noticeMessage">(just a test that type attribute is obeyed) </span>
-			</div>
-			<div class="testExample">
-				<input id="q23" data-dojo-type="dijit.form.TextBox" data-dojo-props='type:"password", name:"password", "class":"medium"
-					'/>
-			</div>
+<div class="dojoTitlePaneLabel"><label for="q23"> Password
+</label> <span class="noticeMessage">(just a test that type attribute is
+obeyed) </span></div>
+<div class="testExample"><input id="q23"
+	data-dojo-type="dijit.form.TextBox"
+	data-dojo-props='type:"password", name:"password", "class":"medium"
+					' />
+</div>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="ticket1651">Trac ticket 1651:  </label>
-				<span class="noticeMessage">value: null should show up as empty</span>
-			</div>
-			<div class="testExample">
-				<input id="ticket1651" class="medium" value="not null"/>
-			</div>
+<div class="dojoTitlePaneLabel"><label for="ticket1651">Trac
+ticket 1651: </label> <span class="noticeMessage">value: null should show
+up as empty</span></div>
+<div class="testExample"><input id="ticket1651" class="medium"
+	value="not null" /></div>
 
-			<script>
+<script>
 				// See if we can make a widget in script and attach it to the DOM ourselves.
 				dojo.addOnLoad(function(){
 					var props = {
@@ -492,32 +504,37 @@
 				});
 			</script>
 
-			<div class="dojoTitlePaneLabel">
-				<label for="q24">initially readOnly TextBox</label>
-				<span class="noticeMessage">a test that readOnly and disabled are understood for TextBox</span>
-			</div>
-			<div class="testExample">
-				<input id="q24" data-dojo-type="dijit.form.TextBox"
-					data-dojo-props='name: "readOnly", "class": "medium", readOnly: true, value: "cannot type here", title: "hint text" '/>
-				<input type="button" id="removereadonly" onclick="dijit.byId('q24').set('readOnly',false);" value="Remove readOnly" tabIndex="-1"/>
-				<input type="button" onclick="dijit.byId('q24').set('readOnly',true);" value="Set readOnly" tabIndex="-1"/>
-				<input type="button" id="removedisabled" onclick="dijit.byId('q24').set('disabled',false);" value="Remove disabled" tabIndex="-1"/>
-				<input type="button" onclick="dijit.byId('q24').set('disabled',true);" value="Set disabled" tabIndex="-1"/>
-			</div>
-			<div class="dojoTitlePaneLabel">
-				<label for="q25">initially disabled ValidationTextBox</label>
-				<span class="noticeMessage">a test that disabled is understood for ValidationTextBox</span>
-			</div>
-			<div class="testExample">
-				<input id="q25" data-dojo-type="dijit.form.ValidationTextBox"
-					data-dojo-props='name: "disabled", "class": "medium", disabled: true, value: "cannot type here" '/>
-				<input type="button" onclick="dijit.byId('q25').set('readOnly',false);" value="Remove readOnly" tabIndex="-1"/>
-				<input type="button" onclick="dijit.byId('q25').set('readOnly',true);" value="Set readOnly" tabIndex="-1"/>
-				<input type="button" onclick="dijit.byId('q25').set('disabled',false);" value="Remove disabled" tabIndex="-1"/>
-				<input type="button" onclick="dijit.byId('q25').set('disabled',true);" value="Set disabled" tabIndex="-1"/>
-			</div>
+<div class="dojoTitlePaneLabel"><label for="q24">initially
+readOnly TextBox</label> <span class="noticeMessage">a test that readOnly
+and disabled are understood for TextBox</span></div>
+<div class="testExample"><input id="q24"
+	data-dojo-type="dijit.form.TextBox"
+	data-dojo-props='name: "readOnly", "class": "medium", readOnly: true, value: "cannot type here", title: "hint text" ' />
+<input type="button" id="removereadonly"
+	onclick="dijit.byId('q24').set('readOnly',false);"
+	value="Remove readOnly" tabIndex="-1" /> <input type="button"
+	onclick="dijit.byId('q24').set('readOnly',true);" value="Set readOnly"
+	tabIndex="-1" /> <input type="button" id="removedisabled"
+	onclick="dijit.byId('q24').set('disabled',false);"
+	value="Remove disabled" tabIndex="-1" /> <input type="button"
+	onclick="dijit.byId('q24').set('disabled',true);" value="Set disabled"
+	tabIndex="-1" /></div>
+<div class="dojoTitlePaneLabel"><label for="q25">initially
+disabled ValidationTextBox</label> <span class="noticeMessage">a test
+that disabled is understood for ValidationTextBox</span></div>
+<div class="testExample"><input id="q25"
+	data-dojo-type="dijit.form.ValidationTextBox"
+	data-dojo-props='name: "disabled", "class": "medium", disabled: true, value: "cannot type here" ' />
+<input type="button" onclick="dijit.byId('q25').set('readOnly',false);"
+	value="Remove readOnly" tabIndex="-1" /> <input type="button"
+	onclick="dijit.byId('q25').set('readOnly',true);" value="Set readOnly"
+	tabIndex="-1" /> <input type="button"
+	onclick="dijit.byId('q25').set('disabled',false);"
+	value="Remove disabled" tabIndex="-1" /> <input type="button"
+	onclick="dijit.byId('q25').set('disabled',true);" value="Set disabled"
+	tabIndex="-1" /></div>
 
-			<script>
+<script>
 				// so robot can get to it easily
 				document.displayData=function() {
 					var f = document.getElementById("form1");
@@ -531,34 +548,32 @@
 				}
 			</script>
 
-			<div>
-				<button name="button" onclick="alert(document.displayData()); return false;" tabIndex="-1">view data</button>
-				<input type="submit" name="submit"  tabIndex="-1"/>
-			</div>
+<div>
+<button name="button"
+	onclick="alert(document.displayData()); return false;" tabIndex="-1">view
+data</button>
+<input type="submit" name="submit" tabIndex="-1" /></div>
 
-		</form>
-		<div class="dojoTitlePaneLabel">
-				<label for="q26">TextBox with placeholder</label>
-				<span class="noticeMessage">a test that placeholder works for TextBox.  10px padding added for testing.</span>
-		</div>
-		<div class="testExample">
-			<input id="q26" data-dojo-type="dijit.form.TextBox" data-dojo-props='placeHolder:"placeholder is here", name:"placeHolder", value:""
-						'/>
-		</div>
-		<h2>Tooltip positioning</h2>
-		<p>
-		These buttons switch the positions searched to try to place the validation error tooltips.
-		Note that setting tooltip positioning to "above" or "below" is dangerous if
-		you have a node with a dropdown, but the drop down might overlap the tooltip.
-		</p>
-		<button onclick="dijit.Tooltip.defaultPosition=['above', 'below'];">above, below</button>
-		<button onclick="dijit.Tooltip.defaultPosition=['after', 'before'];">after, before (default)</button>
+</form>
+<div class="dojoTitlePaneLabel"><label for="q26">TextBox
+with placeholder</label> <span class="noticeMessage">a test that
+placeholder works for TextBox. 10px padding added for testing.</span></div>
+<div class="testExample"><input id="q26"
+	data-dojo-type="dijit.form.TextBox"
+	data-dojo-props='placeHolder:"placeholder is here", name:"placeHolder", value:""
+						' />
+</div>
+<h2>Tooltip positioning</h2>
+<p>These buttons switch the positions searched to try to place the
+validation error tooltips. Note that setting tooltip positioning to
+"above" or "below" is dangerous if you have a node with a dropdown, but
+the drop down might overlap the tooltip.</p>
+<button onclick="dijit.Tooltip.defaultPosition=['above', 'below'];">above,
+below</button>
+<button onclick="dijit.Tooltip.defaultPosition=['after', 'before'];">after,
+before (default)</button>
 
-		<div class="monospace">
-			<input id="monospace1"/>
-		</div>
-		<div class="sans">
-			<input id="sans1"/>
-		</div>
-	</body>
+<div class="monospace"><input id="monospace1" /></div>
+<div class="sans"><input id="sans1" /></div>
+</body>
 </html>

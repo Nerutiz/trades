@@ -6,9 +6,10 @@
 	background-image: url('../images/checkmarkNoBorder.gif');
 }
 
-.tundra .dijitCheckBox,
-.tundra .dijitCheckBoxIcon		/* inside a toggle button */	{
-	background-image: url('../images/checkmark.png'); /* checkbox sprite image */
+.tundra .dijitCheckBox,.tundra .dijitCheckBoxIcon
+	/* inside a toggle button */ {
+	background-image: url('../images/checkmark.png');
+	/* checkbox sprite image */
 	background-repeat: no-repeat;
 	width: 16px;
 	height: 16px;
@@ -16,30 +17,27 @@
 	padding: 0;
 }
 
-.dj_ie6 .tundra .dijitCheckBox,
-.dj_ie6 .tundra .dijitCheckBoxIcon		/* inside a toggle button */	{
-	background-image: url('../images/checkmark.gif'); /* checkbox sprite image */
+.dj_ie6 .tundra .dijitCheckBox,.dj_ie6 .tundra .dijitCheckBoxIcon
+	/* inside a toggle button */ {
+	background-image: url('../images/checkmark.gif');
+	/* checkbox sprite image */
 }
 
-.tundra .dijitCheckBox,
-.tundra .dijitToggleButton .dijitCheckBoxIcon {
+.tundra .dijitCheckBox,.tundra .dijitToggleButton .dijitCheckBoxIcon {
 	/* unchecked */
 	background-position: -16px;
 }
 
-.tundra .dijitCheckBoxChecked,
-.tundra .dijitToggleButtonChecked .dijitCheckBoxIcon {
-	/* checked */
+.tundra .dijitCheckBoxChecked,.tundra .dijitToggleButtonChecked .dijitCheckBoxIcon
+	{ /* checked */
 	background-position: 0;
 }
 
-.tundra .dijitCheckBoxDisabled {
-	/* disabled */
+.tundra .dijitCheckBoxDisabled { /* disabled */
 	background-position: -48px;
 }
 
-.tundra .dijitCheckBoxCheckedDisabled {
-	/* disabled but checked */
+.tundra .dijitCheckBoxCheckedDisabled { /* disabled but checked */
 	background-position: -32px;
 }
 

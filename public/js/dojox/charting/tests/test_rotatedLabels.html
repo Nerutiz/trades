@@ -5,11 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>Chart 2D rotated labels</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	@import "../../../dijit/themes/tundra/tundra.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/tundra/tundra.css";
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 
 dojo.require("dijit.form.Button");
@@ -75,11 +78,11 @@ updateAxes = function(){
 <body class="tundra">
 <h1>Chart 2D rotated labels</h1>
 <!--<p><button onclick="makeObjects();">Go</button></p>-->
-<p>
-    Rotation:&nbsp;
-    <input dojoType="dijit.form.NumberSpinner" id="rotation" value="0" constraints="{min: 0, max: 360, fractional: false}" style="width: 8em;">
-    &nbsp;
-    <button dojoType="dijit.form.Button" onClick="updateAxes()">Apply</button>
+<p>Rotation:&nbsp; <input dojoType="dijit.form.NumberSpinner"
+	id="rotation" value="0"
+	constraints="{min: 0, max: 360, fractional: false}" style="width: 8em;">
+&nbsp;
+<button dojoType="dijit.form.Button" onClick="updateAxes()">Apply</button>
 </p>
 <div id="test1" style="width: 600px; height: 400px;"></div>
 <p>That's all Folks!</p>

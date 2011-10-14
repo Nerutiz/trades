@@ -1,15 +1,20 @@
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Chart: Map&Legend</title>
-		<style type="text/css">
-			@import "../../../../dojo/resources/dojo.css";
-			@import "../../../../dijit/tests/css/dijitTests.css";
-			@import "../../../../dijit/themes/tundra/tundra.css";
-			@import "../resources/Map.css";
-		</style>
-		<script type="text/javascript" djConfig="parseOnLoad:true,gfxRenderer:'svg,vml,silverlight'" src="../../../../dojo/dojo.js"></script>
-		<script type="text/javascript">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chart: Map&Legend</title>
+<style type="text/css">
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../../dijit/themes/tundra/tundra.css";
+
+@import "../resources/Map.css";
+</style>
+<script type="text/javascript"
+	djConfig="parseOnLoad:true,gfxRenderer:'svg,vml,silverlight'"
+	src="../../../../dojo/dojo.js"></script>
+<script type="text/javascript">
 			dojo.require("dojox.geo.charting.Map");
 			dojo.require("dojox.geo.charting.widget.Legend");
 			dojo.require("dojo.data.ItemFileReadStore");
@@ -54,10 +59,10 @@
 				};
 			});
 		</script>
-	</head>
-	<body class="tundra">
-		<h1>Map with series, data, legend</h1>
-		<div id="USStates" style="width:900px;height:500px;border:1px solid;">
-		</div>
-	</body>
+</head>
+<body class="tundra">
+<h1>Map with series, data, legend</h1>
+<div id="USStates"
+	style="width: 900px; height: 500px; border: 1px solid;"></div>
+</body>
 </html>

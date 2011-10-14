@@ -1,24 +1,26 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 		"http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<title>GFX Test: Test the basic utils functions</title>
-		<style type="text/css">
-			@import "../../../../dojo/resources/dojo.css";
-			@import "../../../../dijit/tests/css/dijitTests.css";
-		</style>
-		<!-- SVGWEB { -->
-		<meta name="svg.render.forceflash" content="true"/>
-		<script src="svgweb/src/svg.js" data-path="svgweb/src"></script>
-		<script src="../../../../dojo/dojo.js" djConfig="isDebug:true,forceGfxRenderer:'svg'" type="text/javascript"></script>
-		<!-- } -->
-		<script type="text/javascript" src="../../../util/doh/runner.js"></script>
-		<script type="text/javascript">
+<head>
+<title>GFX Test: Test the basic utils functions</title>
+<style type="text/css">
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
+</style>
+<!-- SVGWEB { -->
+<meta name="svg.render.forceflash" content="true" />
+<script src="svgweb/src/svg.js" data-path="svgweb/src"></script>
+<script src="../../../../dojo/dojo.js"
+	djConfig="isDebug:true,forceGfxRenderer:'svg'" type="text/javascript"></script>
+<!-- } -->
+<script type="text/javascript" src="../../../util/doh/runner.js"></script>
+<script type="text/javascript">
 			dojo.require("doh.runner");
 			dojo.require("dojox.gfx");
 			dojo.require("dojox.gfx.utils");
 		</script>
-		<script type="text/javascript">
+<script type="text/javascript">
 			dojo.addOnLoad(function(){
 				var drawing;
 				var ta;
@@ -221,14 +223,14 @@
 				doh.run();
 			});
 			</script>
-	</head>
-	<body class="tundra">
-		<h1>Test of GFX Utils functions</h1>
-		This page is intended for testing of the functions of the utils package, such as toJson, fromJson, and toSvg.
-		<div id="gfxObject"></div>
-		<div id="scratchObject"></div>
-		<div>
-			<textarea style="width: 100%; height: 300px" id="outputArea"></textarea>
-		</div>
-	</body>
+</head>
+<body class="tundra">
+<h1>Test of GFX Utils functions</h1>
+This page is intended for testing of the functions of the utils package,
+such as toJson, fromJson, and toSvg.
+<div id="gfxObject"></div>
+<div id="scratchObject"></div>
+<div><textarea style="width: 100%; height: 300px" id="outputArea"></textarea>
+</div>
+</body>
 </html>

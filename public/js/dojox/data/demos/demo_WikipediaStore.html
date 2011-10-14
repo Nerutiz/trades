@@ -4,8 +4,12 @@
 <title>Wikipedia Data Store</title>
 <style type="text/css">
 @import "../../../dojo/resources/dojo.css";
+
 @import "../../../dijit/themes/tundra/tundra.css";
-h1 { margin-bottom: 1em; }
+
+h1 {
+	margin-bottom: 1em;
+}
 </style>
 <script type="text/javascript">
 //<![CDATA[
@@ -67,16 +71,14 @@ function doSearch(){
 //]]>
 </script>
 </head>
-<body class="tundra" style="margin:20px;">
-	<form action="#">
-		<p>
-			Text: <input id="searchText" type="text" value="dojo toolkit">
-			Count: <input id="count" type="text" value="8" size="3">
-			<input id="searchButton" type="button" value="store.fetch()" onclick="doSearch()">
-		</p>
+<body class="tundra" style="margin: 20px;">
+<form action="#">
+<p>Text: <input id="searchText" type="text" value="dojo toolkit">
+Count: <input id="count" type="text" value="8" size="3"> <input
+	id="searchButton" type="button" value="store.fetch()"
+	onclick="doSearch()"></p>
 
-		<div id="output" style="padding:0 20px;">
-		</div>
-	</form>
+<div id="output" style="padding: 0 20px;"></div>
+</form>
 </body>
 </html>

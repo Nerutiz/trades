@@ -1,10 +1,12 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <title>dojox.gfx: Career Aptitude Test</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
 </style>
 <script type="text/javascript" src="../../../dojo/dojo.js"></script>
 
@@ -403,7 +405,9 @@ function startTest(level){
 </script>
 
 <style type="text/css">
-.movable { cursor: pointer; }
+.movable {
+	cursor: pointer;
+}
 </style>
 
 </head>
@@ -412,36 +416,47 @@ function startTest(level){
 <p>Warning: Canvas renderer doesn't implement event handling.</p>
 
 <div id="explanation">
-<p>Thank you for your interest in <em>"I can't believe it's manure" Eateries&trade;</em> 
-and for submitting your resume for our review. While this is an automated response, 
-please be assured that every resume is reviewed by us, and forwarded to the hiring
-managers if the skills fit our needs.</p>
-<p>In order order to evaluate your skills we ask you to take a career aptitude test. 
-You will have an exciting chance to operate one of our state-of-the-art workstations 
-remotely. Don't forget:
-</p>
+<p>Thank you for your interest in <em>"I can't believe it's
+manure" Eateries&trade;</em> and for submitting your resume for our review.
+While this is an automated response, please be assured that every resume
+is reviewed by us, and forwarded to the hiring managers if the skills
+fit our needs.</p>
+<p>In order order to evaluate your skills we ask you to take a
+career aptitude test. You will have an exciting chance to operate one of
+our state-of-the-art workstations remotely. Don't forget:</p>
 <ol>
-	<li>Fish out a live speciment of <em>dung-42</em> from the container.</li>
-	<li>Freeze it until you see an orange glow to kill the elements and make it less green.</li>
-	<li>Broil it until you see the orange glow again, and drop it on the table below.</li>
-	<li>You have to process all items without wasting resources and in minimal time.</li>
+	<li>Fish out a live speciment of <em>dung-42</em> from the
+	container.</li>
+	<li>Freeze it until you see an orange glow to kill the elements
+	and make it less green.</li>
+	<li>Broil it until you see the orange glow again, and drop it on
+	the table below.</li>
+	<li>You have to process all items without wasting resources and in
+	minimal time.</li>
 </ol>
-<p>Warnings: don't overfreeze, don't overheat, don't drop the speciment, don't change the sequence, 
-don't touch the speciment in heating and freezing chambers until it is's ready.</p>
+<p>Warnings: don't overfreeze, don't overheat, don't drop the
+speciment, don't change the sequence, don't touch the speciment in
+heating and freezing chambers until it is's ready.</p>
 <p>Use your head and your mouse!</p>
 <p>Please select the desired position:</p>
 <table>
 	<tr>
 		<td>Workstation Supervisor&nbsp;</td>
-		<td><button onclick="startTest(30);">Apply</button></td>
+		<td>
+		<button onclick="startTest(30);">Apply</button>
+		</td>
 	</tr>
 	<tr>
 		<td>Shift Director&nbsp;</td>
-		<td><button onclick="startTest(20);">Apply</button></td>
+		<td>
+		<button onclick="startTest(20);">Apply</button>
+		</td>
 	</tr>
 	<tr>
 		<td>Vice President #49653&nbsp;</td>
-		<td><button onclick="startTest(10);">Apply</button></td>
+		<td>
+		<button onclick="startTest(10);">Apply</button>
+		</td>
 	</tr>
 </table>
 </div>
@@ -449,14 +464,15 @@ don't touch the speciment in heating and freezing chambers until it is's ready.<
 <div id="gfx_holder" style="width: 500px; height: 500px; display: none;"></div>
 
 <div id="result" style="display: none;">
-<p id="result_pass"><strong>Impressive! Please contact us immediately.</strong></p>
-<p>You have made $<span id="result_dollar"></span> per minute for us.
-<span id="result_but">But you wasted $<span id="result_waste"></span> in materials.</span>
-<span id="result_and">It qualifies you to be a <em id="result_pos"></em>.</span>
-</p>
-<p id="result_fail">Should our hiring managers have an interest in your skills and
-capabilities, they will contact you directly. In addition, we will keep
-your resume on file for one year.</p>
+<p id="result_pass"><strong>Impressive! Please contact us
+immediately.</strong></p>
+<p>You have made $<span id="result_dollar"></span> per minute for
+us. <span id="result_but">But you wasted $<span id="result_waste"></span>
+in materials.</span> <span id="result_and">It qualifies you to be a <em
+	id="result_pos"></em>.</span></p>
+<p id="result_fail">Should our hiring managers have an interest in
+your skills and capabilities, they will contact you directly. In
+addition, we will keep your resume on file for one year.</p>
 </div>
 
 </body>

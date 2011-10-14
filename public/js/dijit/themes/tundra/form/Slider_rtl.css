@@ -1,14 +1,10 @@
-.tundra .dijitSliderRtl .dijitSliderProgressBarH,
-.tundra .dijitSliderRtl .dijitSliderRemainingBarH,
-.tundra .dijitSliderRtl .dijitSliderLeftBumper,
-.tundra .dijitSliderRtl .dijitSliderRightBumper,
-.tundra .dijitSliderRtl .dijitSliderTopBumper {
+.tundra .dijitSliderRtl .dijitSliderProgressBarH,.tundra .dijitSliderRtl .dijitSliderRemainingBarH,.tundra .dijitSliderRtl .dijitSliderLeftBumper,.tundra .dijitSliderRtl .dijitSliderRightBumper,.tundra .dijitSliderRtl .dijitSliderTopBumper
+	{
 	background-position: top right;
 }
 
-.tundra .dijitSliderRtl .dijitSliderProgressBarV,
-.tundra .dijitSliderRtl .dijitSliderRemainingBarV,
-.tundra .dijitSliderRtl .dijitSliderBottomBumper {
+.tundra .dijitSliderRtl .dijitSliderProgressBarV,.tundra .dijitSliderRtl .dijitSliderRemainingBarV,.tundra .dijitSliderRtl .dijitSliderBottomBumper
+	{
 	background-position: bottom right;
 }
 

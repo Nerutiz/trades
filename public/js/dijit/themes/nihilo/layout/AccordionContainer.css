@@ -2,16 +2,14 @@
  * dijit.layout.Accordioncontainer
  *
  */
-
 .nihilo .dijitAccordionContainer {
 	border-color: #ccc;
 	background-color: #fff;
 }
 
 /* common */
-
 .nihilo .dijitAccordionTitle {
-	background:#fafafa url("../images/titleBar.png") repeat-x top left;
+	background: #fafafa url("../images/titleBar.png") repeat-x top left;
 	border-top: 1px solid #dedede;
 	padding: 5px 4px 6px 8px;
 	font-size: 0.9em;
@@ -19,8 +17,9 @@
 	color: #6d6d6d;
 }
 
-.nihilo .dijitAccordionTitleSelected  {
-	background: #f9f9f9 url("../images/accordionItemActive.png") top repeat-x;
+.nihilo .dijitAccordionTitleSelected {
+	background: #f9f9f9 url("../images/accordionItemActive.png") top
+		repeat-x;
 	font-weight: bold;
 	border-top: 1px solid #dedede;
 	border-bottom: 1px solid #dedede;
@@ -29,15 +28,17 @@
 }
 
 .nihilo .dijitAccordionArrow {
-	background:url("../images/spriteRoundedIconsSmall.gif") no-repeat -30px top;
-	width:15px;
-	height:15px;
-	margin-top:-1px;
+	background: url("../images/spriteRoundedIconsSmall.gif") no-repeat -30px
+		top;
+	width: 15px;
+	height: 15px;
+	margin-top: -1px;
 }
 
 .nihilo .dijitAccordionTitleSelected .dijitAccordionArrow {
-	background:url("../images/spriteRoundedIconsSmall.gif") no-repeat -15px top;
-	margin-top:-1px;
+	background: url("../images/spriteRoundedIconsSmall.gif") no-repeat -15px
+		top;
+	margin-top: -1px;
 }
 
 .nihilo .dijitAccordionText {

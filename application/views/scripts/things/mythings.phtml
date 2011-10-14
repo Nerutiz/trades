@@ -1,45 +1,21 @@
-<?php if(count($this->things) != 0)
-	{?>
-	<table>
-		<thead>
-			<tr>
-				<th>
-					<?php echo 'Title';?>
-				</th>
-				<th>
-					<?php echo 'Description';?>
-				</th>
-				<th>
-					
-				</th>
-				<th>
-					<?php echo 'Wishes';?>
-				</th>
-				<th>
-					<?php echo 'Keywords';?>
-				</th>
-			</tr>
-		</thead>
-		<tbody class="mythingsTable">
-			<?php foreach ($this->things as $thing): ?>
-			<tr onclick="window.location.href='/things/editthing?id=<?php echo $thing->getId();?>'">
-				<td>
-					<?php echo $thing->getTitle(); ?>
-				</td>
-				<td>
-					<?php echo $thing->getDescription(); ?>
-				</td>
-				<td>
-					<?php //echo $thing->getTitle(); ?>
-				</td>
-				<td>
-					<?php echo $thing->getWishes(); ?>
-				</td>
-				<td>
-					<?php echo $thing->getKeywords(); ?>
-				</td>
-			</tr>
-			<?php endforeach;?>
-		</tbody>
-	</table>
-<?php }?>
+<table id="myThings"  class="thingsTable">
+	<thead>
+		<tr>
+        	<th></th>
+			<th><?php echo 'Title';?></th>
+			<th><?php echo 'Description';?></th>
+			<th></th>
+			<th><?php echo 'Wishes';?></th>
+			<th><?php echo 'Keywords';?></th>
+		</tr>
+	</thead>
+</table>
+
+<script type="text/javascript">
+	var myThingsCreator = new trades.DragNDrop({
+		id:'myThings', 
+		itemOnClick:true,
+		draggable:true,
+		items:<?php echo $this->things;?>
+		});
+</script>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<!--
+<!--
 		Tests that generated widget id's are unique according to scopeMap.
 		The created widgets should get the non-conflicting generated names 
 			- dijit1_dijit_layout_ContentPane_0
@@ -11,8 +11,8 @@
 			$ cd util/buildscripts
 			$ ./build.sh action=release loader=xdomain profile=standard optimize=comments
 	-->
-	<title>Multi-version test</title>
-	<script type="text/javascript">
+<title>Multi-version test</title>
+<script type="text/javascript">
 		djConfig = {
 			baseUrl:'../../../release/dojo/dojo/',
 			scopeMap:[
@@ -23,8 +23,9 @@
 			afterOnLoad: true
 		};
 	</script>
-	<script type="text/javascript" src="../../../release/dojo/dojo/dojo.xd.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript"
+	src="../../../release/dojo/dojo/dojo.xd.js"></script>
+<script type="text/javascript">
 		dojo1.require("dijit.layout.ContentPane");
 		var cp1, cp2;
 		dojo1.ready(function(){

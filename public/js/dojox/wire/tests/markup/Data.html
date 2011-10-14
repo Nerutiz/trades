@@ -1,7 +1,8 @@
 <html>
 <head>
 <title>Test Data</title>
-<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
 <script type="text/javascript">
 dojo.provide("dojox.wire.ml.tests.markup.Data");
 
@@ -36,70 +37,41 @@ dojo.addOnLoad(function(){
 </script>
 </head>
 <body>
-<div dojoType="dojox.wire.ml.Data"
-	id="Data1">
-	<div dojoType="dojox.wire.ml.DataProperty"
-		name="a"
-		value="A"></div>
-	<div dojoType="dojox.wire.ml.DataProperty"
-		name="b"
-		type="number" value="1"></div>
-	<div dojoType="dojox.wire.ml.DataProperty"
-		name="c"
-		type="boolean" value="true"></div>
-	<div dojoType="dojox.wire.ml.DataProperty"
-		name="d"
-		type="object">
-		<div dojoType="dojox.wire.ml.DataProperty"
-			name="a"
-			value="DA"></div>
-		<div dojoType="dojox.wire.ml.DataProperty"
-			name="b"
-			value="DB"></div>
-	</div>
-	<div dojoType="dojox.wire.ml.DataProperty"
-		name="e"
-		type="array">
-		<div dojoType="dojox.wire.ml.DataProperty"
-			value="E1"></div>
-		<div dojoType="dojox.wire.ml.DataProperty"
-			value="E2"></div>
-	</div>
-	<div dojoType="dojox.wire.ml.DataProperty"
-		name="f"
-		type="element"
-		value="x">
-		<div dojoType="dojox.wire.ml.DataProperty"
-			name="text()"
-			value="F"></div>
-		<div dojoType="dojox.wire.ml.DataProperty"
-			name="@y"
-			value="G"></div>
-	</div>
+<div dojoType="dojox.wire.ml.Data" id="Data1">
+<div dojoType="dojox.wire.ml.DataProperty" name="a" value="A"></div>
+<div dojoType="dojox.wire.ml.DataProperty" name="b" type="number"
+	value="1"></div>
+<div dojoType="dojox.wire.ml.DataProperty" name="c" type="boolean"
+	value="true"></div>
+<div dojoType="dojox.wire.ml.DataProperty" name="d" type="object">
+<div dojoType="dojox.wire.ml.DataProperty" name="a" value="DA"></div>
+<div dojoType="dojox.wire.ml.DataProperty" name="b" value="DB"></div>
 </div>
-<div dojoType="dojox.wire.ml.Action"
-	triggerTopic="transfer">
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="Data1.a"
-		target="dojox.wire.ml.tests.markup.Data.target.a"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="Data1.b"
-		target="dojox.wire.ml.tests.markup.Data.target.b"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="Data1.c"
-		target="dojox.wire.ml.tests.markup.Data.target.c"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="Data1.d"
-		target="dojox.wire.ml.tests.markup.Data.target.d"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="Data1.e"
-		target="dojox.wire.ml.tests.markup.Data.target.e"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="Data1.f"
-		target="dojox.wire.ml.tests.markup.Data.target.f"></div>
-	<div dojoType="dojox.wire.ml.Transfer"
-		source="Data1.f.@y"
-		target="dojox.wire.ml.tests.markup.Data.target.g"></div>
+<div dojoType="dojox.wire.ml.DataProperty" name="e" type="array">
+<div dojoType="dojox.wire.ml.DataProperty" value="E1"></div>
+<div dojoType="dojox.wire.ml.DataProperty" value="E2"></div>
+</div>
+<div dojoType="dojox.wire.ml.DataProperty" name="f" type="element"
+	value="x">
+<div dojoType="dojox.wire.ml.DataProperty" name="text()" value="F"></div>
+<div dojoType="dojox.wire.ml.DataProperty" name="@y" value="G"></div>
+</div>
+</div>
+<div dojoType="dojox.wire.ml.Action" triggerTopic="transfer">
+<div dojoType="dojox.wire.ml.Transfer" source="Data1.a"
+	target="dojox.wire.ml.tests.markup.Data.target.a"></div>
+<div dojoType="dojox.wire.ml.Transfer" source="Data1.b"
+	target="dojox.wire.ml.tests.markup.Data.target.b"></div>
+<div dojoType="dojox.wire.ml.Transfer" source="Data1.c"
+	target="dojox.wire.ml.tests.markup.Data.target.c"></div>
+<div dojoType="dojox.wire.ml.Transfer" source="Data1.d"
+	target="dojox.wire.ml.tests.markup.Data.target.d"></div>
+<div dojoType="dojox.wire.ml.Transfer" source="Data1.e"
+	target="dojox.wire.ml.tests.markup.Data.target.e"></div>
+<div dojoType="dojox.wire.ml.Transfer" source="Data1.f"
+	target="dojox.wire.ml.tests.markup.Data.target.f"></div>
+<div dojoType="dojox.wire.ml.Transfer" source="Data1.f.@y"
+	target="dojox.wire.ml.tests.markup.Data.target.g"></div>
 </div>
 </body>
 </html>

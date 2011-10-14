@@ -1,54 +1,54 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-	<head>
-	    <script type="text/javascript" 
-	            src="../../../../dojo/dojo.js" djConfig="isDebug: false"></script>
-		<script type="text/javascript" src="../../../../dojox/off/offline.js"></script>
-		
-		<style type="text/css">
-			body{
-				padding: 2em;
-			}
-			
-			#dataTable{
-				margin-top: 2em;
-			}
-			
-			button{
-				margin-left: 1em;
-			}
-			
-			th, tr, td{
-				text-align: left;
-			}
-			
-			table{
-				text-align: center;
-				clear: both;
-			}
-			
-			#cryptoContainer{
-				float: left;
-				width: 60%;
-			}
-			
-			#numRowsContainer{
-				float: right;
-				width: 40%;
-			}
-			
-			#numRowsContainer input{
-				margin-left: 1.5em;
-				width: 5em;
-			}
-			
-			.table-columns{
-				font-weight: bold;
-			}
-		</style>
-		
-		<script>
+<head>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: false"></script>
+<script type="text/javascript" src="../../../../dojox/off/offline.js"></script>
+
+<style type="text/css">
+body {
+	padding: 2em;
+}
+
+#dataTable {
+	margin-top: 2em;
+}
+
+button {
+	margin-left: 1em;
+}
+
+th,tr,td {
+	text-align: left;
+}
+
+table {
+	text-align: center;
+	clear: both;
+}
+
+#cryptoContainer {
+	float: left;
+	width: 60%;
+}
+
+#numRowsContainer {
+	float: right;
+	width: 40%;
+}
+
+#numRowsContainer input {
+	margin-left: 1.5em;
+	width: 5em;
+}
+
+.table-columns {
+	font-weight: bold;
+}
+</style>
+
+<script>
 			dojo.require("dojox.sql");
 			
 			dojo.connect(window, "onload", function(){
@@ -243,50 +243,50 @@
 						);
 			}
 		</script>
-	</head>
-	
-	<body>
-		<h1>Dojo SQL Cryptography</h1>
-		
-		<h2>Instructions</h2>
-		
-		<p>This demo shows Dojo Offline's SQL encryption technologies. In the table below, we have a
-			sample SQL table that has three columns of data: a last name, a first name, and
-			a social security number. We don't want to store the social security numbers
-			in the clear, just in case they are downloaded for offline use to a laptop and the
-			laptop is stolen.</p>
-		
-		<p>To use this demo, enter a password and press the ENCRYPT button to see the Social Security column encrypt. Enter
-			the same password and press DECRYPT to see it decrypt. If you enter an incorrect password and
-			press DECRYPT, the Social Security column will remain encrypted and only show gibberish.</p>
-			
-		<p>Under the covers we use 256-bit AES encryption and your password to derive the crypto key; we use
-			a facility in Google Gears to do the cryptography in such a way that the browser does not lock up
-			during processing. Dojo Offline ties this cryptography into Dojo SQL, providing convenient ENCRYPT()
-			and DECRYPT() SQL keywords you can use to easily have this functionality in your
-			own offline applications. To learn how you can use this feature 
-			<a href="http://docs.google.com/View?docid=dhkhksk4_8gdp9gr#crypto" target="_blank">see here</a>.</p>
-		
-		<div id="cryptoContainer">
-			<label for="password">
-				Password:
-			</label>
-		
-			<input type="input" name="password" id="password" value="sample_password">
-		
-			<button id="encrypt" onclick="window.setTimeout(encrypt, 1)">Encrypt</button>
-		
-			<button id="decrypt" onclick="window.setTimeout(decrypt, 1)" disabled="true">Decrypt</button>
-		</div>
-		
-		<div id="numRowsContainer">
-			<label for="numRows">
-				Number of Customer Rows in Table:
-			</label>
-		
-			<input id="numRows" type="input" value="30">
-			
-			<button onclick="createTable()">Update</button>
-		</div>
-	</body>
+</head>
+
+<body>
+<h1>Dojo SQL Cryptography</h1>
+
+<h2>Instructions</h2>
+
+<p>This demo shows Dojo Offline's SQL encryption technologies. In
+the table below, we have a sample SQL table that has three columns of
+data: a last name, a first name, and a social security number. We don't
+want to store the social security numbers in the clear, just in case
+they are downloaded for offline use to a laptop and the laptop is
+stolen.</p>
+
+<p>To use this demo, enter a password and press the ENCRYPT button
+to see the Social Security column encrypt. Enter the same password and
+press DECRYPT to see it decrypt. If you enter an incorrect password and
+press DECRYPT, the Social Security column will remain encrypted and only
+show gibberish.</p>
+
+<p>Under the covers we use 256-bit AES encryption and your password
+to derive the crypto key; we use a facility in Google Gears to do the
+cryptography in such a way that the browser does not lock up during
+processing. Dojo Offline ties this cryptography into Dojo SQL, providing
+convenient ENCRYPT() and DECRYPT() SQL keywords you can use to easily
+have this functionality in your own offline applications. To learn how
+you can use this feature <a
+	href="http://docs.google.com/View?docid=dhkhksk4_8gdp9gr#crypto"
+	target="_blank">see here</a>.</p>
+
+<div id="cryptoContainer"><label for="password"> Password:
+</label> <input type="input" name="password" id="password"
+	value="sample_password">
+
+<button id="encrypt" onclick="window.setTimeout(encrypt, 1)">Encrypt</button>
+
+<button id="decrypt" onclick="window.setTimeout(decrypt, 1)"
+	disabled="true">Decrypt</button>
+</div>
+
+<div id="numRowsContainer"><label for="numRows"> Number of
+Customer Rows in Table: </label> <input id="numRows" type="input" value="30">
+
+<button onclick="createTable()">Update</button>
+</div>
+</body>
 </html>

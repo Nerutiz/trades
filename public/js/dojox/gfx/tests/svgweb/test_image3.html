@@ -1,15 +1,18 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <title>Testing image 3</title>
 <style type="text/css">
-	@import "../../../../dojo/resources/dojo.css";
-	@import "../../../../dijit/tests/css/dijitTests.css";
+@import "../../../../dojo/resources/dojo.css";
+
+@import "../../../../dijit/tests/css/dijitTests.css";
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- SVGWEB { -->
-<meta name="svg.render.forceflash" content="true"/>
+<meta name="svg.render.forceflash" content="true" />
 <script src="svgweb/src/svg.js" data-path="svgweb/src"></script>
-<script src="../../../../dojo/dojo.js" djConfig="isDebug:true,forceGfxRenderer:'svg'" type="text/javascript"></script>
+<script src="../../../../dojo/dojo.js"
+	djConfig="isDebug:true,forceGfxRenderer:'svg'" type="text/javascript"></script>
 <!-- } -->
 <script type="text/javascript">
 dojo.require("dojox.gfx");
@@ -62,16 +65,21 @@ dojo.addOnLoad(makeShapes);
 </head>
 <body>
 <h1>dojox.gfx Image tests</h1>
-<p>Clicking the following button should enlarge the surface and the image.<br>
-In the first Test: The image should not be cropped on the right and the background of grid should be red.<br>
-In the secondd test: the cavas should stay the same size, the image is increased and scrollbars appear
-	</p>
-<p>
-<input type="button" onclick="transformImage()" value="scale/reset"/><br />
+<p>Clicking the following button should enlarge the surface and the
+image.<br>
+In the first Test: The image should not be cropped on the right and the
+background of grid should be red.<br>
+In the secondd test: the cavas should stay the same size, the image is
+increased and scrollbars appear</p>
+<p><input type="button" onclick="transformImage()"
+	value="scale/reset" /><br />
 </p>
-<div id="test" style="background-color:red"></div>
+<div id="test" style="background-color: red"></div>
 <p>second test with overflow=auto</p>
-<div style="overflow:auto;background-color:red;width:602px;height:602px;"><div id="test2"></div></div>
+<div
+	style="overflow: auto; background-color: red; width: 602px; height: 602px;">
+<div id="test2"></div>
+</div>
 <p>That's all Folks!</p>
 </body>
 </html>

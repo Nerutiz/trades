@@ -1,4 +1,3 @@
-
 /****
 		dijit.form.TextBox
 		dijit.form.ValidationTextBox
@@ -9,9 +8,7 @@
 		dijit.form.NumberSpinner
 		dijit.form.ComboBox (partial)
  ****/
-
-.tundra .dijitInputContainer INPUT,
-.tundra .dijitTextBox {
+.tundra .dijitInputContainer INPUT,.tundra .dijitTextBox {
 	margin: 0 0.1em;
 }
 
@@ -24,15 +21,18 @@
 		For TextBox, ComboBox, Spinner: the div that contains the input.
 		Otherwise the actual input element.
 	*/
-	background:#fff url("../images/validationInputBg.png") repeat-x top left;
-	#background:#fff url('../images/validationInputBg.gif') repeat-x top left;
-	border:1px solid #b3b3b3;
+	background: #fff url("../images/validationInputBg.png") repeat-x top
+		left; #
+	background: #fff url('../images/validationInputBg.gif') repeat-x top
+		left;
+	border: 1px solid #b3b3b3;
 }
 
 /* ComboBox specific rules*/
 .tundra .dijitComboBox .dijitButtonNode {
 	padding: 0 0.2em;
 }
+
 .tundra .dijitTextBox .dijitButtonNode {
 	/* line between the input area and the drop down button, and also between
 	 * the up and down buttons of a spinner
@@ -42,32 +42,34 @@
 
 .tundra .dijitTextBoxFocused {
 	/* input field when focused (ie: typing affects it) */
-	border-color:#406b9b;
+	border-color: #406b9b;
 }
+
 .tundra .dijitTextBoxFocused .dijitButtonNode {
-	border-color:#366dba;
+	border-color: #366dba;
 }
 
 .tundra .dijitError {
-	background-color:#f9f7ba;
-	background-image:none;
+	background-color: #f9f7ba;
+	background-image: none;
 }
 
 .tundra .dijitErrorFocused {
-	background-color:#f9f999;
-	background-image:none;
+	background-color: #f9f999;
+	background-image: none;
 }
 
 /* Validation errors  */
 .tundra .dijitValidationIcon {
 	/* prevent height change when widget goes from valid to invalid state */
 	width: 16px;
-	background: transparent url('../images/warning.png') no-repeat center center;
+	background: transparent url('../images/warning.png') no-repeat center
+		center;
 }
 
 /* The highlight is shown in the ComboBox menu. */
 .tundra .dijitComboBoxHighlightMatch {
-	background-color:#a5beda;
+	background-color: #a5beda;
 }
 
 .tundra .dijitFocusedLabel {

@@ -2,18 +2,23 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>Dojo Visual Loader Test</title>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/themes/tundra/tundra.css";
-		@import "../../../dijit/themes/dijit.css";
-		@import "../../../dijit/tests/css/dijitTests.css"; 
-		@import "../Loader/Loader.css"; 
-	</style>
+<title>Dojo Visual Loader Test</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:true, parseOnLoad: true"></script>
-	<script type="text/javascript" src="../Loader.js"></script>
-	<script type="text/javascript">
+@import "../../../dijit/themes/tundra/tundra.css";
+
+@import "../../../dijit/themes/dijit.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../Loader/Loader.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true, parseOnLoad: true"></script>
+<script type="text/javascript" src="../Loader.js"></script>
+<script type="text/javascript">
 		// dojo.require("dojox.widget.Loader"); 
 		dojo.require("dojo.parser");	// scan page for widgets and instantiate them
 
@@ -55,27 +60,28 @@
 	</script>
 </head>
 <body class="tundra">
-	<div id="globalLoader" dojoType="dojox.widget.Loader"></div>
+<div id="globalLoader" dojoType="dojox.widget.Loader"></div>
 
-	<!-- Other examples: 
+<!-- Other examples: 
 	<div id="globalLoader" dojoType="dojox.widget.Loader" hasVisuals="false"></div>
 	<div id="globalLoader" dojoType="dojox.widget.Loader" hasVisuals="true" attachToPointer="false"></div>
 	-->
 
-	<h1 class="testTitle">Dojox xhrListener test</h1>
+<h1 class="testTitle">Dojox xhrListener test</h1>
 
-	<a href="javascript:getHoney();">start xhrGet demo</a>
-	<a href="javascript:postHoney();">start xhrPost demo</a>
+<a href="javascript:getHoney();">start xhrGet demo</a>
+<a href="javascript:postHoney();">start xhrPost demo</a>
 
-	<p>No additional code is required except for the existance of a 
-	dojoType="dojox.widget.Loader" node. It will listen for the start
-	and end of xhr* requests (via _ioSetArgs [ugh] and Deferred.prototype._fire .. 
-	</p>
+<p>No additional code is required except for the existance of a
+dojoType="dojox.widget.Loader" node. It will listen for the start and
+end of xhr* requests (via _ioSetArgs [ugh] and Deferred.prototype._fire
+..</p>
 
-	<br>
-	<div id="dataholder" style="float:left; height:300px; overflow:auto; width:400px; border:1px solid #ccc; "></div>
-	<!-- make me a scrollbar. a Taaaaaall scrollbar  -->
-	<div style="float:left; height:2000px; width:1px; overflow:hidden">spacer</div>
+<br>
+<div id="dataholder"
+	style="float: left; height: 300px; overflow: auto; width: 400px; border: 1px solid #ccc;"></div>
+<!-- make me a scrollbar. a Taaaaaall scrollbar  -->
+<div style="float: left; height: 2000px; width: 1px; overflow: hidden">spacer</div>
 
 </body>
 </html>

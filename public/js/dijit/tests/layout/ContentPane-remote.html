@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>ContentPane Remote Loading Test</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>ContentPane Remote Loading Test</title>
 
-	<style type="text/css">
-		@import "../../themes/claro/document.css";
-		@import "../css/dijitTests.css";
-	</style>
+<style type="text/css">
+@import "../../themes/claro/document.css";
 
-	<!-- required: the default dijit theme: -->
-	<link id="themeStyles" rel="stylesheet" href="../../../dijit/themes/claro/claro.css"/>
+@import "../css/dijitTests.css";
+</style>
 
-	<!-- required: dojo.js -->
-	<script type="text/javascript" src="../../../dojo/dojo.js"
-		data-dojo-config="isDebug: true, parseOnLoad: false"></script>
+<!-- required: the default dijit theme: -->
+<link id="themeStyles" rel="stylesheet"
+	href="../../../dijit/themes/claro/claro.css" />
 
-	<!-- only needed for alternate theme testing: do NOT use in your code! -->
-	<script type="text/javascript" src="../_testCommon.js"></script>
+<!-- required: dojo.js -->
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	data-dojo-config="isDebug: true, parseOnLoad: false"></script>
 
-	<!-- functions to help test -->
-	<script type="text/javascript" src="../helpers.js"></script>
+<!-- only needed for alternate theme testing: do NOT use in your code! -->
+<script type="text/javascript" src="../_testCommon.js"></script>
 
-	<script type="text/javascript">
+<!-- functions to help test -->
+<script type="text/javascript" src="../helpers.js"></script>
+
+<script type="text/javascript">
 		dojo.require("doh.runner");
 		dojo.require("dijit.dijit"); // optimize: load dijit layer
 		dojo.require("dijit.layout.ContentPane");
@@ -600,64 +602,72 @@
 </head>
 <body class="claro">
 
-	<h1 class="testTitle">Dijit layout.ContentPane (delayed) remote tests</h1>
+<h1 class="testTitle">Dijit layout.ContentPane (delayed) remote
+tests</h1>
 
-	<h2>Plain ContentPane</h2>
-	<div id='cp' class='box'></div>
+<h2>Plain ContentPane</h2>
+<div id='cp' class='box'></div>
 
-	<h2>StackContainer</h2>
-	<div id='stackcontainer'></div>
+<h2>StackContainer</h2>
+<div id='stackcontainer'></div>
 
-	<h2>TabContainer</h2>
-	<p>These tabs are made up of external content. Loading is delayed to make it easier to see if refreshOnShow and preload = 'false' is working.<br/>
-	The tabs also tests to insert html in the Tab title
-	</p>
+<h2>TabContainer</h2>
+<p>These tabs are made up of external content. Loading is delayed to
+make it easier to see if refreshOnShow and preload = 'false' is working.<br />
+The tabs also tests to insert html in the Tab title</p>
 
-	<div id="createTab" data-dojo-type='dijit.form.Button' data-dojo-props='onClick:function(){ createTab() }'>Create a Tab</div>
-	<div id="ttabs" data-dojo-type="dijit.layout.TabContainer" data-dojo-props='tabPosition:"top", style:"width: 100%; height: 20em;"'>
-		<a id="ttab1" data-dojo-type="dijit.layout.LinkPane"
-			data-dojo-props='href:"getResponse.php?messId=3&amp;delay=1000",
+<div id="createTab" data-dojo-type='dijit.form.Button'
+	data-dojo-props='onClick:function(){ createTab() }'>Create a Tab</div>
+<div id="ttabs" data-dojo-type="dijit.layout.TabContainer"
+	data-dojo-props='tabPosition:"top", style:"width: 100%; height: 20em;"'>
+<a id="ttab1" data-dojo-type="dijit.layout.LinkPane"
+	data-dojo-props='href:"getResponse.php?messId=3&amp;delay=1000",
 			closable:true
-		'><img src='../images/copy.gif'/> Tab1</a>
-		<a id="ttab2" data-dojo-type="dijit.layout.LinkPane"
-			data-dojo-props='href:"getResponse.php?messId=4&amp;delay=1000",
+		'><img
+	src='../images/copy.gif' /> Tab1</a> <a id="ttab2"
+	data-dojo-type="dijit.layout.LinkPane"
+	data-dojo-props='href:"getResponse.php?messId=4&amp;delay=1000",
 			refreshOnShow:true, title:"Tab 2 ",
 			selected:true,
 			closable:true
 		'><i>refreshOnShow</i>
-			<img src='../images/cut.gif'/>
-		</a>
-		<a id="ttab3" data-dojo-type="dijit.layout.LinkPane"
-			data-dojo-props='href:"getResponse.php?messId=5&amp;delay=1000",
+<img src='../images/cut.gif' /> </a> <a id="ttab3"
+	data-dojo-type="dijit.layout.LinkPane"
+	data-dojo-props='href:"getResponse.php?messId=5&amp;delay=1000",
 			onClose:testClose,
 			closable:true
 		'>
-			<b>Tab 3</b>
-			<img src='../images/paste.gif'/>
-		</a>
-	</div>
+<b>Tab 3</b> <img src='../images/paste.gif' /> </a></div>
 
-	<h2>AccordionContainer</h2>
-	<div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props='id:"ac", style:"height:300px; width:400px;"'>
-		<div id="ac_pane1" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"one", refreshOnShow:false, href:"getResponse.php?messId=4&amp;delay=1000"'></div>
-		<div id="ac_pane2" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"two", refreshOnShow:true, href:"getResponse.php?messId=4&amp;delay=4000"'></div>
-		<div id="ac_pane3" data-dojo-type="dijit.layout.ContentPane" data-dojo-props='title:"three", refreshOnShow:false, href:"getResponse.php?messId=4&amp;delay=4100"'></div>
-	</div>
+<h2>AccordionContainer</h2>
+<div data-dojo-type="dijit.layout.AccordionContainer"
+	data-dojo-props='id:"ac", style:"height:300px; width:400px;"'>
+<div id="ac_pane1" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"one", refreshOnShow:false, href:"getResponse.php?messId=4&amp;delay=1000"'></div>
+<div id="ac_pane2" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"two", refreshOnShow:true, href:"getResponse.php?messId=4&amp;delay=4000"'></div>
+<div id="ac_pane3" data-dojo-type="dijit.layout.ContentPane"
+	data-dojo-props='title:"three", refreshOnShow:false, href:"getResponse.php?messId=4&amp;delay=4100"'></div>
+</div>
 
-	<h2>TooltipDialog</h2>
-	<div data-dojo-type="dijit.layout.ContentPane">
-		<div id="preloadTooltipDlgBtn" data-dojo-type="dijit.form.DropDownButton">
-			<span>Show Preload TooltipDialog</span>
-			<div id="preloadTooltipDlg" data-dojo-type="dijit.TooltipDialog" data-dojo-props='title:"Enter Login information", preload: true, href: "doc1.html"'>
-			</div>
-		</div>
-	</div>
+<h2>TooltipDialog</h2>
+<div data-dojo-type="dijit.layout.ContentPane">
+<div id="preloadTooltipDlgBtn"
+	data-dojo-type="dijit.form.DropDownButton"><span>Show
+Preload TooltipDialog</span>
+<div id="preloadTooltipDlg" data-dojo-type="dijit.TooltipDialog"
+	data-dojo-props='title:"Enter Login information", preload: true, href: "doc1.html"'>
+</div>
+</div>
+</div>
 
-	<div id="noPreloadTooltipDlgBtn" data-dojo-type="dijit.form.DropDownButton">
-		<span>Show No-Preload TooltipDialog</span>
-		<div id="noPreloadTooltipDlg" data-dojo-type="dijit.TooltipDialog" data-dojo-props='title:"Enter Login information", preload: false, href: "doc1.html"'>
-		</div>
-	</div>
+<div id="noPreloadTooltipDlgBtn"
+	data-dojo-type="dijit.form.DropDownButton"><span>Show
+No-Preload TooltipDialog</span>
+<div id="noPreloadTooltipDlg" data-dojo-type="dijit.TooltipDialog"
+	data-dojo-props='title:"Enter Login information", preload: false, href: "doc1.html"'>
+</div>
+</div>
 
 </body>
 </html>

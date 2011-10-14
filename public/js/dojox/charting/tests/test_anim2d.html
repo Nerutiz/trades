@@ -1,14 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
-	<title>Chart 2D: Animation tests</title>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true"></script>
-	<script type="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>Chart 2D: Animation tests</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
+<script type="text/javascript">
 
         dojo.require("dojox.charting.Chart");
         dojo.require("dojox.charting.axis2d.Default");
@@ -65,15 +67,15 @@
 	</script>
 </head>
 <body>
-	<textarea id="template" style="display: none;">
+<textarea id="template" style="display: none;">
 		{% for item in charts %}
 			<p>{{ forloop.counter }}: {{ item.description }}</p>
 			<div id="chart_{{ forloop.counter0 }}"></div>
 		{% endfor %}
 	</textarea>
 
-	<h1>Chart 2D: Animation tests</h1>
+<h1>Chart 2D: Animation tests</h1>
 
-	<div id="charts"></div>
+<div id="charts"></div>
 </body>
 </html>

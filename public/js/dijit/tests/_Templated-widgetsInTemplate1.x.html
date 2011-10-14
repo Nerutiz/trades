@@ -1,13 +1,14 @@
 <html>
-	<head>
-		<title>testing widgetsInTemplate support</title>
-		<style type="text/css">
-			@import "../themes/claro/document.css";
-			@import "../themes/claro/claro.css";
-		</style>
-		<script type="text/javascript" src="../../dojo/dojo.js"
-			djConfig="isDebug: true"></script>
-		<script type="text/javascript">
+<head>
+<title>testing widgetsInTemplate support</title>
+<style type="text/css">
+@import "../themes/claro/document.css";
+
+@import "../themes/claro/claro.css";
+</style>
+<script type="text/javascript" src="../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
+<script type="text/javascript">
 			dojo.require("doh.runner");
 
 			dojo.require("dojo.parser");
@@ -379,39 +380,46 @@
 				doh.run();
 			});
 		</script>
-	</head>
-	<body class="claro">
-		<h1>testing widgetsInTemplate support</h1>
-		<xmp id="Test1Template" style="display:none;">
-			<div>
-				<div dojoAttachPoint="normalNode" >normal node</div>
-				<button dojoAttachPoint="buttonWidget" dojoAttachEvent="onClick:onClick" dojoType="dijit.form.Button">button #1</button>
-				<div dojoAttachPoint="checkboxWidget" dojoAttachEvent="onClick:onClick" dojoType="dijit.form.CheckBox"></div> checkbox #1
-				<div dojoAttachPoint="progressBarWidget" dojoAttachEvent="onChange:onClick" style="width:400px"
-					maximum="200" progress="20" dojoType="dijit.ProgressBar"></div>
-			</div>
-		</xmp>
-	<div dojoType="Test1Widget" id="test1Widget" ></div>
+</head>
+<body class="claro">
+<h1>testing widgetsInTemplate support</h1>
+<xmp id="Test1Template" style="display:none;">
+<div>
+<div dojoAttachPoint="normalNode">normal node</div>
+<button dojoAttachPoint="buttonWidget" dojoAttachEvent="onClick:onClick"
+	dojoType="dijit.form.Button">button #1</button>
+<div dojoAttachPoint="checkboxWidget" dojoAttachEvent="onClick:onClick"
+	dojoType="dijit.form.CheckBox"></div>
+checkbox #1
+<div dojoAttachPoint="progressBarWidget"
+	dojoAttachEvent="onChange:onClick" style="width: 400px" maximum="200"
+	progress="20" dojoType="dijit.ProgressBar"></div>
+</div>
+</xmp>
+<div dojoType="Test1Widget" id="test1Widget"></div>
 
-	<!-- TODO: this is a strange test; the containerNode shouldn't have any contents as they will be overwritten -->
-	<xmp id="Test2Template" style="display:none;">
-		<div>
-			<div dojoAttachPoint="containerNode" >
-				<div dojoAttachPoint="checkboxWidget" dojoType="dijit.form.CheckBox"></div>
-				checkbox #2
-			</div>
-		</div>
-	</xmp>
-	<div dojoType="Test2Widget" id="test2Widget" ><button dojoAttachPoint="buttonWidget" dojoType="dijit.form.Button">button #2</button></div>
+<!-- TODO: this is a strange test; the containerNode shouldn't have any contents as they will be overwritten -->
+<xmp id="Test2Template" style="display:none;">
+<div>
+<div dojoAttachPoint="containerNode">
+<div dojoAttachPoint="checkboxWidget" dojoType="dijit.form.CheckBox"></div>
+checkbox #2</div>
+</div>
+</xmp>
+<div dojoType="Test2Widget" id="test2Widget">
+<button dojoAttachPoint="buttonWidget" dojoType="dijit.form.Button">button
+#2</button>
+</div>
 
 
-	<xmp id="Test3Template" style="display:none;">
-		<div>
-			<div dojoAttachPoint="checkboxWidget" dojoType="dijit.form.CheckBox"></div> checkbox #3
-			<div dojoAttachPoint="containerNode" ></div>
-		</div>
-	</xmp>
-		<script>
+<xmp id="Test3Template" style="display:none;">
+<div>
+<div dojoAttachPoint="checkboxWidget" dojoType="dijit.form.CheckBox"></div>
+checkbox #3
+<div dojoAttachPoint="containerNode"></div>
+</div>
+</xmp>
+<script>
 			dojo.declare('Test3Widget',
 				[dijit._Widget, dijit._Templated],
 			{
@@ -420,69 +428,72 @@
 				templateString: dojo.byId('Test3Template').textContent || dojo.byId('Test3Template').innerText
 			});
 		</script>
-	<div dojoType="Test3Widget" id="test3Widget" >
-		<span>hello world</span>
-		<b style="border: 1px solid blue;">this is my
-			<button dojoType="dijit.form.Button" id="3.1">first button</button>
-		</b>
-		<button dojoType="dijit.form.Button" id="3.2">another button</button>
-		<i>and some more</i>
-		<div style="border: 1px solid red;">
-			<div dojoType="dijit.layout.ContentPane" style="border: 1px solid gray;" id="3.3">
-				<button dojoType="dijit.form.Button" id="3.nested">a nested button</button>
-				<button dojoType="dijit.form.Button" id="3.nested2">another nested button</button>
-			</div>
-			<button dojoType="dijit.form.Button" id="3.4">yet another button</button>
-			<button dojoType="dijit.form.Button" id="3.5">yet yet another button</button>
-		</div>
-	</div>
+<div dojoType="Test3Widget" id="test3Widget"><span>hello
+world</span> <b style="border: 1px solid blue;">this is my
+<button dojoType="dijit.form.Button" id="3.1">first button</button>
+</b>
+<button dojoType="dijit.form.Button" id="3.2">another button</button>
+<i>and some more</i>
+<div style="border: 1px solid red;">
+<div dojoType="dijit.layout.ContentPane" style="border: 1px solid gray;"
+	id="3.3">
+<button dojoType="dijit.form.Button" id="3.nested">a nested
+button</button>
+<button dojoType="dijit.form.Button" id="3.nested2">another
+nested button</button>
+</div>
+<button dojoType="dijit.form.Button" id="3.4">yet another
+button</button>
+<button dojoType="dijit.form.Button" id="3.5">yet yet another
+button</button>
+</div>
+</div>
 
-	<!-- Test templated widget containing layout widgets in template -->
-	<xmp id="Test4Template" style="display:none;">
-		<div>
-			<div dojoType="dijit.layout.TabContainer" dojoAttachPoint="tabCont" style="height: 5em;">
-				<div dojoType="dijit.layout.ContentPane" dojoAttachPoint="tab1" title="Tab 1">
-					pane 1
-				</div>
-				<div dojoType="dijit.layout.ContentPane" dojoAttachPoint="tab2" title="Tab 2">
-					pane 2
-				</div>
-			</div>
-		</div>
-	</xmp>
-	<div dojoType="Test4Widget" id="test4Widget" ></div>
+<!-- Test templated widget containing layout widgets in template -->
+<xmp id="Test4Template" style="display:none;">
+<div>
+<div dojoType="dijit.layout.TabContainer" dojoAttachPoint="tabCont"
+	style="height: 5em;">
+<div dojoType="dijit.layout.ContentPane" dojoAttachPoint="tab1"
+	title="Tab 1">pane 1</div>
+<div dojoType="dijit.layout.ContentPane" dojoAttachPoint="tab2"
+	title="Tab 2">pane 2</div>
+</div>
+</div>
+</xmp>
+<div dojoType="Test4Widget" id="test4Widget"></div>
 
-	<!-- Test templated widget containing container and nested widgets in template -->
-	<xmp id="Test5Template" style="display:none;">
-		<div>
-			<div dojoType="TestLayoutWidget" dojoAttachPoint="layout">
-				<div dojoType="TestCtndWidget" dojoAttachPoint="layChild1"></div>
-				<div dojoType="TestCtndWidget" dojoAttachPoint="layChild2"></div>
-			</div>
-			<div dojoType="TestCtnrWidget" dojoAttachPoint="container">
-				<div dojoType="TestCtndWidget" dojoAttachPoint="contained1"></div>
-				<div dojoType="TestCtndWidget" dojoAttachPoint="contained2"></div>
-			</div>
-			<div dojoType="TestStubWidget" dojoAttachPoint="stub1"></div>
-			<div dojoType="TestNonCtnrWidget" dojoAttachPoint="nonContainer">
-				<div dojoType="TestStubWidget" dojoAttachPoint="nonContained1"></div>
-				<div dojoType="TestStubWidget" dojoAttachPoint="nonContained2"></div>
-			</div>
-			<div dojoType="TestCtnrWidget" dojoAttachPoint="threeLevel">
-				<div dojoType="TestNonCtnrWidget" dojoAttachPoint="secondLevel">
-					<div dojoType="TestStubWidget" dojoAttachPoint="bottomLevel"></div>
-				</div>
-			</div>
-			<div dojoType="TestNonCtnrWidget" dojoAttachPoint="anotherThree">
-				<div dojoType="TestCtnrWidget" dojoAttachPoint="anotherSecond">
-					<div dojoType="TestCtndWidget" dojoAttachPoint="anotherBottom"></div>
-				</div>
-			</div>
-		</div>
-	</xmp>
-	<div dojoType="Test5Widget" id="test5Widget" ></div>
+<!-- Test templated widget containing container and nested widgets in template -->
+<xmp id="Test5Template" style="display:none;">
+<div>
+<div dojoType="TestLayoutWidget" dojoAttachPoint="layout">
+<div dojoType="TestCtndWidget" dojoAttachPoint="layChild1"></div>
+<div dojoType="TestCtndWidget" dojoAttachPoint="layChild2"></div>
+</div>
+<div dojoType="TestCtnrWidget" dojoAttachPoint="container">
+<div dojoType="TestCtndWidget" dojoAttachPoint="contained1"></div>
+<div dojoType="TestCtndWidget" dojoAttachPoint="contained2"></div>
+</div>
+<div dojoType="TestStubWidget" dojoAttachPoint="stub1"></div>
+<div dojoType="TestNonCtnrWidget" dojoAttachPoint="nonContainer">
+<div dojoType="TestStubWidget" dojoAttachPoint="nonContained1"></div>
+<div dojoType="TestStubWidget" dojoAttachPoint="nonContained2"></div>
+</div>
+<div dojoType="TestCtnrWidget" dojoAttachPoint="threeLevel">
+<div dojoType="TestNonCtnrWidget" dojoAttachPoint="secondLevel">
+<div dojoType="TestStubWidget" dojoAttachPoint="bottomLevel"></div>
+</div>
+</div>
+<div dojoType="TestNonCtnrWidget" dojoAttachPoint="anotherThree">
+<div dojoType="TestCtnrWidget" dojoAttachPoint="anotherSecond">
+<div dojoType="TestCtndWidget" dojoAttachPoint="anotherBottom"></div>
+</div>
+</div>
+</div>
+</xmp>
+<div dojoType="Test5Widget" id="test5Widget"></div>
 
-	<div dojoType="Missing" id="missing"></div>
-	</body>
+<div dojoType="Missing" id="missing"></div>
+</body>
 </html>
 

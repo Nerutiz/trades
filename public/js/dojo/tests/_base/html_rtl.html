@@ -1,15 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
 <html dir="rtl">
-	<head>
-		<title>testing Core HTML/DOM/CSS/Style utils</title>
-		<style type="text/css">
-			@import "../../resources/dojo.css";
-		</style>
-		<script type="text/javascript" 
-			src="../../dojo.js" 
-			djConfig="isDebug: true"></script>
-		<script type="text/javascript">
+<head>
+<title>testing Core HTML/DOM/CSS/Style utils</title>
+<style type="text/css">
+@import "../../resources/dojo.css";
+</style>
+<script type="text/javascript" src="../../dojo.js"
+	djConfig="isDebug: true"></script>
+<script type="text/javascript">
 			dojo.require("doh.runner");
 			
 			dojo.addOnLoad(function(){
@@ -115,36 +114,37 @@
 				doh.run();
 			});
 		</script>
-		<style type="text/css">
-			#rect100 {
-				background-color: black;
-				color: white;
-				position: absolute;
-				left: 100px;
-				top: 100px;
-				width: 100px;
-				height: 100px;
-				border: 0px;
-				padding: 0px;
-				margin: 0px;
-				overflow: hidden;
-			}
+<style type="text/css">
+#rect100 {
+	background-color: black;
+	color: white;
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	width: 100px;
+	height: 100px;
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
 
-			.iframeTest {
-				border: 5px solid black;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>testing Core HTML/DOM/CSS/Style utils</h1>
-		<div id="rect100">
-			100px rect, abs, 
-			mouse point is at top-left after the test "eventClientXY"
-		</div>
-		<div id="rect_vert" style="height:1600px;">show vertical scrollbar</div>
-		<div id="rect_horz" style="width:1600px;position:relative;right:-200px;">show horizonal scrollbar</div>
-		<br>
-		<script type="text/javascript" src="scrollingIframe.js"></script>
-		<div id="iframeContainer"></div>
-	</body>
+.iframeTest {
+	border: 5px solid black;
+}
+</style>
+</head>
+<body>
+<h1>testing Core HTML/DOM/CSS/Style utils</h1>
+<div id="rect100">100px rect, abs, mouse point is at top-left
+after the test "eventClientXY"</div>
+<div id="rect_vert" style="height: 1600px;">show vertical
+scrollbar</div>
+<div id="rect_horz"
+	style="width: 1600px; position: relative; right: -200px;">show
+horizonal scrollbar</div>
+<br>
+<script type="text/javascript" src="scrollingIframe.js"></script>
+<div id="iframeContainer"></div>
+</body>
 </html>

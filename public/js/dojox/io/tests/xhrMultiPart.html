@@ -1,15 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>XHR MultiPart Tests</title>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
+<title>XHR MultiPart Tests</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-	<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug:true"></script>
-	<script type="text/javascript" src="../xhrMultiPart.js"></script>
-	<script type="text/javascript">
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug:true"></script>
+<script type="text/javascript" src="../xhrMultiPart.js"></script>
+<script type="text/javascript">
 		dojo.require("dojox.io.xhrMultiPart");
 		var content = [
 			{ name: "foo", content: "FOObarbaz", filename: "foo.txt" },
@@ -56,27 +58,25 @@
 	</script>
 </head>
 <body class="tundra">
-	<h1>XHR MultiParts Tests</h1>
-	<p>Run this test from a web server, not from local disk.</p>
-	<p>
-		<button onclick="testXhrMulti()">Test xhrMultiPart</button>
-	</p>
-	<div>
-		<form id="formTest" onsubmit="return testXhrMultiForm()">
-			<input type="hidden" name="foo" value="FOObarbaz" />
-			<input type="hidden" name="bar" value="fooBARbaz" />
-			<input type="hidden" name="baz" value="foobarBAZ" />
-			<input type="submit" value="Test xhrMultiPart with form values" />
-		</form>
-	</div>
-	<div>
-		<form id="formTestWithFile" onsubmit="return testXhrMultiFormWithFile()">
-			<input type="hidden" name="foo" value="FOObarbaz" />
-			<input type="hidden" name="bar" value="fooBARbaz" />
-			<input type="hidden" name="baz" value="foobarBAZ" />
-			<input type="file" name="fileTest" value="" />
-			<input type="submit" value="Test xhrMultiPart (prevent file upload)" />
-		</form>
-	</div>
+<h1>XHR MultiParts Tests</h1>
+<p>Run this test from a web server, not from local disk.</p>
+<p>
+<button onclick="testXhrMulti()">Test xhrMultiPart</button>
+</p>
+<div>
+<form id="formTest" onsubmit="return testXhrMultiForm()"><input
+	type="hidden" name="foo" value="FOObarbaz" /> <input type="hidden"
+	name="bar" value="fooBARbaz" /> <input type="hidden" name="baz"
+	value="foobarBAZ" /> <input type="submit"
+	value="Test xhrMultiPart with form values" /></form>
+</div>
+<div>
+<form id="formTestWithFile" onsubmit="return testXhrMultiFormWithFile()">
+<input type="hidden" name="foo" value="FOObarbaz" /> <input
+	type="hidden" name="bar" value="fooBARbaz" /> <input type="hidden"
+	name="baz" value="foobarBAZ" /> <input type="file" name="fileTest"
+	value="" /> <input type="submit"
+	value="Test xhrMultiPart (prevent file upload)" /></form>
+</div>
 </body>
 </html>

@@ -1,29 +1,30 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<title>Scorll Leak</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
-		<link rel=stylesheet href="support/common.css"/>
-		<style type="text/css">
-			body {
-				font-size: 0.9em;
-				font-family: Geneva, Arial, Helvetica, sans-serif;
-				padding: 0.5em;
-			}
-			.title {
-				text-align:center;
-			}
-	 		#grid {
-	 			border: 1px solid #333;
-				width: 80em;
-				height: 45em;
-			}
-	
-		</style>
-		<script type="text/javascript" src="../../../../dojo/dojo.js" 
-			djConfig="isDebug:false, parseOnLoad: true"></script>
-		<script type="text/javascript">
+<head>
+<title>Scorll Leak</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel=stylesheet href="support/common.css" />
+<style type="text/css">
+body {
+	font-size: 0.9em;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	padding: 0.5em;
+}
+
+.title {
+	text-align: center;
+}
+
+#grid {
+	border: 1px solid #333;
+	width: 80em;
+	height: 45em;
+}
+</style>
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug:false, parseOnLoad: true"></script>
+<script type="text/javascript">
 			dojo.require("dijit.dijit"); // optimize: load dijit layer
 			dojo.require("dojox.grid.EnhancedGrid");
 			dojo.require("dojo.data.ItemFileWriteStore");
@@ -42,8 +43,8 @@
 			dojo.require("dojox.grid.enhanced.plugins.Pagination");
 			dojo.require("dojox.grid.enhanced.plugins.GridSource");
 		</script>
-		<script type="text/javascript" src="../support/test_data.js"></script>
-		<script type="text/javascript">
+<script type="text/javascript" src="../support/test_data.js"></script>
+<script type="text/javascript">
 			//init data
 			var data = {
 				identifier: 'id',
@@ -166,10 +167,11 @@
 				}, interval);
 			}
 		</script>
-	</head>
-	<body class="claro">
-		<div class="heading">dojox.grid.EnhancedGrid Scorll Leak Test</div>
-		<button id="leakTest" onClick="leakTest();">EnhancedGrid Scorll Leak</button>
-		<div id="gridContainer"></div>
-	</body>
+</head>
+<body class="claro">
+<div class="heading">dojox.grid.EnhancedGrid Scorll Leak Test</div>
+<button id="leakTest" onClick="leakTest();">EnhancedGrid Scorll
+Leak</button>
+<div id="gridContainer"></div>
+</body>
 </html>

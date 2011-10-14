@@ -8,24 +8,27 @@
 -->
 <html>
 <head>
-	<title>Sample Topic Wiring</title>
-	<style type="text/css">
+<title>Sample Topic Wiring</title>
+<style type="text/css">
+@import "../../../../dijit/themes/tundra/tundra.css";
 
-		@import "../../../../dijit/themes/tundra/tundra.css";
-		@import "../../../../dojo/resources/dojo.css";
-		@import "../../../../dijit/tests/css/dijitTests.css";
-		@import "../TableContainer.css";
+@import "../../../../dojo/resources/dojo.css";
 
-		.splitView {
-			width: 90%;
-			height: 90%;
-			border: 1px solid #bfbfbf;
-			border-collapse: separate;
-		}
-	</style>
+@import "../../../../dijit/tests/css/dijitTests.css";
 
-	<script type="text/javascript" src="../../../../dojo/dojo.js" djConfig="isDebug: true, parseOnLoad: true"></script>
-	<script type="text/javascript">
+@import "../TableContainer.css";
+
+.splitView {
+	width: 90%;
+	height: 90%;
+	border: 1px solid #bfbfbf;
+	border-collapse: separate;
+}
+</style>
+
+<script type="text/javascript" src="../../../../dojo/dojo.js"
+	djConfig="isDebug: true, parseOnLoad: true"></script>
+<script type="text/javascript">
 		dojo.require("dojo.parser");
 		dojo.require("dojox.wire");
 		dojo.require("dojox.wire.ml.Invocation");
@@ -39,46 +42,50 @@
 
 <body class="tundra">
 
-	<!-- Layout -->
-	<font size="3"><b>Demo of Topic Wiring</b></font><br/><br/>
-	This demo shows how you can wire events to publish to a topic as well as receive topic events
-	<br/>
-	<br/>
-	<table>
-		<tr>
-			<td>
-				<div dojoType="dijit.form.TextBox" jsId="inputField" value="" size="50" intermediateChanges="true"></div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div dojoType="dijit.form.TextBox" jsId="targetField1" value="" disabled="true" size="50"></div>
-			</td>
-		</tr>
-	</table>
+<!-- Layout -->
+<font size="3"><b>Demo of Topic Wiring</b></font>
+<br />
+<br />
+This demo shows how you can wire events to publish to a topic as well as
+receive topic events
+<br />
+<br />
+<table>
+	<tr>
+		<td>
+		<div dojoType="dijit.form.TextBox" jsId="inputField" value=""
+			size="50" intermediateChanges="true"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<div dojoType="dijit.form.TextBox" jsId="targetField1" value=""
+			disabled="true" size="50"></div>
+		</td>
+	</tr>
+</table>
 
 
-	<!-------------------------------- Using dojox.wire, declaratively wire up the widgets. --------------------------->
-	
-	<!-- 
+<!-------------------------------- Using dojox.wire, declaratively wire up the widgets. --------------------------->
+
+<!-- 
 		Whenever a key is entered into the textbox, publish the value of it to a topic.
 	-->
-	<div dojoType="dojox.wire.ml.Action"
-		id="action1"
-		trigger="inputField"
-		triggerEvent="onChange">
-		<div dojoType="dojox.wire.ml.Invocation" topic="sampleTopic"    parameters="inputField.value"></div>
-	</div>    
+<div dojoType="dojox.wire.ml.Action" id="action1" trigger="inputField"
+	triggerEvent="onChange">
+<div dojoType="dojox.wire.ml.Invocation" topic="sampleTopic"
+	parameters="inputField.value"></div>
+</div>
 
-	<!-- 
+<!-- 
 		Whenever a value is published to a topic, set it as the value of the textbox by using Transfer to transfer the value from the
 		topic publish to the target property.  The underlying wire code will invoke the proper setter for the target, in this case
 		it will invoke the dijit 'attr' function.
 	-->
-	<div dojoType="dojox.wire.ml.Action"
-		id="action2"
-		triggerTopic="sampleTopic">
-		<div dojoType="dojox.wire.ml.Transfer" target="targetField1.value"  source="arguments[0]"></div>
-	</div>    
+<div dojoType="dojox.wire.ml.Action" id="action2"
+	triggerTopic="sampleTopic">
+<div dojoType="dojox.wire.ml.Transfer" target="targetField1.value"
+	source="arguments[0]"></div>
+</div>
 </body>
 </html>

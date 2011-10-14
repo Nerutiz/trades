@@ -2,13 +2,14 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title>dojox.av.FLVideo</title>
-	<style type="text/css">
-		@import "../../../dojo/resources/dojo.css";
-		@import "../../../dijit/tests/css/dijitTests.css";
-	</style>
+<title>dojox.av.FLVideo</title>
+<style type="text/css">
+@import "../../../dojo/resources/dojo.css";
 
-    <script>
+@import "../../../dijit/tests/css/dijitTests.css";
+</style>
+
+<script>
 		passthrough = function(msg){
 			//for catching messages from Flash
 			if(window.console){
@@ -17,8 +18,8 @@
 		}
 		var djConfig={isDebug:true, parseOnLoad: true, debugAtAllCosts:false};
     </script>
-	<script type="text/javascript" src="../../../dojo/dojo.js"></script>
-	<script type="text/javascript">
+<script type="text/javascript" src="../../../dojo/dojo.js"></script>
+<script type="text/javascript">
 		dojo.require("dojox.av.FLVideo");
 		dojo.require("dojo.parser");
 
@@ -136,75 +137,91 @@
 
 
 	</script>
-    <style>
-		input{
-			width:66px;
-		}
-		html, body{
-			height:100%;
-			padding:0;
-		}
-		#player{
-			width:100%;
-			height:100%;
-			border:0;
-		}
-		#player td{
-			padding:3px;
-		}
-		#progress, #volume{
-			border:#999999 1px solid;
-			background:#FFFFFF;
-			height:10px;
-			margin:5px 0;
-			cursor:pointer;
-		}
-		#slider, #volslider{
-			border:#999999 3px solid;
-			height:4px;
-			margin:0;
-			padding:0;
-			width:0px;
-			position:relative;
-		}
-	</style>
+<style>
+input {
+	width: 66px;
+}
+
+html,body {
+	height: 100%;
+	padding: 0;
+}
+
+#player {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+#player td {
+	padding: 3px;
+}
+
+#progress,#volume {
+	border: #999999 1px solid;
+	background: #FFFFFF;
+	height: 10px;
+	margin: 5px 0;
+	cursor: pointer;
+}
+
+#slider,#volslider {
+	border: #999999 3px solid;
+	height: 4px;
+	margin: 0;
+	padding: 0;
+	width: 0px;
+	position: relative;
+}
+</style>
 </head>
-<body >
+<body>
 
 
 <table id="player">
-  <tr>
-    <td><h2>dojox.av.FLVideo</h2>
-    <p>DojoX Video uses a Deft component to provide the ability to play FLV files. It does not provide any UI controls; it is comprised mostly of methods and events so that a UI can be built that controls the player. The following test is kept purposely simple and void of any Dijit widgets. Most of the code in the test is to handle layout and the sliders. In fact, adding a video is as easy as: <br>
-<em>new dojox.av.FLVideo({mediaUrl:"myVideoPath"}, "myAttachNode");</em>.</p>
-    </td>
-    <td></td>
-  </tr>
-  <tr>
-    <td colspan="2" style="height:100%;">
-    <div id="vid" style="height:100%;"></div>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"><input id="time" type="text" /></td>
-    <td style="text-align:right;"><input id="dur" type="text" /></td>
-  </tr>
-  <tr>
-    <td colspan="2">
-        <div id="progress"><div id="slider"></div></div>
-    </td>
-  </tr>
-  <tr>
-    <td>
-        <button onclick="toggle();">Play/Pause</button>
-        <button onclick="w.play('video/Grog.flv');">Play Grog</button>
-        <button onclick="w.play('video/OldMan.flv');">Play Old Man</button>
+	<tr>
+		<td>
+		<h2>dojox.av.FLVideo</h2>
+		<p>DojoX Video uses a Deft component to provide the ability to
+		play FLV files. It does not provide any UI controls; it is comprised
+		mostly of methods and events so that a UI can be built that controls
+		the player. The following test is kept purposely simple and void of
+		any Dijit widgets. Most of the code in the test is to handle layout
+		and the sliders. In fact, adding a video is as easy as: <br>
+		<em>new dojox.av.FLVideo({mediaUrl:"myVideoPath"},
+		"myAttachNode");</em>.</p>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="height: 100%;">
+		<div id="vid" style="height: 100%;"></div>
+		</td>
+	</tr>
+	<tr>
+		<td style="text-align: left;"><input id="time" type="text" /></td>
+		<td style="text-align: right;"><input id="dur" type="text" /></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<div id="progress">
+		<div id="slider"></div>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<button onclick="toggle();">Play/Pause</button>
+		<button onclick="w.play('video/Grog.flv');">Play Grog</button>
+		<button onclick="w.play('video/OldMan.flv');">Play Old Man</button>
 		<button onclick="w.destroy();">Destroy Test</button>
-    </td>
-    <td style="text-align:right;">
-        <div id="volume"><div id="volslider"></div></div>
-    </td>
-  </tr>
+		</td>
+		<td style="text-align: right;">
+		<div id="volume">
+		<div id="volslider"></div>
+		</div>
+		</td>
+	</tr>
 </table>
 
 

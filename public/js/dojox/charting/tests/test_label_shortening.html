@@ -5,11 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 <title>Chart 2D labels shortening</title>
 <style type="text/css">
-	@import "../../../dojo/resources/dojo.css";
-	@import "../../../dijit/tests/css/dijitTests.css";
-	@import "../../../dijit/themes/claro/claro.css";
+@import "../../../dojo/resources/dojo.css";
+
+@import "../../../dijit/tests/css/dijitTests.css";
+
+@import "../../../dijit/themes/claro/claro.css";
 </style>
-<script type="text/javascript" src="../../../dojo/dojo.js" djConfig="isDebug: true"></script>
+<script type="text/javascript" src="../../../dojo/dojo.js"
+	djConfig="isDebug: true"></script>
 <script type="text/javascript">
 
 dojo.require("dojox.charting.Chart");
@@ -131,14 +134,18 @@ dojo.addOnLoad(makeObjects);
 </head>
 <body class="claro">
 <h1>Chart 2D labels shortening</h1>
-<p>Hover on the truncated label(end with default trailing Symbol: "..." or your customized trailing symbols) you will see the whole label on tooltip</p>
+<p>Hover on the truncated label(end with default trailing Symbol:
+"..." or your customized trailing symbols) you will see the whole label
+on tooltip</p>
 <p>1: Label shortening.(x axis customized trailing Symbol)</p>
 <div id="test1" style="width: 300px; height: 200px;"></div>
 <p>2: Label shortening with rotation.</p>
 <div id="test2" style="width: 300px; height: 200px;"></div>
-<p>3: Label shortening with limited character.(y axis customized trailing Symbol)</p>
+<p>3: Label shortening with limited character.(y axis customized
+trailing Symbol)</p>
 <div id="test3" style="width: 300px; height: 200px;"></div>
-<p>4: Label shortening with both limited character and limited length in px.</p>
+<p>4: Label shortening with both limited character and limited
+length in px.</p>
 <div id="test4" style="width: 300px; height: 200px;"></div>
 <p>That's all Folks!</p>
 </body>
