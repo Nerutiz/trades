@@ -46,7 +46,21 @@ class Application_Form_ProfileForm extends Zend_Dojo_Form
 		  	'placeHolder'	=>	'Type your Full name',
 		  	'required'		=>	false,
                 ));
+                
+            $this->addElement('ValidationTextBox', 'city', array(
+            'decorators'	=>	$this->elementDecorators,
+                //'label'			=>	'Full name',
+		  	'placeHolder'	=>	'City',
+		  	'required'		=>	false,
+             ));
                 	
+			$this->addElement('ValidationTextBox', 'country', array(
+            'decorators'	=>	$this->elementDecorators,
+                //'label'			=>	'Full name',
+		  	'placeHolder'	=>	'Country',
+		  	'required'		=>	false,
+             ));
+             
                 $this->addElement('ValidationTextBox', 'address', array(
             'decorators'	=>	$this->elementDecorators,
                 //	'label'			=>	'Address',

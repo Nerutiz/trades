@@ -120,6 +120,15 @@ class AccountController extends Zend_Controller_Action
 			}
 		}
 
+		public function changepasswordAction()
+		{
+			Zend_Layout::getMvcInstance()->disableLayout();
+            Zend_Dojo_View_Helper_Dojo::setUseDeclarative();
+            $form = new Application_Form_ChangePasswordForm();
+            $form->change->setAttrib('onclick', 'changePassword();');
+			$this->view->changePasswordForm = $form;
+		}
+		
 		public function logoutAction()
 		{
 			// clear everything - session is cleared also!

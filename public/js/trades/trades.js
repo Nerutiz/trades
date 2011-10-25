@@ -51,27 +51,40 @@ function saveRecord(column, value){
 		 });
 }
 
-function editTaskDialog(taskId)
+function changePasswordDialog()
 {
 	 secondDlg = new dojox.widget.Dialog({
-		 title: "Edit task",
+		 title: "Change password",
 		 layoutAlign: 'center',
-		 id:'editTaskDialog',
+		 id:'changePasswordDialog',
 		 draggable:false,
-		 dimensions: [600,515],
-		 style:'min-height:515px;',
+		 dimensions: [300,190],
          onCancel:function()
 	      {
 	    	 this.destroyRecursive();
 	      },
 	      onLoad:function()
 	      {
-	    	 dojo.byId('id').value = taskId;
+	    	
 	      }
      });
-	 secondDlg.set('href', '/task/edit?id='+taskId);
+	 secondDlg.set('href', '/account/changepassword');
 	 secondDlg.show();
 	 
+}
+
+function changePassword()
+{
+	newpasswords = dijit.byId('newpassword').get('value');
+	if(dijit.byId('newpassword').get('value') == dijit.byId('repeatpassword').get('value'))
+	{
+		dojo.xhrPost({
+			url:'/account/changepassword',
+			contetn:{oldpassword:dijit.byId('oldpassword').get('value'),newpassword:newpasswords}
+		});
+	}
+	else
+		alert('Passwords do not match');
 }
 
 function deleteImage(element, uuid, id)

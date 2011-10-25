@@ -37,7 +37,7 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
 	$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 	?>
     <div class="logoutBlock">
-    	<span class="username"><?php echo $userInfo->username;?></span>
+    	<a href="/account/profile" class="username"><?php echo $userInfo->username;?></a> | 
 		<a href="/account/logout"><?php echo 'Logout'; ?></a> 
     </div>
     <div class="menu">

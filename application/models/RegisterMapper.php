@@ -47,6 +47,8 @@ class Application_Model_RegisterMapper
     		'username'		=>	$user->getUsername(),
     		'fullname'		=>	$user->getFullname(),
     		'address'		=>	$user->getAddress(),
+			'city'			=>  $user->getCity(),
+			'country'		=>	$user->getCountry()
 		);
 		 
 		$this->getDbTable()->update($data, array('id = ?' => $userId));

@@ -62,7 +62,7 @@
 ?>
 <?php $request = Zend_Controller_Front::getInstance()->getRequest();?>
 <form action="/trades/index" id="selectForm" method="POST">
-	<select style="margin-top:25px;" onchange="dojo.byId('selectForm').submit();" name="userid" id="userid ">
+	<select style="margin-top:25px; float:right;" onchange="dojo.byId('selectForm').submit();" name="userid" id="userid ">
 	<?php foreach($this->users as $user):?>
 		<option <?php  if($request->getParam('userid')==$user->id) echo 'selected';?> value="<?php echo $user->id;?>">
 			<?php echo $user->email; ?>
@@ -70,9 +70,10 @@
 	<?php endforeach; ?>
 	</select>
 </form>
+<div style="clear:both;"></div>
 <br>
 <div class="sides">
-		<b>Mano daiktai</b>
+	<b>Mano daiktai</b>
 	<table id="myThings" accept="tr">
 		<thead>
 			<tr>

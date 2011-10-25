@@ -239,3 +239,15 @@ table {
 .thingsTable thead tr:hover{
 	cursor:default;
 }
+
+.formButton{
+	float: right;
+}
+
+dl{
+	display: inline-block;
+	width: auto;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: middle;
+}

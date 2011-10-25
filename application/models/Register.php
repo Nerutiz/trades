@@ -8,6 +8,8 @@ class Application_Model_Register
 	protected $_password;
 	protected $_image;
 	protected $_address;
+	protected $_country;
+	protected $_city;
 
 	public function __construct(array $options = null)
 	{
@@ -117,9 +119,32 @@ class Application_Model_Register
 		$this->_id = (int) $id;
 		return $this;
 	}
+	
 	public function getId()
 	{
 		return $this->_id;
+	}
+	
+	public function setCountry($country)
+	{
+		$this->_country = (string) $country;
+		return $this;
+	}
+	
+	public function getCountry()
+	{
+		return $this->_country;
+	}
+	
+	public function setCity($city)
+	{
+		$this->_city = (string) $city;
+		return $this;
+	}
+	
+	public function getCity()
+	{
+		return $this->_city;
 	}
 
 }
