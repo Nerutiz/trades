@@ -48,6 +48,7 @@ class Application_Model_RegisterMapper
     		'fullname'		=>	$user->getFullname(),
     		'address'		=>	$user->getAddress(),
 			'city'			=>  $user->getCity(),
+			'image'			=>	$user->getImage(),
 			'country'		=>	$user->getCountry()
 		);
 		 
@@ -64,7 +65,9 @@ class Application_Model_RegisterMapper
 		$user->setEmail($row->email)
 		->setUsername($row->username)
 		->setFullname($row->fullname)
-		->setAddress($row->address);
+		->setAddress($row->address)
+		->setImage($row->image);
+				
 		return $row->toArray();
 	}
 	

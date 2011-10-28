@@ -15,10 +15,6 @@ class ThingsController extends Zend_Controller_Action
 		$things = $mapper->fetchAll(Zend_Auth::getInstance()->getStorage()->read()->id);
 		$this->view->things = $things;
 		$this->view->mapper = $mapper;
-		//foreach ($things as $thing):
-			//$image=$mapper->selectmainimage($thing->getId());
-				//$this->view->mainimage = $mainImage;
-		//endforeach;
 	}
 
 	public function indexAction()

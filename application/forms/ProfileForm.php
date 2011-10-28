@@ -61,17 +61,18 @@ class Application_Form_ProfileForm extends Zend_Dojo_Form
 		  	'required'		=>	false,
              ));
              
-                $this->addElement('ValidationTextBox', 'address', array(
-            'decorators'	=>	$this->elementDecorators,
+             $this->addElement('ValidationTextBox', 'address', array(
+            	'decorators'	=>	$this->elementDecorators,
                 //	'label'			=>	'Address',
-		  	'placeHolder'	=>	'Type your Address',
-		  	'required'		=>	false,
+		  		'placeHolder'	=>	'Type your Address',
+		  		'required'		=>	false,
                 ));
+			$this->addElement(new Zend_Form_Element_Hidden('image'));
                 	
-                $this->addElement('button', 'save', array(
-         'value'		=>	'Register',
-	     'decorators'	=>	$this->buttonDecorators,
-                ));
+			$this->addElement('button', 'save', array(
+				'value'		=>	'Register',
+				'decorators'	=>	$this->buttonDecorators,
+             ));
 
                 $this->setDecorators(array('FormElements',array('HtmlTag', array('tag' => 'table')),'Form',));
                  

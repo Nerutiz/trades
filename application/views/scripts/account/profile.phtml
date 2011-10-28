@@ -1,4 +1,33 @@
+<div style="float:left;">
 <?php
 echo $this->profileForm;
 ?>
+</div>
+<input type="file" id="newUploader">
+<div id="imagesBlock" class="imagesBlock">
+	<img src="/uploads/<?php echo $this->profileForm->getValue('image');?>" width="100"/>
+</div>
+<script>
+	var u = new dojox.form.Uploader({
+		multiple:false, 
+		uploadOnSelect:true, 
+		url:"/things/upload",
+		baseClass: 'tradesFileUploader',
+		onComplete:function(dataArray){
+			 imagesString = '';
+			   dojo.forEach(dataArray, function(d){
+			       imagesString = d.uuid + '.' + d.ext;
+			       widthProportion = d.width / 100;
+			       height =  d.height / widthProportion;
+			       console.debug(height);
+			       dojo.query('#imagesBlock img').forEach(function(node){
+				       dojo.destroy(node);
+				   });
+			       dojo.create("img", {src:'/uploads/' + d.uuid + '.' + d.ext, width:100, height: height}, dojo.byId('imagesBlock'));
+			    }); 
+			   dojo.byId('image').value =  imagesString;
+			}
+		}, 'newUploader');
+</script>
+
 <a href="#" onclick="changePasswordDialog();">Change password</a>

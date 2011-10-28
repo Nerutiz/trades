@@ -10,6 +10,7 @@ class Application_Model_Register
 	protected $_address;
 	protected $_country;
 	protected $_city;
+	protected $_images;
 
 	public function __construct(array $options = null)
 	{
@@ -47,7 +48,18 @@ class Application_Model_Register
 		}
 		return $this;
 	}
+	
+	public function setImage($image)
+	{
+		$this->_image = (string) $image;
+		return $this;
+	}
 
+	public function getImage()
+	{
+		return $this->_image;
+	}
+	
 	public function setAddress($address)
 	{
 		$this->_address = (string) $address;
@@ -102,17 +114,17 @@ class Application_Model_Register
 	{
 		return $this->_password;
 	}
-
-	public function setImage($image)
-	{
-		$this->_image = (string) $image;
-		return $this;
-	}
-
-	public function getImage()
-	{
-		return $this->_image;
-	}
+//
+//	public function setImage($image)
+//	{
+//		$this->_image = (string) $image;
+//		return $this;
+//	}
+//
+//	public function getImage()
+//	{
+//		return $this->_image;
+//	}
 
 	public function setId($id)
 	{

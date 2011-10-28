@@ -1,5 +1,9 @@
-<?php
-$this->loginform->setAttrib('onClick', 'validateForSubmit(\'' . $this->loginform->getName() . '\');');
-echo $this->loginform;
-?>
-<a href="/account/register">Register</a>
+<div class="accountForms">
+	<img src="/images/logotype.png">
+	<br>
+	<?php
+	$this->loginform->setAttrib('onClick', 'validateForSubmit(\'' . $this->loginform->getName() . '\');');
+	echo $this->loginform;
+	?>
+	<a href="/account/register">Register</a>
+</div>

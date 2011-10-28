@@ -251,3 +251,28 @@ dl{
 	margin: 0px;
 	vertical-align: middle;
 }
+
+.dojoxUploaderFileListTable{
+	display: none;
+}
+
+.notLoggedBody{
+	background-image: url("../images/background.jpg");
+	background-repeat: repeat;
+	text-align: center;
+}
+
+.accountForms{
+	text-align:center;
+	margin-top:15%;
+	text-align:left;
+	padding:10px;
+	background:#fff;
+	display: inline-block;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px #888;
+	box-shadow: 0 0 5px 5px #888;
+}

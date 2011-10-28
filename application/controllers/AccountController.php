@@ -12,6 +12,7 @@ class AccountController extends Zend_Controller_Action
 
 		public function registerAction()
 		{
+			$this->_helper->layout()->setLayout('notlogged');
 			$validator = new Zend_Validate_Db_RecordExists(
 			array(
         	'table' => 'users',
@@ -43,17 +44,9 @@ class AccountController extends Zend_Controller_Action
 
 		public function indexAction()
 		{
+			$this->_helper->layout()->setLayout('notlogged');
 			if(Zend_Auth::getInstance()->hasIdentity())
-			{
 				$this->_redirect('/account/profile');
-				//  $auth = Zend_Auth::getInstance();
-				//			if ($auth->hasIdentity()) {
-				//	    		// Identity exists; get it
-				//	    		$identity = $auth->getIdentity();
-				//	    	//	$userType = $identity->toArray();
-				//	    	//	print_r(get_object_vars($identity));
-				//			}
-				}
 				 
 				$loginform = new Application_Form_LoginForm();
 				$request = $this->getRequest();
@@ -107,7 +100,6 @@ class AccountController extends Zend_Controller_Action
 			$profileForm->populate($result);
 			$profileForm->save->setAttrib('onClick', 'validateForSubmit(\'' . $profileForm->getName() . '\');');
 			$this->view->profileForm = $profileForm;
-
 
 			if ($this->getRequest()->isPost())
 			{

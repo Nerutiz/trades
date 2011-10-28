@@ -1,9 +1,9 @@
 <?php
 echo $this->thingsForm;
 ?>
-<form enctype="multipart/form-data" action="/things/upload"
-	method="POST"><input type="file" id="newUploader">
-<div id="files" dojoType="dojox.form.uploader.FileList" uploaderId="uploadedfile"></div>
+<form enctype="multipart/form-data" action="/things/upload"method="POST">
+	<input type="file" id="newUploader">
+	<div id="files" dojoType="dojox.form.uploader.FileList" uploaderId="uploadedfile"></div>
 </form>
 
 <div id="imagesBlock" class="imagesBlock"></div>
@@ -17,6 +17,7 @@ echo $this->thingsForm;
 		onComplete:function(dataArray){
 			 imagesString = '';
 			   dojo.forEach(dataArray, function(d){
+				   console.debug(d);
 			       imagesString = imagesString + d.uuid + '-';
 			       widthProportion = d.width / 100;
 			       height =  d.height / widthProportion;

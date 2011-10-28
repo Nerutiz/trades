@@ -73,6 +73,28 @@ function changePasswordDialog()
 	 
 }
 
+function loginDialog()
+{
+	 secondDlg = new dojox.widget.Dialog({
+		 title: "Change password",
+		 layoutAlign: 'center',
+		 id:'changePasswordDialog',
+		 draggable:false,
+		 dimensions: [300,190],
+         onCancel:function()
+	      {
+	    	 this.destroyRecursive();
+	      },
+	      onLoad:function()
+	      {
+	    	
+	      }
+     });
+	 secondDlg.set('href', '/account/changepassword');
+	 secondDlg.show();
+	 
+}
+
 function changePassword()
 {
 	newpasswords = dijit.byId('newpassword').get('value');

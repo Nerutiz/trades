@@ -31,11 +31,10 @@ class Application_Form_LoginForm extends Zend_Dojo_Form
 			'required'		=>	true,
                 	
                 ));
-                	
-                $this->addElement('PasswordTextBox', 'password', array(
+            	
+         $this->addElement('PasswordTextBox', 'password', array(
 		 	'placeHolder'		=>	'Type your Password',
 		  	'decorators'		=>	$this->elementDecorators,
-                 
 			'required'			=>	true,
 		 	'type'				=>	'password'
 		 	));
