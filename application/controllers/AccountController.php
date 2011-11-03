@@ -12,7 +12,7 @@ class AccountController extends Zend_Controller_Action
 
 		public function registerAction()
 		{
-			$this->_helper->layout()->setLayout('notlogged');
+			//$this->_helper->layout()->setLayout('notlogged');
 			$validator = new Zend_Validate_Db_RecordExists(
 			array(
         	'table' => 'users',
@@ -44,7 +44,7 @@ class AccountController extends Zend_Controller_Action
 
 		public function indexAction()
 		{
-			$this->_helper->layout()->setLayout('notlogged');
+			//$this->_helper->layout()->setLayout('notlogged');
 			if(Zend_Auth::getInstance()->hasIdentity())
 				$this->_redirect('/account/profile');
 				 
