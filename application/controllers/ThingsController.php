@@ -76,6 +76,7 @@ class ThingsController extends Zend_Controller_Action
 			$files = $upload->getFileInfo();
 			foreach ($files as $file => $info)
 			{
+				//$transform = new Zend_Image_Transform( $image );
 				$ext = end(explode(".", $info['name']));
 				$uuid = uniqid();
 				$upload->addFilter('Rename', array('target' => 'uploads/' . $uuid . '.' . $ext ,'overwrite' => true));
@@ -93,8 +94,8 @@ class ThingsController extends Zend_Controller_Action
 				$_post['type'] = $type;
 				$_post['size'] = $size;
 				$_post['uuid'] = $uuid;
-				$_post['width'] = $imageSize[0];
-				$_post['height'] = $imageSize[1];
+				$_post['width'] = 150;
+				$_post['height'] = 150;
 				$_post['ext'] = $ext;
 				$htmldata[$cnt] = $_post;
 				$mapper->saveall($htmldata[$cnt]);
