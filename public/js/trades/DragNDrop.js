@@ -39,6 +39,23 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
 		window.location = '/things/editthing?id='+id;
 	},
 	
+        descriptionEllipsis:function(text)
+        {
+            symbolsToShow = 130; 
+            if(text.length > symbolsToShow + 3)
+            {
+                ellipsedText = '';
+                for(var i = 0; i < symbolsToShow; i++)
+                {
+                   ellipsedText += text[i];
+                }
+                ellipsedText += "..."; 
+                return ellipsedText;
+            }
+            else
+                return text;
+        },
+        
 	createContent:function()
 	{
 		if(!this.items)
@@ -97,6 +114,7 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
 
 		}
                 
+                
                 if(this.checkContainerType() == 'DIV')
 		{
                     
@@ -108,7 +126,8 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
                             var descriptionEl = dojo.create('p');
                             var wishEl = dojo.create('p');
                             
-                            img.width = 50;
+                            img.width = 80;
+                            img.height = 80;
                             itemContainer.draggable = isDraggable;
 
                             if(!item.uuid)
@@ -122,7 +141,7 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
                             titleEl.innerHTML = item.title;
                             itemContainer.appendChild(titleEl);	
 
-                            descriptionEl.innerHTML = item.description;
+                            descriptionEl.innerHTML = widget.descriptionEllipsis(item.description);
                             itemContainer.appendChild(descriptionEl);
                           
                             wishEl.innerHTML = item.wishes;
