@@ -315,6 +315,11 @@ dl{
     border-radius:5px;
     background: #CCC;
 }
+.hidden_sumbit{
+    visibility: hidden;
+    position:absolute;
+    top:-100px;
+}
 
 .footer{
     border: 3px solid #888;
