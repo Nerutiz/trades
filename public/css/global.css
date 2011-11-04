@@ -309,6 +309,7 @@ dl{
 .content{
     min-height: 300px;
     border-radius:5px;
+    background: #CCC;
 }
 
 .footer{
