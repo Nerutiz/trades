@@ -244,7 +244,6 @@ dl{
 .notLoggedBody{
 	background-image: url("../images/background.jpg");
 	background-repeat: repeat;
-	text-align: center;
 }
 
 .accountForms{
@@ -265,28 +264,26 @@ dl{
 
 .menu {
         height: 70px;
-        display: none;
-        
 }
 
 .menu a {
-	display: inline-block;
 	padding: 5px;
 }
 
 .logo {
 	background: url("../images/logo.png");
 	width: 108px;
-	height: 97px;
+	height: 91px;
 	position: absolute;
 	top: -12px;
 }
 
 .header .title{
-    margin-left:127px;
+    position: absolute;
     height: 42px;
-    width: 500px;
-    display: inline-block;
+    width: 390px;
+    top:10px;
+    left:180px;
 }
 .header .title span{
     text-transform: uppercase;
@@ -294,18 +291,25 @@ dl{
 }
 
 .header .user_block{
-    display: inline-block;
     width:500px;
     height: 42px;
+    position:absolute;
+    top:10px;
+    left:560px;
 }
-.header .user_block div{
-    display: inline-block;
+.header .logged_block{
     width:200px;
+    height: 42px;
+}
+.header .not_logged_block{
+    width:500px;
     height: 42px;
 }
 
 .content{
     min-height: 300px;
+    background: #FFF;
+    border-radius:5px;
 }
 
 .footer{
