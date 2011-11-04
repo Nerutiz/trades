@@ -84,6 +84,8 @@ class ThingsController extends Zend_Controller_Action
 				{
 					$upload->receive($file);
 				}
+				$imageSize[0] = 150;
+				$imageSize[1] = 150;
 				$imageSize = getimagesize('uploads/' . $uuid . '.' . $ext);
 				$name = $info['name'];
 				$type = $info['type'];
@@ -94,8 +96,8 @@ class ThingsController extends Zend_Controller_Action
 				$_post['type'] = $type;
 				$_post['size'] = $size;
 				$_post['uuid'] = $uuid;
-				$_post['width'] = 150;
-				$_post['height'] = 150;
+				$_post['width'] = $imageSize[0];
+				$_post['height'] = $imageSize[1];
 				$_post['ext'] = $ext;
 				$htmldata[$cnt] = $_post;
 				$mapper->saveall($htmldata[$cnt]);
