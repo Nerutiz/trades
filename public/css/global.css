@@ -369,3 +369,11 @@ dl{
 .itemContainer p{
     margin: 2px;
 }
+
+.formDialog{
+    text-align: center;
+}
+
+.formDialog form{
+    display: inline-block;
+}

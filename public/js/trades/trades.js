@@ -264,3 +264,25 @@ function selectAllUsers(userID)
 		content:{userid:userID}
 	});
 }
+
+function formDialog()
+{
+     formDialog = new dojox.widget.Dialog({
+         title: "Registracija",
+         layoutAlign: 'center',
+         id:'registerDialog',
+         draggable:false,
+         'class':'formDialog',
+         dimensions: [320,230],
+         onCancel:function()
+            {
+             this.destroyRecursive();
+            },
+	 onLoad:function()
+	      {
+	    	
+	      }
+     });
+	 formDialog.set('href', '/account/register');
+	 formDialog.show();
+}
