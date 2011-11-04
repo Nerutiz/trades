@@ -326,6 +326,7 @@ dl{
     border-radius: 5px;
     padding:10px;
     box-shadow: 0 0 3px 3px #888;
+    margin-top: 15px;
 }
 .footer a{
     color:#000;
@@ -337,7 +338,7 @@ dl{
     background: #fff;
     margin: 10px 10px;
     width: 300px;
-    height: 150px;
+    height: 110px;
     vertical-align: top;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -346,4 +347,19 @@ dl{
 
 .itemContainer img{
     float: left;
+    margin-right: 7px;
+    margin-bottom: 7px;
+}
+
+.itemTitle{
+    font-weight: bold;
+}
+
+.itemDesc{
+    font-size: 13px;
+    color: #bfbfbf;
+}
+
+.itemContainer p{
+    margin: 2px;
 }
