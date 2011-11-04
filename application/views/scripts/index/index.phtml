@@ -1,1 +1,10 @@
 <h1>Home page (visas daiktu sąrašas)</h1>
+<div id="allThings">
+</div>
+<script type="text/javascript">
+    new trades.DragNDrop({
+        id:'allThings',
+        isDraggable:false, 
+        items:<?php echo $this->allthings;?>
+    });
+</script>
