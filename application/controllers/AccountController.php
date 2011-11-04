@@ -125,7 +125,7 @@ class AccountController extends Zend_Controller_Action
 		{
 			// clear everything - session is cleared also!
 			Zend_Auth::getInstance()->clearIdentity();
-			$this->_redirect('/account/register');
+			$this->_redirect('/');
 		}
 
 }
