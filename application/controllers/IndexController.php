@@ -10,8 +10,9 @@ class IndexController extends Zend_Controller_Action
 
 	public function indexAction()
 	{
-                $this->_helper->layout()->setLayout('layout');
-		//$this->_redirect('/account/');
+            $id = '';
+            $thingsMapper = new Application_Model_ThingsMapper();
+            $this->view->allthings = $thingsMapper->findotherthings(Zend_Auth::getInstance()->getStorage()->read()->id, $id);
 	}
 
 
