@@ -5,7 +5,7 @@ Thumbs.db
 *.bak
 *.~*
 *.orig
-application/configs/*
+application/configs/*.*
 public/uploads/*
 !README
 
