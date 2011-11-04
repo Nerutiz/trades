@@ -12,7 +12,11 @@ class IndexController extends Zend_Controller_Action
 	{
             $id = '';
             $thingsMapper = new Application_Model_ThingsMapper();
-            $this->view->allthings = $thingsMapper->findotherthings(Zend_Auth::getInstance()->getStorage()->read()->id, $id);
+            if (Zend_Auth::getInstance()->hasIdentity()){
+                $this->view->allthings = $thingsMapper->findotherthings(Zend_Auth::getInstance()->getStorage()->read()->id, $id);
+            }else{
+                $this->view->allthings = $thingsMapper->findotherthings(null, $id);
+            }
 	}
 
 

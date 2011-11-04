@@ -131,9 +131,11 @@ class Application_Model_ThingsMapper
 
 	public function findotherthings($id, $userID)
 	{
-		if(!$userID)
+		if($id)
 			$otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id!=?', $id));
 		else
+                    $otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select());
+                if($userID)
 			$otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id=?', $userID));
 		
 		$thingWithImage = array();
