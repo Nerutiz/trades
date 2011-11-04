@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Keičiu.lt</title>
+<title>Keiciu.lt</title>
 
 <?php echo $this->headTitle() ?>
 
@@ -30,51 +30,46 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
 <body class="claro notLoggedBody">
 
     <div id="header" class="header">
-        <div class="logo"></div>
+        <span class="logo"></span>
         <div class="title">
-            <span>Efektyviausia <br />keitimosi sistema</span>
-            <input type="search" name="search" value="Paieška" />
+            <span style="display: inline-block; vertical-align: middle; padding-right: 10px">Efektyviausia <br />keitimosi sistema</span>
+            <span style="display: inline-block" >
+                <input type="search" name="search" value="Paieška" />
+            </span>
         </div>
         <div class="user_block">
-        
-        <?php /* ?>
-                <input type="text" name="name" />
-                <br/>
-                <input type="password" name="password" />
-            
-                <button>Registruotis</button>
-                <br/>
-                <button>Dėti skelbima</button>
-            <?php */ ?>
-        </div>
-        <div class="menu">
             <?php if (Zend_Auth::getInstance()->hasIdentity()){ ?>
-            <a href="/things/mythings"> Mano daiktai </a>
-            <a href="/things"> Kurti daikta </a>
-            <a href="/trades">  Mainai </a>
+            <?php  $userInfo = Zend_Auth::getInstance()->getStorage()->read(); ?>
+                <div class="loged_block">
+                    <a href="/"> Pradinis </a>
+                    <a href="/things/mythings"> Mano daiktai </a>
+                    <a href="/things"> Kurti daikta </a>
+                    <a href="/trades">  Mainai </a>
+                    <br />
+                    <a href="/account/profile" class="username"><?php echo $userInfo->username;?></a> | 
+                    <a href="/account/logout"><?php echo 'Logout'; ?></a> 
+                </div>
             <?php }else{ ?>
-            <a href="/account"> Prisijungimas.. </a>
+                <div class="not_logged_block">
+                    <div style="display: inline-block; padding-right: 10px">
+                        <form method="post" action="/account">
+                        <input type="text" name="email" value="Vardas"/>
+                        <br />
+                        <input type="password" name="password" value="Passdf" />
+                        <input type="submit" style="display: none;" />
+                        </form>
+                    </div>
+                    <div style="display: inline-block">
+                        <button>Registruotis</button>
+                        <br />
+                        <button>Dėti skelbima</button>
+                    </div>
+                </div>
             <?php } ?>
         </div>
     </div>
 
-    <?php if(Zend_Auth::getInstance()->hasIdentity() OR false){
-            $userInfo = Zend_Auth::getInstance()->getStorage()->read();
-    ?>
-        <div class="logoutBlock">
-            <a href="/account/profile" class="username"><?php echo $userInfo->username;?></a> | 
-                    <a href="/account/logout"><?php echo 'Logout'; ?></a> 
-        </div>
-        <div class="menu">
-            <a href="/things/mythings"> Mano daiktai </a>
-            <a href="/things"> Kurti daikta </a>
-            <a href="/trades">  Mainai </a>
-        </div>
-    <?php }else{
-                    //echo $this->partial('account/index.phtml', array('loginform' => new Application_Form_LoginForm()));
-            }?>
-
-
+    
     <div class="content"> <?php echo $this->layout()->content ?>  </div>
 
 
