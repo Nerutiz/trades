@@ -10,7 +10,8 @@ class IndexController extends Zend_Controller_Action
 
 	public function indexAction()
 	{
-		$this->_redirect('/account/');
+                $this->_helper->layout()->setLayout('layout');
+		//$this->_redirect('/account/');
 	}
 
 
