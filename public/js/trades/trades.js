@@ -265,6 +265,21 @@ function selectAllUsers(userID)
 	});
 }
 
+function removeItem(itemID, item)
+{
+    var conf = confirm("Ar tikrai norite atlikit šį veiksmą?");
+    if (conf){
+        
+	dojo.xhrPost({
+		url:'/things/deletething',
+		content:{itemid:itemID}
+	});
+        dojo.destroy(item);
+    }
+}
+
+
+
 function formDialog()
 {
      formDialog = new dojox.widget.Dialog({

@@ -170,6 +170,18 @@ class Application_Model_ThingsMapper
 		$dbAdapter->query('UPDATE upload SET main="" WHERE things_id="' . $thingid . '"');
 		$dbAdapter->query('UPDATE upload SET main="1" WHERE things_id="' . $thingid . '" AND uuid="' . $imageid . '"');
 	}
+        
+        
+        public function deleteThing($thingid)
+        {       
+            
+            $whereimg = Zend_Db_Table::getDefaultAdapter()->quoteInto('things_id=?',$thingid);
+            $this->getImageDbTable()->delete($whereimg);
+
+            $where = Zend_Db_Table::getDefaultAdapter()->quoteInto('id=?',$thingid);
+            $this->getDbTable()->delete($where);
+
+        }
 
 	
 

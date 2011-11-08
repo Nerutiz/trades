@@ -76,9 +76,11 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
                             var titleTD = dojo.create('td');
                             var descriptionTD = dojo.create('td');
                             var wishesTD = dojo.create('td');
+                            var deleteTD = dojo.create('td');
+                            var deleteIMG = dojo.create('span',{'class':'removeImg'},deleteTD);
                             img.width = 50;
                             tr.draggable = isDraggable;
-
+                            dojo.connect(deleteIMG, "onclick", function(){dojo.stopEvent(event);removeItem(item.id, tr);});
                             if(!item.uuid)
                                 img.src = "/images/" + "noPhoto.gif";
                             else
@@ -101,7 +103,7 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
                             wishesTD.innerHTML = item.wishes;
 
                             tr.appendChild(wishesTD);
-
+                            tr.appendChild(deleteTD);
                             if(widget.itemOnClick)
                             {
                                     dojo.connect(tr, 'onclick', function(){

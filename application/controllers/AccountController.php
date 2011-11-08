@@ -8,7 +8,7 @@ class AccountController extends Zend_Controller_Action
 		//        {
 		//            $this->_redirect('/account');
 		//        }
-		}
+        }
 
 		public function registerAction()
 		{
@@ -16,32 +16,39 @@ class AccountController extends Zend_Controller_Action
                      Zend_Dojo_View_Helper_Dojo::setUseDeclarative();
 			//$this->_helper->layout()->setLayout('notlogged');
 			$validator = new Zend_Validate_Db_RecordExists(
-			array(
-        	'table' => 'users',
-        	'field' => 'email'
-        	));
-        	 
-        	$form = new Application_Form_RegisterForm();
-        	$form->register->setAttrib('onClick', 'validateAndSubmitForm(\'' . $form->getName() . '\');');
-        	$this->view->form = $form;
+                            array(
+                            'table' => 'users',
+                            'field' => 'email'
+                            ));
+
+                    $form = new Application_Form_RegisterForm();
+                    $form->register->setAttrib('onClick', 'validateAndSubmitForm(\'' . $form->getName() . '\');');
+                    $form->setAction('/account/register');
+                    $this->view->form = $form;
 
 
-        	if ($this->getRequest()->isPost())
-        	{
-        		if ($form->isValid($this->getRequest()->getPost()))
-        		{
-        			if (!$validator->isValid($form->email->getValue()))
-        			{
-        				$user = new Application_Model_Register($form->getValues());
-        				$mapper  = new Application_Model_RegisterMapper();
-        				$mapper->save($user);
-        			}
-        			else
-        			$this->view->existedRecordErrorMessage = 'This Email already registered';
-        		}
-        		else
-        		return 'nevalidi';
-        	}
+                    if ($this->getRequest()->isPost())
+                    {
+                            if ($form->isValid($this->getRequest()->getPost()))
+                            {
+                                    if (!$validator->isValid($form->email->getValue()))
+                                    {
+                                            $user = new Application_Model_Register($form->getValues());
+                                            $mapper  = new Application_Model_RegisterMapper();
+                                            $mapper->save($user);
+                                            
+                                            $auth = new Application_Model_Base();
+                                            $auth->authUser($user->getEmail(), $user->getPassword());
+                                            $this->_redirect('/');
+                                    }
+                                    else
+                                    $this->view->existedRecordErrorMessage = 'This Email already registered';
+                            }
+                            else
+                            return 'nevalidi';
+                    }
+                       
+                    
 		}
 
 		public function indexAction()
@@ -58,34 +65,20 @@ class AccountController extends Zend_Controller_Action
 				{
 					if($loginform->isValid($request->getPost()))
 					{
-						$username = $loginform->getValue('email');
-						$password = $loginform->getValue('password');
-						$dbAdapter = Zend_Db_Table::getDefaultAdapter();
+                                            $email = $loginform->getValue('email');
+                                            $password = $loginform->getValue('password');
+						
+                                            $result = new Application_Model_Base();
+                                            $result->authUser($email, $password);
 
-						$authAdapter = new Zend_Auth_Adapter_DbTable($dbAdapter);
-
-						$authAdapter->setTableName('users')
-						->setIdentityColumn('email')
-						->setCredentialColumn('password')
-						->setCredentialTreatment('MD5(?)');
-
-			   $authAdapter->setIdentity($username)
-			   ->setCredential($password);
-			   //echo $username . ' ' .  $password;
-			   $auth = Zend_Auth::getInstance();
-			   $result = $auth->authenticate($authAdapter);
-
-			   if($result->isValid())
-			   {
-			   	$userInfo = $authAdapter->getResultRowObject(null, 'password');
-			   	$authStorage = $auth->getStorage();
-			   	$authStorage->write($userInfo);
-			   	$this->_redirect('/things');
-			   }
-			   else
-			   {
-			   	$errorMessage = "Wrong username or password provided. Please try again.";
-			   }
+                                           if($result == true)
+                                           {
+                                                $this->_redirect('/things');
+                                           }
+                                           else
+                                           {
+                                                $errorMessage = "Wrong username or password provided. Please try again.";
+                                           }
 					}
 				}
 

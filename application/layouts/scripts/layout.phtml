@@ -31,7 +31,7 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
 <body class="claro notLoggedBody">
 
     <div id="header" class="header">
-        <span class="logo"></span>
+        <a href="/"><span class="logo"></span></a>
         <div class="title">
             <span style="display: inline-block; vertical-align: middle; padding-right: 10px">Efektyviausia <br />keitimosi sistema</span>
             <span style="display: inline-block" >
@@ -43,8 +43,8 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
             <?php  $userInfo = Zend_Auth::getInstance()->getStorage()->read(); ?>
                 <div class="loged_block">
                     <a href="/"> Pradinis </a>
-                    <a href="/things/mythings"> Mano daiktai </a>
-                    <a href="/things"> Kurti daikta </a>
+                    <a href="/things/index"> Mano daiktai </a>
+                    <a href="/things/newthing"> Kurti daikta </a>
                     <a href="/trades">  Mainai </a>
                     <br />
                     <a href="/account/profile" class="username"><?php echo $userInfo->username;?></a> | 

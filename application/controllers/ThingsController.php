@@ -9,7 +9,7 @@ class ThingsController extends Zend_Controller_Action
 		}
 	}
 
-	public function mythingsAction()
+	public function indexAction()
 	{
 		$mapper = new Application_Model_ThingsMapper();
 		$things = $mapper->fetchAll(Zend_Auth::getInstance()->getStorage()->read()->id);
@@ -17,7 +17,7 @@ class ThingsController extends Zend_Controller_Action
 		$this->view->mapper = $mapper;
 	}
 
-	public function indexAction()
+	public function newthingAction()
 	{
 		$thingsForm = new Application_Form_ThingsForm();
 		$this->view->thingsForm = $thingsForm;
@@ -132,4 +132,18 @@ class ThingsController extends Zend_Controller_Action
 			}
 		}
 	}
+        
+        public function deletethingAction()
+        {
+            $this->_helper->layout->disableLayout();
+            $this->_helper->viewRenderer->setNoRender(true);
+                    
+            if($this->getRequest()->isPost()){
+                $itemid = $this->getRequest()->getParam("itemid");
+                $mapper = new Application_Model_ThingsMapper;
+                $mapper->deleteThing($itemid);
+                echo "oil ok";
+            }else
+                echo "no post";
+        }
 }

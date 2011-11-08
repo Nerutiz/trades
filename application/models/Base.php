@@ -15,4 +15,33 @@ class Application_Model_Base
 		else
 			throw new Zend_Exception('It\'s not an object');
 	}
+        
+        public function authUser($email, $password)
+        {
+            $dbAdapter = Zend_Db_Table::getDefaultAdapter();
+
+            $authAdapter = new Zend_Auth_Adapter_DbTable($dbAdapter);
+
+            $authAdapter->setTableName('users')
+                    ->setIdentityColumn('email')
+                    ->setCredentialColumn('password')
+                    ->setCredentialTreatment('MD5(?)');
+
+               $authAdapter->setIdentity($email)
+               ->setCredential($password);
+               $auth = Zend_Auth::getInstance();
+               $result = $auth->authenticate($authAdapter);
+
+               if($result->isValid())
+               {
+                    $userInfo = $authAdapter->getResultRowObject(null, 'password');
+                    $authStorage = $auth->getStorage();
+                    $authStorage->write($userInfo);
+                    return true;
+               }
+               else
+               {
+                   return false;
+               }
+        }
 }
