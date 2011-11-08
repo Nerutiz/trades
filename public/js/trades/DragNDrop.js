@@ -126,6 +126,9 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
                             var descriptionEl = dojo.create('p');
                             var wishEl = dojo.create('p');
                             
+                            dojo.connect(itemContainer, 'onclick', function(){ window.location.href="/trades/thing?itemid=" + item.id});
+                            
+                            
                             img.width = 80;
                             img.height = 80;
                             itemContainer.draggable = isDraggable;

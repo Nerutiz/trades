@@ -105,6 +105,13 @@ class Application_Model_ThingsMapper
 		return $mainimage;
 	}
 	
+        public function selectThing($thingsID)
+        {
+            
+            $result = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('id=?', $thingsID));
+            return $result;
+        }
+        
 	public function fetchAll($userId)
 	{
 		$resultSet = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id=?', $userId));
@@ -124,8 +131,6 @@ class Application_Model_ThingsMapper
 		}
 
 		$json = json_encode($thingWithImage);
-//		$data = new Zend_Dojo_Data();
-//		$dojo = $data->setIdentifier('id')->addItems($thingWithImage);
 		return $json;
 	}
 

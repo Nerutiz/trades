@@ -17,13 +17,21 @@ class TradesController extends Zend_Controller_Action
 		$id = '';
 		
 		if($this->getRequest()->isPost())
-        {
+                {
 			if ($this->_hasParam('userid'))
 	    		$id = $this->_getParam('userid');
-        }
+                }
 		$this->view->othersthings = $otherThingsMapper->findotherthings(Zend_Auth::getInstance()->getStorage()->read()->id, $id);
 		$this->view->users = $accountMapper->selectAllUsers(Zend_Auth::getInstance()->getStorage()->read()->id);
 	}
 
+        
+        public function thingAction()
+        {
+            $mapper = new Application_Model_ThingsMapper();
+            
+            if($this->getRequest()->getParam('itemid'))
+                $this->view->thing = $mapper->selectThing($this->getRequest()->getParam('itemid'));
+        }
 
 }
