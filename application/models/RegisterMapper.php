@@ -28,7 +28,9 @@ class Application_Model_RegisterMapper
 		$data = array(
     		'email'			=>	$user->getEmail(),
     		'password'	=>	md5($user->getPassword()),
+                'username' => $user->getEmail()
 		);
+                
 		if (null === ($id = $user->getId()))
 		{
 			unset($data['id']);

@@ -377,3 +377,10 @@ dl{
 .formDialog form{
     display: inline-block;
 }
+
+.removeImg{
+    width: 20px;
+    height:20px;
+    display: inline-block;
+    background: #fff;
+}
