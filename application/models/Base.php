@@ -44,4 +44,10 @@ class Application_Model_Base
                    return false;
                }
         }
+        
+        public function getCategories()
+        {
+            $dbAdapter = Zend_Db_Table::getDefaultAdapter();
+            return $dbAdapter->query("SELECT * FROM thingscategories WHERE 1")->fetchAll();
+        }
 }

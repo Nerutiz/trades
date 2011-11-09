@@ -134,12 +134,16 @@ class Application_Model_ThingsMapper
 		return $json;
 	}
 
-	public function findotherthings($id, $userID)
+	public function findotherthings($id, $userID, $sql = "")
 	{
 		if($id)
-			$otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id!=?', $id));
+			//$otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id!=?', $id));
+                        $otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id!=?', $id));
+
 		else
-                    $otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select());
+                    //$otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select());
+                    $otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where($sql));
+
                 if($userID)
 			$otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id=?', $userID));
 		
@@ -159,8 +163,32 @@ class Application_Model_ThingsMapper
 		}
 
 		$json = json_encode($thingWithImage);
-//		$data = new Zend_Dojo_Data();
-//		$dojo = $data->setIdentifier('id')->addItems($thingWithImage);
+		return $json;
+	}
+        
+        public function getthings($userID, $sql = "")
+	{
+                if($userID)
+			$otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id != ?', $userID)->where($sql));
+                else
+                    $otherThings = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where($sql));
+		
+		$thingWithImage = array();
+		$thingsArray = $otherThings->toArray();
+		
+		foreach ($otherThings as $key => $row) {
+			$image = $this->selectmainimage($row->id)->toArray();
+			if(!empty($image))
+			{
+				unset($image[0]['id']);
+				$thingWithImage[] = array_merge_recursive($thingsArray[$key], $image[0]);
+			}
+			else 
+				$thingWithImage[] = array_merge_recursive($thingsArray[$key], $image);
+			
+		}
+
+		$json = json_encode($thingWithImage);
 		return $json;
 	}
 	

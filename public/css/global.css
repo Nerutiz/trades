@@ -384,3 +384,16 @@ dl{
     display: inline-block;
     background: #fff;
 }
+
+.categories{
+    display: inline-block;
+    padding: 5px;
+    background: #fff;
+    margin: 10px 10px;
+    width: 300px;
+    vertical-align: top;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    float: right;
+}
