@@ -35,7 +35,7 @@ class Application_Model_ThingsMapper
 	{
 		$data = array(
     		'title'			=>	$thing->getTitle(),
-    		'description'	=>	$thing->getDescription(),
+    		'description'           =>	$thing->getDescription(),
     		'wishes'		=>	$thing->getWishes(),
     		'keywords'		=>	$thing->getKeywords(),
     		'users_id'		=>	$userid,
@@ -105,17 +105,25 @@ class Application_Model_ThingsMapper
 		return $mainimage;
 	}
 	
-        public function selectThing($thingsID)
+        public function selectThing($thingsID, Application_Model_Things $thing)
         {
             
-            $result = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('id=?', $thingsID));
-            return $result;
+            $result = $this->getDbTable()->find($thingsID);
+            $row = $result->current();
+            $thing->setId($row->id)
+                  ->setTitle($row->title)
+                  ->setDescription($row->description)
+                  ->setWishes($row->wishes);
+            return $thing;
+            
         }
         
 	public function fetchAll($userId)
 	{
-		$resultSet = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id=?', $userId));
-		$thingWithImage = array();
+            $this->setDbTable('Application_Model_DbTable_Things');
+            $resultSet = $this->getDbTable()->fetchAll($this->getDbTable()->select()->where('users_id=?', $userId));
+		
+                $thingWithImage = array();
 		$thingsArray = $resultSet->toArray();
 		
 		foreach ($resultSet as $key => $row) {
