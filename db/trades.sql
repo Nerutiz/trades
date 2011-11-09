@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.5
+-- version 3.3.9.2
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2011 at 08:58 PM
--- Server version: 5.1.44
--- PHP Version: 5.3.2
+-- Generation Time: Nov 09, 2011 at 07:42 PM
+-- Server version: 5.5.9
+-- PHP Version: 5.3.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -37,7 +37,7 @@ CREATE TABLE `things` (
   `users_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_things_users` (`users_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=40 ;
 
 --
 -- Dumping data for table `things`
@@ -55,6 +55,7 @@ INSERT INTO `things` VALUES(35, 'daiktas', 'kazkoks', NULL, 'norai', 'keywords',
 INSERT INTO `things` VALUES(36, 'daiktas', 'kazkoks', NULL, 'norai', 'keywords', 1);
 INSERT INTO `things` VALUES(37, 'sadkaskd;k', 'l;kl;k', NULL, 'l;k', 'l;klasd', 1);
 INSERT INTO `things` VALUES(38, 'nuajas sudinas', 'asdasd', NULL, 'asdas', 'sadasdsa', 1);
+INSERT INTO `things` VALUES(39, 'Telefonas', 'NAUJAS - Kokybiskas Dvieju 2 Sim korteliu daugiafunkcinis Mobilusis Telefonas S9000 Palaiko Dvi 2 Sim korteles, Abi korteles aktyvios vienu metu, Tinka visu operatoriu Sim korteles - Turi daugybe Jusu patogumui skirtu funkciju - Metalinis Ultra Plonas korpusas - 1.1cm., Greitas procesorius, TV imtuvas, Skype Mobile programa, Lietimui Jautrus TouchPad mygtukas, Didelis Lietimui Jautrus, Ryskus ekranas 2.6\\"TOUCH High Resolution 320x240 True Colour Touch Screen 262000 Spalvu', NULL, 'iPhone 4s', 'HTC, telefonas, mobilus telefonas', 4);
 
 -- --------------------------------------------------------
 
@@ -66,11 +67,30 @@ CREATE TABLE `trades` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `fromuser` int(11) DEFAULT NULL,
   `touser` int(11) DEFAULT NULL,
+  `fromthing` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Dumping data for table `trades`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tradesdetails`
+--
+
+CREATE TABLE `tradesdetails` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `trades_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `tradesdetails`
 --
 
 
@@ -93,7 +113,7 @@ CREATE TABLE `upload` (
   `things_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_images_things1` (`things_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=225 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=227 ;
 
 --
 -- Dumping data for table `upload`
@@ -161,6 +181,8 @@ INSERT INTO `upload` VALUES(221, '4eac1ac6b709c', 'P4150421.JPG', 'image/jpeg', 
 INSERT INTO `upload` VALUES(222, '4eac1ac6c9d7e', 'P4150423.JPG', 'image/jpeg', '3160562', 'JPG', '4288', '3216', NULL, NULL);
 INSERT INTO `upload` VALUES(223, '4eac1ac6ca3ad', 'P4150425.JPG', 'image/jpeg', '2890835', 'JPG', '4288', '3216', NULL, NULL);
 INSERT INTO `upload` VALUES(224, '4eb2d7c40421f', 'P4150421.JPG', 'image/jpeg', '3045358', 'JPG', '150', '150', NULL, NULL);
+INSERT INTO `upload` VALUES(225, '4eb4288e61c25', 'opapa.jpg', 'image/jpeg', '70134', 'jpg', '640', '426', NULL, NULL);
+INSERT INTO `upload` VALUES(226, '4eb4480fdec38', 'telef.jpg', 'image/jpeg', '66022', 'jpg', '300', '213', 1, 39);
 
 -- --------------------------------------------------------
 
@@ -179,7 +201,7 @@ CREATE TABLE `users` (
   `city` varchar(45) DEFAULT NULL,
   `country` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `users`
@@ -188,6 +210,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` VALUES(1, 'Nerutiz', 'Nerijus', '0cc175b9c0f1b6a831c399e269772661', '4eaae0517816d.JPG', 'a@a.com', 'Ausros 94-10 Utena', 'Utena', 'Lithuania');
 INSERT INTO `users` VALUES(2, 'local', 'localy', 'f5ddaf0ca7929578b408c909429f68f2', NULL, 'local@local.com', 'local', NULL, NULL);
 INSERT INTO `users` VALUES(3, NULL, NULL, '703d438474bd4ce336bd41f74ee528e3', NULL, 'nerijus@dycode.net', NULL, NULL, NULL);
+INSERT INTO `users` VALUES(4, NULL, NULL, '703d438474bd4ce336bd41f74ee528e3', NULL, 'nerijus@me.com', NULL, NULL, NULL);
 
 --
 -- Constraints for dumped tables
