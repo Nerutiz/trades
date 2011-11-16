@@ -63,7 +63,7 @@ class Application_Model_RegisterMapper
 		if (0 == count($result)) {
 			return;
 		}
-		$row = $result->current();
+                $row = $result->current();
 		$user->setEmail($row->email)
 		->setUsername($row->username)
 		->setFullname($row->fullname)

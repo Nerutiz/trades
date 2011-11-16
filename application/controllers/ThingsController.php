@@ -38,21 +38,48 @@ class ThingsController extends Zend_Controller_Action
 	public function editthingAction()
 	{
 		$form = new Application_Form_ThingsForm();
-		$thing = new Application_Model_Things();
-		$mapper = new Application_Model_ThingsMapper();
+                $this->view->form = $form;
+	
+                
+                 if($this->getRequest()->isPost())
+                {
+                     if ($form->isValid($this->getRequest()->getPost()))
+			{
+                            $userInfo = Zend_Auth::getInstance()->getStorage()->read();
+                            
+                            $mything = new Application_Model_Things($form->getValues());
+                            $newmapper = new Application_Model_ThingsMapper();
+                            $newmapper->editThing($mything, $this->_getParam('id'));
+                            return;
+                        }
+                }
+                
+                
 		if($this->_getParam('id'))
 		{
+                    	$thing = new Application_Model_Things();
+                        $mapper = new Application_Model_ThingsMapper();
+                    
 			$this->view->form = $form;
 			$mapper = new Application_Model_ThingsMapper();
 			$result = $mapper->find($this->_getParam('id'), $thing);
 			$form->populate($result); 
 			$this->view->images = $mapper->findimage($this->_getParam('id'));
-		}
+                   
+                }
 		else
-		$this->view->form = $form;
+                    $this->view->form = $form;
 	}
+        
+        public function saveeditthingsAction()
+        {
+            $this->_helper->viewRenderer->setNoRender(true);
+            $thing = new Application_Model_Things();
+            
+            
+        }
 
-	public function saverecordAction()
+        public function saverecordAction()
 	{
 		$userInfo = Zend_Auth::getInstance()->getStorage()->read();
 		$thingsForm = new Application_Form_ThingsForm();
