@@ -10,12 +10,21 @@ class IndexController extends Zend_Controller_Action
 
 	public function indexAction()
 	{
-            $id = '';
             $thingsMapper = new Application_Model_ThingsMapper();
+            
+            $sql = "1";
+            
+            $categoryid = $this->getRequest()->getParam("category");
+            if(!empty ($categoryid))
+            {
+                $sql .= " AND thingscategories_id = " . (int)$categoryid; 
+            }
+            
+            
             if (Zend_Auth::getInstance()->hasIdentity()){
-                $this->view->allthings = $thingsMapper->findotherthings(Zend_Auth::getInstance()->getStorage()->read()->id, $id);
+                $this->view->allthings = $thingsMapper->getthings(Zend_Auth::getInstance()->getStorage()->read()->id, $sql);
             }else{
-                $this->view->allthings = $thingsMapper->findotherthings(null, $id);
+                $this->view->allthings = $thingsMapper->getthings(null, $sql);
             }
 	}
 
