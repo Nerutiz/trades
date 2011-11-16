@@ -207,6 +207,17 @@ class Application_Model_ThingsMapper
 		$dbAdapter->query('UPDATE upload SET main="1" WHERE things_id="' . $thingid . '" AND uuid="' . $imageid . '"');
 	}
         
+        public function editThing($thing, $thingID)
+        {
+            $data = array(
+                'title'         => $thing->getTitle(),
+                'description'   => $thing->getDescription(),
+                'wishes'        => $thing->getWishes(),
+                'keywords'      => $thing->getKeywords()
+                ); 
+            $this->getDbTable()->update($data, array('id = ?' => $thingID));
+           
+        }
         
         public function deleteThing($thingid)
         {       
