@@ -40,6 +40,8 @@ class ThingsController extends Zend_Controller_Action
 		$form = new Application_Form_ThingsForm();
 		$thing = new Application_Model_Things();
 		$mapper = new Application_Model_ThingsMapper();
+                
+                
 		if($this->_getParam('id'))
 		{
 			$this->view->form = $form;
