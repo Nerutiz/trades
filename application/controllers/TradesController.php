@@ -38,5 +38,16 @@ class TradesController extends Zend_Controller_Action
             }
             
         }
+        
+        public function mytradesAction()
+        {
+            $mapper = new Application_Model_TradesMapper();
+            
+            $userID = Zend_Auth::getInstance()->getStorage()->read()->id;
+            $myTrades = $mapper->get_my_trades($userID);
+            
+            $this->view->myTrades = $myTrades;
+        }
+        
 
 }

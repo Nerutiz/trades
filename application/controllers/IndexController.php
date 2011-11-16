@@ -27,6 +27,18 @@ class IndexController extends Zend_Controller_Action
                 $this->view->allthings = $thingsMapper->getthings(null, $sql);
             }
 	}
+        
+        
+        public function rulesAction()
+        {
+            $this->render("/rules");
+        }
+        
+        public function companyAction()
+        {
+            $this->render("/company");
+        }
+        
 
 
 }

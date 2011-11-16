@@ -56,34 +56,34 @@ class AccountController extends Zend_Controller_Action
                     
 			//$this->_helper->layout()->setLayout('notlogged');
 			if(Zend_Auth::getInstance()->hasIdentity())
-				$this->_redirect('/account/profile');
-				 
-				$loginform = new Application_Form_LoginForm();
-				$request = $this->getRequest();
+                            $this->_redirect('/account/profile');
 
-				if($request->isPost())
-				{
-					if($loginform->isValid($request->getPost()))
-					{
-                                            $email = $loginform->getValue('email');
-                                            $password = $loginform->getValue('password');
-						
-                                            $result = new Application_Model_Base();
-                                            $result->authUser($email, $password);
+                        $loginform = new Application_Form_LoginForm();
+                        $request = $this->getRequest();
 
-                                           if($result == true)
-                                           {
-                                                $this->_redirect('/things');
-                                           }
-                                           else
-                                           {
-                                                $errorMessage = "Wrong username or password provided. Please try again.";
-                                           }
-					}
-				}
+                        if($request->isPost())
+                        {
+                                if($loginform->isValid($request->getPost()))
+                                {
+                                    $email = $loginform->getValue('email');
+                                    $password = $loginform->getValue('password');
 
-				//	$this->view->errorMessage = $errorMessage;
-				$this->view->loginform = $loginform;
+                                    $result = new Application_Model_Base();
+                                    $result->authUser($email, $password);
+
+                                   if($result == true)
+                                   {
+                                        $this->_redirect('/things');
+                                   }
+                                   else
+                                   {
+                                        $errorMessage = "Wrong username or password provided. Please try again.";
+                                   }
+                                }
+                        }
+
+                        //	$this->view->errorMessage = $errorMessage;
+                        $this->view->loginform = $loginform;
 		}
 
 		public function profileAction()
