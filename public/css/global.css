@@ -265,7 +265,8 @@ dl{
     padding: 0px 4px;
     vertical-align: middle;
     border-left: 1px solid #B8B8B8;
-    height: 25px;
+    height: 30px;
+    position: relative;
 }
 
 .userBlock ol>:first-child{
@@ -311,6 +312,29 @@ dl{
 
 .loginFormContainer{
     display: none;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #000;
+    border-top: 0px;
+    position: absolute;
+    top:30px;
+    right: -1px;
+}
+
+.loginFormContainer input[type="text"], .loginFormContainer input[type="password"]{
+    width: 200px;
+    height: 20px;
+    font-size: 99%;
+    background: #fff;
+}
+
+.activeUser{
+    background: #fff;
+    color:#000000;
+}
+
+.activeUser .loginFormContainer{
+    display: block;
 }
 
 .mainMenu{
@@ -334,6 +358,14 @@ dl{
     border: 1px solid #BDBDBD;
     height: 30px;
     width: 500px;
+    font-size: 99%;
+    box-shadow: inset 0px 1px 0px 0px #eaeaea, 0px 1px 0px 0px #f7f7f7;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #eaeaea, 0px 1px 0px 0px #f7f7f7;
+    -moz-box-shadow: inset 0px 1px 0px 0px #eaeaea, 0px 1px 0px 0px #f7f7f7;
+}
+
+input[type="text"], input[type="password"]{
+      border: 1px solid #BDBDBD;
     font-size: 99%;
     box-shadow: inset 0px 1px 0px 0px #eaeaea, 0px 1px 0px 0px #f7f7f7;
     -webkit-box-shadow: inset 0px 1px 0px 0px #eaeaea, 0px 1px 0px 0px #f7f7f7;
@@ -435,18 +467,18 @@ dl{
     padding: 5px;
     background: #fff;
     margin: 10px 10px;
-    width: 300px;
-    height: 110px;
     vertical-align: top;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
 
+.itemContainer:hover{
+    background: #F2F4F8;
+}
+
 .itemContainer img{
-    float: left;
-    margin-right: 7px;
-    margin-bottom: 7px;
+    max-width: 80px;
 }
 
 .itemTitle{

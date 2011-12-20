@@ -23,6 +23,7 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
 	echo $this->dojo();
 }
 ?>
+
 <?php echo $this->headScript();  ?>
 <link rel="stylesheet" href="/css/global.css" />
 <link rel="stylesheet" href="/js/dojox/widget/Dialog/Dialog.css" />
@@ -39,28 +40,49 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
                 <a href="/things/index"> Mano daiktai </a>
                 <a href="/things/newthing"> Kurti daikta </a>
                 <a href="/trades">  Mainai </a>
-                 <?php  $userInfo = Zend_Auth::getInstance()->getStorage()->read(); ?>
+                <?php  $userInfo = Zend_Auth::getInstance()->getStorage()->read(); ?>
                 <div class="userBlock">
+                    <?php if (Zend_Auth::getInstance()->hasIdentity()){ ?>
                     <ol>
                         <li>
                             <a href="/account/profile" class="username"><?php echo $userInfo->username;?></a> 
                         </li>
                         <li>
                             <a href="/account/logout"><?php echo 'Logout'; ?></a>
-                            <div class="loginFormContainer">
-                                <form method="post" action="/account">
-                                    <input type="text" name="email" placeholder="Vardas"/>
-                                    <br />
-                                    <input type="password" name="password" placeholder="Slaptažodis" />
-                                    <input type="submit" class="hidden_sumbit" />
-                                </form>
-                            </div>
                         </li>
                         <li>
                             <a href="#" class="settings"></a>
                         </li>
                     </ol>
-                </div>
+                <?php }else{?>
+                    <ol>
+                        <li style="cursor: pointer;">
+                            <div onclick="setActive(this);">Prisijungti</div>
+                            <div class="loginFormContainer">
+                                <form method="post" action="/account">
+                                    <label for="email">
+                                        E-mail:
+                                    </label>
+                                    <input type="text" name="email" placeholder="Vardas"/>
+                                    <br />
+                                    <label for="password">
+                                        Slaptažodis:
+                                    </label>
+                                    <input type="password" name="password" placeholder="Slaptažodis" />
+                                    <br/>
+                                    <input type="submit" class="button" style="font-size: 12px; margin-top: 5px;" value="Prisijungti">                                  
+                                </form>
+                             </div>
+                        </li>
+                        <li>
+                            <a href="#" onclick="trades.formDialog();">Registruotis</a>
+                        </li>
+                        <li>
+                            <a href="#" class="settings"></a>
+                        </li>
+                    </ol>
+                <?php }?>
+                 </div> 
             </div>
         </div>
         <div class="logoContainer">
@@ -74,22 +96,6 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
         </div>
         <div class="mainContent">
             <?php echo $this->layout()->content ?> 
-        </div>
-        <div class="user_block">
-            <?php if (Zend_Auth::getInstance()->hasIdentity()){ ?>
-
-            <?php }else{ ?>
-                <div class="not_logged_block">
-                    <div style="display: inline-block; padding-right: 10px;">
-                        
-                    </div>
-                    <div style="display: inline-block">
-                        <a href="#" onclick="formDialog();">Registruotis</a>
-                        <br />
-                        <a href="#">Dėti skelbima</a>
-                    </div>
-                </div>
-            <?php } ?>
         </div>
     </div>
     <div class="footer">

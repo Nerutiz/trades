@@ -123,10 +123,10 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
                     isDraggable = this.isDraggable;
                     dojo.forEach(this.items, function(item){
                             var itemContainer = dojo.create('div');
-                            var titleEl = dojo.create('p');
+//                            var titleEl = dojo.create('p');
                             var img = dojo.create('img'); 
-                            var descriptionEl = dojo.create('p');
-                            var wishEl = dojo.create('p');
+//                            var descriptionEl = dojo.create('p');
+//                            var wishEl = dojo.create('p');
                             
                             dojo.connect(itemContainer, 'onclick', function(){ window.location.href="/trades/thing?itemid=" + item.id});
                             
@@ -143,15 +143,15 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
            
                             itemContainer.appendChild(img);
 
-                            titleEl.innerHTML = item.title;
-                            itemContainer.appendChild(titleEl);	
-
-                            descriptionEl.innerHTML = widget.descriptionEllipsis(item.description);
-                            itemContainer.appendChild(descriptionEl);
-                          
-                            wishEl.innerHTML = item.wishes;
-
-                            itemContainer.appendChild(wishEl);
+//                            titleEl.innerHTML = item.title;
+//                            itemContainer.appendChild(titleEl);	
+//
+//                            descriptionEl.innerHTML = widget.descriptionEllipsis(item.description);
+//                            itemContainer.appendChild(descriptionEl);
+//                          
+//                            wishEl.innerHTML = item.wishes;
+//
+//                            itemContainer.appendChild(wishEl);
 
                             if(widget.itemOnClick)
                             {
@@ -161,9 +161,9 @@ dojo.declare("trades.DragNDrop",[dijit._Widget,dijit._Templated],{
                             }
                             
                             dojo.addClass(itemContainer, 'itemContainer');
-                            dojo.addClass(titleEl, 'itemTitle');
-                            dojo.addClass(descriptionEl, 'itemDesc');
-                            dojo.addClass(wishEl, 'itemWish');
+//                            dojo.addClass(titleEl, 'itemTitle');
+//                            dojo.addClass(descriptionEl, 'itemDesc');
+//                            dojo.addClass(wishEl, 'itemWish');
 
                             dojo.place(itemContainer, this.container, 'last');
                     });	
