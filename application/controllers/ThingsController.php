@@ -46,7 +46,6 @@ class ThingsController extends Zend_Controller_Action
                      if ($form->isValid($this->getRequest()->getPost()))
 			{
                             $userInfo = Zend_Auth::getInstance()->getStorage()->read();
-                            
                             $mything = new Application_Model_Things($form->getValues());
                             $newmapper = new Application_Model_ThingsMapper();
                             $newmapper->editThing($mything, $this->_getParam('id'));
