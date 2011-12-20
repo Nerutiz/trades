@@ -754,6 +754,9 @@ abstract class Zend_Db_Table_Abstract
 				throw new Zend_Db_Table_Exception('No adapter found for ' . get_class($this));
 			}
 		}
+                
+                $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini', 'production');
+                $this->_db->query("SET NAMES '". $config->resources->db->params->charset . "'");
 	}
 
 	/**

@@ -1,6 +1,7 @@
 <?php
 class Application_Model_Base
 {
+    
 	public function convertObjectToArray($object/*Object*/)
 	{
 		if(is_object($object))
@@ -48,6 +49,7 @@ class Application_Model_Base
         public function getCategories()
         {
             $dbAdapter = Zend_Db_Table::getDefaultAdapter();
+            
             return $dbAdapter->query("SELECT * FROM thingscategories WHERE 1")->fetchAll();
         }
 }
