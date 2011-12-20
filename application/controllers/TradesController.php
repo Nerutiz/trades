@@ -32,9 +32,17 @@ class TradesController extends Zend_Controller_Action
             
             if($this->getRequest()->getParam('itemid'))
             {
-                $this->view->thing = $mapper->selectThing($this->getRequest()->getParam('itemid'), new Application_Model_Things);
-                $this->view->images = $mapper->findimage($this->getRequest()->getParam('itemid'));
-		$this->view->mythings = $mapper->fetchAll(Zend_Auth::getInstance()->getStorage()->read()->id);
+                if (Zend_Auth::getInstance()->hasIdentity())
+                {
+                    $this->view->thing = $mapper->selectThing($this->getRequest()->getParam('itemid'), new Application_Model_Things);
+                    $this->view->images = $mapper->findimage($this->getRequest()->getParam('itemid'));
+                    $this->view->mythings = $mapper->fetchAll(Zend_Auth::getInstance()->getStorage()->read()->id);
+                }else
+                {
+                    $this->view->thing = $mapper->selectThing($this->getRequest()->getParam('itemid'), new Application_Model_Things);
+                    $this->view->images = $mapper->findimage($this->getRequest()->getParam('itemid'));
+             
+                }
             }
             
         }
