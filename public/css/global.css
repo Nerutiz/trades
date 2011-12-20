@@ -228,11 +228,11 @@ dl{
 
 .accountForms{
 	text-align:center;
-	margin-top:15%;
+	margin:50px auto;
+        width: 265px;
 	text-align:left;
 	padding:10px;
 	background:#fff;
-	display: inline-block;
 	border-radius: 6px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;

@@ -229,7 +229,7 @@ class Application_Model_ThingsMapper
             $this->getDbTable()->delete($where);
 
         }
-
+        
 	
 
 }
