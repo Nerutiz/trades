@@ -30,35 +30,58 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
 </head>
 <body class="claro notLoggedBody">
 
-    <div id="header" class="header">
-        <a href="/"><span class="logo"></span></a>
-        <div class="title">
-            <span style="display: inline-block; vertical-align: middle; padding-right: 10px">Efektyviausia <br />keitimosi sistema</span>
-            <span style="display: inline-block" >
-                <input type="search" name="search" value="Paieška" />
-            </span>
+    <div>
+        <div class="headerBlock">
+            <div class="opacityBackground">
+            </div>
+            <div class="mainMenu">
+                <a href="/"> Pradinis </a>
+                <a href="/things/index"> Mano daiktai </a>
+                <a href="/things/newthing"> Kurti daikta </a>
+                <a href="/trades">  Mainai </a>
+                 <?php  $userInfo = Zend_Auth::getInstance()->getStorage()->read(); ?>
+                <div class="userBlock">
+                    <ol>
+                        <li>
+                            <a href="/account/profile" class="username"><?php echo $userInfo->username;?></a> 
+                        </li>
+                        <li>
+                            <a href="/account/logout"><?php echo 'Logout'; ?></a>
+                            <div class="loginFormContainer">
+                                <form method="post" action="/account">
+                                    <input type="text" name="email" placeholder="Vardas"/>
+                                    <br />
+                                    <input type="password" name="password" placeholder="Slaptažodis" />
+                                    <input type="submit" class="hidden_sumbit" />
+                                </form>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="settings"></a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="logoContainer">
+            <div class="searchBlock">
+                <a href="/" class="logo"></a>
+                <form class="searchForm">
+                    <input type="text" name="q" id="q" class="searchInput"/>
+                    <span class="button">Ieškoti</span>
+                </form>
+            </div>
+        </div>
+        <div class="mainContent">
+            <?php echo $this->layout()->content ?> 
         </div>
         <div class="user_block">
             <?php if (Zend_Auth::getInstance()->hasIdentity()){ ?>
-            <?php  $userInfo = Zend_Auth::getInstance()->getStorage()->read(); ?>
-                <div class="loged_block">
-                    <a href="/"> Pradinis </a>
-                    <a href="/things/index"> Mano daiktai </a>
-                    <a href="/things/newthing"> Kurti daikta </a>
-                    <a href="/trades">  Mainai </a>
-                    <br />
-                    <a href="/account/profile" class="username"><?php echo $userInfo->username;?></a> | 
-                    <a href="/account/logout"><?php echo 'Logout'; ?></a> 
-                </div>
+            
             <?php }else{ ?>
                 <div class="not_logged_block">
                     <div style="display: inline-block; padding-right: 10px;">
-                        <form method="post" action="/account">
-                        <input type="text" name="email" placeholder="Vardas"/>
-                        <br />
-                        <input type="password" name="password" placeholder="Slaptažodis" />
-                        <input type="submit" class="hidden_sumbit" />
-                        </form>
+                        
                     </div>
                     <div style="display: inline-block">
                         <a href="#" onclick="formDialog();">Registruotis</a>
@@ -69,21 +92,10 @@ $this->dojo()->enable()->setDjConfigOption('parseOnLoad', true)->setDjConfigOpti
             <?php } ?>
         </div>
     </div>
-
-    
-    <div class="content"> <?php echo $this->layout()->content ?>  </div>
-
-
     <div class="footer">
-        <span>
-            &COPY; 2011 Visos teisės saugomos
-        </span> 
-        <span>
-            <a href="#">Rekvizitai</a>
-        </span>
-        <span>
-            <a href="#">Taisyklės</a>
-        </span>
+        <span>&COPY; 2011 Visos teisės saugomos</span> 
+        <a href="#">Rekvizitai</a>
+        <a href="#">Taisyklės</a>
     </div>
 
 </body>
