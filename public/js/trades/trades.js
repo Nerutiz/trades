@@ -219,7 +219,7 @@ function sourceCreator(item, hint)
 }
 
 function checkAcceptanceWithoutSelfDrop(source, nodes) {
-    if(this == source){ return false; }
+    if(this == source){return false;}
     for(var i = 0; i < nodes.length; ++i){
         var type = source.getItem(nodes[i].id).type;
         var flag = false;
@@ -280,24 +280,29 @@ function removeItem(itemID, item)
 
 
 
-function formDialog()
+trades.formDialog = function()
 {
-     formDialog = new dojox.widget.Dialog({
-         title: "Registracija",
-         layoutAlign: 'center',
-         id:'registerDialog',
-         draggable:false,
-         'class':'formDialog',
-         dimensions: [320,230],
-         onCancel:function()
-            {
-             this.destroyRecursive();
-            },
-	 onLoad:function()
-	      {
-	    	
-	      }
-     });
-	 formDialog.set('href', '/account/register');
-	 formDialog.show();
+    formDialog = new dojox.widget.Dialog({
+        title: "Registracija",
+        layoutAlign: 'center',
+        id:'registerDialog',
+        draggable:false,
+        'class':'formDialog',
+        dimensions: [320,230],
+        onCancel:function()
+        {
+        this.destroyRecursive();
+        }
+    });
+    formDialog.set('href', '/account/register');
+    formDialog.show();
+}
+
+function setActive(element)
+{
+    var element = element.parentNode;
+    if(dojo.hasClass(element, 'activeUser'))
+        dojo.removeClass(element, 'activeUser');
+    else
+        dojo.addClass(element, 'activeUser');
 }
